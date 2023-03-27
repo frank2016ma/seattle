@@ -2,11 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://frank2016ma.github.io/seattle/posts/bookmarklet/</loc>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
+  </url><url>
     <loc>https://frank2016ma.github.io/seattle/</loc>
-    <lastmod>2023-03-27T12:37:09+08:00</lastmod>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/javascript/</loc>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/</loc>
-    <lastmod>2023-03-27T12:37:09+08:00</lastmod>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/powershell/</loc>
     <lastmod>2023-03-27T12:37:09+08:00</lastmod>
@@ -18,9 +27,6 @@
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/rpa/</loc>
-    <lastmod>2023-03-25T22:59:00+08:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/uipath/</loc>

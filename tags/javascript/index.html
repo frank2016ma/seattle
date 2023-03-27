@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head>
-	<meta name="generator" content="Hugo 0.92.2" /><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>frank_in_seattle</title>
-
+<title>javascript | frank_in_seattle</title>
+<meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="Frank Ma">
-<link rel="canonical" href="https://frank2016ma.github.io/seattle/">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/tags/javascript/">
 <link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://frank2016ma.github.io/seattle/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://frank2016ma.github.io/seattle/favicon-16x16.png">
@@ -19,7 +18,7 @@
 <link rel="mask-icon" href="https://frank2016ma.github.io/seattle/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://frank2016ma.github.io/seattle/index.xml">
+<link rel="alternate" type="application/rss+xml" href="https://frank2016ma.github.io/seattle/tags/javascript/index.xml">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,28 +55,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="frank_in_seattle" />
+</noscript><meta property="og:title" content="javascript" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://frank2016ma.github.io/seattle/" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/tags/javascript/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="frank_in_seattle"/>
+<meta name="twitter:title" content="javascript"/>
 <meta name="twitter:description" content=""/>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "frank_in_seattle",
-  "url": "https://frank2016ma.github.io/seattle/",
-  "description": "",
-  "thumbnailUrl": "https://frank2016ma.github.io/seattle/favicon.ico",
-  "sameAs": [
-      
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -139,8 +125,13 @@
     </nav>
 </header>
 <main class="main"> 
+<header class="page-header">
+  <h1>
+    javascript
+  </h1>
+</header>
 
-<article class="first-entry"> 
+<article class="post-entry tag-entry"> 
   <header class="entry-header">
     <h2>Bookmarklet
     </h2>
@@ -152,75 +143,6 @@ javascript:(function(){document.querySelector(&#39;#uCode&#39;).value=&#39;usern
   </div>
   <footer class="entry-footer"><span title='2023-03-27 17:21:51 +0800 CST'>March 27, 2023</span>&nbsp;·&nbsp;Frank Ma</footer>
   <a class="entry-link" aria-label="post link to Bookmarklet" href="https://frank2016ma.github.io/seattle/posts/bookmarklet/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Powershell
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-Where-Object {}
-特殊变量 $_ 来表示管道中的当前对象
-传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
-为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
- 而wordpad.exe 所在的&#34;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&#34;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&#34;%ProgramFiles%\Windows NT\Accessories&#34;.
-默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;‘可以执行命令, 或者启动程序.
-判断一个变量是否为数组
-$ip=ipconfig
-$ip -is [array]
-查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
-对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
-变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
-使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
-常用的对管道结果进一步处理的命令有：
- Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft ....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-27 12:37:09 +0800 CST'>March 27, 2023</span>&nbsp;·&nbsp;Frank Ma</footer>
-  <a class="entry-link" aria-label="post link to Powershell" href="https://frank2016ma.github.io/seattle/posts/powershell/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>Linux Command Usage
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>tell me about the linux command `grep` usage
- The grep command in Linux is a powerful utility used for searching and filtering text in files or streams. It is a versatile tool that can be used to search for specific patterns or expressions in text files or even output from other commands. Here are some of the most common uses of the grep command:
-  Search for a pattern in a file: The basic syntax for using grep to search for a pattern in a file is as follows:...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-26 10:58:32 +0800 CST'>March 26, 2023</span>&nbsp;·&nbsp;Frank Ma</footer>
-  <a class="entry-link" aria-label="post link to Linux Command Usage" href="https://frank2016ma.github.io/seattle/posts/linux-command-usage/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>uipath-note
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>uipath Activity Packages  Activity package versions are independent of Studio, Robot, or Orchestrator versions, except for Orchestrator activities. For example, the Start Job activity, introduced in v2018.1, only works on v2018.1 Robots or newer.
-We support backward compatibility, For example, a project created with Studio v2018.4 should work on a v2019.10 Robot or newer.
-We do not support forward compatibility, For example, a project created in Studio v2019.10 might not work with a v2018....</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-25 22:59:00 +0800 CST'>March 25, 2023</span>&nbsp;·&nbsp;Frank Ma</footer>
-  <a class="entry-link" aria-label="post link to uipath-note" href="https://frank2016ma.github.io/seattle/posts/uipath/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2>vscode key shortcuts
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>   多光标操作 ====     Ctrl&#43;I 选中当前行   Shift&#43;Alt&#43;I 将光标插入所选每行的末尾   Ctrl&#43;Shift&#43;L 选择所有与所选中内容相同的内容   Ctrl&#43;F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl&#43;\ 拆分编辑器为多组   Ctrl&#43; 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl&#43;K P 复制当前文件路径   Ctrl&#43;K R 打开当前文件所在文件夹       显示 ====     Shift&#43;Alt&#43;0 切换编辑器布局（水平/垂直）   Ctrl&#43;Shift&#43;F 显示搜索界面   Ctrl&#43;Shift&#43;X 显示插件管理界面   Ctrl&#43;K V 预览Markdown文件（侧边）   Ctrl&#43;K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl&#43;K Ctrl&#43;X 移除行尾空白字符       基础编辑 ====     Ctrl&#43;Shift&#43;K 删除行   Ctrl&#43;Enter 在当前行下方插入新行   Ctrl&#43;Shift&#43;Enter 在当前行上方插入新行   Shift&#43;Alt&#43;A 切换块注释   Alt&#43;Z 切换自动换行   Ctrl&#43;K Ctrl&#43;[ 折叠当前所有子代码块   Ctrl&#43;K Ctrl&#43;] 展开当前所有子代码块    </p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-15 21:49:19 +0800 CST'>March 15, 2023</span>&nbsp;·&nbsp;Frank Ma</footer>
-  <a class="entry-link" aria-label="post link to vscode key shortcuts" href="https://frank2016ma.github.io/seattle/posts/vscode-keys/"></a>
 </article>
     </main>
     

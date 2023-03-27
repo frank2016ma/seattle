@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>javascript on frank_in_seattle</title>
+    <link>https://frank2016ma.github.io/seattle/tags/javascript/</link>
+    <description>Recent content in javascript on frank_in_seattle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Mar 2023 17:21:51 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookmarklet</title>
+      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+      <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+      <description>阮一峰的Bookmarklet编写指南
+浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录
+javascript:(function(){document.querySelector(&amp;#39;#uCode&amp;#39;).value=&amp;#39;username&amp;#39;;document.querySelector(&amp;#39;#pW&amp;#39;).value=&amp;#39;password&amp;#39;;document.querySelector(&amp;#39;#login_btn%20%3E%20button.login&amp;#39;).click();})(); </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,18 @@
     <description>Recent content on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Mar 2023 12:37:09 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Mar 2023 17:21:51 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookmarklet</title>
+      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+      <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+      <description>阮一峰的Bookmarklet编写指南
+浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录
+javascript:(function(){document.querySelector(&amp;#39;#uCode&amp;#39;).value=&amp;#39;username&amp;#39;;document.querySelector(&amp;#39;#pW&amp;#39;).value=&amp;#39;password&amp;#39;;document.querySelector(&amp;#39;#login_btn%20%3E%20button.login&amp;#39;).click();})(); </description>
+    </item>
+    
     <item>
       <title>Powershell</title>
       <link>https://frank2016ma.github.io/seattle/posts/powershell/</link>
@@ -39,7 +50,9 @@ $ip -is [array]
       <pubDate>Sun, 26 Mar 2023 10:58:32 +0800</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</guid>
-      <description></description>
+      <description>tell me about the linux command `grep` usage
+ The grep command in Linux is a powerful utility used for searching and filtering text in files or streams. It is a versatile tool that can be used to search for specific patterns or expressions in text files or even output from other commands. Here are some of the most common uses of the grep command:
+  Search for a pattern in a file: The basic syntax for using grep to search for a pattern in a file is as follows:</description>
     </item>
     
     <item>
