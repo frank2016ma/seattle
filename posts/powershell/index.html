@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Powershell | frank_in_seattle</title>
+<meta name="keywords" content="">
+<meta name="description" content="Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
+Get-Member -MemberType Properties
+Where-Object {}
+特殊变量 $_ 来表示管道中的当前对象
+传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
+为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+ 而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&quot;%ProgramFiles%\Windows NT\Accessories&quot;.
+默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;&lsquo;可以执行命令, 或者启动程序.
+判断一个变量是否为数组
+$ip=ipconfig
+$ip -is [array]
+查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
+对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
+变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
+使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .">
+<meta name="author" content="Frank Ma">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/powershell/">
+<link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://frank2016ma.github.io/seattle/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://frank2016ma.github.io/seattle/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://frank2016ma.github.io/seattle/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://frank2016ma.github.io/seattle/apple-touch-icon.png">
+<link rel="mask-icon" href="https://frank2016ma.github.io/seattle/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Powershell" />
+<meta property="og:description" content="Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
+Get-Member -MemberType Properties
+Where-Object {}
+特殊变量 $_ 来表示管道中的当前对象
+传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
+为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+ 而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&quot;%ProgramFiles%\Windows NT\Accessories&quot;.
+默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;&lsquo;可以执行命令, 或者启动程序.
+判断一个变量是否为数组
+$ip=ipconfig
+$ip -is [array]
+查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
+对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
+变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
+使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/powershell/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-27T12:37:09+08:00" />
+<meta property="article:modified_time" content="2023-03-27T12:37:09+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Powershell"/>
+<meta name="twitter:description" content="Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
+Get-Member -MemberType Properties
+Where-Object {}
+特殊变量 $_ 来表示管道中的当前对象
+传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
+为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+ 而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&quot;%ProgramFiles%\Windows NT\Accessories&quot;.
+默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;&lsquo;可以执行命令, 或者启动程序.
+判断一个变量是否为数组
+$ip=ipconfig
+$ip -is [array]
+查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
+对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
+变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
+使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft ."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://frank2016ma.github.io/seattle/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Powershell",
+      "item": "https://frank2016ma.github.io/seattle/posts/powershell/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Powershell",
+  "name": "Powershell",
+  "description": "Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素\nGet-Member -MemberType Properties\nWhere-Object {}\n特殊变量 $_ 来表示管道中的当前对象\n传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.\n为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？\n 因为notepad.exe位于C:Windows\\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.\n 而wordpad.exe 所在的\u0026quot;%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe\u0026quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+\u0026quot;%ProgramFiles%\\Windows NT\\Accessories\u0026quot;.\n默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加'\u0026amp;\u0026lsquo;可以执行命令, 或者启动程序.\n判断一个变量是否为数组\n$ip=ipconfig\n$ip -is [array]\n查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.\n对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.\n变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.\n使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便\n常用的对管道结果进一步处理的命令有：\n Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .",
+  "keywords": [
+    
+  ],
+  "articleBody": "Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素\nGet-Member -MemberType Properties\nWhere-Object {}\n特殊变量 $_ 来表示管道中的当前对象\n传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.\n为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？\n 因为notepad.exe位于C:Windows\\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.\n 而wordpad.exe 所在的\"%ProgramFiles%\\Windows NT\\Accessories\\wordpad.exe\"目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+\"%ProgramFiles%\\Windows NT\\Accessories\".\n默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加'\u0026‘可以执行命令, 或者启动程序.\n判断一个变量是否为数组\n$ip=ipconfig\n$ip -is [array]\n查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.\n对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.\n变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.\n使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便\n常用的对管道结果进一步处理的命令有：\n Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中. ForEach-Object: 针对每一组输入对象执行操作. Format-List: 将输出的格式设置为属性列表, 其中每个属性均各占一行显示. Format-Table: 将输出的格式设置为表. Format-Wide: 将对象的格式设置为只能显示每个对象的一个属性的宽表. Get-Unique: 从排序列表返回唯一项目. Group-Object: 指定的属性包含相同值的组对象. Import-Clixml: 导入 CLIXML 文件, 并在 Windows PowerShell 中创建相应的对象. Measure-Object: 计算对象的数字属性以及字符串对象（如文本文件）中的字符数、单词数和行数. more: 对结果分屏显示. Out-File: 将输出发送到文件. Out-Null: 删除输出, 不将其发送到控制台. Out-Printer: 将输出发送到打印机. Out-String: 将对象作为一列字符串发送到主机. Select-Object: 选择一个对象或一组对象的指定属性.它还可以从对象的数组中选择唯一对象, 也可以从对象数组的开头或末尾选择指定个数的对象. Sort-Object: 按属性值对象进行排序. Tee-Object: 将命令输出保存在文件或变量中, 并将其显示在控制台中. Where-Object: 创建控制哪些对象沿着命令管道传递的筛选器.  在ForEach-Object中, $代表当前对象, 当然也允许通过$,调用该对象支持的方法.\n文件系统 -filter的执行效率明显高于-include, 原因在于-include支持正则表达式, 从内部实现上就更加复杂, 而-filter只支持简单的模式匹配 Get-Content 逐行读取文本的内容, 然后把文本的每一行传递给管道.因此, 在你想读取一个长文件的前10行, 应当适用Select-Object：\nGet-Content $env:windir\\windowsupdate.log | Select-Object -first 10\n使用Select-String可以过滤出文本文件中的信息.下面的命令行会从windowsupdate.log文件中过滤出包含\"added update\"短语的行\nGet-Content $env:windir\\windowsupdate.log | Select-String “Added update”\nDir | ForEach-Object { Rename-Item $.Name $.Name.replace(“abc”, “\") }\nDir $directory*.ps1 | ForEach-Object {$x=0} { Rename-Item $_ (“Script \" + $x + “.ps1”); $x++ } {“Finished!\"}\n##运行Powershell脚本\n使用相对路径, 或者绝对路径\n.\\MyScript.ps1\nE:MyScript.ps1\nSystem.IO.FileInfo\nGetType()\nExtension: 后缀名(.txt, .doc)\nName 有后缀名(.png, .pdf…), BaseName 没有后缀名\nDirectoryName 是String型, Directory是对象\n#\n$files = Get-ChildItem -Path “E:\\AA_OCR\\dm” -Recurse\nforeach($child in $files){\n$child.Name\n$child.fullname\n$child | Get-Member\n$child.Extension\n$child.Exists\n$child.GetType()\n}\n#\n使用power shell 远程连接windows server server配置 Enable-PSRemoting -Force\nwinrm set winrm/config/client ‘@{TrustedHosts=“10.66.22.3”}’\nRestart-Service WinRM\nEnter-PSSession 正则表达式\nrundll32.exe keymgr.dll, KRShowKeyMgr\ncmdkey.exe\n建立, 显示, 并删除已储存的用户名称和密码\n这个命令的语法为:\nCMDKEY [{/add | /generic}:targetname {/smartcard | /user:username {/pass{:password}}} | /delete{:targetname | /ras} | /list{:targetname}]\n范例:\n列出可用的认证:\ncmdkey /list\ncmdkey /list:targetname\n建立一般认证:\n可以用 /generic 参数来取代 /add 参数, 以建立一般认证\n删除现有认证:\ncmdkey /delete:targetname\ncmdkey /delete:Frank_Ma\ncmdkey /generic:Frank_Ma /user:username /pass:password\nRTF(Rich Text Format)\n富文本格式\n",
+  "wordCount" : "276",
+  "inLanguage": "en",
+  "datePublished": "2023-03-27T12:37:09+08:00",
+  "dateModified": "2023-03-27T12:37:09+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "Frank Ma"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://frank2016ma.github.io/seattle/posts/powershell/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "frank_in_seattle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://frank2016ma.github.io/seattle/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://frank2016ma.github.io/seattle/" accesskey="h" title="frank_in_seattle (Alt + H)">frank_in_seattle</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/posts/" title="Posts">
+                    <span>blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/" title="about">
+                    <span>about</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/tags/" title="Tags">
+                    <span>tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Powershell
+    </h1>
+    <div class="post-meta"><span title='2023-03-27 12:37:09 +0800 CST'>March 27, 2023</span>&nbsp;·&nbsp;Frank Ma
+
+</div>
+  </header> 
+  <div class="post-content"><p>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素</p>
+<p>Get-Member -MemberType Properties</p>
+<p>Where-Object {}</p>
+<p>特殊变量 <code>$_</code> 来表示管道中的当前对象</p>
+<p>传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.</p>
+<p>为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？</p>
+<blockquote>
+<p>因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.</p>
+</blockquote>
+<p>而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&quot;%ProgramFiles%\Windows NT\Accessories&quot;.</p>
+<p>默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加'&amp;&lsquo;可以执行命令, 或者启动程序.</p>
+<p>判断一个变量是否为数组</p>
+<p>$ip=ipconfig</p>
+<p>$ip -is [array]</p>
+<p>查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.</p>
+<p>对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.</p>
+<p>变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.</p>
+<p>使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便</p>
+<p>常用的对管道结果进一步处理的命令有：</p>
+<ul>
+<li>Compare-Object: 比较两组对象.</li>
+<li>ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.</li>
+<li>Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中.</li>
+<li>Export-Csv: 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.</li>
+<li>ForEach-Object: 针对每一组输入对象执行操作.</li>
+<li>Format-List: 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.</li>
+<li>Format-Table: 将输出的格式设置为表.</li>
+<li>Format-Wide: 将对象的格式设置为只能显示每个对象的一个属性的宽表.</li>
+<li>Get-Unique: 从排序列表返回唯一项目.</li>
+<li>Group-Object: 指定的属性包含相同值的组对象.</li>
+<li>Import-Clixml: 导入 CLIXML 文件, 并在 Windows PowerShell 中创建相应的对象.</li>
+<li>Measure-Object: 计算对象的数字属性以及字符串对象（如文本文件）中的字符数、单词数和行数.</li>
+<li>more: 对结果分屏显示.</li>
+<li>Out-File: 将输出发送到文件.</li>
+<li>Out-Null: 删除输出, 不将其发送到控制台.</li>
+<li>Out-Printer: 将输出发送到打印机.</li>
+<li>Out-String: 将对象作为一列字符串发送到主机.</li>
+<li>Select-Object: 选择一个对象或一组对象的指定属性.它还可以从对象的数组中选择唯一对象, 也可以从对象数组的开头或末尾选择指定个数的对象.</li>
+<li>Sort-Object: 按属性值对象进行排序.</li>
+<li>Tee-Object: 将命令输出保存在文件或变量中, 并将其显示在控制台中.</li>
+<li>Where-Object: 创建控制哪些对象沿着命令管道传递的筛选器.</li>
+</ul>
+<p>在ForEach-Object中, $<em>代表当前对象, 当然也允许通过$</em>,调用该对象支持的方法.</p>
+<h2 id="文件系统">文件系统<a hidden class="anchor" aria-hidden="true" href="#文件系统">#</a></h2>
+<p>-filter的执行效率明显高于-include, 原因在于-include<strong>支持正则表达式</strong>, 从内部实现上就更加复杂, 而-filter只支持简单的模式匹配
+Get-Content 逐行读取文本的内容, 然后把文本的每一行传递给管道.因此, 在你想读取一个长文件的前10行, 应当适用Select-Object：</p>
+<p>Get-Content $env:windir\windowsupdate.log | Select-Object -first 10</p>
+<p>使用Select-String可以过滤出文本文件中的信息.下面的命令行会从windowsupdate.log文件中过滤出<strong>包含&quot;added update&quot;短语的行</strong></p>
+<p>Get-Content $env:windir\windowsupdate.log | Select-String &ldquo;Added update&rdquo;</p>
+<p>Dir | ForEach-Object { Rename-Item $<em>.Name $</em>.Name.replace(&ldquo;abc&rdquo;, &ldquo;&quot;) }</p>
+<p>Dir $directory*.ps1 | ForEach-Object {$x=0} { Rename-Item $_ (&ldquo;Script &quot; + $x + &ldquo;.ps1&rdquo;); $x++ } {&ldquo;Finished!&quot;}</p>
+<p>##运行Powershell脚本</p>
+<p>使用相对路径, 或者绝对路径</p>
+<p>.\MyScript.ps1</p>
+<p>E:MyScript.ps1</p>
+<p>&lt;#</p>
+<p>System.IO.FileInfo</p>
+<p>GetType()</p>
+<p>Extension: 后缀名(.txt, .doc)</p>
+<p>Name 有后缀名(.png, .pdf&hellip;), BaseName 没有后缀名</p>
+<p>DirectoryName 是String型, Directory是对象</p>
+<p>#&gt;</p>
+<p>&lt;#</p>
+<p>$files = Get-ChildItem -Path &ldquo;E:\AA_OCR\dm&rdquo; -Recurse</p>
+<p>foreach($child in $files){</p>
+<p>$child.Name</p>
+<p>$child.fullname</p>
+<p>$child | Get-Member</p>
+<p>$child.Extension</p>
+<p>$child.Exists</p>
+<p>$child.GetType()</p>
+<p>}</p>
+<p>#&gt;</p>
+<h2 id="使用power-shell-远程连接windows-server">使用power shell 远程连接windows server<a hidden class="anchor" aria-hidden="true" href="#使用power-shell-远程连接windows-server">#</a></h2>
+<h3 id="server配置">server配置<a hidden class="anchor" aria-hidden="true" href="#server配置">#</a></h3>
+<p><code>Enable-PSRemoting -Force</code></p>
+<p>winrm set winrm/config/client &lsquo;@{TrustedHosts=&ldquo;10.66.22.3&rdquo;}&rsquo;</p>
+<p>Restart-Service WinRM</p>
+<h3 id="enter-pssession">Enter-PSSession<a hidden class="anchor" aria-hidden="true" href="#enter-pssession">#</a></h3>
+<p>正则表达式</p>
+<p><code>rundll32.exe keymgr.dll, KRShowKeyMgr</code></p>
+<p><code>cmdkey.exe</code></p>
+<p>建立, 显示, 并删除已储存的用户名称和密码</p>
+<p>这个命令的语法为:</p>
+<p><code>CMDKEY [{/add | /generic}:targetname {/smartcard | /user:username {/pass{:password}}} | /delete{:targetname | /ras} | /list{:targetname}]</code></p>
+<p>范例:</p>
+<p>列出可用的认证:</p>
+<p>cmdkey /list</p>
+<p>cmdkey /list:targetname</p>
+<p><strong>建立一般认证:</strong></p>
+<p>可以用 /generic 参数来取代 /add 参数, 以建立一般认证</p>
+<p>删除现有认证:</p>
+<p>cmdkey /delete:targetname</p>
+<p>cmdkey /delete:Frank_Ma</p>
+<p>cmdkey /generic:Frank_Ma /user:username /pass:password</p>
+<p>RTF(Rich Text Format)</p>
+<p>富文本格式</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://frank2016ma.github.io/seattle/">frank_in_seattle</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

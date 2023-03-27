@@ -6,7 +6,33 @@
     <description>Recent content in Posts on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Mar 2023 10:58:32 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Mar 2023 12:37:09 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powershell</title>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell/</link>
+      <pubDate>Mon, 27 Mar 2023 12:37:09 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell/</guid>
+      <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
+Get-Member -MemberType Properties
+Where-Object {}
+特殊变量 $_ 来表示管道中的当前对象
+传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
+为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+ 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序.
+判断一个变量是否为数组
+$ip=ipconfig
+$ip -is [array]
+查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
+对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
+变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
+使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .</description>
+    </item>
+    
     <item>
       <title>Linux Command Usage</title>
       <link>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</link>
