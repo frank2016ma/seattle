@@ -2,51 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://frank2016ma.github.io/seattle/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/everything-search-tool/</loc>
+    <lastmod>2023-04-03T22:28:49+08:00</lastmod>
+  </url><url>
+    <loc>http://123.60.148.26:1313/seattle/</loc>
+    <lastmod>2023-04-03T22:28:49+08:00</lastmod>
+  </url><url>
+    <loc>http://123.60.148.26:1313/seattle/posts/</loc>
+    <lastmod>2023-04-03T22:28:49+08:00</lastmod>
+  </url><url>
+    <loc>http://123.60.148.26:1313/seattle/posts/winget/</loc>
+    <lastmod>2023-04-03T22:17:25+08:00</lastmod>
+  </url><url>
+    <loc>http://123.60.148.26:1313/seattle/posts/powershell-history/</loc>
     <lastmod>2023-04-02T11:42:36+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/</loc>
-    <lastmod>2023-04-02T11:42:36+08:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/powershell-history/</loc>
-    <lastmod>2023-04-02T11:42:36+08:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/bookmarklet/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/bookmarklet/</loc>
     <lastmod>2023-03-27T17:21:51+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/javascript/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/javascript/</loc>
     <lastmod>2023-03-27T17:21:51+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/</loc>
     <lastmod>2023-03-27T17:21:51+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/powershell/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/powershell/</loc>
     <lastmod>2023-03-27T12:37:09+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/linux-command-usage/</loc>
     <lastmod>2023-03-26T10:58:32+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/c#/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/c#/</loc>
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/rpa/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/rpa/</loc>
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/uipath/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/uipath/</loc>
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/uipath/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/uipath/</loc>
     <lastmod>2023-03-25T22:59:00+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/tools/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/tools/</loc>
     <lastmod>2023-03-15T21:49:19+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/vscode/</loc>
+    <loc>http://123.60.148.26:1313/seattle/tags/vscode/</loc>
     <lastmod>2023-03-15T21:49:19+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/vscode-keys/</loc>
+    <loc>http://123.60.148.26:1313/seattle/posts/vscode-keys/</loc>
     <lastmod>2023-03-15T21:49:19+08:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/</loc>
+    <loc>http://123.60.148.26:1313/seattle/categories/</loc>
   </url>
 </urlset>
