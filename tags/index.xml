@@ -2,62 +2,62 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on frank_in_seattle</title>
-    <link>http://123.60.148.26:1313/seattle/tags/</link>
+    <link>https://frank2016ma.github.io/seattle/tags/</link>
     <description>Recent content in Tags on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Mar 2023 17:21:51 +0800</lastBuildDate><atom:link href="http://123.60.148.26:1313/seattle/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 Mar 2023 17:21:51 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>javascript</title>
-      <link>http://123.60.148.26:1313/seattle/tags/javascript/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/javascript/</link>
       <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/javascript/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>C#</title>
-      <link>http://123.60.148.26:1313/seattle/tags/c#/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/c#/</link>
       <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/c#/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RPA</title>
-      <link>http://123.60.148.26:1313/seattle/tags/rpa/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/rpa/</link>
       <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/rpa/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/rpa/</guid>
       <description></description>
     </item>
     
     <item>
       <title>uipath</title>
-      <link>http://123.60.148.26:1313/seattle/tags/uipath/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/uipath/</link>
       <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/uipath/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/uipath/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tools</title>
-      <link>http://123.60.148.26:1313/seattle/tags/tools/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/tools/</link>
       <pubDate>Wed, 15 Mar 2023 21:49:19 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/tools/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/tools/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vscode</title>
-      <link>http://123.60.148.26:1313/seattle/tags/vscode/</link>
+      <link>https://frank2016ma.github.io/seattle/tags/vscode/</link>
       <pubDate>Wed, 15 Mar 2023 21:49:19 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/tags/vscode/</guid>
+      <guid>https://frank2016ma.github.io/seattle/tags/vscode/</guid>
       <description></description>
     </item>
     

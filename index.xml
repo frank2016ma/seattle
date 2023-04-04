@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>frank_in_seattle</title>
-    <link>http://123.60.148.26:1313/seattle/</link>
+    <link>https://frank2016ma.github.io/seattle/</link>
     <description>Recent content on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="http://123.60.148.26:1313/seattle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Everything Search Tool</title>
-      <link>http://123.60.148.26:1313/seattle/posts/everything-search-tool/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
       <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/everything-search-tool/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
       <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
 如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
@@ -31,19 +31,19 @@ UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和
     
     <item>
       <title>Winget</title>
-      <link>http://123.60.148.26:1313/seattle/posts/winget/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/winget/</link>
       <pubDate>Mon, 03 Apr 2023 22:17:25 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/winget/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/winget/</guid>
       <description></description>
     </item>
     
     <item>
       <title>PowerShell History</title>
-      <link>http://123.60.148.26:1313/seattle/posts/powershell-history/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
       <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/powershell-history/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
       <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
 PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
 但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
@@ -59,10 +59,10 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     
     <item>
       <title>Bookmarklet</title>
-      <link>http://123.60.148.26:1313/seattle/posts/bookmarklet/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
       <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/bookmarklet/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
       <description>阮一峰的Bookmarklet编写指南
 浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录
 javascript:(function(){document.querySelector(&amp;#39;#uCode&amp;#39;).value=&amp;#39;username&amp;#39;;document.querySelector(&amp;#39;#pW&amp;#39;).value=&amp;#39;password&amp;#39;;document.querySelector(&amp;#39;#login_btn%20%3E%20button.login&amp;#39;).click();})(); </description>
@@ -70,10 +70,10 @@ javascript:(function(){document.querySelector(&amp;#39;#uCode&amp;#39;).value=&a
     
     <item>
       <title>Powershell</title>
-      <link>http://123.60.148.26:1313/seattle/posts/powershell/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell/</link>
       <pubDate>Mon, 27 Mar 2023 12:37:09 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/powershell/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell/</guid>
       <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
 Get-Member -MemberType Properties
 Where-Object {}
@@ -96,10 +96,10 @@ $ip -is [array]
     
     <item>
       <title>Linux Command Usage</title>
-      <link>http://123.60.148.26:1313/seattle/posts/linux-command-usage/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</link>
       <pubDate>Sun, 26 Mar 2023 10:58:32 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/linux-command-usage/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</guid>
       <description>tell me about the linux command `grep` usage
  The grep command in Linux is a powerful utility used for searching and filtering text in files or streams. It is a versatile tool that can be used to search for specific patterns or expressions in text files or even output from other commands. Here are some of the most common uses of the grep command:
   Search for a pattern in a file: The basic syntax for using grep to search for a pattern in a file is as follows:</description>
@@ -107,10 +107,10 @@ $ip -is [array]
     
     <item>
       <title>uipath-note</title>
-      <link>http://123.60.148.26:1313/seattle/posts/uipath/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/uipath/</link>
       <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/uipath/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/uipath/</guid>
       <description>uipath Activity Packages  Activity package versions are independent of Studio, Robot, or Orchestrator versions, except for Orchestrator activities. For example, the Start Job activity, introduced in v2018.1, only works on v2018.1 Robots or newer.
 We support backward compatibility, For example, a project created with Studio v2018.4 should work on a v2019.10 Robot or newer.
 We do not support forward compatibility, For example, a project created in Studio v2019.10 might not work with a v2018.</description>
@@ -118,10 +118,10 @@ We do not support forward compatibility, For example, a project created in Studi
     
     <item>
       <title>vscode key shortcuts</title>
-      <link>http://123.60.148.26:1313/seattle/posts/vscode-keys/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
       <pubDate>Wed, 15 Mar 2023 21:49:19 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/vscode-keys/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
       <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
     </item>
     

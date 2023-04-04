@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>RPA on frank_in_seattle</title>
-    <link>http://123.60.148.26:1313/seattle/tags/rpa/</link>
+    <link>https://frank2016ma.github.io/seattle/tags/rpa/</link>
     <description>Recent content in RPA on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Mar 2023 22:59:00 +0800</lastBuildDate><atom:link href="http://123.60.148.26:1313/seattle/tags/rpa/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Mar 2023 22:59:00 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/rpa/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>uipath-note</title>
-      <link>http://123.60.148.26:1313/seattle/posts/uipath/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/uipath/</link>
       <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
       
-      <guid>http://123.60.148.26:1313/seattle/posts/uipath/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/uipath/</guid>
       <description>uipath Activity Packages  Activity package versions are independent of Studio, Robot, or Orchestrator versions, except for Orchestrator activities. For example, the Start Job activity, introduced in v2018.1, only works on v2018.1 Robots or newer.
 We support backward compatibility, For example, a project created with Studio v2018.4 should work on a v2019.10 Robot or newer.
 We do not support forward compatibility, For example, a project created in Studio v2019.10 might not work with a v2018.</description>
