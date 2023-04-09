@@ -6,7 +6,16 @@
     <description>Recent content in Posts on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2023 20:27:59 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gpt_mirror</title>
+      <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
+      <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
+      <description>gpt-mirror</description>
+    </item>
+    
     <item>
       <title>Everything Search Tool</title>
       <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
