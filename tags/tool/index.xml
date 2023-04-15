@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tool on frank_in_seattle</title>
+    <link>https://frank2016ma.github.io/seattle/tags/tool/</link>
+    <description>Recent content in tool on frank_in_seattle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything Search Tool</title>
+      <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
+      <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
+      <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
+UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
+以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
+在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
+  点击常规页面。
+  检查 Everything 服务。
+  取消以管理员方式运行。
+  点击确定。
+  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
+  重启 Everything。
+  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
+如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PowerShell on frank_in_seattle</title>
+    <link>https://frank2016ma.github.io/seattle/tags/powershell/</link>
+    <description>Recent content in PowerShell on frank_in_seattle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Apr 2023 11:42:36 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell History</title>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
+      <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
+      <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
+PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
+但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
+这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
+Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
+可以通过以下命令来实现查看所有命令历史记录
+Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
+Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
+而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
+utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description>
+    </item>
+    
+  </channel>
+</rss>

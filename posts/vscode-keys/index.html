@@ -165,17 +165,22 @@
         <ul id="menu">
             <li>
                 <a href="https://frank2016ma.github.io/seattle/posts/" title="Posts">
-                    <span>blog</span>
+                    <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://frank2016ma.github.io/seattle/" title="about">
-                    <span>about</span>
+                <a href="https://frank2016ma.github.io/seattle/categroies/" title="Categroies">
+                    <span>Categroies</span>
                 </a>
             </li>
             <li>
                 <a href="https://frank2016ma.github.io/seattle/tags/" title="Tags">
-                    <span>tags</span>
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/archives/" title="Archives">
+                    <span>Archives</span>
                 </a>
             </li>
         </ul>
@@ -185,14 +190,15 @@
 
 <article class="post-single">
   <header class="post-header">
-    
+    <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
     <h1 class="post-title">
       vscode key shortcuts
     </h1>
-    <div class="post-meta"><span title='2023-03-15 21:49:19 +0800 CST'>March 15, 2023</span>&nbsp;·&nbsp;Frank Ma
+    <div class="post-meta"><span title='2023-03-15 21:49:19 +0800 CST'>March 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Frank Ma
 
 </div>
   </header> 
+
   <div class="post-content"><table>
 <thead>
 <tr>
@@ -346,6 +352,14 @@
       <li><a href="https://frank2016ma.github.io/seattle/tags/tools/">tools</a></li>
       <li><a href="https://frank2016ma.github.io/seattle/tags/vscode/">vscode</a></li>
     </ul>
+<nav class="paginav">
+  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/powershell-history/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>PowerShell History</span>
+  </a>
+</nav>
+
   </footer>
 </article>
     </main>
@@ -417,6 +431,53 @@
         }
     })
 
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 </script>
 </body>
 

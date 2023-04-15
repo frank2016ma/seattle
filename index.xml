@@ -6,23 +6,14 @@
     <description>Recent content on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Apr 2023 20:36:08 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo_blog</title>
-      <link>https://frank2016ma.github.io/seattle/posts/hugo_blog/</link>
-      <pubDate>Sun, 09 Apr 2023 20:36:08 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/hugo_blog/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 09 Apr 2023 20:27:59 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gpt_mirror</title>
       <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
       <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
-      <description>gpt-mirror</description>
+      <description>Gpt-mirror</description>
     </item>
     
     <item>
@@ -67,65 +58,6 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     </item>
     
     <item>
-      <title>Bookmarklet</title>
-      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
-      <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
-      <description>阮一峰的Bookmarklet编写指南
-浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录
-javascript:(function(){document.querySelector(&amp;#39;#uCode&amp;#39;).value=&amp;#39;username&amp;#39;;document.querySelector(&amp;#39;#pW&amp;#39;).value=&amp;#39;password&amp;#39;;document.querySelector(&amp;#39;#login_btn%20%3E%20button.login&amp;#39;).click();})(); </description>
-    </item>
-    
-    <item>
-      <title>Powershell</title>
-      <link>https://frank2016ma.github.io/seattle/posts/powershell/</link>
-      <pubDate>Mon, 27 Mar 2023 12:37:09 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/powershell/</guid>
-      <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-Where-Object {}
-特殊变量 $_ 来表示管道中的当前对象
-传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
-为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
- 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
-默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序.
-判断一个变量是否为数组
-$ip=ipconfig
-$ip -is [array]
-查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
-对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
-变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
-使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
-常用的对管道结果进一步处理的命令有：
- Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .</description>
-    </item>
-    
-    <item>
-      <title>Linux Command Usage</title>
-      <link>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</link>
-      <pubDate>Sun, 26 Mar 2023 10:58:32 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/linux-command-usage/</guid>
-      <description>tell me about the linux command `grep` usage
- The grep command in Linux is a powerful utility used for searching and filtering text in files or streams. It is a versatile tool that can be used to search for specific patterns or expressions in text files or even output from other commands. Here are some of the most common uses of the grep command:
-  Search for a pattern in a file: The basic syntax for using grep to search for a pattern in a file is as follows:</description>
-    </item>
-    
-    <item>
-      <title>uipath-note</title>
-      <link>https://frank2016ma.github.io/seattle/posts/uipath/</link>
-      <pubDate>Sat, 25 Mar 2023 22:59:00 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/uipath/</guid>
-      <description>uipath Activity Packages  Activity package versions are independent of Studio, Robot, or Orchestrator versions, except for Orchestrator activities. For example, the Start Job activity, introduced in v2018.1, only works on v2018.1 Robots or newer.
-We support backward compatibility, For example, a project created with Studio v2018.4 should work on a v2019.10 Robot or newer.
-We do not support forward compatibility, For example, a project created in Studio v2019.10 might not work with a v2018.</description>
-    </item>
-    
-    <item>
       <title>vscode key shortcuts</title>
       <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
       <pubDate>Wed, 15 Mar 2023 21:49:19 +0800</pubDate>
@@ -133,6 +65,7 @@ We do not support forward compatibility, For example, a project created in Studi
       <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
       <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
     </item>
+    
     
   </channel>
 </rss>
