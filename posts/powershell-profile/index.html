@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>PowerShell Profile | frank_in_seattle</title>
+<meta name="keywords" content="PowerShell">
+<meta name="description" content="简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
+配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
+导入第三方库 Terminal-Icons 美化终端
+Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令
+# 删除原有的别名 history # PowerShell 5.1版本需使用 Remove-Item 删除 # 更高版本的 PowerShell 可直接使用 Remove-Alias 命令 Remove-Item -Path Alias:history function history{ Get-Content (Get-PSReadlineOption).">
+<meta name="author" content="Frank Ma">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/powershell-profile/">
+<link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://frank2016ma.github.io/seattle/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://frank2016ma.github.io/seattle/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://frank2016ma.github.io/seattle/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://frank2016ma.github.io/seattle/apple-touch-icon.png">
+<link rel="mask-icon" href="https://frank2016ma.github.io/seattle/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="PowerShell Profile" />
+<meta property="og:description" content="简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
+配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
+导入第三方库 Terminal-Icons 美化终端
+Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令
+# 删除原有的别名 history # PowerShell 5.1版本需使用 Remove-Item 删除 # 更高版本的 PowerShell 可直接使用 Remove-Alias 命令 Remove-Item -Path Alias:history function history{ Get-Content (Get-PSReadlineOption)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/powershell-profile/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PowerShell Profile"/>
+<meta name="twitter:description" content="简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
+配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
+导入第三方库 Terminal-Icons 美化终端
+Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令
+# 删除原有的别名 history # PowerShell 5.1版本需使用 Remove-Item 删除 # 更高版本的 PowerShell 可直接使用 Remove-Alias 命令 Remove-Item -Path Alias:history function history{ Get-Content (Get-PSReadlineOption)."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://frank2016ma.github.io/seattle/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "PowerShell Profile",
+      "item": "https://frank2016ma.github.io/seattle/posts/powershell-profile/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "PowerShell Profile",
+  "name": "PowerShell Profile",
+  "description": "简短说明 介绍如何创建和使用 PowerShell 配置文件\n长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。\n$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。\n其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径\n$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。\n特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。\n若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。\n配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。\n导入第三方库 Terminal-Icons 美化终端\nImport-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令\n# 删除原有的别名 history # PowerShell 5.1版本需使用 Remove-Item 删除 # 更高版本的 PowerShell 可直接使用 Remove-Alias 命令 Remove-Item -Path Alias:history function history{ Get-Content (Get-PSReadlineOption).",
+  "keywords": [
+    "PowerShell"
+  ],
+  "articleBody": "简短说明 介绍如何创建和使用 PowerShell 配置文件\n长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。\n$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。\n其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径\n$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。\n特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。\n若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。\n配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。\n导入第三方库 Terminal-Icons 美化终端\nImport-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令\n# 删除原有的别名 history # PowerShell 5.1版本需使用 Remove-Item 删除 # 更高版本的 PowerShell 可直接使用 Remove-Alias 命令 Remove-Item -Path Alias:history function history{ Get-Content (Get-PSReadlineOption).HistorySavePath -Encoding utf8 } 如果配置文件首次设置后, 打开 PowerShell 时显示\n无法加载文件 C:\\Users\\Ma\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。\n需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件\nSet-ExecutionPolicy RemoteSigned 关于配置文件 - PowerShell | Microsoft Learn\n",
+  "wordCount" : "101",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Frank Ma"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://frank2016ma.github.io/seattle/posts/powershell-profile/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "frank_in_seattle",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://frank2016ma.github.io/seattle/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://frank2016ma.github.io/seattle/" accesskey="h" title="frank_in_seattle (Alt + H)">frank_in_seattle</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/categroies/" title="Categroies">
+                    <span>Categroies</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://frank2016ma.github.io/seattle/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
+    <h1 class="post-title">
+      PowerShell Profile
+    </h1>
+    <div class="post-meta">1 min&nbsp;·&nbsp;Frank Ma
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#%e7%ae%80%e7%9f%ad%e8%af%b4%e6%98%8e" aria-label="简短说明">简短说明</a></li>
+                <li>
+                    <a href="#%e9%95%bf%e8%af%b4%e6%98%8e" aria-label="长说明">长说明</a></li>
+                <li>
+                    <a href="#profile-%e5%8f%98%e9%87%8f" aria-label="$PROFILE 变量"><code>$PROFILE</code> 变量</a></li>
+                <li>
+                    <a href="#%e5%88%9b%e5%bb%ba%e7%bc%96%e8%be%91%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" aria-label="创建、编辑配置文件">创建、编辑配置文件</a></li>
+                <li>
+                    <a href="#%e4%bd%bf%e7%94%a8%e9%85%8d%e7%bd%ae%e6%96%87%e4%bb%b6" aria-label="使用配置文件">使用配置文件</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="简短说明">简短说明<a hidden class="anchor" aria-hidden="true" href="#简短说明">#</a></h2>
+<p>介绍如何创建和使用 PowerShell 配置文件</p>
+<h2 id="长说明">长说明<a hidden class="anchor" aria-hidden="true" href="#长说明">#</a></h2>
+<p>PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。
+PowerShell 支持用户和主机程序的多个配置文件。 <strong>但是，它不会为你创建配置文件。</strong></p>
+<h2 id="profile-变量"><code>$PROFILE</code> 变量<a hidden class="anchor" aria-hidden="true" href="#profile-变量">#</a></h2>
+<p>变量 <code>$PROFILE</code> 存储 <code>当前用户，当前主机</code> 配置文件 的路径。</p>
+<p>其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$PROFILE | Get-Member -Type NoteProperty
+</code></pre></div><h2 id="创建编辑配置文件">创建、编辑配置文件<a hidden class="anchor" aria-hidden="true" href="#创建编辑配置文件">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">notepad $PROFILE
+</code></pre></div><h2 id="使用配置文件">使用配置文件<a hidden class="anchor" aria-hidden="true" href="#使用配置文件">#</a></h2>
+<p>在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。</p>
+<p>特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。</p>
+<p>若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。</p>
+<p>配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。</p>
+<p>导入第三方库 <a href="https://github.com/devblackops/Terminal-Icons">Terminal-Icons</a> 美化终端</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Import-Module Terminal-Icons
+</code></pre></div><p>保存常用函数, 如 将 <code>history</code> 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell"><span style="color:#75715e"># 删除原有的别名 history</span>
+<span style="color:#75715e"># PowerShell 5.1版本需使用 Remove-Item 删除</span>
+<span style="color:#75715e"># 更高版本的 PowerShell 可直接使用 Remove-Alias 命令</span>
+Remove-Item -Path <span style="color:#66d9ef">Alias</span><span style="color:#960050;background-color:#1e0010">:</span>history
+<span style="color:#66d9ef">function</span> history{
+    Get-Content (Get-PSReadlineOption).HistorySavePath -Encoding utf8
+}
+</code></pre></div><p>如果配置文件首次设置后, 打开 PowerShell 时显示</p>
+<p><em>无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。</em></p>
+<p>需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Set-ExecutionPolicy RemoteSigned
+</code></pre></div><p><a href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-5.1">关于配置文件 - PowerShell | Microsoft Learn</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://frank2016ma.github.io/seattle/tags/powershell/">PowerShell</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/powershell-history/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>PowerShell History</span>
+  </a>
+  <a class="next" href="https://frank2016ma.github.io/seattle/posts/vscode-keys/">
+    <span class="title">Next »</span>
+    <br>
+    <span>vscode key shortcuts</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://frank2016ma.github.io/seattle/">frank_in_seattle</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

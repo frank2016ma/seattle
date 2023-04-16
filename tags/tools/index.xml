@@ -5,12 +5,11 @@
     <link>https://frank2016ma.github.io/seattle/tags/tools/</link>
     <description>Recent content in tools on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 15 Mar 2023 21:49:19 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vscode key shortcuts</title>
       <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
-      <pubDate>Wed, 15 Mar 2023 21:49:19 +0800</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
       <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
