@@ -7,6 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hugo Image</title>
+      <link>https://frank2016ma.github.io/seattle/posts/hugo-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/hugo-image/</guid>
+      <description>初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
+markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)</description>
+    </item>
+    
+    <item>
       <title>Win11 Brightness</title>
       <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
