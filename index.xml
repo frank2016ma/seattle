@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>frank_in_seattle</title>
-    <link>http://frankinseattle.top/seattle/</link>
+    <link>https://frank2016ma.github.io/seattle/</link>
     <description>Recent content on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 08:43:25 +0800</lastBuildDate><atom:link href="http://frankinseattle.top/seattle/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 08:43:25 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About-RPA</title>
-      <link>http://frankinseattle.top/seattle/posts/about-rpa/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/about-rpa/</link>
       <pubDate>Sat, 15 Apr 2023 08:43:25 +0800</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/about-rpa/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/about-rpa/</guid>
       <description>1. 给出RPA工具的三个优点  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。(并非指不会报错) 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。  2. 实施RPA流程有哪几个步骤？  业务流程分析：首先需要对需要自动化的业务流程进行详细的分析，确定自动化的可行性和优先级。 流程设计：根据业务流程分析的结果，设计自动化流程，包括流程图设计、自动化脚本编写、数据处理等。 机器人部署：选择合适的机器人工具，并进行部署和配置，包括安装机器人软件、配置机器人环境、设置机器人权限等。 测试和验证：进行自动化流程的测试和验证，包括验证流程的正确性、数据的准确性和完整性等。 上线和运维：将自动化流程上线，并进行监控和维护，包括定期检查机器人运行状态、处理异常情况、更新自动化脚本等。 持续优化：根据实际运行情况，对自动化流程进行持续优化，包括优化自动化脚本、增加自动化流程等，以提高效率和准确性。 以上步骤可以根据实际情况进行调整和修改，但总体流程应该是类似的。  3. 使用RPA有什么好处？  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。 提高员工满意度：RPA可以解放员工手动操作的重复性工作，使他们可以更专注于高价值的工作，从而提高员工满意度和工作积极性。 提高业务灵活性：RPA可以快速适应不同的业务需求和变化，从而提高业务灵活性和响应速度。 提高数据安全性：RPA可以通过权限控制和审计功能来保证数据的安全性，从而降低数据泄露和安全风险。  4. RPA和宏之间的主要区别是什么？   目的不同：RPA是为了实现自动化流程，减少人工干预，提高效率和准确性，而宏则是为了简化重复性操作，提高用户体验。
   实现方式不同：RPA是通过机器人自动执行流程，而宏是通过对软件进行编程来实现自动化操作。
   灵活性不同：RPA可以自动化各种软件和系统，包括ERP、CRM、OA等，而宏通常只能应用于特定软件或应用程序。
@@ -24,19 +24,19 @@
     
     <item>
       <title>Gpt_mirror</title>
-      <link>http://frankinseattle.top/seattle/posts/gpt_mirror/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
       <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/gpt_mirror/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
       <description>Gpt-mirror</description>
     </item>
     
     <item>
       <title>Everything Search Tool</title>
-      <link>http://frankinseattle.top/seattle/posts/everything-search-tool/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
       <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/everything-search-tool/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
       <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
 如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
@@ -55,10 +55,10 @@ UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和
     
     <item>
       <title>PowerShell History</title>
-      <link>http://frankinseattle.top/seattle/posts/powershell-history/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
       <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/powershell-history/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
       <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
 PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
 但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
@@ -75,20 +75,20 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     
     <item>
       <title>Microsoft Excel Scroll</title>
-      <link>http://frankinseattle.top/seattle/posts/microsoft-excel-scroll/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/microsoft-excel-scroll/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
       <description>浏览器以及 WPS Office 支持 Shift+ 鼠标滚轮 实现横向滚动
 Microsoft Office 的 Excel 横向滚动的方式是 Ctrl+ Shift+ 鼠标滚轮</description>
     </item>
     
     <item>
       <title>PowerShell Profile</title>
-      <link>http://frankinseattle.top/seattle/posts/powershell-profile/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/powershell-profile/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
       <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
 长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
 $PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
@@ -106,19 +106,19 @@ Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看
     
     <item>
       <title>vscode key shortcuts</title>
-      <link>http://frankinseattle.top/seattle/posts/vscode-keys/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/vscode-keys/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
       <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
     </item>
     
     <item>
       <title>Win11 Brightness</title>
-      <link>http://frankinseattle.top/seattle/posts/win11-brightness/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/win11-brightness/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
       <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
 解决方法:
 打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗</description>

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>others on frank_in_seattle</title>
-    <link>http://frankinseattle.top/seattle/tags/others/</link>
+    <link>https://frank2016ma.github.io/seattle/tags/others/</link>
     <description>Recent content in others on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://frankinseattle.top/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Win11 Brightness</title>
-      <link>http://frankinseattle.top/seattle/posts/win11-brightness/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/win11-brightness/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
       <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
 解决方法:
 打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗</description>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>PowerShell on frank_in_seattle</title>
-    <link>http://frankinseattle.top/seattle/tags/powershell/</link>
+    <link>https://frank2016ma.github.io/seattle/tags/powershell/</link>
     <description>Recent content in PowerShell on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Apr 2023 11:42:36 +0800</lastBuildDate><atom:link href="http://frankinseattle.top/seattle/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Apr 2023 11:42:36 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PowerShell History</title>
-      <link>http://frankinseattle.top/seattle/posts/powershell-history/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
       <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/powershell-history/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
       <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
 PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
 但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
@@ -28,10 +28,10 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     
     <item>
       <title>PowerShell Profile</title>
-      <link>http://frankinseattle.top/seattle/posts/powershell-profile/</link>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://frankinseattle.top/seattle/posts/powershell-profile/</guid>
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
       <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
 长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
 $PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
