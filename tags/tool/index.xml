@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>tool on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/tags/tool/</link>
+    <link>http://frankinseattle.top/seattle/tags/tool/</link>
     <description>Recent content in tool on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="http://frankinseattle.top/seattle/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Everything Search Tool</title>
-      <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
+      <link>http://frankinseattle.top/seattle/posts/everything-search-tool/</link>
       <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
       
-      <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
+      <guid>http://frankinseattle.top/seattle/posts/everything-search-tool/</guid>
       <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
 如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
