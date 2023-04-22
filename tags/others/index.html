@@ -138,15 +138,40 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
-    <h2>Hugo Image
+    <h2>ASCII Diagrams
     </h2>
   </header>
   <div class="entry-content">
-    <p>初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
-markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)</p>
+    <p>字符换渲染 Github
+字符换编辑</p>
   </div>
   <footer class="entry-footer">1 min&nbsp;·&nbsp;Frank Ma</footer>
-  <a class="entry-link" aria-label="post link to Hugo Image" href="https://frank2016ma.github.io/seattle/posts/hugo-image/"></a>
+  <a class="entry-link" aria-label="post link to ASCII Diagrams" href="https://frank2016ma.github.io/seattle/posts/ascii-diagrams/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Hugo Front Matter
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>TOMLidentified by opening and closing &#43;&#43;&#43;. YAMLidentified by opening and closing —. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo</p>
+  </div>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;Frank Ma</footer>
+  <a class="entry-link" aria-label="post link to Hugo Front Matter" href="https://frank2016ma.github.io/seattle/posts/hugo-front-matter/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Powershell Remove Duplicate Files
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
+$root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </p>
+  </div>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;Frank Ma</footer>
+  <a class="entry-link" aria-label="post link to Powershell Remove Duplicate Files" href="https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/"></a>
 </article>
 
 <article class="post-entry tag-entry"> 
@@ -157,7 +182,8 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)</p>
   <div class="entry-content">
     <p>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
 解决方法:
-打开 设置 &gt; 系统 &gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗</p>
+打开 设置 &gt; 系统 &gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
+  </p>
   </div>
   <footer class="entry-footer">1 min&nbsp;·&nbsp;Frank Ma</footer>
   <a class="entry-link" aria-label="post link to Win11 Brightness" href="https://frank2016ma.github.io/seattle/posts/win11-brightness/"></a>

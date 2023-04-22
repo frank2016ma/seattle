@@ -5,12 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Hugo Image | frank_in_seattle</title>
-<meta name="keywords" content="others">
-<meta name="description" content="初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
-markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)">
+<title>MIME | frank_in_seattle</title>
+<meta name="keywords" content="HTML">
+<meta name="description" content="MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
+MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+语法 MIME 类型通用结构：
+ type/subtype
+ MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写。
+两种主要的 MIME 类型在默认类型中扮演了重要的角色：
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程">
 <meta name="author" content="Frank Ma">
-<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/hugo-image/">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/mime/">
 <link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -57,18 +64,32 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)">
         }
 
     </style>
-</noscript><meta property="og:title" content="Hugo Image" />
-<meta property="og:description" content="初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
-markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)" />
+</noscript><meta property="og:title" content="MIME" />
+<meta property="og:description" content="MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
+MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+语法 MIME 类型通用结构：
+ type/subtype
+ MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写。
+两种主要的 MIME 类型在默认类型中扮演了重要的角色：
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/hugo-image/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/mime/" /><meta property="article:section" content="posts" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo Image"/>
-<meta name="twitter:description" content="初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
-markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)"/>
+<meta name="twitter:title" content="MIME"/>
+<meta name="twitter:description" content="MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
+MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+语法 MIME 类型通用结构：
+ type/subtype
+ MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写。
+两种主要的 MIME 类型在默认类型中扮演了重要的角色：
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程"/>
 
 
 <script type="application/ld+json">
@@ -85,8 +106,8 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)"/>
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Hugo Image",
-      "item": "https://frank2016ma.github.io/seattle/posts/hugo-image/"
+      "name": "MIME",
+      "item": "https://frank2016ma.github.io/seattle/posts/mime/"
     }
   ]
 }
@@ -95,14 +116,14 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)"/>
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Hugo Image",
-  "name": "Hugo Image",
-  "description": "初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:\nmarkdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)",
+  "headline": "MIME",
+  "name": "MIME",
+  "description": "MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。\nMIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。\n浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。\n语法 MIME 类型通用结构：\n type/subtype\n MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。\nMIME类型对大小写不敏感，但是传统写法都是小写。\n两种主要的 MIME 类型在默认类型中扮演了重要的角色：\n text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程",
   "keywords": [
-    "others"
+    "HTML"
   ],
-  "articleBody": "初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:\nmarkdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)\n",
-  "wordCount" : "7",
+  "articleBody": "MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。\nMIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。\n浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。\n语法 MIME 类型通用结构：\n type/subtype\n MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。\nMIME类型对大小写不敏感，但是传统写法都是小写。\n两种主要的 MIME 类型在默认类型中扮演了重要的角色：\n text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程\n",
+  "wordCount" : "40",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -112,7 +133,7 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)"/>
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://frank2016ma.github.io/seattle/posts/hugo-image/"
+    "@id": "https://frank2016ma.github.io/seattle/posts/mime/"
   },
   "publisher": {
     "@type": "Organization",
@@ -195,33 +216,67 @@ markdown 文件中的路径是 ![](/seattle/image/snip-win11-brightness.png)"/>
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
     <h1 class="post-title">
-      Hugo Image
+      MIME
     </h1>
     <div class="post-meta">1 min&nbsp;·&nbsp;Frank Ma
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
 
-  <div class="post-content"><p>初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:</p>
-<p>markdown 文件中的路径是 <code>![](/seattle/image/snip-win11-brightness.png)</code></p>
+        <div class="inner"><ul>
+                <li>
+                    <a href="#mime-%e7%b1%bb%e5%9e%8b" aria-label="MIME 类型">MIME 类型</a><ul>
+                        
+                <li>
+                    <a href="#%e8%af%ad%e6%b3%95" aria-label="语法">语法</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="mime-类型">MIME 类型<a hidden class="anchor" aria-hidden="true" href="#mime-类型">#</a></h1>
+<p>MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。</p>
+<p>MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。</p>
+<p>浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。</p>
+<h2 id="语法">语法<a hidden class="anchor" aria-hidden="true" href="#语法">#</a></h2>
+<p>MIME 类型通用结构：</p>
+<blockquote>
+<p>type/subtype</p>
+</blockquote>
+<p>MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。</p>
+<p>MIME类型对大小写不敏感，但是传统写法都是小写。</p>
+<p>两种主要的 MIME 类型在默认类型中扮演了重要的角色：</p>
+<ul>
+<li>text/plain 表示文本文件的默认值。</li>
+<li>application/octet-stream 表示所有其他情况的默认值。</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>摘抄自 <a href="https://www.runoob.com/http/mime-types.html">MIME 类型 | 菜鸟教程</a></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://frank2016ma.github.io/seattle/tags/others/">others</a></li>
+      <li><a href="https://frank2016ma.github.io/seattle/tags/html/">HTML</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/powershell-history/">
+  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/">
     <span class="title">« Prev</span>
     <br>
-    <span>PowerShell History</span>
+    <span>Microsoft Excel Scroll</span>
   </a>
-  <a class="next" href="https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/">
+  <a class="next" href="https://frank2016ma.github.io/seattle/posts/powershell-profile/">
     <span class="title">Next »</span>
     <br>
-    <span>Microsoft Excel Scroll</span>
+    <span>PowerShell Profile</span>
   </a>
 </nav>
 
