@@ -6,11 +6,11 @@
     <description>Recent content in Posts on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 08:43:25 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About-RPA</title>
       <link>https://frank2016ma.github.io/seattle/posts/about-rpa/</link>
-      <pubDate>Sat, 15 Apr 2023 08:43:25 +0800</pubDate>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/about-rpa/</guid>
       <description>1. 给出RPA工具的三个优点  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。(并非指不会报错) 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。  2. 实施RPA流程有哪几个步骤？  业务流程分析：首先需要对需要自动化的业务流程进行详细的分析，确定自动化的可行性和优先级。 流程设计：根据业务流程分析的结果，设计自动化流程，包括流程图设计、自动化脚本编写、数据处理等。 机器人部署：选择合适的机器人工具，并进行部署和配置，包括安装机器人软件、配置机器人环境、设置机器人权限等。 测试和验证：进行自动化流程的测试和验证，包括验证流程的正确性、数据的准确性和完整性等。 上线和运维：将自动化流程上线，并进行监控和维护，包括定期检查机器人运行状态、处理异常情况、更新自动化脚本等。 持续优化：根据实际运行情况，对自动化流程进行持续优化，包括优化自动化脚本、增加自动化流程等，以提高效率和准确性。 以上步骤可以根据实际情况进行调整和修改，但总体流程应该是类似的。  3. 使用RPA有什么好处？  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。 提高员工满意度：RPA可以解放员工手动操作的重复性工作，使他们可以更专注于高价值的工作，从而提高员工满意度和工作积极性。 提高业务灵活性：RPA可以快速适应不同的业务需求和变化，从而提高业务灵活性和响应速度。 提高数据安全性：RPA可以通过权限控制和审计功能来保证数据的安全性，从而降低数据泄露和安全风险。  4. RPA和宏之间的主要区别是什么？   目的不同：RPA是为了实现自动化流程，减少人工干预，提高效率和准确性，而宏则是为了简化重复性操作，提高用户体验。
@@ -73,22 +73,24 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     </item>
     
     <item>
-      <title>ASCII Diagrams</title>
-      <link>https://frank2016ma.github.io/seattle/posts/ascii-diagrams/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>Bookmarklet</title>
+      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+      <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
       
-      <guid>https://frank2016ma.github.io/seattle/posts/ascii-diagrams/</guid>
-      <description>字符换渲染 Github
-字符换编辑</description>
+      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+      <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
     </item>
     
     <item>
-      <title>Hugo Front Matter</title>
-      <link>https://frank2016ma.github.io/seattle/posts/hugo-front-matter/</link>
+      <title>Hugo Content Management</title>
+      <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://frank2016ma.github.io/seattle/posts/hugo-front-matter/</guid>
-      <description>TOMLidentified by opening and closing +++. YAMLidentified by opening and closing &amp;mdash;. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo</description>
+      <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
+      <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
+Page Bundles are a way to group Page Resources.
+Page Bundle definition A Page Bundle can be one of:
+ Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
     </item>
     
     <item>
@@ -115,7 +117,7 @@ MIME 消息能包含文本、图像、音频、视频以及其他应用程序专
  MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
 MIME类型对大小写不敏感，但是传统写法都是小写。
 两种主要的 MIME 类型在默认类型中扮演了重要的角色：
- text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘抄自 MIME 类型 | 菜鸟教程</description>
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
     </item>
     
     <item>

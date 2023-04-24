@@ -3,22 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://frank2016ma.github.io/seattle/posts/about-rpa/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/gpt-answer/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/rpa/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/</loc>
-    <lastmod>2023-04-15T08:43:25+08:00</lastmod>
+    <lastmod>2023-04-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</loc>
     <lastmod>2023-04-09T20:27:59+08:00</lastmod>
@@ -35,12 +35,18 @@
     <loc>https://frank2016ma.github.io/seattle/posts/powershell-history/</loc>
     <lastmod>2023-04-02T11:42:36+08:00</lastmod>
   </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/bookmarklet/</loc>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/javascript/</loc>
+    <lastmod>2023-03-27T17:21:51+08:00</lastmod>
+  </url><url>
     <loc>https://frank2016ma.github.io/seattle/about/</loc>
     <priority>0</priority>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/archives/</loc>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/ascii-diagrams/</loc>
+    <loc>https://frank2016ma.github.io/seattle/categories/blog/</loc>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/categories/</loc>
   </url><url>
@@ -48,7 +54,9 @@
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/html/</loc>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/hugo-front-matter/</loc>
+    <loc>https://frank2016ma.github.io/seattle/tags/hugo/</loc>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</loc>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</loc>
   </url><url>
