@@ -47,5 +47,15 @@ Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的�
 Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
     </item>
     
+    <item>
+      <title>Powershell Remove Duplicate Files</title>
+      <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
+      <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
+$root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
+    </item>
+    
   </channel>
 </rss>

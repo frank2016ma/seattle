@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tools on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/tags/tools/</link>
-    <description>Recent content in tools on frank_in_seattle</description>
+    <title>cheat sheet on frank_in_seattle</title>
+    <link>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</link>
+    <description>Recent content in cheat sheet on frank_in_seattle</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/tools/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tmux</title>
-      <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
-      <description># start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离Ctrl+bd列出当前所有会话(此快捷键需要在tmux会话内执行)Ctrl+bs划分左右两个窗格Ctrl+b%划分上下两个窗格Ctrl+b&amp;quot;关闭当前窗格Ctrl+bx调整窗格大小 Ctrl+bCtrl+方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl+b[按 q退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/cheat-sheet/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vscode key shortcuts</title>
       <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>

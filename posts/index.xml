@@ -23,12 +23,12 @@
     </item>
     
     <item>
-      <title>Gpt_mirror</title>
+      <title>Gpt_Mirror</title>
       <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
       <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
-      <description>Gpt-mirror</description>
+      <description>Gpt-Mirror</description>
     </item>
     
     <item>
@@ -82,6 +82,26 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
     </item>
     
     <item>
+      <title>Download Github Single File</title>
+      <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
+      <description>在命令行下, 如何在GitHub单独下载一份文件
+# 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; https://raw.githubusercontent.com/curl/curl/master/README.md
+Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
+    </item>
+    
+    <item>
+      <title>Grep Cheat Sheet</title>
+      <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
+      <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
+    </item>
+    
+    <item>
       <title>Hugo Content Management</title>
       <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -99,7 +119,7 @@ Page Bundle definition A Page Bundle can be one of:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
-      <description>浏览器以及 WPS Office 支持 Shift+ 鼠标滚轮 实现横向滚动
+      <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift+ 鼠标滚轮 实现横向滚动
 Microsoft Office 的 Excel 横向滚动的方式是 Ctrl+ Shift+ 鼠标滚轮</description>
     </item>
     
@@ -149,6 +169,18 @@ Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看
       <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
       <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
 $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
+    </item>
+    
+    <item>
+      <title>Tmux</title>
+      <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
+      <description># start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离Ctrl+bd列出当前所有会话(此快捷键需要在tmux会话内执行)Ctrl+bs划分左右两个窗格Ctrl+b%划分上下两个窗格Ctrl+b&amp;quot;关闭当前窗格Ctrl+bx调整窗格大小 Ctrl+bCtrl+方向键
+copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
+Ctrl+b[按 q退出
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
     </item>
     
     <item>

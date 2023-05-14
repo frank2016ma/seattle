@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Hugo Front Matter | frank_in_seattle</title>
-<meta name="keywords" content="others">
-<meta name="description" content="TOMLidentified by opening and closing &#43;&#43;&#43;. YAMLidentified by opening and closing &mdash;. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo">
+<title>Grep Cheat Sheet | frank_in_seattle</title>
+<meta name="keywords" content="Linux">
+<meta name="description" content="# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &#34;of&#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &#39;Exception&#39; error.log # Display 4 lines before matching string, -B grep -B 4 &#39;Exception&#39; error.log # Display 5 lines around matching string, -C grep -C 5 &#39;Exception&#39; error.log # Recursive search (within subdirs), -r grep -r &#39;quickref.me&#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &#39;warning&#39; /var/log/syslog # Use regex (lines starting with &#39;al&#39;), -e grep -e &#39;^al&#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &#39;ja(s|cks)on&#39; filename # -c 打印匹配的行数 grep -c &#39;error&#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &#39;robot&#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &#34;go&#34; demo.">
 <meta name="author" content="Frank Ma">
-<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/hugo-front-matter/">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/">
 <link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -56,16 +56,16 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="Hugo Front Matter" />
-<meta property="og:description" content="TOMLidentified by opening and closing &#43;&#43;&#43;. YAMLidentified by opening and closing &mdash;. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo" />
+</noscript><meta property="og:title" content="Grep Cheat Sheet" />
+<meta property="og:description" content="# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &#34;of&#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &#39;Exception&#39; error.log # Display 4 lines before matching string, -B grep -B 4 &#39;Exception&#39; error.log # Display 5 lines around matching string, -C grep -C 5 &#39;Exception&#39; error.log # Recursive search (within subdirs), -r grep -r &#39;quickref.me&#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &#39;warning&#39; /var/log/syslog # Use regex (lines starting with &#39;al&#39;), -e grep -e &#39;^al&#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &#39;ja(s|cks)on&#39; filename # -c 打印匹配的行数 grep -c &#39;error&#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &#39;robot&#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &#34;go&#34; demo." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/hugo-front-matter/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/" /><meta property="article:section" content="posts" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hugo Front Matter"/>
-<meta name="twitter:description" content="TOMLidentified by opening and closing &#43;&#43;&#43;. YAMLidentified by opening and closing &mdash;. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo"/>
+<meta name="twitter:title" content="Grep Cheat Sheet"/>
+<meta name="twitter:description" content="# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &#34;of&#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &#39;Exception&#39; error.log # Display 4 lines before matching string, -B grep -B 4 &#39;Exception&#39; error.log # Display 5 lines around matching string, -C grep -C 5 &#39;Exception&#39; error.log # Recursive search (within subdirs), -r grep -r &#39;quickref.me&#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &#39;warning&#39; /var/log/syslog # Use regex (lines starting with &#39;al&#39;), -e grep -e &#39;^al&#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &#39;ja(s|cks)on&#39; filename # -c 打印匹配的行数 grep -c &#39;error&#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &#39;robot&#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &#34;go&#34; demo."/>
 
 
 <script type="application/ld+json">
@@ -82,8 +82,8 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Hugo Front Matter",
-      "item": "https://frank2016ma.github.io/seattle/posts/hugo-front-matter/"
+      "name": "Grep Cheat Sheet",
+      "item": "https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/"
     }
   ]
 }
@@ -92,14 +92,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Hugo Front Matter",
-  "name": "Hugo Front Matter",
-  "description": "TOMLidentified by opening and closing +++. YAMLidentified by opening and closing \u0026mdash;. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo",
+  "headline": "Grep Cheat Sheet",
+  "name": "Grep Cheat Sheet",
+  "description": "# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w \u0026#34;of\u0026#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 \u0026#39;Exception\u0026#39; error.log # Display 4 lines before matching string, -B grep -B 4 \u0026#39;Exception\u0026#39; error.log # Display 5 lines around matching string, -C grep -C 5 \u0026#39;Exception\u0026#39; error.log # Recursive search (within subdirs), -r grep -r \u0026#39;quickref.me\u0026#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v \u0026#39;warning\u0026#39; /var/log/syslog # Use regex (lines starting with \u0026#39;al\u0026#39;), -e grep -e \u0026#39;^al\u0026#39; filename # Extended regex (lines containing jason or jackson), -E grep -E \u0026#39;ja(s|cks)on\u0026#39; filename # -c 打印匹配的行数 grep -c \u0026#39;error\u0026#39; /var/log/syslog # -l 打印匹配的文件名 grep -l \u0026#39;robot\u0026#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n \u0026#34;go\u0026#34; demo.",
   "keywords": [
-    "others"
+    "Linux"
   ],
-  "articleBody": " TOMLidentified by opening and closing +++. YAMLidentified by opening and closing —. JSONa single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.  Front Matter | Hugo\n",
-  "wordCount" : "30",
+  "articleBody": "# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w \"of\" demo.txt # Display 3 lines after matching string, -A grep -A 3 'Exception' error.log # Display 4 lines before matching string, -B grep -B 4 'Exception' error.log # Display 5 lines around matching string, -C grep -C 5 'Exception' error.log # Recursive search (within subdirs), -r grep -r 'quickref.me' /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v 'warning' /var/log/syslog # Use regex (lines starting with 'al'), -e grep -e '^al' filename # Extended regex (lines containing jason or jackson), -E grep -E 'ja(s|cks)on' filename # -c 打印匹配的行数 grep -c 'error' /var/log/syslog # -l 打印匹配的文件名 grep -l 'robot' /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n \"go\" demo.txt # print the file containing the query including thos within subdirs grep -r ^David ~/some_dir/* # print the name of the file(s) which matches the query grep -l ^David ~/some_dir/* Grep Command Cheat Sheet \u0026 Quick Reference\n",
+  "wordCount" : "173",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -109,7 +109,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://frank2016ma.github.io/seattle/posts/hugo-front-matter/"
+    "@id": "https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/"
   },
   "publisher": {
     "@type": "Organization",
@@ -192,40 +192,78 @@
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
     <h1 class="post-title">
-      Hugo Front Matter
+      Grep Cheat Sheet
     </h1>
     <div class="post-meta">1 min&nbsp;·&nbsp;Frank Ma
 
 </div>
   </header> 
 
-  <div class="post-content"><ul>
-<li>TOML<!-- raw HTML omitted -->
-identified by opening and closing +++.</li>
-<li>YAML<!-- raw HTML omitted -->
-identified by opening and closing &mdash;.</li>
-<li>JSON<!-- raw HTML omitted -->
-a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.</li>
-</ul>
-<p><a href="https://gohugo.io/content-management/front-matter/#front-matter-formats">Front Matter | Hugo</a></p>
+  <div class="post-content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">
+<span style="color:#75715e"># -i 忽略大小写</span>
+grep -i ^DA demo.txt
+
+<span style="color:#75715e"># Search only for the full word, -w</span>
+grep -w <span style="color:#e6db74">&#34;of&#34;</span> demo.txt
+
+<span style="color:#75715e"># Display 3 lines after matching string, -A</span>
+grep -A <span style="color:#ae81ff">3</span> <span style="color:#e6db74">&#39;Exception&#39;</span> error.log
+
+<span style="color:#75715e"># Display 4 lines before matching string, -B</span>
+grep -B <span style="color:#ae81ff">4</span> <span style="color:#e6db74">&#39;Exception&#39;</span> error.log
+
+<span style="color:#75715e"># Display 5 lines around matching string, -C</span>
+grep -C <span style="color:#ae81ff">5</span> <span style="color:#e6db74">&#39;Exception&#39;</span> error.log
+
+<span style="color:#75715e"># Recursive search (within subdirs), -r</span>
+grep -r <span style="color:#e6db74">&#39;quickref.me&#39;</span> /var/log/nginx/
+
+<span style="color:#75715e"># -v 反向查找, 只打印不匹配的行</span>
+grep -v <span style="color:#e6db74">&#39;warning&#39;</span> /var/log/syslog
+
+<span style="color:#75715e"># Use regex (lines starting with &#39;al&#39;), -e</span>
+grep -e <span style="color:#e6db74">&#39;^al&#39;</span> filename
+
+<span style="color:#75715e"># Extended regex (lines containing jason or jackson), -E</span>
+grep -E <span style="color:#e6db74">&#39;ja(s|cks)on&#39;</span> filename
+
+<span style="color:#75715e"># -c 打印匹配的行数</span>
+grep -c <span style="color:#e6db74">&#39;error&#39;</span> /var/log/syslog
+
+<span style="color:#75715e"># -l 打印匹配的文件名</span>
+grep -l <span style="color:#e6db74">&#39;robot&#39;</span> /var/log/*
+
+<span style="color:#75715e"># Only show the matching part of the string, -o</span>
+grep -o search_string filename
+
+<span style="color:#75715e"># -n 显示匹配的行号</span>
+grep -n <span style="color:#e6db74">&#34;go&#34;</span> demo.txt
+
+
+<span style="color:#75715e"># print the file containing the query including thos within subdirs</span>
+grep -r ^David ~/some_dir/*
+
+<span style="color:#75715e"># print the name of the file(s) which matches the query</span>
+grep -l ^David ~/some_dir/*
+</code></pre></div><p><a href="https://quickref.me/grep">Grep Command Cheat Sheet &amp; Quick Reference</a></p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://frank2016ma.github.io/seattle/tags/others/">others</a></li>
+      <li><a href="https://frank2016ma.github.io/seattle/tags/linux/">Linux</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/ascii-diagrams/">
+  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/download-github-single-file/">
     <span class="title">« Prev</span>
     <br>
-    <span>ASCII Diagrams</span>
+    <span>Download Github Single File</span>
   </a>
-  <a class="next" href="https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/">
+  <a class="next" href="https://frank2016ma.github.io/seattle/posts/hugo-content-management/">
     <span class="title">Next »</span>
     <br>
-    <span>Microsoft Excel Scroll</span>
+    <span>Hugo Content Management</span>
   </a>
 </nav>
 

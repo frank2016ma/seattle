@@ -5,12 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Powershell Remove Duplicate Files | frank_in_seattle</title>
-<meta name="keywords" content="PowerShell">
-<meta name="description" content="PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file ">
+<title>Download Github Single File | frank_in_seattle</title>
+<meta name="keywords" content="shell, git">
+<meta name="description" content="在命令行下, 如何在GitHub单独下载一份文件
+# 下载到当前目录 wget https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -O https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -o $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; https://raw.githubusercontent.com/curl/curl/master/README.md
+Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名">
 <meta name="author" content="Frank Ma">
-<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/">
+<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/download-github-single-file/">
 <link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -57,18 +58,20 @@ $root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $
         }
 
     </style>
-</noscript><meta property="og:title" content="Powershell Remove Duplicate Files" />
-<meta property="og:description" content="PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file " />
+</noscript><meta property="og:title" content="Download Github Single File" />
+<meta property="og:description" content="在命令行下, 如何在GitHub单独下载一份文件
+# 下载到当前目录 wget https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -O https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -o $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; https://raw.githubusercontent.com/curl/curl/master/README.md
+Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/download-github-single-file/" /><meta property="article:section" content="posts" />
 
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Powershell Remove Duplicate Files"/>
-<meta name="twitter:description" content="PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file "/>
+<meta name="twitter:title" content="Download Github Single File"/>
+<meta name="twitter:description" content="在命令行下, 如何在GitHub单独下载一份文件
+# 下载到当前目录 wget https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -O https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; curl -o $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt; https://raw.githubusercontent.com/curl/curl/master/README.md
+Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名"/>
 
 
 <script type="application/ld+json">
@@ -85,8 +88,8 @@ $root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Powershell Remove Duplicate Files",
-      "item": "https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/"
+      "name": "Download Github Single File",
+      "item": "https://frank2016ma.github.io/seattle/posts/download-github-single-file/"
     }
   ]
 }
@@ -95,14 +98,14 @@ $root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Powershell Remove Duplicate Files",
-  "name": "Powershell Remove Duplicate Files",
-  "description": "PowerShell 脚本 删除重复文件(根据文件哈希值判重)\n$root_path = \u0026#34;D:\\folder_name\u0026#34; $log_file = \u0026#34;D:\\log_file.txt\u0026#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file ",
+  "headline": "Download Github Single File",
+  "name": "Download Github Single File",
+  "description": "在命令行下, 如何在GitHub单独下载一份文件\n# 下载到当前目录 wget https://raw.githubusercontent.com/\u0026lt;用户名\u0026gt;/\u0026lt;存储库名\u0026gt;/\u0026lt;分支名\u0026gt;/\u0026lt;文件路径\u0026gt;/\u0026lt;文件名\u0026gt; curl -O https://raw.githubusercontent.com/\u0026lt;用户名\u0026gt;/\u0026lt;存储库名\u0026gt;/\u0026lt;分支名\u0026gt;/\u0026lt;文件路径\u0026gt;/\u0026lt;文件名\u0026gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/\u0026lt;用户名\u0026gt;/\u0026lt;存储库名\u0026gt;/\u0026lt;分支名\u0026gt;/\u0026lt;文件路径\u0026gt;/\u0026lt;文件名\u0026gt; curl -o $dest_folder https://raw.githubusercontent.com/\u0026lt;用户名\u0026gt;/\u0026lt;存储库名\u0026gt;/\u0026lt;分支名\u0026gt;/\u0026lt;文件路径\u0026gt;/\u0026lt;文件名\u0026gt; https://raw.githubusercontent.com/curl/curl/master/README.md\nWindows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名",
   "keywords": [
-    "PowerShell"
+    "shell", "git"
   ],
-  "articleBody": "PowerShell 脚本 删除重复文件(根据文件哈希值判重)\n$root_path = \"D:\\folder_name\" $log_file = \"D:\\log_file.txt\" ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file ",
-  "wordCount" : "33",
+  "articleBody": "在命令行下, 如何在GitHub单独下载一份文件\n# 下载到当前目录 wget https://raw.githubusercontent.com///// curl -O https://raw.githubusercontent.com///// # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com///// curl -o $dest_folder https://raw.githubusercontent.com///// https://raw.githubusercontent.com/curl/curl/master/README.md\nWindows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名\n",
+  "wordCount" : "42",
   "inLanguage": "en",
   "datePublished": "0001-01-01T00:00:00Z",
   "dateModified": "0001-01-01T00:00:00Z",
@@ -112,7 +115,7 @@ $root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/"
+    "@id": "https://frank2016ma.github.io/seattle/posts/download-github-single-file/"
   },
   "publisher": {
     "@type": "Organization",
@@ -195,35 +198,46 @@ $root_path = &#34;D:\folder_name&#34; $log_file = &#34;D:\log_file.txt&#34; ls $
   <header class="post-header">
     <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
     <h1 class="post-title">
-      Powershell Remove Duplicate Files
+      Download Github Single File
     </h1>
     <div class="post-meta">1 min&nbsp;·&nbsp;Frank Ma
 
 </div>
   </header> 
 
-  <div class="post-content"><p>PowerShell 脚本 删除重复文件(根据文件哈希值判重)</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">$root_path = <span style="color:#e6db74">&#34;D:\folder_name&#34;</span>
-$log_file = <span style="color:#e6db74">&#34;D:\log_file.txt&#34;</span>
-ls $root_path -recurse | get-filehash | group -property hash | where { $_.count <span style="color:#f92672">-gt</span> 1 } | % { $_.group } | epcsv $log_file
-</code></pre></div>
+  <div class="post-content"><p>在命令行下, 如何在GitHub单独下载一份文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 下载到当前目录</span>
+wget https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt;
+curl -O https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt;
+<span style="color:#75715e"># example</span>
+wget https://raw.githubusercontent.com/curl/curl/master/README.md
+curl -O https://raw.githubusercontent.com/curl/curl/master/README.md
+
+<span style="color:#75715e"># 下载到指定文件夹</span>
+$dest_folder <span style="color:#f92672">=</span> /root/
+wget -P $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt;
+curl -o $dest_folder https://raw.githubusercontent.com/&lt;用户名&gt;/&lt;存储库名&gt;/&lt;分支名&gt;/&lt;文件路径&gt;/&lt;文件名&gt;
+</code></pre></div><p><a href="https://raw.githubusercontent.com/curl/curl/master/README.md">https://raw.githubusercontent.com/curl/curl/master/README.md</a></p>
+<p>Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 <code>Invoke-WebRequest</code> 的别名</p>
+
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://frank2016ma.github.io/seattle/tags/powershell/">PowerShell</a></li>
+      <li><a href="https://frank2016ma.github.io/seattle/tags/shell/">shell</a></li>
+      <li><a href="https://frank2016ma.github.io/seattle/tags/git/">git</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/powershell-profile/">
+  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/bookmarklet/">
     <span class="title">« Prev</span>
     <br>
-    <span>PowerShell Profile</span>
+    <span>Bookmarklet</span>
   </a>
-  <a class="next" href="https://frank2016ma.github.io/seattle/posts/tmux/">
+  <a class="next" href="https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/">
     <span class="title">Next »</span>
     <br>
-    <span>Tmux</span>
+    <span>Grep Cheat Sheet</span>
   </a>
 </nav>
 

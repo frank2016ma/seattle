@@ -7,16 +7,6 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Powershell Remove Duplicate Files</title>
-      <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
-      <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
-    </item>
-    
-    <item>
       <title>Win11 Brightness</title>
       <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
