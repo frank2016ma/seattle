@@ -1,219 +1,750 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/posts/</link>
-    <description>Recent content in Posts on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About-RPA</title>
-      <link>https://frank2016ma.github.io/seattle/posts/about-rpa/</link>
-      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/about-rpa/</guid>
-      <description>1. 给出RPA工具的三个优点  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。(并非指不会报错) 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。  2. 实施RPA流程有哪几个步骤？  业务流程分析：首先需要对需要自动化的业务流程进行详细的分析，确定自动化的可行性和优先级。 流程设计：根据业务流程分析的结果，设计自动化流程，包括流程图设计、自动化脚本编写、数据处理等。 机器人部署：选择合适的机器人工具，并进行部署和配置，包括安装机器人软件、配置机器人环境、设置机器人权限等。 测试和验证：进行自动化流程的测试和验证，包括验证流程的正确性、数据的准确性和完整性等。 上线和运维：将自动化流程上线，并进行监控和维护，包括定期检查机器人运行状态、处理异常情况、更新自动化脚本等。 持续优化：根据实际运行情况，对自动化流程进行持续优化，包括优化自动化脚本、增加自动化流程等，以提高效率和准确性。 以上步骤可以根据实际情况进行调整和修改，但总体流程应该是类似的。  3. 使用RPA有什么好处？  提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。 减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。 降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。 提高员工满意度：RPA可以解放员工手动操作的重复性工作，使他们可以更专注于高价值的工作，从而提高员工满意度和工作积极性。 提高业务灵活性：RPA可以快速适应不同的业务需求和变化，从而提高业务灵活性和响应速度。 提高数据安全性：RPA可以通过权限控制和审计功能来保证数据的安全性，从而降低数据泄露和安全风险。  4. RPA和宏之间的主要区别是什么？   目的不同：RPA是为了实现自动化流程，减少人工干预，提高效率和准确性，而宏则是为了简化重复性操作，提高用户体验。
-  实现方式不同：RPA是通过机器人自动执行流程，而宏是通过对软件进行编程来实现自动化操作。
-  灵活性不同：RPA可以自动化各种软件和系统，包括ERP、CRM、OA等，而宏通常只能应用于特定软件或应用程序。
-  编写难度不同：RPA的自动化脚本可以通过拖放式流程设计来完成，而宏需要进行编程，需要具备一定的编程知识和技能。
-  安全性不同：RPA可以通过权限控制和审计功能来保证数据的安全性，而宏则可能存在安全风险，如恶意宏可能会破坏系统或窃取数据。
-总之，RPA和宏都可以实现自动化操作，但目的、实现方式、灵活性、编写难度和安全性等方面存在较大的区别。
-  5. 传统软件系统和RPA之间有什么区别  目的不同：传统软件系统通常是为了解决特定的业务需求而开发的，而RPA则是为了自动化重复性、繁琐的任务而开发的。 开发难度不同：传统软件系统通常需要进行复杂的开发过程，需要考虑各种业务逻辑和数据处理，而RPA则相对简单，只需要进行简单的流程设计和自动化脚本编写。 执行速度不同：传统软件系统通常需要进行复杂的计算和处理，执行速度较慢，而RPA则是基于机器人的自动化，执行速度较快。 可扩展性不同：传统软件系统通常需要进行复杂的扩展和升级，而RPA则可以通过添加新的自动化脚本来实现快速扩展。 适用范围不同：传统软件系统通常适用于各种复杂的业务场景，而RPA则更适用于重复性、繁琐的任务，如数据输入、数据处理、文件传输等。  </description>
-    </item>
-    
-    <item>
-      <title>Gpt_Mirror</title>
-      <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
-      <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
-      <description>Gpt-Mirror</description>
-    </item>
-    
-    <item>
-      <title>Everything Search Tool</title>
-      <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
-      <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
-      <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
-如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
-UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
-以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
-在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
-  点击常规页面。
-  检查 Everything 服务。
-  取消以管理员方式运行。
-  点击确定。
-  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
-  重启 Everything。
-  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
-文件内容未被索引时，搜索内容将会很慢。
-如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。</description>
-    </item>
-    
-    <item>
-      <title>PowerShell History</title>
-      <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
-      <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
-      <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
-PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
-但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
-这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
-Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
-可以通过以下命令来实现查看所有命令历史记录
-Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
-PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
-Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
-而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
-utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description>
-    </item>
-    
-    <item>
-      <title>Bookmarklet</title>
-      <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
-      <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
-      <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
-    </item>
-    
-    <item>
-      <title>Download Github Single File</title>
-      <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
-      <description>在命令行下, 如何在GitHub单独下载一份文件
-# 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; https://raw.githubusercontent.com/curl/curl/master/README.md
-Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
-    </item>
-    
-    <item>
-      <title>Grep Cheat Sheet</title>
-      <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-      <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Content Management</title>
-      <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
-      <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
-Page Bundles are a way to group Page Resources.
-Page Bundle definition A Page Bundle can be one of:
- Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
-    </item>
-    
-    <item>
-      <title>Microsoft Excel Scroll</title>
-      <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
-      <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
-Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
-    </item>
-    
-    <item>
-      <title>MIME</title>
-      <link>https://frank2016ma.github.io/seattle/posts/mime/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/mime/</guid>
-      <description>MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
-MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
-浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
-语法 MIME 类型通用结构：
- type/subtype
- MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
-MIME类型对大小写不敏感，但是传统写法都是小写。
-两种主要的 MIME 类型在默认类型中扮演了重要的角色：
- text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
-    </item>
-    
-    <item>
-      <title>PowerShell Profile</title>
-      <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
-      <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
-长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
-$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
-其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
-$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 如果配置文件首次设置后, 打开 PowerShell 时显示
-无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
-需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
-Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
-特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
-若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
-配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
-导入第三方库 Terminal-Icons 美化终端
-Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
-    </item>
-    
-    <item>
-      <title>Powershell Remove Duplicate Files</title>
-      <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
-      <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
-    </item>
-    
-    <item>
-      <title>Tmux</title>
-      <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
-      <description># start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl+b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl+b s
-划分左右两个窗格
-Ctrl+b %
-划分上下两个窗格
-Ctrl+b &amp;quot;
-关闭当前窗格
-Ctrl+b x
-调整窗格大小 Ctrl+b Ctrl+方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl+b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
-    </item>
-    
-    <item>
-      <title>vscode key shortcuts</title>
-      <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
-      <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
-    </item>
-    
-    <item>
-      <title>Win11 Brightness</title>
-      <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
-      <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
-解决方法:
-打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
-  </description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/posts/</link>
+        <description>Recent content in Posts on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.frankinseattle.top/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>About-RPA</title>
+        <link>https://www.frankinseattle.top/posts/about-rpa/</link>
+        <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/about-rpa/</guid>
+        <description>&lt;h3 id=&#34;1-给出rpa工具的三个优点&#34;&gt;1. 给出RPA工具的三个优点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。&lt;/li&gt;
+&lt;li&gt;减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。(并非指不会报错)&lt;/li&gt;
+&lt;li&gt;降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-实施rpa流程有哪几个步骤&#34;&gt;2. 实施RPA流程有哪几个步骤？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;业务流程分析：首先需要对需要自动化的业务流程进行详细的分析，确定自动化的可行性和优先级。&lt;/li&gt;
+&lt;li&gt;流程设计：根据业务流程分析的结果，设计自动化流程，包括流程图设计、自动化脚本编写、数据处理等。&lt;/li&gt;
+&lt;li&gt;机器人部署：选择合适的机器人工具，并进行部署和配置，包括安装机器人软件、配置机器人环境、设置机器人权限等。&lt;/li&gt;
+&lt;li&gt;测试和验证：进行自动化流程的测试和验证，包括验证流程的正确性、数据的准确性和完整性等。&lt;/li&gt;
+&lt;li&gt;上线和运维：将自动化流程上线，并进行监控和维护，包括定期检查机器人运行状态、处理异常情况、更新自动化脚本等。&lt;/li&gt;
+&lt;li&gt;持续优化：根据实际运行情况，对自动化流程进行持续优化，包括优化自动化脚本、增加自动化流程等，以提高效率和准确性。&lt;/li&gt;
+&lt;li&gt;以上步骤可以根据实际情况进行调整和修改，但总体流程应该是类似的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-使用rpa有什么好处&#34;&gt;3. 使用RPA有什么好处？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;提高工作效率：RPA可以自动化重复性、繁琐的任务，从而节省时间和人力，提高工作效率。&lt;/li&gt;
+&lt;li&gt;减少错误率：RPA可以避免人为错误，从而减少错误率，提高数据准确性和可靠性。&lt;/li&gt;
+&lt;li&gt;降低成本：RPA可以代替人力完成部分工作，从而降低成本，同时还能提高生产效率。&lt;/li&gt;
+&lt;li&gt;提高员工满意度：RPA可以解放员工手动操作的重复性工作，使他们可以更专注于高价值的工作，从而提高员工满意度和工作积极性。&lt;/li&gt;
+&lt;li&gt;提高业务灵活性：RPA可以快速适应不同的业务需求和变化，从而提高业务灵活性和响应速度。&lt;/li&gt;
+&lt;li&gt;提高数据安全性：RPA可以通过权限控制和审计功能来保证数据的安全性，从而降低数据泄露和安全风险。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-rpa和宏之间的主要区别是什么&#34;&gt;4. RPA和宏之间的主要区别是什么？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;目的不同：RPA是为了实现自动化流程，减少人工干预，提高效率和准确性，而宏则是为了简化重复性操作，提高用户体验。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实现方式不同：RPA是通过机器人自动执行流程，而宏是通过对软件进行编程来实现自动化操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;灵活性不同：RPA可以自动化各种软件和系统，包括ERP、CRM、OA等，而宏通常只能应用于特定软件或应用程序。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写难度不同：RPA的自动化脚本可以通过拖放式流程设计来完成，而宏需要进行编程，需要具备一定的编程知识和技能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安全性不同：RPA可以通过权限控制和审计功能来保证数据的安全性，而宏则可能存在安全风险，如恶意宏可能会破坏系统或窃取数据。&lt;/p&gt;
+&lt;p&gt;总之，RPA和宏都可以实现自动化操作，但目的、实现方式、灵活性、编写难度和安全性等方面存在较大的区别。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-传统软件系统和rpa之间有什么区别&#34;&gt;5. 传统软件系统和RPA之间有什么区别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;目的不同：传统软件系统通常是为了解决特定的业务需求而开发的，而RPA则是为了自动化重复性、繁琐的任务而开发的。&lt;/li&gt;
+&lt;li&gt;开发难度不同：传统软件系统通常需要进行复杂的开发过程，需要考虑各种业务逻辑和数据处理，而RPA则相对简单，只需要进行简单的流程设计和自动化脚本编写。&lt;/li&gt;
+&lt;li&gt;执行速度不同：传统软件系统通常需要进行复杂的计算和处理，执行速度较慢，而RPA则是基于机器人的自动化，执行速度较快。&lt;/li&gt;
+&lt;li&gt;可扩展性不同：传统软件系统通常需要进行复杂的扩展和升级，而RPA则可以通过添加新的自动化脚本来实现快速扩展。&lt;/li&gt;
+&lt;li&gt;适用范围不同：传统软件系统通常适用于各种复杂的业务场景，而RPA则更适用于重复性、繁琐的任务，如数据输入、数据处理、文件传输等。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Gpt_Mirror</title>
+        <link>https://www.frankinseattle.top/posts/gpt_mirror/</link>
+        <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/gpt_mirror/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yzfly/awesome-chatgpt-zh#%E5%9B%BD%E5%86%85%E5%8F%AF%E4%BD%BF%E7%94%A8chatgpt%E9%95%9C%E5%83%8F%E7%AB%99%E7%82%B9&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gpt-Mirror&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Everything Search Tool</title>
+        <link>https://www.frankinseattle.top/posts/everything-search-tool/</link>
+        <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/everything-search-tool/</guid>
+        <description>&lt;h3 id=&#34;everything-是什么&#34;&gt;&amp;ldquo;Everything&amp;rdquo; 是什么？&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。&lt;/p&gt;
+&lt;h3 id=&#34;如何在运行-everything-时屏蔽-uac-警告&#34;&gt;如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。&lt;/p&gt;
+&lt;p&gt;UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。&lt;/p&gt;
+&lt;p&gt;以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：&lt;/p&gt;
+&lt;p&gt;在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击常规页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查 Everything 服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;取消以管理员方式运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击确定。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 Everything。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;搜索&#34;&gt;搜索&lt;/h3&gt;
+&lt;h4 id=&#34;everything-能否搜索文件内容&#34;&gt;&amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？&lt;/h4&gt;
+&lt;p&gt;可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。&lt;/p&gt;
+&lt;p&gt;文件内容未被索引时，搜索内容将会很慢。&lt;/p&gt;
+&lt;h4 id=&#34;如何使用通配符&#34;&gt;如何使用通配符？&lt;/h4&gt;
+&lt;p&gt;搜索关键词中使用通配符 &lt;code&gt;*&lt;/code&gt; 将会匹配任意数量的任意字符。&lt;/p&gt;
+&lt;p&gt;例如，搜索以 e 开头并以 g 结尾的文件和文件夹：&lt;code&gt;e*g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;搜索关键词中使用通配符 &lt;code&gt;?&lt;/code&gt; 将会匹配任一字符。&lt;/p&gt;
+&lt;p&gt;例如，搜索含有两个字符扩展名的文件：&lt;code&gt;*.??&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;如何搜索文件类型&#34;&gt;如何搜索文件类型？&lt;/h4&gt;
+&lt;p&gt;搜索文件类型，请在搜索框输入扩展名，&lt;/p&gt;
+&lt;p&gt;例如，搜索 mp3 文件，输入 &lt;code&gt;*.mp3&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;p&gt;搜索多个文件类型，请使用 &lt;code&gt;|&lt;/code&gt; 分隔，&lt;/p&gt;
+&lt;p&gt;例如：&lt;code&gt;*.bmp|*.jpg&lt;/code&gt; 将会搜索 bmp 或 jpg 类型文件。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PowerShell History</title>
+        <link>https://www.frankinseattle.top/posts/powershell-history/</link>
+        <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/powershell-history/</guid>
+        <description>&lt;h2 id=&#34;get-history&#34;&gt;Get-History&lt;/h2&gt;
+&lt;p&gt;PowerShell 的 &lt;code&gt;Get-History&lt;/code&gt; 命令只显示&lt;strong&gt;当前会话&lt;/strong&gt;的历史命令&lt;/p&gt;
+&lt;p&gt;PowerShell 没有类似 Linux bash 下的 &lt;code&gt;history&lt;/code&gt; 一样, 直接查看所有会话的历史命令的 Cmdlet&lt;/p&gt;
+&lt;p&gt;但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中&lt;/p&gt;
+&lt;p&gt;这个文件的路径可以通过命令 &lt;code&gt;(Get-PSReadlineOption).HistorySavePath&lt;/code&gt; 获取到&lt;/p&gt;
+&lt;h2 id=&#34;get-psreadlineoption&#34;&gt;Get-PSReadlineOption&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Get-PSReadlineOption&lt;/code&gt; 命令 包含在 &lt;code&gt;PSReadLine&lt;/code&gt; 模块下, 该模块需要 PowerShell 5.1 或更高的版本&lt;/p&gt;
+&lt;p&gt;可以通过以下命令来实现查看所有命令历史记录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;Get-Content (Get-PSReadlineOption).HistorySavePath
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码&lt;/p&gt;
+&lt;p&gt;PowerShell 5.1 中 &lt;code&gt;Get-Content&lt;/code&gt; 命令的 &lt;code&gt;-Encoding&lt;/code&gt; 参数默认是 &lt;code&gt;Default&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;而在 PowerShell 7.2 中, &lt;code&gt;Get-Content&lt;/code&gt; 命令的 &lt;code&gt;-Encoding&lt;/code&gt; 参数默认是 &lt;code&gt;utf8NoBOM&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Bookmarklet</title>
+        <link>https://www.frankinseattle.top/posts/bookmarklet/</link>
+        <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/bookmarklet/</guid>
+        <description>&lt;h2 id=&#34;bookmarklet-是什么&#34;&gt;Bookmarklet 是什么&lt;/h2&gt;
+&lt;p&gt;A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.&lt;/p&gt;
+&lt;h2 id=&#34;bookmarklet-可以做什么&#34;&gt;Bookmarklet 可以做什么&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;javascript&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(){document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#uCode&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;username&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#pW&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#login_btn%20%3E%20button.login&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;click&lt;/span&gt;();})();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;写文章时候, 经常会放上一些摘抄的原网址的标题和链接, 使用下面的&lt;code&gt;bookmarklet&lt;/code&gt;可以快速获取文章标题和链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;alert&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)`&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;如何编写-bookmarklet&#34;&gt;如何编写 bookmarklet&lt;/h2&gt;
+&lt;p&gt;你只需要编写常规的JavaScript, 网络上有很多在线转换工具, 帮助将常规的js代码生成bookmarklet, 比如:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://caiorss.github.io/bookmarklet-maker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet Maker&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Bookmarklet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;阮一峰的 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2011/06/a_guide_for_writing_bookmarklet.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet编写指南&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Download Github Single File</title>
+        <link>https://www.frankinseattle.top/posts/download-github-single-file/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/download-github-single-file/</guid>
+        <description>&lt;p&gt;在命令行下, 如何在GitHub单独下载一份文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下载到当前目录&lt;/span&gt;
+wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# example&lt;/span&gt;
+wget https://raw.githubusercontent.com/curl/curl/master/README.md
+curl -O https://raw.githubusercontent.com/curl/curl/master/README.md
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 下载到指定文件夹&lt;/span&gt;
+$dest_folder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /root/
+wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://raw.githubusercontent.com/curl/curl/master/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://raw.githubusercontent.com/curl/curl/master/README.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 &lt;code&gt;Invoke-WebRequest&lt;/code&gt; 的别名&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Find Cheat Sheet</title>
+        <link>https://www.frankinseattle.top/posts/find-cheat-sheet/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/find-cheat-sheet/</guid>
+        <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;path...&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;expression&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Wildcard&lt;/span&gt;
+
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2020*.csv&amp;#34;&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;json_*&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# regex&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#  TODO&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# directory&lt;/span&gt;
+find . -type d
+&lt;span style=&#34;color:#75715e&#34;&gt;# file&lt;/span&gt;
+find . -type f
+
+&lt;span style=&#34;color:#75715e&#34;&gt;## Size&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find all bigger than 10MB files, 查找大于10M的文件&lt;/span&gt;
+find . -size +10M
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find all smaller than 10MB files, 查找小于10M的文件&lt;/span&gt;
+find . -size -10M
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件&lt;/span&gt;
+find . -size +100M -size -1G
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;multiple-dirs--filenames&#34;&gt;multiple dirs &amp;amp; filenames&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with multiple dirs&lt;/span&gt;
+find /opt /usr /var -name foo.scala -type f
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with .sh and .txt extensions&lt;/span&gt;
+find . -type f &lt;span style=&#34;color:#ae81ff&#34;&gt;\(&lt;/span&gt; -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.sh&amp;#34;&lt;/span&gt; -o -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;find-and-&#34;&gt;Find and &amp;hellip;&lt;/h2&gt;
+&lt;h3 id=&#34;find-and-replace&#34;&gt;find and replace&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find all files and modify the content const to let&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# s表示substitute, 替换操作&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# g表示global, 全局替换&lt;/span&gt;
+find ./ -type f -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/const/let/g&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find readable and writable files and modify the content old to new&lt;/span&gt;
+find ./ -type f -readable -writable -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s/old/new/g&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-move&#34;&gt;find and move&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find and move it to a specific directory (/tmp/music)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# {} 表示find找到的每一个文件名(相当于PowerShell中的 $_)&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.mp3&amp;#39;&lt;/span&gt; -exec mv &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; /tmp/music &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-concatenate&#34;&gt;Find and concatenate&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all csv files in the download directory into merged.csv&lt;/span&gt;
+find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | xargs cat &amp;gt; merged.csv
+&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all sorted csv files in the download directory into merged.csv&lt;/span&gt;
+find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | sort | xargs cat &amp;gt; merged.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Grep Cheat Sheet</title>
+        <link>https://www.frankinseattle.top/posts/grep-cheat-sheet/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/grep-cheat-sheet/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# -i 忽略大小写&lt;/span&gt;
+grep -i ^DA demo.txt
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Search only for the full word, -w&lt;/span&gt;
+grep -w &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;of&amp;#34;&lt;/span&gt; demo.txt
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 3 lines after matching string, -A&lt;/span&gt;
+grep -A &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 4 lines before matching string, -B&lt;/span&gt;
+grep -B &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 5 lines around matching string, -C&lt;/span&gt;
+grep -C &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Recursive search (within subdirs), -r&lt;/span&gt;
+grep -r &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;quickref.me&amp;#39;&lt;/span&gt; /var/log/nginx/
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -v 反向查找, 只打印不匹配的行&lt;/span&gt;
+grep -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;warning&amp;#39;&lt;/span&gt; /var/log/syslog
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Use regex (lines starting with &amp;#39;al&amp;#39;), -e&lt;/span&gt;
+grep -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^al&amp;#39;&lt;/span&gt; filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Extended regex (lines containing jason or jackson), -E&lt;/span&gt;
+grep -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ja(s|cks)on&amp;#39;&lt;/span&gt; filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -c 打印匹配的行数&lt;/span&gt;
+grep -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt; /var/log/syslog
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -l 打印匹配的文件名&lt;/span&gt;
+grep -l &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;robot&amp;#39;&lt;/span&gt; /var/log/*
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Only show the matching part of the string, -o&lt;/span&gt;
+grep -o search_string filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -n 显示匹配的行号&lt;/span&gt;
+grep -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;go&amp;#34;&lt;/span&gt; demo.txt
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# print the file containing the query including thos within subdirs&lt;/span&gt;
+grep -r ^David ~/some_dir/*
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# print the name of the file(s) which matches the query&lt;/span&gt;
+grep -l ^David ~/some_dir/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://quickref.me/grep&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Grep Command Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Hugo Content Management</title>
+        <link>https://www.frankinseattle.top/posts/hugo-content-management/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/hugo-content-management/</guid>
+        <description>&lt;h2 id=&#34;名词&#34;&gt;名词&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Page resources&lt;/strong&gt; – images, other pages, documents, etc. – have page-relative URLs and their own metadata.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Page Bundles&lt;/strong&gt; are a way to group &lt;strong&gt;Page Resources&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;page-bundle&#34;&gt;Page Bundle&lt;/h2&gt;
+&lt;h3 id=&#34;definition&#34;&gt;definition&lt;/h3&gt;
+&lt;p&gt;A Page Bundle can be one of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Leaf Bundle&lt;/strong&gt;(leaf means it has no children)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Branch Bundle&lt;/strong&gt;(home page, section, taxonomy terms, taxonomy list)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;examples&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-goat&#34; data-lang=&#34;goat&#34;&gt;content/
+├── about(Leaf Bundle)
+│   ├── index.md
+├── posts
+│   ├── my-post(Leaf Bundle)
+│   │   ├── content1.md
+│   │   ├── content2.md
+│   │   ├── image1.jpg
+│   │   ├── image2.png
+│   │   └── index.md
+│   └── my-other-post(Leaf Bundle)
+│       └── index.md
+│
+└── another-section
+    ├── ..
+    └── not-a-leaf-bundle
+        ├── ..
+        └── another-leaf-bundle(Leaf Bundle)
+            └── index.md
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-goat&#34; data-lang=&#34;goat&#34;&gt;content/
+├── branch-bundle-1(Branch Bundle)
+│   ├── branch-content1.md
+│   ├── branch-content2.md
+│   ├── image1.jpg
+│   ├── image2.png
+│   └── _index.md
+└── branch-bundle-2(Branch Bundle)
+    ├── _index.md
+    └── a-leaf-bundle
+        └── index.md
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;section&#34;&gt;section&lt;/h2&gt;
+&lt;p&gt;A Section is a collection of pages that gets defined based on the organization structure under the content/ directory.&lt;/p&gt;
+&lt;h2 id=&#34;archetypes原型&#34;&gt;archetypes(原型)&lt;/h2&gt;
+&lt;h2 id=&#34;taxonomy分类系统&#34;&gt;taxonomy(分类系统)&lt;/h2&gt;
+&lt;p&gt;Hugo includes support for user-defined groupings of content called taxonomies. Taxonomies are classifications of logical relationships between content.&lt;/p&gt;
+&lt;h2 id=&#34;front-mattermetadata&#34;&gt;front matter(metadata)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TOML&lt;br&gt;
+identified by opening and closing +++.&lt;/li&gt;
+&lt;li&gt;YAML&lt;br&gt;
+identified by opening and closing &amp;mdash;.&lt;/li&gt;
+&lt;li&gt;JSON&lt;br&gt;
+a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shortcode&#34;&gt;shortcode&lt;/h2&gt;
+&lt;p&gt;layouts/shortcodes/myshortcode-name.html&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{{ &amp;lt; myshortcode-name params &amp;gt; }}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/front-matter/#front-matter-formats&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Front Matter | Hugo&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Microsoft Excel Scroll</title>
+        <link>https://www.frankinseattle.top/posts/microsoft-excel-scroll/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/microsoft-excel-scroll/</guid>
+        <description>&lt;p&gt;浏览器 &lt;code&gt;WPS Office&lt;/code&gt; 及及大部分支持横向滚动的桌面端软件, 支持 &lt;kbd&gt;Shift&lt;/kbd&gt; + 鼠标滚轮 实现横向滚动&lt;/p&gt;
+&lt;p&gt;Microsoft Office 的 Excel 横向滚动的方式是 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + 鼠标滚轮&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>MIME</title>
+        <link>https://www.frankinseattle.top/posts/mime/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/mime/</guid>
+        <description>&lt;h1 id=&#34;mime-类型&#34;&gt;MIME 类型&lt;/h1&gt;
+&lt;p&gt;MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。&lt;/p&gt;
+&lt;p&gt;MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。&lt;/p&gt;
+&lt;p&gt;浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。&lt;/p&gt;
+&lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
+&lt;p&gt;MIME 类型通用结构：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;type/subtype&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。&lt;/p&gt;
+&lt;p&gt;MIME类型对大小写不敏感，但是传统写法都是小写。&lt;/p&gt;
+&lt;p&gt;两种主要的 MIME 类型在默认类型中扮演了重要的角色：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;text/plain 表示文本文件的默认值。&lt;/li&gt;
+&lt;li&gt;application/octet-stream 表示所有其他情况的默认值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;p&gt;摘自 &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/http/mime-types.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MIME 类型 | 菜鸟教程&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PowerShell Profile</title>
+        <link>https://www.frankinseattle.top/posts/powershell-profile/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/powershell-profile/</guid>
+        <description>&lt;h2 id=&#34;简短说明&#34;&gt;简短说明&lt;/h2&gt;
+&lt;p&gt;介绍如何创建和使用 PowerShell 配置文件&lt;/p&gt;
+&lt;h2 id=&#34;长说明&#34;&gt;长说明&lt;/h2&gt;
+&lt;p&gt;PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。
+PowerShell 支持用户和主机程序的多个配置文件。 &lt;strong&gt;但是，它不会为你创建配置文件。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;profile-变量&#34;&gt;&lt;code&gt;$PROFILE&lt;/code&gt; 变量&lt;/h2&gt;
+&lt;p&gt;变量 &lt;code&gt;$PROFILE&lt;/code&gt; 存储 &lt;code&gt;当前用户，当前主机&lt;/code&gt; 配置文件 的路径。&lt;/p&gt;
+&lt;p&gt;其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;$PROFILE | Get-Member -Type NoteProperty
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;创建编辑配置文件&#34;&gt;创建、编辑配置文件&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;notepad $PROFILE
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果配置文件首次设置后, 打开 PowerShell 时显示&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;Set-ExecutionPolicy RemoteSigned
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用配置文件&#34;&gt;使用配置文件&lt;/h2&gt;
+&lt;p&gt;在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。&lt;/p&gt;
+&lt;p&gt;特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。&lt;/p&gt;
+&lt;p&gt;若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。&lt;/p&gt;
+&lt;p&gt;配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。&lt;/p&gt;
+&lt;p&gt;导入第三方库 &lt;a class=&#34;link&#34; href=&#34;https://github.com/devblackops/Terminal-Icons&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Terminal-Icons&lt;/a&gt; 美化终端&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;Import-Module Terminal-Icons
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存常用函数, 如 将 &lt;code&gt;history&lt;/code&gt; 设置为查看所有历史命令, 而非仅仅当前会话的历史命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 删除原有的别名 history&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# PowerShell 5.1版本需使用 Remove-Item 删除&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# 更高版本的 PowerShell 可直接使用 Remove-Alias 命令&lt;/span&gt;
+Remove-Item -Path &lt;span style=&#34;color:#66d9ef&#34;&gt;Alias&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;history
+&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; history{
+    Get-Content (Get-PSReadlineOption).HistorySavePath -Encoding utf8
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-5.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;关于配置文件 - PowerShell | Microsoft Learn&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Powershell Remove Duplicate Files</title>
+        <link>https://www.frankinseattle.top/posts/powershell-remove-duplicate-files/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/powershell-remove-duplicate-files/</guid>
+        <description>&lt;p&gt;PowerShell 脚本 删除重复文件(根据文件哈希值判重)&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;$root_path = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;D:\folder_name&amp;#34;&lt;/span&gt;
+$log_file = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;D:\log_file.txt&amp;#34;&lt;/span&gt;
+ls $root_path -recurse | get-filehash | group -property hash | where { $_.count &lt;span style=&#34;color:#f92672&#34;&gt;-gt&lt;/span&gt; 1 } | % { $_.group } | epcsv $log_file
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Ssh Timeout</title>
+        <link>https://www.frankinseattle.top/posts/ssh-timeout/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/ssh-timeout/</guid>
+        <description>&lt;p&gt;使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录&lt;/p&gt;
+&lt;p&gt;使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命令行参数设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果是在终端中使用&lt;code&gt;ssh&lt;/code&gt;命令连接远程机器, 如在&lt;code&gt;Windows Terminal&lt;/code&gt;中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh -o ServerAliveInterval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt; root@127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;客户端&lt;code&gt;config&lt;/code&gt;文件设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; 文件中添加&lt;code&gt;ServerAliveInterval 60&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host xxx
+    HostName 127.0.0.1
+    User root
+    ServerAliveInterval 60
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Tldr</title>
+        <link>https://www.frankinseattle.top/posts/tldr/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tldr/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档&lt;/p&gt;
+&lt;p&gt;tldr 提供了 web端 &lt;a class=&#34;link&#34; href=&#34;https://tldr.inbrowser.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tldr InBrowser.App&lt;/a&gt;, &lt;code&gt;nodejs&lt;/code&gt; 和 &lt;code&gt;python&lt;/code&gt; 客户端以及 &lt;a class=&#34;link&#34; href=&#34;https://tldr.sh/assets/tldr-book.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF版本&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# nodejs&lt;/span&gt;
+npm install tldr
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# python&lt;/span&gt;
+pip3 install tldr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tldr sed
+
+sed
+
+Edit text in a scriptable manner.
+See also: `awk`, `ed`.
+More information: https://www.gnu.org/software/sed/manual/sed.html.
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`:
+command | sed &#39;s/apple/mango/g&#39;
+
+- Execute a specific script [f]ile and print the result to `stdout`:
+command | sed -f path/to/script.sed
+
+- Replace all `apple` (extended regex) occurrences with `APPLE` (extended regex) in all input lines and print the result to `stdout`:
+command | sed -E &#39;s/(apple)/\U\1/g&#39;
+
+- Print just a first line to `stdout`:
+command | sed -n &#39;1p&#39;
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in a specific file and overwrite the original file in place:
+sed -i &#39;s/apple/mango/g&#39; path/to/file
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>https://www.frankinseattle.top/posts/tmux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tmux/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 新建会话&lt;/span&gt;
+tmux new -s session_name
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to last session&lt;/span&gt;
+tmux a
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to a session with the name mysession&lt;/span&gt;
+tmux a -t mysession
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;常用快捷键&#34;&gt;常用快捷键&lt;/h2&gt;
+&lt;p&gt;将当前会话与窗口分离&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;d&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;列出当前所有会话(此快捷键需要在tmux会话内执行)&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;s&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分左右两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;%&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分上下两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;&amp;quot;&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;关闭当前窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;x&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;调整窗格大小
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;Ctrl&lt;/kbd&gt;+方向键&lt;/p&gt;
+&lt;h2 id=&#34;copy-mode&#34;&gt;copy mode&lt;/h2&gt;
+&lt;p&gt;进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;[&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;按 &lt;kbd&gt;q&lt;/kbd&gt; 退出&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tmuxcheatsheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tmux Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt;划分窗格后, 只能通过 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; + 方向键 在不同的窗格之间切换光标焦点, 并且在&lt;code&gt;tmux&lt;/code&gt;窗口中, 需要进入&lt;code&gt;copy mode&lt;/code&gt;才能上下翻页, 所以个人在日常使用中, 并不会经常使用&lt;code&gt;tmux&lt;/code&gt;的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>vscode key shortcuts</title>
+        <link>https://www.frankinseattle.top/posts/vscode-keys/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/vscode-keys/</guid>
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;多光标操作&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+I&lt;/td&gt;
+&lt;td&gt;选中当前行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+I&lt;/td&gt;
+&lt;td&gt;将光标插入所选每行的末尾&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+L&lt;/td&gt;
+&lt;td&gt;选择所有与所选中&lt;strong&gt;内容&lt;/strong&gt;相同的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+F2&lt;/td&gt;
+&lt;td&gt;选择所有与所选中&lt;strong&gt;词汇&lt;/strong&gt;相同的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编辑器控制&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+\&lt;/td&gt;
+&lt;td&gt;拆分编辑器为多组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+ 1 / 2 / 3&lt;/td&gt;
+&lt;td&gt;切换窗口焦点至某一组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件管理&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K P&lt;/td&gt;
+&lt;td&gt;复制当前文件路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K R&lt;/td&gt;
+&lt;td&gt;打开当前文件所在文件夹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;显示&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+0&lt;/td&gt;
+&lt;td&gt;切换编辑器布局（水平/垂直）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+F&lt;/td&gt;
+&lt;td&gt;显示搜索界面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+X&lt;/td&gt;
+&lt;td&gt;显示插件管理界面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K V&lt;/td&gt;
+&lt;td&gt;预览Markdown文件（侧边）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Z&lt;/td&gt;
+&lt;td&gt;禅模式（连按两次Esc退出）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;语言操作&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+X&lt;/td&gt;
+&lt;td&gt;移除行尾空白字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基础编辑&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+K&lt;/td&gt;
+&lt;td&gt;删除行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Enter&lt;/td&gt;
+&lt;td&gt;在当前行下方插入新行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+Enter&lt;/td&gt;
+&lt;td&gt;在当前行上方插入新行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+A&lt;/td&gt;
+&lt;td&gt;切换块注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt+Z&lt;/td&gt;
+&lt;td&gt;切换自动换行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+[&lt;/td&gt;
+&lt;td&gt;折叠当前所有子代码块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+]&lt;/td&gt;
+&lt;td&gt;展开当前所有子代码块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>Win11 Brightness</title>
+        <link>https://www.frankinseattle.top/posts/win11-brightness/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/win11-brightness/</guid>
+        <description>&lt;p&gt;Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况&lt;/p&gt;
+&lt;p&gt;解决方法:&lt;/p&gt;
+&lt;p&gt;打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;snip-win11-brightness.png&#34;
+         alt=&#34;Example Image&#34;/&gt;
+&lt;/figure&gt;
+
+</description>
+        </item>
+        
+    </channel>
 </rss>

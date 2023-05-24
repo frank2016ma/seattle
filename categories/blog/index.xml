@@ -1,22 +1,78 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Blog on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/categories/blog/</link>
-    <description>Recent content in Blog on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/categories/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo Content Management</title>
-      <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
-      <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
-Page Bundles are a way to group Page Resources.
-Page Bundle definition A Page Bundle can be one of:
- Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blog on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/categories/blog/</link>
+        <description>Recent content in Blog on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/categories/blog/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Content Management</title>
+        <link>https://www.frankinseattle.top/posts/hugo-content-management/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/hugo-content-management/</guid>
+        <description>&lt;h2 id=&#34;名词&#34;&gt;名词&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Page resources&lt;/strong&gt; – images, other pages, documents, etc. – have page-relative URLs and their own metadata.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Page Bundles&lt;/strong&gt; are a way to group &lt;strong&gt;Page Resources&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;page-bundle&#34;&gt;Page Bundle&lt;/h2&gt;
+&lt;h3 id=&#34;definition&#34;&gt;definition&lt;/h3&gt;
+&lt;p&gt;A Page Bundle can be one of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Leaf Bundle&lt;/strong&gt;(leaf means it has no children)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Branch Bundle&lt;/strong&gt;(home page, section, taxonomy terms, taxonomy list)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;examples&#34;&gt;examples&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-goat&#34; data-lang=&#34;goat&#34;&gt;content/
+├── about(Leaf Bundle)
+│   ├── index.md
+├── posts
+│   ├── my-post(Leaf Bundle)
+│   │   ├── content1.md
+│   │   ├── content2.md
+│   │   ├── image1.jpg
+│   │   ├── image2.png
+│   │   └── index.md
+│   └── my-other-post(Leaf Bundle)
+│       └── index.md
+│
+└── another-section
+    ├── ..
+    └── not-a-leaf-bundle
+        ├── ..
+        └── another-leaf-bundle(Leaf Bundle)
+            └── index.md
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-goat&#34; data-lang=&#34;goat&#34;&gt;content/
+├── branch-bundle-1(Branch Bundle)
+│   ├── branch-content1.md
+│   ├── branch-content2.md
+│   ├── image1.jpg
+│   ├── image2.png
+│   └── _index.md
+└── branch-bundle-2(Branch Bundle)
+    ├── _index.md
+    └── a-leaf-bundle
+        └── index.md
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;section&#34;&gt;section&lt;/h2&gt;
+&lt;p&gt;A Section is a collection of pages that gets defined based on the organization structure under the content/ directory.&lt;/p&gt;
+&lt;h2 id=&#34;archetypes原型&#34;&gt;archetypes(原型)&lt;/h2&gt;
+&lt;h2 id=&#34;taxonomy分类系统&#34;&gt;taxonomy(分类系统)&lt;/h2&gt;
+&lt;p&gt;Hugo includes support for user-defined groupings of content called taxonomies. Taxonomies are classifications of logical relationships between content.&lt;/p&gt;
+&lt;h2 id=&#34;front-mattermetadata&#34;&gt;front matter(metadata)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;TOML&lt;br&gt;
+identified by opening and closing +++.&lt;/li&gt;
+&lt;li&gt;YAML&lt;br&gt;
+identified by opening and closing &amp;mdash;.&lt;/li&gt;
+&lt;li&gt;JSON&lt;br&gt;
+a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;shortcode&#34;&gt;shortcode&lt;/h2&gt;
+&lt;p&gt;layouts/shortcodes/myshortcode-name.html&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;{{ &amp;lt; myshortcode-name params &amp;gt; }}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/content-management/front-matter/#front-matter-formats&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Front Matter | Hugo&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

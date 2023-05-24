@@ -1,264 +1,264 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Tmux | frank_in_seattle</title>
-<meta name="keywords" content="tools">
-<meta name="description" content="# start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
 Ctrl&#43;b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
 Ctrl&#43;b s
 划分左右两个窗格
 Ctrl&#43;b %
 划分上下两个窗格
-Ctrl&#43;b &quot;
+Ctrl&#43;b &amp;quot;
 关闭当前窗格
 Ctrl&#43;b x
 调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
 copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
 Ctrl&#43;b [
 按 q 退出
-参考 Tmux Cheat Sheet &amp; Quick Reference">
-<meta name="author" content="Frank Ma">
-<link rel="canonical" href="https://frank2016ma.github.io/seattle/posts/tmux/">
-<link crossorigin="anonymous" href="/seattle/assets/css/stylesheet.6a98292fb8fa8cf0f3ba4042d4b75515c04267550f3ad49ff6271b5af9562443.css" integrity="sha256-apgpL7j6jPDzukBC1LdVFcBCZ1UPOtSf9icbWvlWJEM=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/seattle/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://frank2016ma.github.io/seattle/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://frank2016ma.github.io/seattle/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://frank2016ma.github.io/seattle/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://frank2016ma.github.io/seattle/apple-touch-icon.png">
-<link rel="mask-icon" href="https://frank2016ma.github.io/seattle/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference
+Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便'>
+<title>Tmux</title>
+
+<link rel='canonical' href='https://www.frankinseattle.top/posts/tmux/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tmux'>
+<meta property='og:description' content='# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
+Ctrl&#43;b d
+列出当前所有会话(此快捷键需要在tmux会话内执行)
+Ctrl&#43;b s
+划分左右两个窗格
+Ctrl&#43;b %
+划分上下两个窗格
+Ctrl&#43;b &amp;quot;
+关闭当前窗格
+Ctrl&#43;b x
+调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
+copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
+Ctrl&#43;b [
+按 q 退出
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference
+Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便'>
+<meta property='og:url' content='https://www.frankinseattle.top/posts/tmux/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='tools' />
+<meta name="twitter:title" content="Tmux">
+<meta name="twitter:description" content="# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
+Ctrl&#43;b d
+列出当前所有会话(此快捷键需要在tmux会话内执行)
+Ctrl&#43;b s
+划分左右两个窗格
+Ctrl&#43;b %
+划分上下两个窗格
+Ctrl&#43;b &amp;quot;
+关闭当前窗格
+Ctrl&#43;b x
+调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
+copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
+Ctrl&#43;b [
+按 q 退出
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference
+Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
         }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:title" content="Tmux" />
-<meta property="og:description" content="# start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl&#43;b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl&#43;b s
-划分左右两个窗格
-Ctrl&#43;b %
-划分上下两个窗格
-Ctrl&#43;b &quot;
-关闭当前窗格
-Ctrl&#43;b x
-调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl&#43;b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp; Quick Reference" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://frank2016ma.github.io/seattle/posts/tmux/" /><meta property="article:section" content="posts" />
-
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tmux"/>
-<meta name="twitter:description" content="# start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl&#43;b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl&#43;b s
-划分左右两个窗格
-Ctrl&#43;b %
-划分上下两个窗格
-Ctrl&#43;b &quot;
-关闭当前窗格
-Ctrl&#43;b x
-调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl&#43;b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp; Quick Reference"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://frank2016ma.github.io/seattle/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Tmux",
-      "item": "https://frank2016ma.github.io/seattle/posts/tmux/"
-    }
-  ]
-}
+    })();
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Tmux",
-  "name": "Tmux",
-  "description": "# start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离\nCtrl+b d\n列出当前所有会话(此快捷键需要在tmux会话内执行)\nCtrl+b s\n划分左右两个窗格\nCtrl+b %\n划分上下两个窗格\nCtrl+b \u0026quot;\n关闭当前窗格\nCtrl+b x\n调整窗格大小 Ctrl+b Ctrl+方向键\ncopy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode\nCtrl+b [\n按 q 退出\n参考 Tmux Cheat Sheet \u0026amp; Quick Reference",
-  "keywords": [
-    "tools"
-  ],
-  "articleBody": "# start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离\nCtrl+b d\n列出当前所有会话(此快捷键需要在tmux会话内执行)\nCtrl+b s\n划分左右两个窗格\nCtrl+b %\n划分上下两个窗格\nCtrl+b \"\n关闭当前窗格\nCtrl+b x\n调整窗格大小 Ctrl+b Ctrl+方向键\ncopy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode\nCtrl+b [\n按 q 退出\n参考 Tmux Cheat Sheet \u0026 Quick Reference\n",
-  "wordCount" : "66",
-  "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "Frank Ma"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://frank2016ma.github.io/seattle/posts/tmux/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "frank_in_seattle",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://frank2016ma.github.io/seattle/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
 
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://frank2016ma.github.io/seattle/" accesskey="h" title="frank_in_seattle (Alt + H)">frank_in_seattle</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
-        <ul id="menu">
-            <li>
-                <a href="https://frank2016ma.github.io/seattle/posts/" title="Posts">
-                    <span>Posts</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://frank2016ma.github.io/seattle/categroies/" title="Categroies">
-                    <span>Categroies</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://frank2016ma.github.io/seattle/tags/" title="Tags">
-                    <span>Tags</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://frank2016ma.github.io/seattle/archives/" title="Archives">
-                    <span>Archives</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/tags/' >
+                
+                
+                
+                <span>Tags</span>
+            </a>
+        </li>
+        
 
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://frank2016ma.github.io/seattle/">Home</a>&nbsp;»&nbsp;<a href="https://frank2016ma.github.io/seattle/posts/">Posts</a></div>
-    <h1 class="post-title">
-      Tmux
-    </h1>
-    <div class="post-meta">1 min&nbsp;·&nbsp;Frank Ma
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
 
-</div>
-  </header> <div class="toc">
-    <details >
-        <summary accesskey="c" title="(Alt + C)">
-            <span class="details">Table of Contents</span>
-        </summary>
 
-        <div class="inner"><ul>
-                <li>
-                    <a href="#%e5%b8%b8%e7%94%a8%e5%bf%ab%e6%8d%b7%e9%94%ae" aria-label="常用快捷键">常用快捷键</a></li>
-                <li>
-                    <a href="#copy-mode" aria-label="copy mode">copy mode</a></li>
-                <li>
-                    <a href="#%e5%8f%82%e8%80%83" aria-label="参考">参考</a>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
                 </li>
-            </ul>
+            
         </div>
-    </details>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#常用快捷键">常用快捷键</a></li>
+    <li><a href="#copy-mode">copy mode</a></li>
+    <li><a href="#参考">参考</a></li>
+    <li><a href="#tips">Tips</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/none/" >
+                None
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/tmux/">Tmux</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
 </div>
 
-  <div class="post-content"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># start a new session</span>
+</header>
+
+    <section class="article-content">
+    
+    
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 新建会话</span>
 tmux new -s session_name
 
 <span style="color:#75715e"># Attach to last session</span>
@@ -267,7 +267,7 @@ tmux a
 <span style="color:#75715e"># Attach to a session with the name mysession</span>
 tmux a -t mysession
 
-</code></pre></div><h2 id="常用快捷键">常用快捷键<a hidden class="anchor" aria-hidden="true" href="#常用快捷键">#</a></h2>
+</code></pre></div><h2 id="常用快捷键">常用快捷键</h2>
 <p>将当前会话与窗口分离<br>
 <kbd>Ctrl</kbd>+<kbd>b</kbd> <kbd>d</kbd></p>
 <p>列出当前所有会话(此快捷键需要在tmux会话内执行)<br>
@@ -280,156 +280,227 @@ tmux a -t mysession
 <kbd>Ctrl</kbd>+<kbd>b</kbd> <kbd>x</kbd></p>
 <p>调整窗格大小
 <kbd>Ctrl</kbd>+<kbd>b</kbd> <kbd>Ctrl</kbd>+方向键</p>
-<h2 id="copy-mode">copy mode<a hidden class="anchor" aria-hidden="true" href="#copy-mode">#</a></h2>
+<h2 id="copy-mode">copy mode</h2>
 <p>进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode</p>
 <p><kbd>Ctrl</kbd>+<kbd>b</kbd> <kbd>[</kbd></p>
 <p>按 <kbd>q</kbd> 退出</p>
-<h2 id="参考">参考<a hidden class="anchor" aria-hidden="true" href="#参考">#</a></h2>
-<p><a href="https://tmuxcheatsheet.com/">Tmux Cheat Sheet &amp; Quick Reference</a></p>
+<h2 id="参考">参考</h2>
+<p><a class="link" href="https://tmuxcheatsheet.com/"  target="_blank" rel="noopener"
+    >Tmux Cheat Sheet &amp; Quick Reference</a></p>
+<h2 id="tips">Tips</h2>
+<p><code>tmux</code>划分窗格后, 只能通过 <kbd>Ctrl</kbd>+<kbd>b</kbd> + 方向键 在不同的窗格之间切换光标焦点, 并且在<code>tmux</code>窗口中, 需要进入<code>copy mode</code>才能上下翻页, 所以个人在日常使用中, 并不会经常使用<code>tmux</code>的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便</p>
+
+</section>
 
 
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://frank2016ma.github.io/seattle/tags/tools/">tools</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="prev" href="https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/">
-    <span class="title">« Prev</span>
-    <br>
-    <span>Powershell Remove Duplicate Files</span>
-  </a>
-  <a class="next" href="https://frank2016ma.github.io/seattle/posts/vscode-keys/">
-    <span class="title">Next »</span>
-    <br>
-    <span>vscode key shortcuts</span>
-  </a>
-</nav>
-
-  </footer>
-</article>
-    </main>
+    <footer class="article-footer">
     
-<footer class="footer">
-    <span>&copy; 2023 <a href="https://frank2016ma.github.io/seattle/">frank_in_seattle</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-    <br>
-    <span>
-        <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
-    </span>
+    <section class="article-tags">
+        
+            <a href="/tags/tools/">tools</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/tldr/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tldr</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/drafts/bilibili-video-test/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bilibili Video Test</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/download-github-single-file/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Download Github Single File</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/grep-cheat-sheet/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Grep Cheat Sheet</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/ssh-timeout/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Ssh Timeout</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
 </footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
 
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
 
+        document.head.appendChild(customFont);
+    }());
 </script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
+    </body>
 </html>

@@ -1,37 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Categories on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/categories/</link>
-    <description>Recent content in Categories on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Blog</title>
-      <link>https://frank2016ma.github.io/seattle/categories/blog/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/categories/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>None</title>
-      <link>https://frank2016ma.github.io/seattle/categories/none/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/categories/none/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PowerShell</title>
-      <link>https://frank2016ma.github.io/seattle/categories/powershell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/categories/powershell/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/categories/</link>
+        <description>Recent content in Categories on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Blog</title>
+        <link>https://www.frankinseattle.top/categories/blog/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/categories/blog/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://www.frankinseattle.top/categories/linux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/categories/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>None</title>
+        <link>https://www.frankinseattle.top/categories/none/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/categories/none/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PowerShell</title>
+        <link>https://www.frankinseattle.top/categories/powershell/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/categories/powershell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Web</title>
+        <link>https://www.frankinseattle.top/categories/web/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/categories/web/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
 </rss>

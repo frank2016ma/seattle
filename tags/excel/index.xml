@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Excel on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/tags/excel/</link>
-    <description>Recent content in Excel on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/excel/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Microsoft Excel Scroll</title>
-      <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
-      <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
-Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Excel on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/tags/excel/</link>
+        <description>Recent content in Excel on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/excel/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Microsoft Excel Scroll</title>
+        <link>https://www.frankinseattle.top/posts/microsoft-excel-scroll/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/microsoft-excel-scroll/</guid>
+        <description>&lt;p&gt;浏览器 &lt;code&gt;WPS Office&lt;/code&gt; 及及大部分支持横向滚动的桌面端软件, 支持 &lt;kbd&gt;Shift&lt;/kbd&gt; + 鼠标滚轮 实现横向滚动&lt;/p&gt;
+&lt;p&gt;Microsoft Office 的 Excel 横向滚动的方式是 &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;Shift&lt;/kbd&gt; + 鼠标滚轮&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

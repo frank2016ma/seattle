@@ -1,53 +1,222 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>None on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/categories/none/</link>
-    <description>Recent content in None on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Download Github Single File</title>
-      <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
-      <description>在命令行下, 如何在GitHub单独下载一份文件
-# 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; https://raw.githubusercontent.com/curl/curl/master/README.md
-Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
-    </item>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>None on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/categories/none/</link>
+        <description>Recent content in None on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Bilibili Video Test</title>
+        <link>https://www.frankinseattle.top/drafts/bilibili-video-test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/drafts/bilibili-video-test/</guid>
+        <description>
+
+
+
+
+
     
-    <item>
-      <title>Grep Cheat Sheet</title>
-      <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-      <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
-    </item>
-    
-    <item>
-      <title>Tmux</title>
-      <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
-      <description># start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl+b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl+b s
-划分左右两个窗格
-Ctrl+b %
-划分上下两个窗格
-Ctrl+b &amp;quot;
-关闭当前窗格
-Ctrl+b x
-调整窗格大小 Ctrl+b Ctrl+方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl+b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
-    </item>
-    
-  </channel>
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1Ju411471Z&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Download Github Single File</title>
+        <link>https://www.frankinseattle.top/posts/download-github-single-file/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/download-github-single-file/</guid>
+        <description>&lt;p&gt;在命令行下, 如何在GitHub单独下载一份文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下载到当前目录&lt;/span&gt;
+wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# example&lt;/span&gt;
+wget https://raw.githubusercontent.com/curl/curl/master/README.md
+curl -O https://raw.githubusercontent.com/curl/curl/master/README.md
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 下载到指定文件夹&lt;/span&gt;
+$dest_folder &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /root/
+wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://raw.githubusercontent.com/curl/curl/master/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://raw.githubusercontent.com/curl/curl/master/README.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 &lt;code&gt;Invoke-WebRequest&lt;/code&gt; 的别名&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Grep Cheat Sheet</title>
+        <link>https://www.frankinseattle.top/posts/grep-cheat-sheet/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/grep-cheat-sheet/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# -i 忽略大小写&lt;/span&gt;
+grep -i ^DA demo.txt
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Search only for the full word, -w&lt;/span&gt;
+grep -w &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;of&amp;#34;&lt;/span&gt; demo.txt
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 3 lines after matching string, -A&lt;/span&gt;
+grep -A &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 4 lines before matching string, -B&lt;/span&gt;
+grep -B &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Display 5 lines around matching string, -C&lt;/span&gt;
+grep -C &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Recursive search (within subdirs), -r&lt;/span&gt;
+grep -r &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;quickref.me&amp;#39;&lt;/span&gt; /var/log/nginx/
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -v 反向查找, 只打印不匹配的行&lt;/span&gt;
+grep -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;warning&amp;#39;&lt;/span&gt; /var/log/syslog
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Use regex (lines starting with &amp;#39;al&amp;#39;), -e&lt;/span&gt;
+grep -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^al&amp;#39;&lt;/span&gt; filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Extended regex (lines containing jason or jackson), -E&lt;/span&gt;
+grep -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ja(s|cks)on&amp;#39;&lt;/span&gt; filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -c 打印匹配的行数&lt;/span&gt;
+grep -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt; /var/log/syslog
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -l 打印匹配的文件名&lt;/span&gt;
+grep -l &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;robot&amp;#39;&lt;/span&gt; /var/log/*
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Only show the matching part of the string, -o&lt;/span&gt;
+grep -o search_string filename
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# -n 显示匹配的行号&lt;/span&gt;
+grep -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;go&amp;#34;&lt;/span&gt; demo.txt
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# print the file containing the query including thos within subdirs&lt;/span&gt;
+grep -r ^David ~/some_dir/*
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# print the name of the file(s) which matches the query&lt;/span&gt;
+grep -l ^David ~/some_dir/*
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://quickref.me/grep&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Grep Command Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Ssh Timeout</title>
+        <link>https://www.frankinseattle.top/posts/ssh-timeout/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/ssh-timeout/</guid>
+        <description>&lt;p&gt;使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录&lt;/p&gt;
+&lt;p&gt;使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命令行参数设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果是在终端中使用&lt;code&gt;ssh&lt;/code&gt;命令连接远程机器, 如在&lt;code&gt;Windows Terminal&lt;/code&gt;中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh -o ServerAliveInterval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt; root@127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;客户端&lt;code&gt;config&lt;/code&gt;文件设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; 文件中添加&lt;code&gt;ServerAliveInterval 60&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host xxx
+    HostName 127.0.0.1
+    User root
+    ServerAliveInterval 60
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Tldr</title>
+        <link>https://www.frankinseattle.top/posts/tldr/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tldr/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档&lt;/p&gt;
+&lt;p&gt;tldr 提供了 web端 &lt;a class=&#34;link&#34; href=&#34;https://tldr.inbrowser.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tldr InBrowser.App&lt;/a&gt;, &lt;code&gt;nodejs&lt;/code&gt; 和 &lt;code&gt;python&lt;/code&gt; 客户端以及 &lt;a class=&#34;link&#34; href=&#34;https://tldr.sh/assets/tldr-book.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF版本&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# nodejs&lt;/span&gt;
+npm install tldr
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# python&lt;/span&gt;
+pip3 install tldr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tldr sed
+
+sed
+
+Edit text in a scriptable manner.
+See also: `awk`, `ed`.
+More information: https://www.gnu.org/software/sed/manual/sed.html.
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`:
+command | sed &#39;s/apple/mango/g&#39;
+
+- Execute a specific script [f]ile and print the result to `stdout`:
+command | sed -f path/to/script.sed
+
+- Replace all `apple` (extended regex) occurrences with `APPLE` (extended regex) in all input lines and print the result to `stdout`:
+command | sed -E &#39;s/(apple)/\U\1/g&#39;
+
+- Print just a first line to `stdout`:
+command | sed -n &#39;1p&#39;
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in a specific file and overwrite the original file in place:
+sed -i &#39;s/apple/mango/g&#39; path/to/file
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>https://www.frankinseattle.top/posts/tmux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tmux/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 新建会话&lt;/span&gt;
+tmux new -s session_name
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to last session&lt;/span&gt;
+tmux a
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to a session with the name mysession&lt;/span&gt;
+tmux a -t mysession
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;常用快捷键&#34;&gt;常用快捷键&lt;/h2&gt;
+&lt;p&gt;将当前会话与窗口分离&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;d&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;列出当前所有会话(此快捷键需要在tmux会话内执行)&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;s&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分左右两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;%&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分上下两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;&amp;quot;&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;关闭当前窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;x&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;调整窗格大小
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;Ctrl&lt;/kbd&gt;+方向键&lt;/p&gt;
+&lt;h2 id=&#34;copy-mode&#34;&gt;copy mode&lt;/h2&gt;
+&lt;p&gt;进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;[&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;按 &lt;kbd&gt;q&lt;/kbd&gt; 退出&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tmuxcheatsheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tmux Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt;划分窗格后, 只能通过 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; + 方向键 在不同的窗格之间切换光标焦点, 并且在&lt;code&gt;tmux&lt;/code&gt;窗口中, 需要进入&lt;code&gt;copy mode&lt;/code&gt;才能上下翻页, 所以个人在日常使用中, 并不会经常使用&lt;code&gt;tmux&lt;/code&gt;的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

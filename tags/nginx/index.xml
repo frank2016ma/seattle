@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nginx on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/tags/nginx/</link>
+        <description>Recent content in Nginx on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/nginx/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Nginx 反向代理中的路径问题</title>
+        <link>https://www.frankinseattle.top/drafts/nginx-proxy-pass/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/drafts/nginx-proxy-pass/</guid>
+        <description>&lt;p&gt;Nginx 反向代理的配置块内容通常如下:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;[&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; ~ &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; ~&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;^~&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;uri&lt;/span&gt; {
+    &lt;span style=&#34;color:#f92672&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;URL&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;proxy_pass 后面的 URL, 如果带 &lt;code&gt;/&lt;/code&gt;, 表示绝对路径, 如果不带 &lt;code&gt;/&lt;/code&gt;, 表示相对路径&lt;/p&gt;
+&lt;p&gt;通常 &lt;code&gt;URL = host[:port][path]&lt;/code&gt;(中括号内的内容表示可选)&lt;/p&gt;
+&lt;p&gt;如 &lt;code&gt;https://www.example.com:8080/&lt;/code&gt;,&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;https://&lt;/code&gt; 是协议, &lt;code&gt;www.example.com&lt;/code&gt; 是 &lt;code&gt;host&lt;/code&gt;, &lt;code&gt;80&lt;/code&gt; 是 &lt;code&gt;port&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt; 是 &lt;code&gt;path&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;proxy_pass 后面的 URL 不包含 &lt;code&gt;path&lt;/code&gt; 时, 如 &lt;a class=&#34;link&#34; href=&#34;https://www.example.com:8080&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.example.com:8080&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;target_url = URL + uri&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;proxy_pass 后面的 URL 包含 &lt;code&gt;path&lt;/code&gt; 时, &lt;code&gt;/&lt;/code&gt;也算(如 &lt;a class=&#34;link&#34; href=&#34;https://www.example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.example.com/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;target_url = URL.replace(uri, path)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以下这篇文章写得非常通俗易懂, 并且举了很详细的例子加以说明&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xuexb.github.io/learn-nginx/example/proxy_pass.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;proxy_pass url 反向代理的坑 | Nginx 入门教程&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,22 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>others on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/tags/others/</link>
-    <description>Recent content in others on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Win11 Brightness</title>
-      <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
-      <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
-解决方法:
-打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
-  </description>
-    </item>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>others on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/tags/others/</link>
+        <description>Recent content in others on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/others/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Bilibili Video Test</title>
+        <link>https://www.frankinseattle.top/drafts/bilibili-video-test/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/drafts/bilibili-video-test/</guid>
+        <description>
+
+
+
+
+
     
-  </channel>
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1Ju411471Z&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        <item>
+        <title>Ssh Timeout</title>
+        <link>https://www.frankinseattle.top/posts/ssh-timeout/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/ssh-timeout/</guid>
+        <description>&lt;p&gt;使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录&lt;/p&gt;
+&lt;p&gt;使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命令行参数设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果是在终端中使用&lt;code&gt;ssh&lt;/code&gt;命令连接远程机器, 如在&lt;code&gt;Windows Terminal&lt;/code&gt;中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh -o ServerAliveInterval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt; root@127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;客户端&lt;code&gt;config&lt;/code&gt;文件设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; 文件中添加&lt;code&gt;ServerAliveInterval 60&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host xxx
+    HostName 127.0.0.1
+    User root
+    ServerAliveInterval 60
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Win11 Brightness</title>
+        <link>https://www.frankinseattle.top/posts/win11-brightness/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/win11-brightness/</guid>
+        <description>&lt;p&gt;Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况&lt;/p&gt;
+&lt;p&gt;解决方法:&lt;/p&gt;
+&lt;p&gt;打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;snip-win11-brightness.png&#34;
+         alt=&#34;Example Image&#34;/&gt;
+&lt;/figure&gt;
+
+</description>
+        </item>
+        
+    </channel>
 </rss>

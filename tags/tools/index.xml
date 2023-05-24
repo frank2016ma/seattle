@@ -1,42 +1,381 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>tools on frank_in_seattle</title>
-    <link>https://frank2016ma.github.io/seattle/tags/tools/</link>
-    <description>Recent content in tools on frank_in_seattle</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/tools/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tmux</title>
-      <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
-      <description># start a new session tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl+b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl+b s
-划分左右两个窗格
-Ctrl+b %
-划分上下两个窗格
-Ctrl+b &amp;quot;
-关闭当前窗格
-Ctrl+b x
-调整窗格大小 Ctrl+b Ctrl+方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl+b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
-    </item>
-    
-    <item>
-      <title>vscode key shortcuts</title>
-      <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
-      <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
-    </item>
-    
-  </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tools on Frank in seattle</title>
+        <link>https://www.frankinseattle.top/tags/tools/</link>
+        <description>Recent content in tools on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 03 Apr 2023 22:28:49 +0800</lastBuildDate><atom:link href="https://www.frankinseattle.top/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Everything Search Tool</title>
+        <link>https://www.frankinseattle.top/posts/everything-search-tool/</link>
+        <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/everything-search-tool/</guid>
+        <description>&lt;h3 id=&#34;everything-是什么&#34;&gt;&amp;ldquo;Everything&amp;rdquo; 是什么？&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。&lt;/p&gt;
+&lt;h3 id=&#34;如何在运行-everything-时屏蔽-uac-警告&#34;&gt;如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？&lt;/h3&gt;
+&lt;p&gt;&amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。&lt;/p&gt;
+&lt;p&gt;UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。&lt;/p&gt;
+&lt;p&gt;以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：&lt;/p&gt;
+&lt;p&gt;在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;点击常规页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查 Everything 服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;取消以管理员方式运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击确定。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启 Everything。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;搜索&#34;&gt;搜索&lt;/h3&gt;
+&lt;h4 id=&#34;everything-能否搜索文件内容&#34;&gt;&amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？&lt;/h4&gt;
+&lt;p&gt;可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。&lt;/p&gt;
+&lt;p&gt;文件内容未被索引时，搜索内容将会很慢。&lt;/p&gt;
+&lt;h4 id=&#34;如何使用通配符&#34;&gt;如何使用通配符？&lt;/h4&gt;
+&lt;p&gt;搜索关键词中使用通配符 &lt;code&gt;*&lt;/code&gt; 将会匹配任意数量的任意字符。&lt;/p&gt;
+&lt;p&gt;例如，搜索以 e 开头并以 g 结尾的文件和文件夹：&lt;code&gt;e*g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;搜索关键词中使用通配符 &lt;code&gt;?&lt;/code&gt; 将会匹配任一字符。&lt;/p&gt;
+&lt;p&gt;例如，搜索含有两个字符扩展名的文件：&lt;code&gt;*.??&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;如何搜索文件类型&#34;&gt;如何搜索文件类型？&lt;/h4&gt;
+&lt;p&gt;搜索文件类型，请在搜索框输入扩展名，&lt;/p&gt;
+&lt;p&gt;例如，搜索 mp3 文件，输入 &lt;code&gt;*.mp3&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;p&gt;搜索多个文件类型，请使用 &lt;code&gt;|&lt;/code&gt; 分隔，&lt;/p&gt;
+&lt;p&gt;例如：&lt;code&gt;*.bmp|*.jpg&lt;/code&gt; 将会搜索 bmp 或 jpg 类型文件。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Bookmarklet</title>
+        <link>https://www.frankinseattle.top/posts/bookmarklet/</link>
+        <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/bookmarklet/</guid>
+        <description>&lt;h2 id=&#34;bookmarklet-是什么&#34;&gt;Bookmarklet 是什么&lt;/h2&gt;
+&lt;p&gt;A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.&lt;/p&gt;
+&lt;h2 id=&#34;bookmarklet-可以做什么&#34;&gt;Bookmarklet 可以做什么&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;javascript&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(){document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#uCode&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;username&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#pW&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#login_btn%20%3E%20button.login&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;click&lt;/span&gt;();})();
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;写文章时候, 经常会放上一些摘抄的原网址的标题和链接, 使用下面的&lt;code&gt;bookmarklet&lt;/code&gt;可以快速获取文章标题和链接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;alert&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)`&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;如何编写-bookmarklet&#34;&gt;如何编写 bookmarklet&lt;/h2&gt;
+&lt;p&gt;你只需要编写常规的JavaScript, 网络上有很多在线转换工具, 帮助将常规的js代码生成bookmarklet, 比如:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://caiorss.github.io/bookmarklet-maker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet Maker&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Bookmarklet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet - Wikipedia&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;阮一峰的 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2011/06/a_guide_for_writing_bookmarklet.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bookmarklet编写指南&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Find Cheat Sheet</title>
+        <link>https://www.frankinseattle.top/posts/find-cheat-sheet/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/find-cheat-sheet/</guid>
+        <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;path...&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;expression&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Wildcard&lt;/span&gt;
+
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2020*.csv&amp;#34;&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;json_*&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# regex&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;#  TODO&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# directory&lt;/span&gt;
+find . -type d
+&lt;span style=&#34;color:#75715e&#34;&gt;# file&lt;/span&gt;
+find . -type f
+
+&lt;span style=&#34;color:#75715e&#34;&gt;## Size&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find all bigger than 10MB files, 查找大于10M的文件&lt;/span&gt;
+find . -size +10M
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find all smaller than 10MB files, 查找小于10M的文件&lt;/span&gt;
+find . -size -10M
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件&lt;/span&gt;
+find . -size +100M -size -1G
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;multiple-dirs--filenames&#34;&gt;multiple dirs &amp;amp; filenames&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with multiple dirs&lt;/span&gt;
+find /opt /usr /var -name foo.scala -type f
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with .sh and .txt extensions&lt;/span&gt;
+find . -type f &lt;span style=&#34;color:#ae81ff&#34;&gt;\(&lt;/span&gt; -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.sh&amp;#34;&lt;/span&gt; -o -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;find-and-&#34;&gt;Find and &amp;hellip;&lt;/h2&gt;
+&lt;h3 id=&#34;find-and-replace&#34;&gt;find and replace&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find all files and modify the content const to let&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# s表示substitute, 替换操作&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# g表示global, 全局替换&lt;/span&gt;
+find ./ -type f -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/const/let/g&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Find readable and writable files and modify the content old to new&lt;/span&gt;
+find ./ -type f -readable -writable -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s/old/new/g&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-move&#34;&gt;find and move&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find and move it to a specific directory (/tmp/music)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# {} 表示find找到的每一个文件名(相当于PowerShell中的 $_)&lt;/span&gt;
+find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.mp3&amp;#39;&lt;/span&gt; -exec mv &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; /tmp/music &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-concatenate&#34;&gt;Find and concatenate&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all csv files in the download directory into merged.csv&lt;/span&gt;
+find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | xargs cat &amp;gt; merged.csv
+&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all sorted csv files in the download directory into merged.csv&lt;/span&gt;
+find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | sort | xargs cat &amp;gt; merged.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Tldr</title>
+        <link>https://www.frankinseattle.top/posts/tldr/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tldr/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档&lt;/p&gt;
+&lt;p&gt;tldr 提供了 web端 &lt;a class=&#34;link&#34; href=&#34;https://tldr.inbrowser.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;tldr InBrowser.App&lt;/a&gt;, &lt;code&gt;nodejs&lt;/code&gt; 和 &lt;code&gt;python&lt;/code&gt; 客户端以及 &lt;a class=&#34;link&#34; href=&#34;https://tldr.sh/assets/tldr-book.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF版本&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# nodejs&lt;/span&gt;
+npm install tldr
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# python&lt;/span&gt;
+pip3 install tldr
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tldr sed
+
+sed
+
+Edit text in a scriptable manner.
+See also: `awk`, `ed`.
+More information: https://www.gnu.org/software/sed/manual/sed.html.
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`:
+command | sed &#39;s/apple/mango/g&#39;
+
+- Execute a specific script [f]ile and print the result to `stdout`:
+command | sed -f path/to/script.sed
+
+- Replace all `apple` (extended regex) occurrences with `APPLE` (extended regex) in all input lines and print the result to `stdout`:
+command | sed -E &#39;s/(apple)/\U\1/g&#39;
+
+- Print just a first line to `stdout`:
+command | sed -n &#39;1p&#39;
+
+- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in a specific file and overwrite the original file in place:
+sed -i &#39;s/apple/mango/g&#39; path/to/file
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>https://www.frankinseattle.top/posts/tmux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/tmux/</guid>
+        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 新建会话&lt;/span&gt;
+tmux new -s session_name
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to last session&lt;/span&gt;
+tmux a
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Attach to a session with the name mysession&lt;/span&gt;
+tmux a -t mysession
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;常用快捷键&#34;&gt;常用快捷键&lt;/h2&gt;
+&lt;p&gt;将当前会话与窗口分离&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;d&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;列出当前所有会话(此快捷键需要在tmux会话内执行)&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;s&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分左右两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;%&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;划分上下两个窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;&amp;quot;&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;关闭当前窗格&lt;br&gt;
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;x&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;调整窗格大小
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;Ctrl&lt;/kbd&gt;+方向键&lt;/p&gt;
+&lt;h2 id=&#34;copy-mode&#34;&gt;copy mode&lt;/h2&gt;
+&lt;p&gt;进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode&lt;/p&gt;
+&lt;p&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; &lt;kbd&gt;[&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;按 &lt;kbd&gt;q&lt;/kbd&gt; 退出&lt;/p&gt;
+&lt;h2 id=&#34;参考&#34;&gt;参考&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://tmuxcheatsheet.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tmux Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt;划分窗格后, 只能通过 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;b&lt;/kbd&gt; + 方向键 在不同的窗格之间切换光标焦点, 并且在&lt;code&gt;tmux&lt;/code&gt;窗口中, 需要进入&lt;code&gt;copy mode&lt;/code&gt;才能上下翻页, 所以个人在日常使用中, 并不会经常使用&lt;code&gt;tmux&lt;/code&gt;的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>vscode key shortcuts</title>
+        <link>https://www.frankinseattle.top/posts/vscode-keys/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.frankinseattle.top/posts/vscode-keys/</guid>
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;多光标操作&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+I&lt;/td&gt;
+&lt;td&gt;选中当前行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+I&lt;/td&gt;
+&lt;td&gt;将光标插入所选每行的末尾&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+L&lt;/td&gt;
+&lt;td&gt;选择所有与所选中&lt;strong&gt;内容&lt;/strong&gt;相同的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+F2&lt;/td&gt;
+&lt;td&gt;选择所有与所选中&lt;strong&gt;词汇&lt;/strong&gt;相同的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;编辑器控制&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+\&lt;/td&gt;
+&lt;td&gt;拆分编辑器为多组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+ 1 / 2 / 3&lt;/td&gt;
+&lt;td&gt;切换窗口焦点至某一组&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件管理&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K P&lt;/td&gt;
+&lt;td&gt;复制当前文件路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K R&lt;/td&gt;
+&lt;td&gt;打开当前文件所在文件夹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;显示&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+0&lt;/td&gt;
+&lt;td&gt;切换编辑器布局（水平/垂直）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+F&lt;/td&gt;
+&lt;td&gt;显示搜索界面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+X&lt;/td&gt;
+&lt;td&gt;显示插件管理界面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K V&lt;/td&gt;
+&lt;td&gt;预览Markdown文件（侧边）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Z&lt;/td&gt;
+&lt;td&gt;禅模式（连按两次Esc退出）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;语言操作&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+X&lt;/td&gt;
+&lt;td&gt;移除行尾空白字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;基础编辑&lt;/th&gt;
+&lt;th&gt;====&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+K&lt;/td&gt;
+&lt;td&gt;删除行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Enter&lt;/td&gt;
+&lt;td&gt;在当前行下方插入新行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+Shift+Enter&lt;/td&gt;
+&lt;td&gt;在当前行上方插入新行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift+Alt+A&lt;/td&gt;
+&lt;td&gt;切换块注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt+Z&lt;/td&gt;
+&lt;td&gt;切换自动换行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+[&lt;/td&gt;
+&lt;td&gt;折叠当前所有子代码块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+K Ctrl+]&lt;/td&gt;
+&lt;td&gt;展开当前所有子代码块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
