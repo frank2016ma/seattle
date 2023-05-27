@@ -2,49 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>PowerShell on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/categories/powershell/</link>
+        <link>https://frank2016ma.github.io/seattle/categories/powershell/</link>
         <description>Recent content in PowerShell on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/categories/powershell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/categories/powershell/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PowerShell Profile</title>
-        <link>https://www.frankinseattle.top/posts/powershell-profile/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/powershell-profile/</guid>
-        <description>&lt;h2 id=&#34;简短说明&#34;&gt;简短说明&lt;/h2&gt;
-&lt;p&gt;介绍如何创建和使用 PowerShell 配置文件&lt;/p&gt;
-&lt;h2 id=&#34;长说明&#34;&gt;长说明&lt;/h2&gt;
-&lt;p&gt;PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。
-PowerShell 支持用户和主机程序的多个配置文件。 &lt;strong&gt;但是，它不会为你创建配置文件。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;profile-变量&#34;&gt;&lt;code&gt;$PROFILE&lt;/code&gt; 变量&lt;/h2&gt;
-&lt;p&gt;变量 &lt;code&gt;$PROFILE&lt;/code&gt; 存储 &lt;code&gt;当前用户，当前主机&lt;/code&gt; 配置文件 的路径。&lt;/p&gt;
-&lt;p&gt;其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;$PROFILE | Get-Member -Type NoteProperty
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;创建编辑配置文件&#34;&gt;创建、编辑配置文件&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;notepad $PROFILE
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果配置文件首次设置后, 打开 PowerShell 时显示&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;Set-ExecutionPolicy RemoteSigned
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用配置文件&#34;&gt;使用配置文件&lt;/h2&gt;
-&lt;p&gt;在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。&lt;/p&gt;
-&lt;p&gt;特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。&lt;/p&gt;
-&lt;p&gt;若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。&lt;/p&gt;
-&lt;p&gt;配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。&lt;/p&gt;
-&lt;p&gt;导入第三方库 &lt;a class=&#34;link&#34; href=&#34;https://github.com/devblackops/Terminal-Icons&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Terminal-Icons&lt;/a&gt; 美化终端&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;Import-Module Terminal-Icons
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;保存常用函数, 如 将 &lt;code&gt;history&lt;/code&gt; 设置为查看所有历史命令, 而非仅仅当前会话的历史命令&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-PowerShell&#34; data-lang=&#34;PowerShell&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 删除原有的别名 history&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# PowerShell 5.1版本需使用 Remove-Item 删除&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# 更高版本的 PowerShell 可直接使用 Remove-Alias 命令&lt;/span&gt;
-Remove-Item -Path &lt;span style=&#34;color:#66d9ef&#34;&gt;Alias&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;history
-&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; history{
-    Get-Content (Get-PSReadlineOption).HistorySavePath -Encoding utf8
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-5.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;关于配置文件 - PowerShell | Microsoft Learn&lt;/a&gt;&lt;/p&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
+        <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 如果配置文件首次设置后, 打开 PowerShell 时显示
+无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
+需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
+Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
+配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
+导入第三方库 Terminal-Icons 美化终端
+Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
         </item>
         
     </channel>

@@ -2,136 +2,120 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/</link>
         <description>Recent content in Tags on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.frankinseattle.top/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>gpt-answer</title>
-        <link>https://www.frankinseattle.top/tags/gpt-answer/</link>
-        <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Thu, 25 May 2023 20:34:35 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>others</title>
+        <link>https://frank2016ma.github.io/seattle/tags/others/</link>
+        <pubDate>Thu, 25 May 2023 20:34:35 +0800</pubDate>
         
-        <guid>https://www.frankinseattle.top/tags/gpt-answer/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>RPA</title>
-        <link>https://www.frankinseattle.top/tags/rpa/</link>
-        <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/rpa/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>tools</title>
-        <link>https://www.frankinseattle.top/tags/tools/</link>
-        <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/tools/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>PowerShell</title>
-        <link>https://www.frankinseattle.top/tags/powershell/</link>
-        <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/powershell/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>javascript</title>
-        <link>https://www.frankinseattle.top/tags/javascript/</link>
-        <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/javascript/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>cheat sheet</title>
-        <link>https://www.frankinseattle.top/tags/cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/cheat-sheet/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Excel</title>
-        <link>https://www.frankinseattle.top/tags/excel/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/excel/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>git</title>
-        <link>https://www.frankinseattle.top/tags/git/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/git/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>HTML</title>
-        <link>https://www.frankinseattle.top/tags/html/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/html/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Hugo</title>
-        <link>https://www.frankinseattle.top/tags/hugo/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/hugo/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Linux</title>
-        <link>https://www.frankinseattle.top/tags/linux/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/linux/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/others/</guid>
         <description></description>
         </item>
         <item>
         <title>Nginx</title>
-        <link>https://www.frankinseattle.top/tags/nginx/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <link>https://frank2016ma.github.io/seattle/tags/nginx/</link>
+        <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/tags/nginx/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>others</title>
-        <link>https://www.frankinseattle.top/tags/others/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://www.frankinseattle.top/tags/others/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/nginx/</guid>
         <description></description>
         </item>
         <item>
         <title>proxy</title>
-        <link>https://www.frankinseattle.top/tags/proxy/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/proxy/</link>
+        <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/proxy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>tools</title>
+        <link>https://frank2016ma.github.io/seattle/tags/tools/</link>
+        <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/tools/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>PowerShell</title>
+        <link>https://frank2016ma.github.io/seattle/tags/powershell/</link>
+        <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/powershell/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>javascript</title>
+        <link>https://frank2016ma.github.io/seattle/tags/javascript/</link>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>cheat sheet</title>
+        <link>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/tags/proxy/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Excel</title>
+        <link>https://frank2016ma.github.io/seattle/tags/excel/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/excel/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>git</title>
+        <link>https://frank2016ma.github.io/seattle/tags/git/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>HTML</title>
+        <link>https://frank2016ma.github.io/seattle/tags/html/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/html/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hugo</title>
+        <link>https://frank2016ma.github.io/seattle/tags/hugo/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://frank2016ma.github.io/seattle/tags/linux/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/linux/</guid>
         <description></description>
         </item>
         <item>
         <title>shell</title>
-        <link>https://www.frankinseattle.top/tags/shell/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/shell/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/tags/shell/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/shell/</guid>
         <description></description>
         </item>
         <item>
         <title>vscode</title>
-        <link>https://www.frankinseattle.top/tags/vscode/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/vscode/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/tags/vscode/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/vscode/</guid>
         <description></description>
         </item>
         

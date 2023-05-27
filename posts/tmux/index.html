@@ -1,63 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl&#43;b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl&#43;b s
-划分左右两个窗格
-Ctrl&#43;b %
-划分上下两个窗格
-Ctrl&#43;b &amp;quot;
-关闭当前窗格
-Ctrl&#43;b x
-调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl&#43;b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference
-Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.'>
 <title>Tmux</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/tmux/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/tmux/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tmux'>
-<meta property='og:description' content='# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl&#43;b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl&#43;b s
-划分左右两个窗格
-Ctrl&#43;b %
-划分上下两个窗格
-Ctrl&#43;b &amp;quot;
-关闭当前窗格
-Ctrl&#43;b x
-调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl&#43;b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference
-Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/tmux/'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tmux'>
+<meta property='og:description' content='tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/tmux/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='tools' />
 <meta name="twitter:title" content="Tmux">
-<meta name="twitter:description" content="# 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl&#43;b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl&#43;b s
-划分左右两个窗格
-Ctrl&#43;b %
-划分上下两个窗格
-Ctrl&#43;b &amp;quot;
-关闭当前窗格
-Ctrl&#43;b x
-调整窗格大小 Ctrl&#43;b Ctrl&#43;方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl&#43;b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference
-Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便">
+<meta name="twitter:description" content="tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.">
     </head>
     <body class="
     article-page
@@ -65,9 +20,7 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -94,25 +47,10 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -120,47 +58,17 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -187,12 +95,16 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#常用快捷键">常用快捷键</a></li>
-    <li><a href="#copy-mode">copy mode</a></li>
-    <li><a href="#参考">参考</a></li>
-    <li><a href="#tips">Tips</a></li>
-  </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#常用快捷键">常用快捷键</a></li>
+        <li><a href="#copy-mode">copy mode</a></li>
+        <li><a href="#参考">参考</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </section>
@@ -210,7 +122,7 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
     
     <header class="article-category">
         
-            <a href="/categories/none/" >
+            <a href="/seattle/categories/none/" >
                 None
             </a>
         
@@ -219,9 +131,13 @@ Tips tmux划分窗格后, 只能通过 Ctrl&#43;b &#43; 方向键 在不同的�
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/tmux/">Tmux</a>
+            <a href="/seattle/posts/tmux/">Tmux</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            tmux is a terminal multiplexer. It lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal.
+        </h3>
         
     </div>
 
@@ -297,7 +213,7 @@ tmux a -t mysession
     
     <section class="article-tags">
         
-            <a href="/tags/tools/">tools</a>
+            <a href="/seattle/tags/tools/">tools</a>
         
     </section>
 
@@ -319,64 +235,64 @@ tmux a -t mysession
             
                 
 <article class="">
-    <a href="/posts/tldr/">
+    <a href="/seattle/posts/ssh-timeout/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于SSH长时间无操作自动断开</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/everything-search-tool/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Everything Search Tool</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/bookmarklet/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bookmarklet</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/find-cheat-sheet/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find Cheat Sheet</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/tldr/">
         
         
 
         <div class="article-details">
             <h2 class="article-title">Tldr</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/drafts/bilibili-video-test/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Bilibili Video Test</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/download-github-single-file/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Download Github Single File</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/grep-cheat-sheet/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Grep Cheat Sheet</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/posts/ssh-timeout/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Ssh Timeout</h2>
         </div>
     </a>
 </article>
@@ -401,6 +317,10 @@ tmux a -t mysession
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -489,7 +409,7 @@ tmux a -t mysession
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

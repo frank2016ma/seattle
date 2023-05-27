@@ -2,74 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>others on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/others/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/others/</link>
         <description>Recent content in others on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/others/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Bilibili Video Test</title>
-        <link>https://www.frankinseattle.top/drafts/bilibili-video-test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 25 May 2023 20:34:35 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/others/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>修改xlsm文件中的宏脚本编码</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</link>
+        <pubDate>Thu, 25 May 2023 20:34:35 +0800</pubDate>
         
-        <guid>https://www.frankinseattle.top/drafts/bilibili-video-test/</guid>
-        <description>
-
-
-
-
-
-    
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1Ju411471Z&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</guid>
+        <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.</description>
         </item>
         <item>
-        <title>Ssh Timeout</title>
-        <link>https://www.frankinseattle.top/posts/ssh-timeout/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>TOML</title>
+        <link>https://frank2016ma.github.io/seattle/posts/toml/</link>
+        <pubDate>Thu, 25 May 2023 15:16:41 +0800</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/ssh-timeout/</guid>
-        <description>&lt;p&gt;使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录&lt;/p&gt;
-&lt;p&gt;使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;命令行参数设置&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果是在终端中使用&lt;code&gt;ssh&lt;/code&gt;命令连接远程机器, 如在&lt;code&gt;Windows Terminal&lt;/code&gt;中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh -o ServerAliveInterval&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;60&lt;/span&gt; root@127.0.0.1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;客户端&lt;code&gt;config&lt;/code&gt;文件设置&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;~/.ssh/config&lt;/code&gt; 文件中添加&lt;code&gt;ServerAliveInterval 60&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Host xxx
-    HostName 127.0.0.1
-    User root
-    ServerAliveInterval 60
-&lt;/code&gt;&lt;/pre&gt;</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/toml/</guid>
+        <description>规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
+多次定义同一个key是非法的
+key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符 等价于
+{ &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.com&amp;#34;: true } } 表 表（也被称为哈希表或字典）是键值对的集合 它们由表头定义，连同方括号作为单独的行出现 表头不同于数组，因为数组只有值 缩进会被忽略
+从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对
+[table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于</description>
         </item>
         <item>
         <title>Win11 Brightness</title>
-        <link>https://www.frankinseattle.top/posts/win11-brightness/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
+        <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
+        <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
+解决方法:
+打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
+ </description>
+        </item>
+        <item>
+        <title>Bilibili Video Test</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/win11-brightness/</guid>
-        <description>&lt;p&gt;Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况&lt;/p&gt;
-&lt;p&gt;解决方法:&lt;/p&gt;
-&lt;p&gt;打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗&lt;/p&gt;
-&lt;figure&gt;&lt;img src=&#34;snip-win11-brightness.png&#34;
-         alt=&#34;Example Image&#34;/&gt;
-&lt;/figure&gt;
-
-</description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</guid>
+        <description></description>
         </item>
         
     </channel>

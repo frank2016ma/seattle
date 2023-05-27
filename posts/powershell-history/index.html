@@ -14,9 +14,9 @@ Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)'>
 <title>PowerShell History</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/powershell-history/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/powershell-history/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='PowerShell History'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='PowerShell History'>
 <meta property='og:description' content='Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
 PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
 但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
@@ -28,7 +28,7 @@ PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
 Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
 utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/powershell-history/'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/powershell-history/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='PowerShell' /><meta property='article:published_time' content='2023-04-02T11:42:36&#43;08:00'/><meta property='article:modified_time' content='2023-04-02T11:42:36&#43;08:00'/>
 <meta name="twitter:title" content="PowerShell History">
@@ -50,9 +50,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -79,25 +77,10 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -105,47 +88,17 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -172,10 +125,14 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#get-history">Get-History</a></li>
-    <li><a href="#get-psreadlineoption">Get-PSReadlineOption</a></li>
-  </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#get-history">Get-History</a></li>
+        <li><a href="#get-psreadlineoption">Get-PSReadlineOption</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </section>
@@ -194,7 +151,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/powershell-history/">PowerShell History</a>
+            <a href="/seattle/posts/powershell-history/">PowerShell History</a>
         </h2>
     
         
@@ -268,7 +225,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
     
     <section class="article-tags">
         
-            <a href="/tags/powershell/">PowerShell</a>
+            <a href="/seattle/tags/powershell/">PowerShell</a>
         
     </section>
 
@@ -282,6 +239,41 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/powershell-profile/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PowerShell Profile</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/powershell-remove-duplicate-files/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Powershell Remove Duplicate Files</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -298,6 +290,10 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -386,7 +382,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

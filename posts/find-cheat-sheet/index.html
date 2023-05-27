@@ -4,11 +4,11 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size &#43;10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .'>
 <title>Find Cheat Sheet</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/find-cheat-sheet/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Find Cheat Sheet'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Find Cheat Sheet'>
 <meta property='og:description' content='Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size &#43;10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/find-cheat-sheet/'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='tools' />
 <meta name="twitter:title" content="Find Cheat Sheet">
@@ -20,9 +20,7 @@
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -49,25 +47,10 @@
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -75,47 +58,17 @@
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -142,17 +95,21 @@
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#multiple-dirs--filenames">multiple dirs &amp; filenames</a></li>
-    <li><a href="#find-and-">Find and &hellip;</a>
-      <ol>
-        <li><a href="#find-and-replace">find and replace</a></li>
-        <li><a href="#find-and-move">find and move</a></li>
-        <li><a href="#find-and-concatenate">Find and concatenate</a></li>
-      </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#multiple-dirs--filenames">multiple dirs &amp; filenames</a></li>
+        <li><a href="#find-and-">Find and &hellip;</a>
+          <ul>
+            <li><a href="#find-and-replace">find and replace</a></li>
+            <li><a href="#find-and-move">find and move</a></li>
+            <li><a href="#find-and-concatenate">Find and concatenate</a></li>
+          </ul>
+        </li>
+      </ul>
     </li>
-  </ol>
+  </ul>
 </nav>
         </div>
     </section>
@@ -170,7 +127,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/linux/" >
+            <a href="/seattle/categories/linux/" >
                 Linux
             </a>
         
@@ -179,7 +136,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/find-cheat-sheet/">Find Cheat Sheet</a>
+            <a href="/seattle/posts/find-cheat-sheet/">Find Cheat Sheet</a>
         </h2>
     
         
@@ -277,7 +234,7 @@ find download -type f -iname <span style="color:#e6db74">&#39;*.csv&#39;</span> 
     
     <section class="article-tags">
         
-            <a href="/tags/tools/">tools</a>
+            <a href="/seattle/tags/tools/">tools</a>
         
     </section>
 
@@ -291,6 +248,80 @@ find download -type f -iname <span style="color:#e6db74">&#39;*.csv&#39;</span> 
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/ssh-timeout/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">关于SSH长时间无操作自动断开</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/everything-search-tool/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Everything Search Tool</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/bookmarklet/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bookmarklet</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/tldr/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tldr</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/tmux/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tmux</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -307,6 +338,10 @@ find download -type f -iname <span style="color:#e6db74">&#39;*.csv&#39;</span> 
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -395,7 +430,7 @@ find download -type f -iname <span style="color:#e6db74">&#39;*.csv&#39;</span> 
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

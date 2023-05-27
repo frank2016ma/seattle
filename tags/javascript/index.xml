@@ -2,37 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>javascript on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/javascript/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/javascript/</link>
         <description>Recent content in javascript on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 27 Mar 2023 17:21:51 +0800</lastBuildDate><atom:link href="https://www.frankinseattle.top/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/javascript/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bookmarklet</title>
-        <link>https://www.frankinseattle.top/posts/bookmarklet/</link>
-        <pubDate>Mon, 27 Mar 2023 17:21:51 +0800</pubDate>
+        <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/bookmarklet/</guid>
-        <description>&lt;h2 id=&#34;bookmarklet-是什么&#34;&gt;Bookmarklet 是什么&lt;/h2&gt;
-&lt;p&gt;A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.&lt;/p&gt;
-&lt;h2 id=&#34;bookmarklet-可以做什么&#34;&gt;Bookmarklet 可以做什么&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;javascript&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt;(){document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#uCode&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;username&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#pW&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;value&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;password&amp;#39;&lt;/span&gt;;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;querySelector&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;#login_btn%20%3E%20button.login&amp;#39;&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;click&lt;/span&gt;();})();
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;写文章时候, 经常会放上一些摘抄的原网址的标题和链接, 使用下面的&lt;code&gt;bookmarklet&lt;/code&gt;可以快速获取文章标题和链接&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;alert&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;`[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;](&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;${&lt;/span&gt;document.&lt;span style=&#34;color:#a6e22e&#34;&gt;URL&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;)`&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;如何编写-bookmarklet&#34;&gt;如何编写 bookmarklet&lt;/h2&gt;
-&lt;p&gt;你只需要编写常规的JavaScript, 网络上有很多在线转换工具, 帮助将常规的js代码生成bookmarklet, 比如:&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://caiorss.github.io/bookmarklet-maker/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Bookmarklet Maker&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;引用&#34;&gt;引用&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Bookmarklet&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Bookmarklet - Wikipedia&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;阮一峰的 &lt;a class=&#34;link&#34; href=&#34;https://www.ruanyifeng.com/blog/2011/06/a_guide_for_writing_bookmarklet.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Bookmarklet编写指南&lt;/a&gt;&lt;/p&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+        <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
         </item>
         
     </channel>

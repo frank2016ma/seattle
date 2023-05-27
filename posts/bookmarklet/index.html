@@ -4,13 +4,13 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.'>
 <title>Bookmarklet</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/bookmarklet/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/bookmarklet/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Bookmarklet'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Bookmarklet'>
 <meta property='og:description' content='Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/bookmarklet/'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/bookmarklet/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='javascript' /><meta property='article:tag' content='tools' /><meta property='article:published_time' content='2023-03-27T17:21:51&#43;08:00'/><meta property='article:modified_time' content='2023-03-27T17:21:51&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='javascript' /><meta property='article:tag' content='tools' /><meta property='article:published_time' content='2023-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Bookmarklet">
 <meta name="twitter:description" content="Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.">
     </head>
@@ -20,9 +20,7 @@
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -49,25 +47,10 @@
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -75,47 +58,17 @@
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -142,12 +95,16 @@
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#bookmarklet-是什么">Bookmarklet 是什么</a></li>
-    <li><a href="#bookmarklet-可以做什么">Bookmarklet 可以做什么</a></li>
-    <li><a href="#如何编写-bookmarklet">如何编写 bookmarklet</a></li>
-    <li><a href="#引用">引用</a></li>
-  </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#bookmarklet-是什么">Bookmarklet 是什么</a></li>
+        <li><a href="#bookmarklet-可以做什么">Bookmarklet 可以做什么</a></li>
+        <li><a href="#如何编写-bookmarklet">如何编写 bookmarklet</a></li>
+        <li><a href="#引用">引用</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </section>
@@ -166,7 +123,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/bookmarklet/">Bookmarklet</a>
+            <a href="/seattle/posts/bookmarklet/">Bookmarklet</a>
         </h2>
     
         
@@ -246,9 +203,9 @@
     
     <section class="article-tags">
         
-            <a href="/tags/javascript/">javascript</a>
+            <a href="/seattle/tags/javascript/">javascript</a>
         
-            <a href="/tags/tools/">tools</a>
+            <a href="/seattle/tags/tools/">tools</a>
         
     </section>
 
@@ -262,6 +219,67 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/find-cheat-sheet/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Find Cheat Sheet</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/tldr/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tldr</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/tmux/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Tmux</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/vscode-keys/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">vscode key shortcuts</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     
@@ -278,6 +296,10 @@
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -366,7 +388,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

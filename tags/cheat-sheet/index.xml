@@ -2,203 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>cheat sheet on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</link>
         <description>Recent content in cheat sheet on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/cheat-sheet/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/cheat-sheet/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Tldr</title>
-        <link>https://www.frankinseattle.top/posts/tldr/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/tldr/</guid>
-        <description>&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档&lt;/p&gt;
-&lt;p&gt;tldr 提供了 web端 &lt;a class=&#34;link&#34; href=&#34;https://tldr.inbrowser.app/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;tldr InBrowser.App&lt;/a&gt;, &lt;code&gt;nodejs&lt;/code&gt; 和 &lt;code&gt;python&lt;/code&gt; 客户端以及 &lt;a class=&#34;link&#34; href=&#34;https://tldr.sh/assets/tldr-book.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;PDF版本&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# nodejs&lt;/span&gt;
-npm install tldr
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# python&lt;/span&gt;
-pip3 install tldr
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;tldr sed
-
-sed
-
-Edit text in a scriptable manner.
-See also: `awk`, `ed`.
-More information: https://www.gnu.org/software/sed/manual/sed.html.
-
-- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`:
-command | sed &#39;s/apple/mango/g&#39;
-
-- Execute a specific script [f]ile and print the result to `stdout`:
-command | sed -f path/to/script.sed
-
-- Replace all `apple` (extended regex) occurrences with `APPLE` (extended regex) in all input lines and print the result to `stdout`:
-command | sed -E &#39;s/(apple)/\U\1/g&#39;
-
-- Print just a first line to `stdout`:
-command | sed -n &#39;1p&#39;
-
-- Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in a specific file and overwrite the original file in place:
-sed -i &#39;s/apple/mango/g&#39; path/to/file
-&lt;/code&gt;&lt;/pre&gt;</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
+tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
+安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
         </item>
         <item>
         <title>vscode key shortcuts</title>
-        <link>https://www.frankinseattle.top/posts/vscode-keys/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/vscode-keys/</guid>
-        <description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;多光标操作&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+I&lt;/td&gt;
-&lt;td&gt;选中当前行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Shift+Alt+I&lt;/td&gt;
-&lt;td&gt;将光标插入所选每行的末尾&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+L&lt;/td&gt;
-&lt;td&gt;选择所有与所选中&lt;strong&gt;内容&lt;/strong&gt;相同的内容&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+F2&lt;/td&gt;
-&lt;td&gt;选择所有与所选中&lt;strong&gt;词汇&lt;/strong&gt;相同的内容&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;编辑器控制&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+\&lt;/td&gt;
-&lt;td&gt;拆分编辑器为多组&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+ 1 / 2 / 3&lt;/td&gt;
-&lt;td&gt;切换窗口焦点至某一组&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;文件管理&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K P&lt;/td&gt;
-&lt;td&gt;复制当前文件路径&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K R&lt;/td&gt;
-&lt;td&gt;打开当前文件所在文件夹&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;显示&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Shift+Alt+0&lt;/td&gt;
-&lt;td&gt;切换编辑器布局（水平/垂直）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+F&lt;/td&gt;
-&lt;td&gt;显示搜索界面&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+X&lt;/td&gt;
-&lt;td&gt;显示插件管理界面&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K V&lt;/td&gt;
-&lt;td&gt;预览Markdown文件（侧边）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K Z&lt;/td&gt;
-&lt;td&gt;禅模式（连按两次Esc退出）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;语言操作&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K Ctrl+X&lt;/td&gt;
-&lt;td&gt;移除行尾空白字符&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;基础编辑&lt;/th&gt;
-&lt;th&gt;====&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+K&lt;/td&gt;
-&lt;td&gt;删除行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Enter&lt;/td&gt;
-&lt;td&gt;在当前行下方插入新行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+Enter&lt;/td&gt;
-&lt;td&gt;在当前行上方插入新行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Shift+Alt+A&lt;/td&gt;
-&lt;td&gt;切换块注释&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Alt+Z&lt;/td&gt;
-&lt;td&gt;切换自动换行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K Ctrl+[&lt;/td&gt;
-&lt;td&gt;折叠当前所有子代码块&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+K Ctrl+]&lt;/td&gt;
-&lt;td&gt;展开当前所有子代码块&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
+        <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
         </item>
         
     </channel>

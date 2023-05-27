@@ -2,64 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/linux/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/linux/</link>
         <description>Recent content in Linux on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Grep Cheat Sheet</title>
-        <link>https://www.frankinseattle.top/posts/grep-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/grep-cheat-sheet/</guid>
-        <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# -i 忽略大小写&lt;/span&gt;
-grep -i ^DA demo.txt
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Search only for the full word, -w&lt;/span&gt;
-grep -w &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;of&amp;#34;&lt;/span&gt; demo.txt
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Display 3 lines after matching string, -A&lt;/span&gt;
-grep -A &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Display 4 lines before matching string, -B&lt;/span&gt;
-grep -B &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Display 5 lines around matching string, -C&lt;/span&gt;
-grep -C &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Exception&amp;#39;&lt;/span&gt; error.log
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Recursive search (within subdirs), -r&lt;/span&gt;
-grep -r &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;quickref.me&amp;#39;&lt;/span&gt; /var/log/nginx/
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# -v 反向查找, 只打印不匹配的行&lt;/span&gt;
-grep -v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;warning&amp;#39;&lt;/span&gt; /var/log/syslog
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Use regex (lines starting with &amp;#39;al&amp;#39;), -e&lt;/span&gt;
-grep -e &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^al&amp;#39;&lt;/span&gt; filename
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Extended regex (lines containing jason or jackson), -E&lt;/span&gt;
-grep -E &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ja(s|cks)on&amp;#39;&lt;/span&gt; filename
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# -c 打印匹配的行数&lt;/span&gt;
-grep -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;error&amp;#39;&lt;/span&gt; /var/log/syslog
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# -l 打印匹配的文件名&lt;/span&gt;
-grep -l &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;robot&amp;#39;&lt;/span&gt; /var/log/*
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Only show the matching part of the string, -o&lt;/span&gt;
-grep -o search_string filename
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# -n 显示匹配的行号&lt;/span&gt;
-grep -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;go&amp;#34;&lt;/span&gt; demo.txt
-
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# print the file containing the query including thos within subdirs&lt;/span&gt;
-grep -r ^David ~/some_dir/*
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# print the name of the file(s) which matches the query&lt;/span&gt;
-grep -l ^David ~/some_dir/*
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://quickref.me/grep&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Grep Command Cheat Sheet &amp;amp; Quick Reference&lt;/a&gt;&lt;/p&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
+        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
         </item>
         
     </channel>

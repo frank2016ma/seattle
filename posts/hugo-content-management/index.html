@@ -7,14 +7,14 @@ Page Bundle definition A Page Bundle can be one of:
  Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.'>
 <title>Hugo Content Management</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/hugo-content-management/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/hugo-content-management/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Hugo Content Management'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Hugo Content Management'>
 <meta property='og:description' content='名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
 Page Bundles are a way to group Page Resources.
 Page Bundle definition A Page Bundle can be one of:
  Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/hugo-content-management/'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/hugo-content-management/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Hugo' />
 <meta name="twitter:title" content="Hugo Content Management">
@@ -29,9 +29,7 @@ Page Bundle definition A Page Bundle can be one of:
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -58,25 +56,10 @@ Page Bundle definition A Page Bundle can be one of:
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -84,47 +67,17 @@ Page Bundle definition A Page Bundle can be one of:
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -151,20 +104,24 @@ Page Bundle definition A Page Bundle can be one of:
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#名词">名词</a></li>
-    <li><a href="#page-bundle">Page Bundle</a>
-      <ol>
-        <li><a href="#definition">definition</a></li>
-        <li><a href="#examples">examples</a></li>
-      </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#名词">名词</a></li>
+        <li><a href="#page-bundle">Page Bundle</a>
+          <ul>
+            <li><a href="#definition">definition</a></li>
+            <li><a href="#examples">examples</a></li>
+          </ul>
+        </li>
+        <li><a href="#section">section</a></li>
+        <li><a href="#archetypes原型">archetypes(原型)</a></li>
+        <li><a href="#taxonomy分类系统">taxonomy(分类系统)</a></li>
+        <li><a href="#front-mattermetadata">front matter(metadata)</a></li>
+        <li><a href="#shortcode">shortcode</a></li>
+      </ul>
     </li>
-    <li><a href="#section">section</a></li>
-    <li><a href="#archetypes原型">archetypes(原型)</a></li>
-    <li><a href="#taxonomy分类系统">taxonomy(分类系统)</a></li>
-    <li><a href="#front-mattermetadata">front matter(metadata)</a></li>
-    <li><a href="#shortcode">shortcode</a></li>
-  </ol>
+  </ul>
 </nav>
         </div>
     </section>
@@ -182,7 +139,7 @@ Page Bundle definition A Page Bundle can be one of:
     
     <header class="article-category">
         
-            <a href="/categories/blog/" >
+            <a href="/seattle/categories/blog/" >
                 Blog
             </a>
         
@@ -191,7 +148,7 @@ Page Bundle definition A Page Bundle can be one of:
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/hugo-content-management/">Hugo Content Management</a>
+            <a href="/seattle/posts/hugo-content-management/">Hugo Content Management</a>
         </h2>
     
         
@@ -298,7 +255,7 @@ a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.<
     
     <section class="article-tags">
         
-            <a href="/tags/hugo/">Hugo</a>
+            <a href="/seattle/tags/hugo/">Hugo</a>
         
     </section>
 
@@ -328,6 +285,10 @@ a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.<
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -416,7 +377,7 @@ a single JSON object surrounded by ‘{’ and ‘}’, followed by a new line.<
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

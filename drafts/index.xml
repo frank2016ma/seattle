@@ -2,66 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Drafts on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/drafts/</link>
+        <link>https://frank2016ma.github.io/seattle/drafts/</link>
         <description>Recent content in Drafts on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/drafts/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Bilibili Video Test</title>
-        <link>https://www.frankinseattle.top/drafts/bilibili-video-test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 25 May 2023 20:34:35 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/drafts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>修改xlsm文件中的宏脚本编码</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</link>
+        <pubDate>Thu, 25 May 2023 20:34:35 +0800</pubDate>
         
-        <guid>https://www.frankinseattle.top/drafts/bilibili-video-test/</guid>
-        <description>
-
-
-
-
-
-    
-
-
-&lt;div class=&#34;video-wrapper&#34;&gt;
-    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1Ju411471Z&#34;
-            scrolling=&#34;no&#34;
-            frameborder=&#34;no&#34;
-            framespacing=&#34;0&#34;
-            allowfullscreen=&#34;true&#34;
-    &gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</guid>
+        <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.</description>
         </item>
         <item>
-        <title>Nginx 反向代理中的路径问题</title>
-        <link>https://www.frankinseattle.top/drafts/nginx-proxy-pass/</link>
+        <title>Bilibili Video Test</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/drafts/nginx-proxy-pass/</guid>
-        <description>&lt;p&gt;Nginx 反向代理的配置块内容通常如下:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;location&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;[&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; ~ &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; ~&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;^~&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;uri&lt;/span&gt; {
-    &lt;span style=&#34;color:#f92672&#34;&gt;proxy_pass&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;URL&lt;/span&gt;;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;proxy_pass 后面的 URL, 如果带 &lt;code&gt;/&lt;/code&gt;, 表示绝对路径, 如果不带 &lt;code&gt;/&lt;/code&gt;, 表示相对路径&lt;/p&gt;
-&lt;p&gt;通常 &lt;code&gt;URL = host[:port][path]&lt;/code&gt;(中括号内的内容表示可选)&lt;/p&gt;
-&lt;p&gt;如 &lt;code&gt;https://www.example.com:8080/&lt;/code&gt;,&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;https://&lt;/code&gt; 是协议, &lt;code&gt;www.example.com&lt;/code&gt; 是 &lt;code&gt;host&lt;/code&gt;, &lt;code&gt;80&lt;/code&gt; 是 &lt;code&gt;port&lt;/code&gt;, &lt;code&gt;/&lt;/code&gt; 是 &lt;code&gt;path&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;proxy_pass 后面的 URL 不包含 &lt;code&gt;path&lt;/code&gt; 时, 如 &lt;a class=&#34;link&#34; href=&#34;https://www.example.com:8080&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.example.com:8080&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;target_url = URL + uri&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;proxy_pass 后面的 URL 包含 &lt;code&gt;path&lt;/code&gt; 时, &lt;code&gt;/&lt;/code&gt;也算(如 &lt;a class=&#34;link&#34; href=&#34;https://www.example.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://www.example.com/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;target_url = URL.replace(uri, path)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;以下这篇文章写得非常通俗易懂, 并且举了很详细的例子加以说明&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://xuexb.github.io/learn-nginx/example/proxy_pass.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;proxy_pass url 反向代理的坑 | Nginx 入门教程&lt;/a&gt;&lt;/p&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</guid>
+        <description></description>
         </item>
         
     </channel>

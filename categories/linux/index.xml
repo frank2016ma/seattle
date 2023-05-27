@@ -2,67 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linux on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/categories/linux/</link>
+        <link>https://frank2016ma.github.io/seattle/categories/linux/</link>
         <description>Recent content in Linux on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 19 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于SSH长时间无操作自动断开</title>
+        <link>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</link>
+        <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</guid>
+        <description>使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
+使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
+ 命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
+ssh -o ServerAliveInterval=60 root@127.0.0.1 使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
+客户端.ssh/config文件设置  ~/.ssh/config 文件中添加ServerAliveInterval 60
+Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
+        </item>
+        <item>
         <title>Find Cheat Sheet</title>
-        <link>https://www.frankinseattle.top/posts/find-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/find-cheat-sheet/</guid>
-        <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;find &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;path...&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;options&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;expression&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Wildcard&lt;/span&gt;
-
-find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt;
-find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2020*.csv&amp;#34;&lt;/span&gt;
-find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;json_*&amp;#34;&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# regex&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;#  TODO&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# directory&lt;/span&gt;
-find . -type d
-&lt;span style=&#34;color:#75715e&#34;&gt;# file&lt;/span&gt;
-find . -type f
-
-&lt;span style=&#34;color:#75715e&#34;&gt;## Size&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Find all bigger than 10MB files, 查找大于10M的文件&lt;/span&gt;
-find . -size +10M
-&lt;span style=&#34;color:#75715e&#34;&gt;# Find all smaller than 10MB files, 查找小于10M的文件&lt;/span&gt;
-find . -size -10M
-&lt;span style=&#34;color:#75715e&#34;&gt;# Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件&lt;/span&gt;
-find . -size +100M -size -1G
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;multiple-dirs--filenames&#34;&gt;multiple dirs &amp;amp; filenames&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with multiple dirs&lt;/span&gt;
-find /opt /usr /var -name foo.scala -type f
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Find files with .sh and .txt extensions&lt;/span&gt;
-find . -type f &lt;span style=&#34;color:#ae81ff&#34;&gt;\(&lt;/span&gt; -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.sh&amp;#34;&lt;/span&gt; -o -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.txt&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;find-and-&#34;&gt;Find and &amp;hellip;&lt;/h2&gt;
-&lt;h3 id=&#34;find-and-replace&#34;&gt;find and replace&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find all files and modify the content const to let&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# s表示substitute, 替换操作&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# g表示global, 全局替换&lt;/span&gt;
-find ./ -type f -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s/const/let/g&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
-
-&lt;span style=&#34;color:#75715e&#34;&gt;# Find readable and writable files and modify the content old to new&lt;/span&gt;
-find ./ -type f -readable -writable -exec sed -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s/old/new/g&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-move&#34;&gt;find and move&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Find and move it to a specific directory (/tmp/music)&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;# {} 表示find找到的每一个文件名(相当于PowerShell中的 $_)&lt;/span&gt;
-find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.mp3&amp;#39;&lt;/span&gt; -exec mv &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt; /tmp/music &lt;span style=&#34;color:#ae81ff&#34;&gt;\;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;find-and-concatenate&#34;&gt;Find and concatenate&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all csv files in the download directory into merged.csv&lt;/span&gt;
-find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | xargs cat &amp;gt; merged.csv
-&lt;span style=&#34;color:#75715e&#34;&gt;# Merge all sorted csv files in the download directory into merged.csv&lt;/span&gt;
-find download -type f -iname &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*.csv&amp;#39;&lt;/span&gt; | sort | xargs cat &amp;gt; merged.csv
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
+        <description>Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size +10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .</description>
         </item>
         
     </channel>

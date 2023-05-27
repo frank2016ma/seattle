@@ -2,36 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>HTML on Frank in seattle</title>
-        <link>https://www.frankinseattle.top/tags/html/</link>
+        <link>https://frank2016ma.github.io/seattle/tags/html/</link>
         <description>Recent content in HTML on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://www.frankinseattle.top/tags/html/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/html/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>MIME</title>
-        <link>https://www.frankinseattle.top/posts/mime/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/mime/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.frankinseattle.top/posts/mime/</guid>
-        <description>&lt;h1 id=&#34;mime-类型&#34;&gt;MIME 类型&lt;/h1&gt;
-&lt;p&gt;MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。&lt;/p&gt;
-&lt;p&gt;MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。&lt;/p&gt;
-&lt;p&gt;浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。&lt;/p&gt;
-&lt;h2 id=&#34;语法&#34;&gt;语法&lt;/h2&gt;
-&lt;p&gt;MIME 类型通用结构：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;type/subtype&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。&lt;/p&gt;
-&lt;p&gt;MIME类型对大小写不敏感，但是传统写法都是小写。&lt;/p&gt;
-&lt;p&gt;两种主要的 MIME 类型在默认类型中扮演了重要的角色：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;text/plain 表示文本文件的默认值。&lt;/li&gt;
-&lt;li&gt;application/octet-stream 表示所有其他情况的默认值。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;p&gt;摘自 &lt;a class=&#34;link&#34; href=&#34;https://www.runoob.com/http/mime-types.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;MIME 类型 | 菜鸟教程&lt;/a&gt;&lt;/p&gt;
-</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/mime/</guid>
+        <description>MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
+MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+语法 MIME 类型通用结构：
+ type/subtype
+ MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写。
+两种主要的 MIME 类型在默认类型中扮演了重要的角色：
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
         </item>
         
     </channel>

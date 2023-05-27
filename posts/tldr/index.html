@@ -6,13 +6,13 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
 安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.'>
 <title>Tldr</title>
 
-<link rel='canonical' href='https://www.frankinseattle.top/posts/tldr/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/tldr/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tldr'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tldr'>
 <meta property='og:description' content='简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.'>
-<meta property='og:url' content='https://www.frankinseattle.top/posts/tldr/'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/tldr/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='tools' /><meta property='article:tag' content='cheat sheet' />
 <meta name="twitter:title" content="Tldr">
@@ -26,9 +26,7 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "dark");
         })();
     </script><script>
     (function() {
@@ -55,25 +53,10 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
     <header>
         
             
-            <figure class="site-avatar">
-                <a href="/">
-                
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
-                
-                </a>
-                
-            </figure>
-            
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">Frank in seattle</a></h1>
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
             <h2 class="site-description">Hi there, Welcome to my blog</h2>
         </div>
     </header><ol class="menu" id="main-menu">
@@ -81,47 +64,17 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
         
         
         <li >
-            <a href='/posts/' >
+            <a href='/seattle/' >
                 
                 
                 
-                <span>Posts</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/tags/' >
-                
-                
-                
-                <span>Tags</span>
+                <span>Home</span>
             </a>
         </li>
         
 
         <div class="menu-bottom-section">
             
-            
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>Dark Mode</span>
-                </li>
             
         </div>
     </ol>
@@ -148,11 +101,15 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
         
         <div class="widget--toc">
             <nav id="TableOfContents">
-  <ol>
-    <li><a href="#简介">简介</a></li>
-    <li><a href="#安装">安装</a></li>
-    <li><a href="#使用">使用</a></li>
-  </ol>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简介">简介</a></li>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#使用">使用</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </section>
@@ -170,7 +127,7 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
     
     <header class="article-category">
         
-            <a href="/categories/none/" >
+            <a href="/seattle/categories/none/" >
                 None
             </a>
         
@@ -179,7 +136,7 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/posts/tldr/">Tldr</a>
+            <a href="/seattle/posts/tldr/">Tldr</a>
         </h2>
     
         
@@ -261,9 +218,9 @@ sed -i 's/apple/mango/g' path/to/file
     
     <section class="article-tags">
         
-            <a href="/tags/tools/">tools</a>
+            <a href="/seattle/tags/tools/">tools</a>
         
-            <a href="/tags/cheat-sheet/">cheat sheet</a>
+            <a href="/seattle/tags/cheat-sheet/">cheat sheet</a>
         
     </section>
 
@@ -285,12 +242,12 @@ sed -i 's/apple/mango/g' path/to/file
             
                 
 <article class="">
-    <a href="/posts/tmux/">
+    <a href="/seattle/posts/vscode-keys/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Tmux</h2>
+            <h2 class="article-title">vscode key shortcuts</h2>
         </div>
     </a>
 </article>
@@ -298,12 +255,12 @@ sed -i 's/apple/mango/g' path/to/file
             
                 
 <article class="">
-    <a href="/drafts/bilibili-video-test/">
+    <a href="/seattle/posts/ssh-timeout/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Bilibili Video Test</h2>
+            <h2 class="article-title">关于SSH长时间无操作自动断开</h2>
         </div>
     </a>
 </article>
@@ -311,12 +268,12 @@ sed -i 's/apple/mango/g' path/to/file
             
                 
 <article class="">
-    <a href="/posts/download-github-single-file/">
+    <a href="/seattle/posts/everything-search-tool/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Download Github Single File</h2>
+            <h2 class="article-title">Everything Search Tool</h2>
         </div>
     </a>
 </article>
@@ -324,12 +281,12 @@ sed -i 's/apple/mango/g' path/to/file
             
                 
 <article class="">
-    <a href="/posts/grep-cheat-sheet/">
+    <a href="/seattle/posts/bookmarklet/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Grep Cheat Sheet</h2>
+            <h2 class="article-title">Bookmarklet</h2>
         </div>
     </a>
 </article>
@@ -337,12 +294,12 @@ sed -i 's/apple/mango/g' path/to/file
             
                 
 <article class="">
-    <a href="/posts/ssh-timeout/">
+    <a href="/seattle/posts/find-cheat-sheet/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Ssh Timeout</h2>
+            <h2 class="article-title">Find Cheat Sheet</h2>
         </div>
     </a>
 </article>
@@ -367,6 +324,10 @@ sed -i 's/apple/mango/g' path/to/file
     <section class="powerby">
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
     </section>
 </footer>
 
@@ -455,7 +416,7 @@ sed -i 's/apple/mango/g' path/to/file
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

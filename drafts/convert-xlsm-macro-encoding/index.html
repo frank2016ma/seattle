@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.'>
+<title>修改xlsm文件中的宏脚本编码</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='修改xlsm文件中的宏脚本编码'>
+<meta property='og:description' content='之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Drafts' /><meta property='article:tag' content='others' /><meta property='article:published_time' content='2023-05-25T20:34:35&#43;08:00'/><meta property='article:modified_time' content='2023-05-25T20:34:35&#43;08:00'/>
+<meta name="twitter:title" content="修改xlsm文件中的宏脚本编码">
+<meta name="twitter:description" content="之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">Hi there, Welcome to my blog</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/none/" >
+                None
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/drafts/convert-xlsm-macro-encoding/">修改xlsm文件中的宏脚本编码</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 25, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK</p>
+<p>由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在<code>xlsm</code>文件中, 需要放到服务器上去执行时, 中文部分会显示乱码</p>
+<p>于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情</p>
+<ol>
+<li>将<code>xlsm</code>文件中的VBA代码导出为<code>.bas</code>代码文件</li>
+<li>转换纯文本代码文件的编码格式</li>
+<li>将转换编码之后的代码导入<code>xlsm</code>文件</li>
+</ol>
+<p>如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.IO;
+<span style="color:#66d9ef">using</span> System.Text;
+<span style="color:#66d9ef">using</span> Excel = Microsoft.Office.Interop.Excel;
+<span style="color:#66d9ef">using</span> Microsoft.Vbe.Interop;
+
+<span style="color:#66d9ef">namespace</span> XLSM_Big52GBK_Converter
+{
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>{
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> ConvertEncoding(<span style="color:#66d9ef">string</span> sourcePath, <span style="color:#66d9ef">string</span> destPath){
+            <span style="color:#66d9ef">string</span> content;
+            content = File.ReadAllText(sourcePath, Encoding.GetEncoding(<span style="color:#ae81ff">950</span>));
+            File.WriteAllText(destPath, content, Encoding.GetEncoding(<span style="color:#ae81ff">936</span>));
+        }
+
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Watermark(){
+            Console.WriteLine(<span style="color:#e6db74">&#34; ==========================&#34;</span>);
+            Console.WriteLine(<span style="color:#e6db74">&#34; &gt;&gt; Date:    2021/7/10     &#34;</span>);
+            Console.WriteLine(<span style="color:#e6db74">&#34; &gt;&gt; Author:  Frank_Ma/WKS  &#34;</span>);
+            Console.WriteLine(<span style="color:#e6db74">&#34; ==========================&#34;</span>);
+        }
+
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> End(){
+            Console.WriteLine(<span style="color:#e6db74">&#34;OK&#34;</span>);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Press Any Key to Close&#34;</span>);
+            Console.ReadKey();
+        }
+
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args){
+            Watermark();
+            Excel.Application app = <span style="color:#66d9ef">new</span> Excel.Application();
+            app.DisplayAlerts = <span style="color:#66d9ef">false</span>;
+            <span style="color:#66d9ef">string</span> oFilename, nFilename, dir, oBas, nBas;
+            <span style="color:#66d9ef">if</span> (args.Length == <span style="color:#ae81ff">0</span>){
+                Console.WriteLine(<span style="color:#e6db74">&#34; 輸入xlsm文件的完整路徑:&#34;</span>);
+                nFilename = Console.ReadLine();
+            }
+            <span style="color:#66d9ef">else</span>{
+                nFilename = args[<span style="color:#ae81ff">0</span>];
+            }
+            nFilename = nFilename.Trim(<span style="color:#e6db74">&#39;\&#34;&#39;</span>);
+            <span style="color:#66d9ef">if</span> (!nFilename.ToLower().EndsWith(<span style="color:#e6db74">&#34;.xlsm&#34;</span>)){
+                <span style="color:#66d9ef">return</span>;
+            }
+            Console.WriteLine(<span style="color:#e6db74">&#34;converting...&#34;</span>);
+
+            dir = Path.GetDirectoryName(nFilename);
+            oFilename = Path.Combine(dir, Path.GetFileNameWithoutExtension(nFilename) + <span style="color:#e6db74">&#34;_old.xlsm&#34;</span>);
+            oBas = Path.Combine(dir, <span style="color:#e6db74">&#34;old.bas&#34;</span>);
+            nBas = Path.Combine(dir, <span style="color:#e6db74">&#34;new.bas&#34;</span>);
+            File.Copy(nFilename, oFilename, <span style="color:#66d9ef">true</span>);
+
+            Excel.Workbook oWb = app.Workbooks.Open(oFilename);
+            Excel.Workbook nWb = app.Workbooks.Open(nFilename);
+
+            <span style="color:#66d9ef">foreach</span> (VBComponent cp <span style="color:#66d9ef">in</span> nWb.VBProject.VBComponents){
+                <span style="color:#66d9ef">if</span> (cp.Type == vbext_ComponentType.vbext_ct_StdModule){
+                    <span style="color:#66d9ef">int</span> n = cp.CodeModule.CountOfLines;
+                    cp.CodeModule.DeleteLines(<span style="color:#ae81ff">1</span>, n);
+                }
+            }
+
+            <span style="color:#66d9ef">foreach</span> (VBComponent comp <span style="color:#66d9ef">in</span> oWb.VBProject.VBComponents){
+                <span style="color:#66d9ef">if</span> (comp.Type == vbext_ComponentType.vbext_ct_StdModule){
+                    comp.Export(oBas);
+                    ConvertEncoding(oBas, nBas);
+                    nWb.VBProject.VBComponents.Item(comp.Name).CodeModule.AddFromFile(nBas);
+                }
+            }
+            oWb.Close(<span style="color:#66d9ef">false</span>);
+            nWb.Close(<span style="color:#66d9ef">true</span>);
+            End();
+        }
+    }
+}
+</code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/seattle/tags/others/">others</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/toml/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">TOML</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/posts/win11-brightness/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Win11 Brightness</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/seattle/drafts/bilibili-video-test/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bilibili Video Test</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
