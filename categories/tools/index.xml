@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>tools on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/categories/tools/</link>
+        <description>Recent content in tools on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/tools/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>7z 命令行使用</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</guid>
+        <description>7z 命令行基本语法为
+7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.</description>
+        </item>
+        
+    </channel>
+</rss>

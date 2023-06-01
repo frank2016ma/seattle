@@ -6,25 +6,44 @@
         <description>Recent content in Drafts on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 25 May 2023 20:34:35 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/drafts/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>修改xlsm文件中的宏脚本编码</title>
-        <link>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</link>
-        <pubDate>Thu, 25 May 2023 20:34:35 +0800</pubDate>
+        <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/drafts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>7z 命令行使用</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</guid>
-        <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
-由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
-于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.</description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</guid>
+        <description>7z 命令行基本语法为
+7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.</description>
         </item>
         <item>
-        <title>Bilibili Video Test</title>
-        <link>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>一些 Linux 命令</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/linux-tools/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</guid>
-        <description></description>
+        <guid>https://frank2016ma.github.io/seattle/drafts/linux-tools/</guid>
+        <description>Linux命令 scp scp 命令 - SSH 教程 - 网道
+# 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
+which bash # /usr/bin/bash docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown 上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh
+examples 将 log 文件夹的所有.</description>
+        </item>
+        <item>
+        <title>Batcat</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/batcat/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/drafts/batcat/</guid>
+        <description>hugo config | bat -l toml </description>
+        </item>
+        <item>
+        <title>Powershell</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/powershell/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/drafts/powershell/</guid>
+        <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素 Get-Member -MemberType Properties Where-Object {} 特殊变量 $_ 来表示管道中的当前对象 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的. 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中. 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;. 默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序. 判断一个变量是否为数组 $ip=ipconfig $ip -is [array] 查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的. 对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法. 变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型. 使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+ 常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .</description>
         </item>
         
     </channel>

@@ -4,27 +4,27 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.'>
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.'>
 <title>修改xlsm文件中的宏脚本编码</title>
 
-<link rel='canonical' href='https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/'>
 
 <link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='修改xlsm文件中的宏脚本编码'>
 <meta property='og:description' content='之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.'>
-<meta property='og:url' content='https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/'>
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Drafts' /><meta property='article:tag' content='others' /><meta property='article:published_time' content='2023-05-25T20:34:35&#43;08:00'/><meta property='article:modified_time' content='2023-05-25T20:34:35&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='VBA' /><meta property='article:tag' content='encoding' /><meta property='article:published_time' content='2023-05-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-25T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="修改xlsm文件中的宏脚本编码">
 <meta name="twitter:description" content="之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.">
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.">
     </head>
     <body class="
     article-page
@@ -96,8 +96,8 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
     
     <header class="article-category">
         
-            <a href="/seattle/categories/none/" >
-                None
+            <a href="/seattle/categories/vba/" >
+                VBA
             </a>
         
     </header>
@@ -105,7 +105,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/seattle/drafts/convert-xlsm-macro-encoding/">修改xlsm文件中的宏脚本编码</a>
+            <a href="/seattle/posts/convert-xlsm-macro-encoding/">修改xlsm文件中的宏脚本编码</a>
         </h2>
     
         
@@ -142,7 +142,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 
 
                 <time class="article-time--reading">
-                    1 minute read
+                    2 minute read
                 </time>
             </div>
         
@@ -164,6 +164,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 <li>将<code>xlsm</code>文件中的VBA代码导出为<code>.bas</code>代码文件</li>
 <li>转换纯文本代码文件的编码格式</li>
 <li>将转换编码之后的代码导入<code>xlsm</code>文件</li>
+<li>生成<code>exe</code>后, 可以通过命令行执行, 也可以直接拖动图标将<code>xlsm</code>文件拖到生成的<code>.exe</code>文件上</li>
 </ol>
 <p>如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">using</span> System;
@@ -241,6 +242,14 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
         }
     }
 }
+</code></pre></div><p>VBA 实现Excel单元格(或者Word)中的繁简转换, 可以使用以下两种方法</p>
+<ol>
+<li>调用 EXCEL 的 TCSCConv.SharedAddin, 对sheet内容进行繁简转换</li>
+<li>调用系统API  LCMapString 对String进行繁简转换</li>
+</ol>
+<p>受限于本机非Unicode程式的编码格式, 可能会出现VBA本身就无法识别出简体中文的情况（当本机编码为big5时）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Declare</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">LCMapString</span> <span style="color:#66d9ef">Lib</span> <span style="color:#e6db74">&#34;kernel32&#34;</span> <span style="color:#66d9ef">Alias</span> <span style="color:#e6db74">&#34;LCMapStringA&#34;</span> (<span style="color:#66d9ef">ByVal</span> Locale <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> dwMapFlags <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpSrcStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchSrc <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpDestStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchDest <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+<span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Declare</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">lstrlen</span> <span style="color:#66d9ef">Lib</span> <span style="color:#e6db74">&#34;kernel32&#34;</span> <span style="color:#66d9ef">Alias</span> <span style="color:#e6db74">&#34;lstrlenA&#34;</span> (<span style="color:#66d9ef">ByVal</span> lpString <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
 </code></pre></div>
 </section>
 
@@ -249,7 +258,9 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
     
     <section class="article-tags">
         
-            <a href="/seattle/tags/others/">others</a>
+            <a href="/seattle/tags/vba/">VBA</a>
+        
+            <a href="/seattle/tags/encoding/">encoding</a>
         
     </section>
 
@@ -263,54 +274,6 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/seattle/posts/toml/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">TOML</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/seattle/posts/win11-brightness/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Win11 Brightness</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/seattle/drafts/bilibili-video-test/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Bilibili Video Test</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

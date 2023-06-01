@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>others on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/categories/others/</link>
+        <description>Recent content in others on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/others/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>编程文档中的 Foo Bar</title>
+        <link>https://frank2016ma.github.io/seattle/posts/foo-bar/</link>
+        <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/foo-bar/</guid>
+        <description>许多软件文档中, 代码示例的部分, 经常会使用 &amp;lsquo;foobar&amp;rsquo;或者 &amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo; 作为变量, 这两个单词具体是什么意思有点困惑, 词典给出的中文翻译都联系不上
+太长不看版:
+结合国情来理解, foo 和 bar 就是课文中的小明和小红, 罗翔刑法案例中的张三, 张宇高数课, 等价无穷小公式中的狗
+以下是维基百科给出的详细解释:
+Foobar - Wikipedia</description>
+        </item>
+        <item>
+        <title>Batcat</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/batcat/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/drafts/batcat/</guid>
+        <description>hugo config | bat -l toml </description>
+        </item>
+        <item>
+        <title>Bilibili Video Test</title>
+        <link>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</guid>
+        <description>测试 hugo 主题 stack 中的 bilibili 视频 shortcode
+</description>
+        </item>
+        
+    </channel>
+</rss>

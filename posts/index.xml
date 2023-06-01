@@ -6,10 +6,85 @@
         <description>Recent content in Posts on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 25 May 2023 15:16:41 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>apt Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</link>
+        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</guid>
+        <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
+apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
+search apt search package_name
+show apt show package_name 显示有关给定软件包的信息，包括其依赖项、安装、下载大小、软件包可用的来源、软件包内容的描述等
+install apt install package1 package2 安装软件包, 多个软件包名使用空格分隔
+update &amp;amp; upgrade apt update 从APT存储库中获取最新索引数据
+apt upgrade 将已安装的软件包升级到最新版本
+apt upgrade package_name 升级单个软件包
+list apt list --installed 列出已安装的软件包
+apt list --upgradeable 获取可升级软件包的列表
+remove &amp;amp; purge remove 和 purge 的区别: remove 保留软件包的配置文件, 而 purge 会卸载软件包并删除配置文件
+PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不一致时, 需要注意是不是之前安装过这个软件, 然后使用remove删除, 重新安装之后使用了之前的配置文件导致的
+apt remove package_name</description>
+        </item>
+        <item>
+        <title>Python Kwargs</title>
+        <link>https://frank2016ma.github.io/seattle/posts/python-kwargs/</link>
+        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/python-kwargs/</guid>
+        <description>dt = {&amp;#39;sep&amp;#39;: &amp;#39; # &amp;#39;, &amp;#39;end&amp;#39;: &amp;#39;\n\n&amp;#39;} print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, **dt) # 等价于 print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, sep=&amp;#39; # &amp;#39;, end=&amp;#39;\n\n&amp;#39;) </description>
+        </item>
+        <item>
+        <title>编程文档中的 Foo Bar</title>
+        <link>https://frank2016ma.github.io/seattle/posts/foo-bar/</link>
+        <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/foo-bar/</guid>
+        <description>许多软件文档中, 代码示例的部分, 经常会使用 &amp;lsquo;foobar&amp;rsquo;或者 &amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo; 作为变量, 这两个单词具体是什么意思有点困惑, 词典给出的中文翻译都联系不上
+太长不看版:
+结合国情来理解, foo 和 bar 就是课文中的小明和小红, 罗翔刑法案例中的张三, 张宇高数课, 等价无穷小公式中的狗
+以下是维基百科给出的详细解释:
+Foobar - Wikipedia</description>
+        </item>
+        <item>
+        <title>VBA Notebook</title>
+        <link>https://frank2016ma.github.io/seattle/posts/vba-notebook/</link>
+        <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/vba-notebook/</guid>
+        <description>VBA(For Excel) Excel 对象 单元格里的数据类型系统是根据数据内容确定的, 比如：你将 A 列单元格格式设为保留两位的数值型, 当你在 A1 输入 5 时, 它就显示为 5.00, 如果输入 ABC, 它就不会变成数值型, 而是文本型, 如果将文本改为数字后, 又回到你设置的保留两位小数格式所以单元格设置格式只能对能转换的数据有效(当你设置为文本型后，所有输入字符都能转换为文本，可以理解为文本型才是单元格真正能设置的格式)
+相对地址 &amp;amp; 绝对地址($) C2 = A2 * B2
+AUTOFILL: C3 = A3 * B3
+J6 = I6 * $K$3 + I6
+AUTOFILL: J7 = I7 * $K$3 + I7
+引用单元格   A1 表示法
+Range(&amp;ldquo;A1&amp;rdquo;)
+Range(&amp;ldquo;A1:B5&amp;rdquo;)
+Range(&amp;ldquo;A1:B5,C1:D5&amp;rdquo;)
+Range(&amp;ldquo;A:A&amp;rdquo;)
+Range(&amp;ldquo;1:1&amp;rdquo;)
+Range(&amp;ldquo;A:C&amp;rdquo;)
+Range(&amp;ldquo;1:5&amp;rdquo;)
+Range(&amp;ldquo;1:1,3:3,8:8&amp;rdquo;)
+Range(&amp;ldquo;A:A,C:C,F:F&amp;rdquo;)
+  索引编号(适合用于循环)
+Cells(6, 1)
+  快捷表示法</description>
+        </item>
+        <item>
+        <title>Csharp Call Command Line</title>
+        <link>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</link>
+        <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</guid>
+        <description>C# 中可以通过 Diagnostics.Process 类来实现调用外部的可执行文件
+下面是一段调用 PowerPoint 演示幻灯片的脚本:
+using System.Diagnostics; namespace awake { class Program { static void Main(string[] args) { Process p = new Process(); // powershell 的命令行工具  p.StartInfo.FileName = &amp;#34;C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE&amp;#34;; // /S 后面跟着命令的参数  p.StartInfo.Arguments = &amp;#34;/S \&amp;#34;E:\\mail\\keep awake.pptx\&amp;#34;&amp;#34;; p.StartInfo.CreateNoWindow = true; p.StartInfo.UseShellExecute = false; p.Start(); } } } </description>
+        </item>
+        <item>
         <title>TOML</title>
         <link>https://frank2016ma.github.io/seattle/posts/toml/</link>
-        <pubDate>Thu, 25 May 2023 15:16:41 +0800</pubDate>
+        <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/toml/</guid>
         <description>规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
@@ -18,6 +93,18 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.com&amp;#34;: true } } 表 表（也被称为哈希表或字典）是键值对的集合 它们由表头定义，连同方括号作为单独的行出现 表头不同于数组，因为数组只有值 缩进会被忽略
 从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对
 [table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于</description>
+        </item>
+        <item>
+        <title>修改xlsm文件中的宏脚本编码</title>
+        <link>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</link>
+        <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</guid>
+        <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.</description>
         </item>
         <item>
         <title>Nginx 反向代理中的路径问题</title>
@@ -49,75 +136,18 @@ ssh -o ServerAliveInterval=60 root@127.0.0.1 使用以上参数只会对本次�
 Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         </item>
         <item>
-        <title>Win11 Brightness</title>
-        <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
-        <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+        <title>Bilibili Video Test</title>
+        <link>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
-        <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
-解决方法:
-打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
- </description>
-        </item>
-        <item>
-        <title>Gpt_Mirror</title>
-        <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
-        <pubDate>Sun, 09 Apr 2023 20:27:59 +0800</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
-        <description>Gpt-Mirror</description>
-        </item>
-        <item>
-        <title>Everything Search Tool</title>
-        <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
-        <pubDate>Mon, 03 Apr 2023 22:28:49 +0800</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
-        <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
-如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
-UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
-以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
-在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
-  点击常规页面。
-  检查 Everything 服务。
-  取消以管理员方式运行。
-  点击确定。
-  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
-  重启 Everything。
-  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
-文件内容未被索引时，搜索内容将会很慢。
-如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。</description>
-        </item>
-        <item>
-        <title>PowerShell History</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
-        <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
-        <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
-PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
-但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
-这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
-Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
-可以通过以下命令来实现查看所有命令历史记录
-Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
-PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
-Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
-而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
-utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description>
-        </item>
-        <item>
-        <title>Bookmarklet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
-        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
-        <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</guid>
+        <description>测试 hugo 主题 stack 中的 bilibili 视频 shortcode
+</description>
         </item>
         <item>
         <title>Download Github Single File</title>
         <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
         <description>在命令行下, 如何在GitHub单独下载一份文件
@@ -125,45 +155,9 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
 Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
         </item>
         <item>
-        <title>Find Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
-        <description>Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size +10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .</description>
-        </item>
-        <item>
-        <title>Grep Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
-        </item>
-        <item>
-        <title>Hugo Content Management</title>
-        <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
-        <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
-Page Bundles are a way to group Page Resources.
-Page Bundle definition A Page Bundle can be one of:
- Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
-        </item>
-        <item>
-        <title>Microsoft Excel Scroll</title>
-        <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
-        <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
-Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
-        </item>
-        <item>
         <title>MIME</title>
         <link>https://frank2016ma.github.io/seattle/posts/mime/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/mime/</guid>
         <description>MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
@@ -177,48 +171,34 @@ MIME类型对大小写不敏感，但是传统写法都是小写。
  text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
         </item>
         <item>
-        <title>PowerShell Profile</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>Grep Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
-        <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
-长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
-$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
-其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
-$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 如果配置文件首次设置后, 打开 PowerShell 时显示
-无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
-需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
-Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
-特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
-若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
-配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
-导入第三方库 Terminal-Icons 美化终端
-Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
+        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.</description>
         </item>
         <item>
         <title>Powershell Remove Duplicate Files</title>
         <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
         <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
 $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
         </item>
         <item>
-        <title>Tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <title>Find Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
-        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
-tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
-安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
+        <description>Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size +10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .</description>
         </item>
         <item>
         <title>Tmux</title>
         <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
         <description># 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
@@ -239,12 +219,140 @@ Ctrl+b [
 Tips tmux划分窗格后, 只能通过 Ctrl+b + 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便</description>
         </item>
         <item>
-        <title>vscode key shortcuts</title>
+        <title>Hugo Content Management</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
+        <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
+        <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
+Page Bundles are a way to group Page Resources.
+Page Bundle definition A Page Bundle can be one of:
+ Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
+        </item>
+        <item>
+        <title>Win11 Brightness</title>
+        <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
+        <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
+        <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
+解决方法:
+打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗
+ </description>
+        </item>
+        <item>
+        <title>Microsoft Excel 横向滚动</title>
+        <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
+        <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
+        <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
+Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
+        </item>
+        <item>
+        <title>tldr</title>
+        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
+        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
+tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
+安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
+        </item>
+        <item>
+        <title>Gpt_Mirror</title>
+        <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
+        <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
+        <description>Gpt-Mirror</description>
+        </item>
+        <item>
+        <title>Everything Search Tool</title>
+        <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
+        <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
+        <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
+UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
+以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
+在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
+  点击常规页面。
+  检查 Everything 服务。
+  取消以管理员方式运行。
+  点击确定。
+  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
+  重启 Everything。
+  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
+如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。</description>
+        </item>
+        <item>
+        <title>PowerShell History</title>
+        <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
+        <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
+PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
+但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
+这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
+Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
+可以通过以下命令来实现查看所有命令历史记录
+Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
+Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
+而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
+utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description>
+        </item>
+        <item>
+        <title>PowerShell Profile</title>
+        <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
+        <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 如果配置文件首次设置后, 打开 PowerShell 时显示
+无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
+需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
+Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
+配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
+导入第三方库 Terminal-Icons 美化终端
+Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
+        </item>
+        <item>
+        <title>VScode 快捷键</title>
         <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
-        <description>   多光标操作 ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容       编辑器控制 ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组       文件管理 ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹       显示 ====     Shift+Alt+0 切换编辑器布局（水平/垂直）   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）       语言操作 ====     Ctrl+K Ctrl+X 移除行尾空白字符       基础编辑 ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
+        <description>多光标操作     ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容    编辑器控制     ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组    文件管理     ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹    显示     ====     Shift+Alt+0 切换编辑器布局(水平/垂直)   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）    语言操作     ====     Ctrl+K Ctrl+X 移除行尾空白字符    基础编辑     ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
+        </item>
+        <item>
+        <title>Bookmarklet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+        <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
+        </item>
+        <item>
+        <title>Python Meeting</title>
+        <link>https://frank2016ma.github.io/seattle/posts/python-meeting/</link>
+        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/python-meeting/</guid>
+        <description>题目001: 在Python中如何实现单例模式。  点评：单例模式是指让一个类只能创建出唯一的实例，这个题目在面试中出现的频率极高，因为它考察的不仅仅是单例模式，更是对Python语言到底掌握到何种程度，建议大家用装饰器和元类这两种方式来实现单例模式，因为这两种方式的通用性最强，而且也可以顺便展示自己对装饰器和元类中两个关键知识点的理解。
+ 方法一：使用装饰器实现单例模式。
+from functools import wraps def singleton(cls): &amp;#34;&amp;#34;&amp;#34;单例类装饰器&amp;#34;&amp;#34;&amp;#34; instances = {} @wraps(cls) def wrapper(*args, **kwargs): if cls not in instances: instances[cls] = cls(*args, **kwargs) return instances[cls] return wrapper @singleton class President: pass  扩展：装饰器是Python中非常有特色的语法，用一个函数去装饰另一个函数或类，为其添加额外的能力。通常通过装饰来实现的功能都属横切关注功能，也就是跟正常的业务逻辑没有必然联系，可以动态添加或移除的功能。装饰器可以为代码提供缓存、代理、上下文环境等服务，它是对设计模式中代理模式的践行。在写装饰器的时候，带装饰功能的函数（上面代码中的wrapper函数）通常都会用functools模块中的wraps再加以装饰，这个装饰器最重要的作用是给被装饰的类或函数动态添加一个__wrapped__属性，这个属性会将被装饰之前的类或函数保留下来，这样在我们不需要装饰功能的时候，可以通过它来取消装饰器，例如可以使用President = President.__wrapped__来取消对President类做的单例处理。需要提醒大家的是：上面的单例并不是线程安全的，如果要做到线程安全，需要对创建对象的代码进行加锁的处理。在Python中可以使用threading模块的RLock对象来提供锁，可以使用锁对象的acquire和release方法来实现加锁和解锁的操作。当然，更为简便的做法是使用锁对象的with上下文语法来进行隐式的加锁和解锁操作。
+ 方法二：使用元类实现单例模式。
+class SingletonMeta(type): &amp;#34;&amp;#34;&amp;#34;自定义单例元类&amp;#34;&amp;#34;&amp;#34; def __init__(cls, *args, **kwargs): cls.__instance = None super().__init__(*args, **kwargs) def __call__(cls, *args, **kwargs): if cls.__instance is None: cls.__instance = super().__call__(*args, **kwargs) return cls.__instance class President(metaclass=SingletonMeta): pass  扩展：Python是面向对象的编程语言，在面向对象的世界中，一切皆为对象。对象是通过类来创建的，而类本身也是对象，类这样的对象是通过元类来创建的。我们在定义类时，如果没有给一个类指定父类，那么默认的父类是object，如果没有给一个类指定元类，那么默认的元类是type。通过自定义的元类，我们可以改变一个类默认的行为，就如同上面的代码中，我们通过元类的__call__魔术方法，改变了President类的构造器那样。</description>
         </item>
         
     </channel>

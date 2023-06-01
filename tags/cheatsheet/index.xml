@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>cheatsheet on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/tags/cheatsheet/</link>
+        <description>Recent content in cheatsheet on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>apt Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</link>
+        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</guid>
+        <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
+apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
+search apt search package_name
+show apt show package_name 显示有关给定软件包的信息，包括其依赖项、安装、下载大小、软件包可用的来源、软件包内容的描述等
+install apt install package1 package2 安装软件包, 多个软件包名使用空格分隔
+update &amp;amp; upgrade apt update 从APT存储库中获取最新索引数据
+apt upgrade 将已安装的软件包升级到最新版本
+apt upgrade package_name 升级单个软件包
+list apt list --installed 列出已安装的软件包
+apt list --upgradeable 获取可升级软件包的列表
+remove &amp;amp; purge remove 和 purge 的区别: remove 保留软件包的配置文件, 而 purge 会卸载软件包并删除配置文件
+PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不一致时, 需要注意是不是之前安装过这个软件, 然后使用remove删除, 重新安装之后使用了之前的配置文件导致的
+apt remove package_name</description>
+        </item>
+        
+    </channel>
+</rss>

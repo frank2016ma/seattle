@@ -5,10 +5,11 @@
         <link>https://frank2016ma.github.io/seattle/tags/shell/</link>
         <description>Recent content in shell on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Download Github Single File</title>
         <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
         <description>在命令行下, 如何在GitHub单独下载一份文件

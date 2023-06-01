@@ -6,22 +6,20 @@
         <description>Recent content in None on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 25 May 2023 20:34:35 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>修改xlsm文件中的宏脚本编码</title>
-        <link>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</link>
-        <pubDate>Thu, 25 May 2023 20:34:35 +0800</pubDate>
+        <lastBuildDate>Mon, 29 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Csharp Call Command Line</title>
+        <link>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</link>
+        <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/drafts/convert-xlsm-macro-encoding/</guid>
-        <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
-由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
-于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.WriteLine(&amp;#34; &amp;gt;&amp;gt; Date: 2021/7/10 &amp;#34;); Console.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</guid>
+        <description>C# 中可以通过 Diagnostics.Process 类来实现调用外部的可执行文件
+下面是一段调用 PowerPoint 演示幻灯片的脚本:
+using System.Diagnostics; namespace awake { class Program { static void Main(string[] args) { Process p = new Process(); // powershell 的命令行工具  p.StartInfo.FileName = &amp;#34;C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE&amp;#34;; // /S 后面跟着命令的参数  p.StartInfo.Arguments = &amp;#34;/S \&amp;#34;E:\\mail\\keep awake.pptx\&amp;#34;&amp;#34;; p.StartInfo.CreateNoWindow = true; p.StartInfo.UseShellExecute = false; p.Start(); } } } </description>
         </item>
         <item>
         <title>TOML</title>
         <link>https://frank2016ma.github.io/seattle/posts/toml/</link>
-        <pubDate>Thu, 25 May 2023 15:16:41 +0800</pubDate>
+        <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/toml/</guid>
         <description>规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
@@ -32,17 +30,9 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 [table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于</description>
         </item>
         <item>
-        <title>Bilibili Video Test</title>
-        <link>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/drafts/bilibili-video-test/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Download Github Single File</title>
         <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
         <description>在命令行下, 如何在GitHub单独下载一份文件
@@ -52,43 +42,10 @@ Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是
         <item>
         <title>Grep Cheat Sheet</title>
         <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
-        </item>
-        <item>
-        <title>Tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
-        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
-tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
-安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
-        </item>
-        <item>
-        <title>Tmux</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
-        <description># 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
-Ctrl+b d
-列出当前所有会话(此快捷键需要在tmux会话内执行)
-Ctrl+b s
-划分左右两个窗格
-Ctrl+b %
-划分上下两个窗格
-Ctrl+b &amp;quot;
-关闭当前窗格
-Ctrl+b x
-调整窗格大小 Ctrl+b Ctrl+方向键
-copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
-Ctrl+b [
-按 q 退出
-参考 Tmux Cheat Sheet &amp;amp; Quick Reference
-Tips tmux划分窗格后, 只能通过 Ctrl+b + 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便</description>
+        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.</description>
         </item>
         
     </channel>

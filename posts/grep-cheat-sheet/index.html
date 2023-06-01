@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.'>
 <title>Grep Cheat Sheet</title>
 
 <link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/'>
 
 <link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Grep Cheat Sheet'>
-<meta property='og:description' content='# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.'>
+<meta property='og:description' content='# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Linux' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Linux' /><meta property='article:published_time' content='2023-04-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Grep Cheat Sheet">
-<meta name="twitter:description" content="# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.">
+<meta name="twitter:description" content="# -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.">
     </head>
     <body class="
     article-page
@@ -105,6 +105,19 @@
     
     <footer class="article-time">
         
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 27, 2023</time>
+            </div>
+        
 
         
             <div>
@@ -137,6 +150,7 @@
 grep -i ^DA demo.txt
 
 <span style="color:#75715e"># Search only for the full word, -w</span>
+<span style="color:#75715e"># 仅匹配整个单词, 如下面的例子, &#34;off&#34; 不会被匹配到</span>
 grep -w <span style="color:#e6db74">&#34;of&#34;</span> demo.txt
 
 <span style="color:#75715e"># Display 3 lines after matching string, -A</span>
@@ -149,12 +163,14 @@ grep -B <span style="color:#ae81ff">4</span> <span style="color:#e6db74">&#39;Ex
 grep -C <span style="color:#ae81ff">5</span> <span style="color:#e6db74">&#39;Exception&#39;</span> error.log
 
 <span style="color:#75715e"># Recursive search (within subdirs), -r</span>
+<span style="color:#75715e"># -r 递归</span>
 grep -r <span style="color:#e6db74">&#39;quickref.me&#39;</span> /var/log/nginx/
 
 <span style="color:#75715e"># -v 反向查找, 只打印不匹配的行</span>
 grep -v <span style="color:#e6db74">&#39;warning&#39;</span> /var/log/syslog
 
 <span style="color:#75715e"># Use regex (lines starting with &#39;al&#39;), -e</span>
+<span style="color:#75715e"># 正则表达式</span>
 grep -e <span style="color:#e6db74">&#39;^al&#39;</span> filename
 
 <span style="color:#75715e"># Extended regex (lines containing jason or jackson), -E</span>
@@ -177,9 +193,16 @@ grep -n <span style="color:#e6db74">&#34;go&#34;</span> demo.txt
 grep -r ^David ~/some_dir/*
 
 <span style="color:#75715e"># print the name of the file(s) which matches the query</span>
+<span style="color:#75715e"># --file-with-matches</span>
 grep -l ^David ~/some_dir/*
+
+<span style="color:#75715e"># -L --files-without-match</span>
+<span style="color:#75715e"># </span>
+grep -rL <span style="color:#e6db74">&#39;date = &#39;</span> ./content/*/*.md
 </code></pre></div><p><a class="link" href="https://quickref.me/grep"  target="_blank" rel="noopener"
     >Grep Command Cheat Sheet &amp; Quick Reference</a></p>
+<p><a class="link" href="https://zhuanlan.zhihu.com/p/108042597"  target="_blank" rel="noopener"
+    >shell脚本——grep详解 - 知乎</a></p>
 
 </section>
 

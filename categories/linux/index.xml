@@ -6,7 +6,38 @@
         <description>Recent content in Linux on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 19 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>apt Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</link>
+        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</guid>
+        <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
+apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
+search apt search package_name
+show apt show package_name 显示有关给定软件包的信息，包括其依赖项、安装、下载大小、软件包可用的来源、软件包内容的描述等
+install apt install package1 package2 安装软件包, 多个软件包名使用空格分隔
+update &amp;amp; upgrade apt update 从APT存储库中获取最新索引数据
+apt upgrade 将已安装的软件包升级到最新版本
+apt upgrade package_name 升级单个软件包
+list apt list --installed 列出已安装的软件包
+apt list --upgradeable 获取可升级软件包的列表
+remove &amp;amp; purge remove 和 purge 的区别: remove 保留软件包的配置文件, 而 purge 会卸载软件包并删除配置文件
+PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不一致时, 需要注意是不是之前安装过这个软件, 然后使用remove删除, 重新安装之后使用了之前的配置文件导致的
+apt remove package_name</description>
+        </item>
+        <item>
+        <title>一些 Linux 命令</title>
+        <link>https://frank2016ma.github.io/seattle/drafts/linux-tools/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/drafts/linux-tools/</guid>
+        <description>Linux命令 scp scp 命令 - SSH 教程 - 网道
+# 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
+which bash # /usr/bin/bash docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown 上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh
+examples 将 log 文件夹的所有.</description>
+        </item>
+        <item>
         <title>关于SSH长时间无操作自动断开</title>
         <link>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</link>
         <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
@@ -22,10 +53,43 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         <item>
         <title>Find Cheat Sheet</title>
         <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
         <description>Usage find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find . -size +10M # Find all smaller than 10MB files, 查找小于10M的文件 find . -size -10M # Find Size between 100MB and 1GB, 查找大于100M且小于1G的文件 find .</description>
+        </item>
+        <item>
+        <title>Tmux</title>
+        <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
+        <description># 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession 常用快捷键 将当前会话与窗口分离
+Ctrl+b d
+列出当前所有会话(此快捷键需要在tmux会话内执行)
+Ctrl+b s
+划分左右两个窗格
+Ctrl+b %
+划分上下两个窗格
+Ctrl+b &amp;quot;
+关闭当前窗格
+Ctrl+b x
+调整窗格大小 Ctrl+b Ctrl+方向键
+copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
+Ctrl+b [
+按 q 退出
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference
+Tips tmux划分窗格后, 只能通过 Ctrl+b + 方向键 在不同的窗格之间切换光标焦点, 并且在tmux窗口中, 需要进入copy mode才能上下翻页, 所以个人在日常使用中, 并不会经常使用tmux的拆分窗格等功能, 更多的是使用客户端软件(如 xshell, Windows Terminal)自带的拆分窗口功能, 一个账号同时登录多个会话(不执行影响其他会话的命令), 切换窗口和翻页更方便</description>
+        </item>
+        <item>
+        <title>tldr</title>
+        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
+        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
+tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
+安装 # nodejs npm install tldr # python pip3 install tldr 使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
         </item>
         
     </channel>

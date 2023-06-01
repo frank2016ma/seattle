@@ -14,7 +14,7 @@ Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是
 Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/download-github-single-file/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='shell' /><meta property='article:tag' content='git' />
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='shell' /><meta property='article:tag' content='git' /><meta property='article:published_time' content='2023-04-29T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-29T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Download Github Single File">
 <meta name="twitter:description" content="在命令行下, 如何在GitHub单独下载一份文件
 # 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; https://raw.githubusercontent.com/curl/curl/master/README.md
@@ -110,6 +110,19 @@ Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是
     
     
     <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 29, 2023</time>
+            </div>
         
 
         

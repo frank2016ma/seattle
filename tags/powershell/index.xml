@@ -6,10 +6,19 @@
         <description>Recent content in PowerShell on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 02 Apr 2023 11:42:36 +0800</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/powershell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/powershell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Powershell Remove Duplicate Files</title>
+        <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
+        <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
+$root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
+        </item>
+        <item>
         <title>PowerShell History</title>
         <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
-        <pubDate>Sun, 02 Apr 2023 11:42:36 +0800</pubDate>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
         <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
@@ -27,7 +36,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description
         <item>
         <title>PowerShell Profile</title>
         <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
         <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
@@ -43,15 +52,6 @@ Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的�
 配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
 导入第三方库 Terminal-Icons 美化终端
 Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
-        </item>
-        <item>
-        <title>Powershell Remove Duplicate Files</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
-        <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-$root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file </description>
         </item>
         
     </channel>

@@ -5,13 +5,14 @@
         <link>https://frank2016ma.github.io/seattle/tags/linux/</link>
         <description>Recent content in Linux on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 27 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Grep Cheat Sheet</title>
         <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r grep -r &amp;#39;quickref.me&amp;#39; /var/log/nginx/ # -v 反向查找, 只打印不匹配的行 grep -v &amp;#39;warning&amp;#39; /var/log/syslog # Use regex (lines starting with &amp;#39;al&amp;#39;), -e grep -e &amp;#39;^al&amp;#39; filename # Extended regex (lines containing jason or jackson), -E grep -E &amp;#39;ja(s|cks)on&amp;#39; filename # -c 打印匹配的行数 grep -c &amp;#39;error&amp;#39; /var/log/syslog # -l 打印匹配的文件名 grep -l &amp;#39;robot&amp;#39; /var/log/* # Only show the matching part of the string, -o grep -o search_string filename # -n 显示匹配的行号 grep -n &amp;#34;go&amp;#34; demo.</description>
+        <description># -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.txt # Display 3 lines after matching string, -A grep -A 3 &amp;#39;Exception&amp;#39; error.log # Display 4 lines before matching string, -B grep -B 4 &amp;#39;Exception&amp;#39; error.log # Display 5 lines around matching string, -C grep -C 5 &amp;#39;Exception&amp;#39; error.log # Recursive search (within subdirs), -r # -r 递归 grep -r &amp;#39;quickref.</description>
         </item>
         
     </channel>

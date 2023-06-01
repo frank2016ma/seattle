@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素 Get-Member -MemberType Properties Where-Object {} 特殊变量 $_ 来表示管道中的当前对象 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的. 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中. 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;. 默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序. 判断一个变量是否为数组 $ip=ipconfig $ip -is [array] 查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的. 对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法. 变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型. 使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+ 常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .'>
+<title>Powershell</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/drafts/powershell/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Powershell'>
+<meta property='og:description' content='Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素 Get-Member -MemberType Properties Where-Object {} 特殊变量 $_ 来表示管道中的当前对象 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的. 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中. 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;. 默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序. 判断一个变量是否为数组 $ip=ipconfig $ip -is [array] 查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的. 对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法. 变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型. 使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+ 常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/drafts/powershell/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Drafts' /><meta property='article:published_time' content='2023-05-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-13T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Powershell">
+<meta name="twitter:description" content="Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素 Get-Member -MemberType Properties Where-Object {} 特殊变量 $_ 来表示管道中的当前对象 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的. 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中. 而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;. 默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加&#39;&amp;amp;&amp;lsquo;可以执行命令, 或者启动程序. 判断一个变量是否为数组 $ip=ipconfig $ip -is [array] 查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的. 对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法. 变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型. 使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便
+ 常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">Hi there, Welcome to my blog</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#文件系统">文件系统</a></li>
+        <li><a href="#运行powershell脚本">运行Powershell脚本</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/powershell/" >
+                PowerShell
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/drafts/powershell/">Powershell</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 13, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
+Get-Member -MemberType Properties
+Where-Object {}
+特殊变量 <code>$_</code> 来表示管道中的当前对象
+传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
+为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？</p>
+<blockquote>
+<p>因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&quot;%ProgramFiles%\Windows NT\Accessories&quot;.
+默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加'&amp;&lsquo;可以执行命令, 或者启动程序.
+判断一个变量是否为数组
+$ip=ipconfig
+$ip -is [array]
+查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的.
+对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法.
+变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型.
+使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便</p>
+</blockquote>
+<p>常用的对管道结果进一步处理的命令有：</p>
+<ul>
+<li>Compare-Object: 比较两组对象.</li>
+<li>ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.</li>
+<li>Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中.</li>
+<li>Export-Csv: 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.</li>
+<li>ForEach-Object: 针对每一组输入对象执行操作.</li>
+<li>Format-List: 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.</li>
+<li>Format-Table: 将输出的格式设置为表.</li>
+<li>Format-Wide: 将对象的格式设置为只能显示每个对象的一个属性的宽表.</li>
+<li>Get-Unique: 从排序列表返回唯一项目.</li>
+<li>Group-Object: 指定的属性包含相同值的组对象.</li>
+<li>Import-Clixml: 导入 CLIXML 文件, 并在 Windows PowerShell 中创建相应的对象.</li>
+<li>Measure-Object: 计算对象的数字属性以及字符串对象（如文本文件）中的字符数、单词数和行数.</li>
+<li>more: 对结果分屏显示.</li>
+<li>Out-File: 将输出发送到文件.</li>
+<li>Out-Null: 删除输出, 不将其发送到控制台.</li>
+<li>Out-Printer: 将输出发送到打印机.</li>
+<li>Out-String: 将对象作为一列字符串发送到主机.</li>
+<li>Select-Object: 选择一个对象或一组对象的指定属性.它还可以从对象的数组中选择唯一对象, 也可以从对象数组的开头或末尾选择指定个数的对象.</li>
+<li>Sort-Object: 按属性值对象进行排序.</li>
+<li>Tee-Object: 将命令输出保存在文件或变量中, 并将其显示在控制台中.</li>
+<li>Where-Object: 创建控制哪些对象沿着命令管道传递的筛选器.</li>
+</ul>
+<p>在ForEach-Object中, $<em>代表当前对象, 当然也允许通过$</em>,调用该对象支持的方法.</p>
+<h2 id="文件系统">文件系统</h2>
+<p>-filter的执行效率明显高于-include, 原因在于-include<strong>支持正则表达式</strong>, 从内部实现上就更加复杂, 而-filter只支持简单的模式匹配
+Get-Content 逐行读取文本的内容, 然后把文本的每一行传递给管道.因此, 在你想读取一个长文件的前10行, 应当适用Select-Object：</p>
+<p><code>Get-Content $env:windir\windowsupdate.log | Select-Object -first 10</code></p>
+<p>使用Select-String可以过滤出文本文件中的信息.下面的命令行会从windowsupdate.log文件中过滤出<strong>包含&quot;added update&quot;短语的行</strong></p>
+<p>Get-Content $env:windir\windowsupdate.log | Select-String &ldquo;Added update&rdquo;</p>
+<p>Dir | ForEach-Object { Rename-Item $<em>.Name $</em>.Name.replace(&ldquo;abc&rdquo;, &ldquo;&quot;) }</p>
+<p>Dir $directory*.ps1 | ForEach-Object {$x=0} { Rename-Item $_ (&ldquo;Script &quot; + $x + &ldquo;.ps1&rdquo;); $x++ } {&ldquo;Finished!&quot;}</p>
+<h2 id="运行powershell脚本">运行Powershell脚本</h2>
+<p>使用相对路径, 或者绝对路径
+.\MyScript.ps1
+E:\MyScript.ps1
+&lt;#
+System.IO.FileInfo
+GetType()
+Extension: 后缀名(.txt, .doc)
+Name 有后缀名(.png, .pdf&hellip;), BaseName 没有后缀名
+DirectoryName 是String型, Directory是对象
+#&gt;
+&lt;#
+$files = Get-ChildItem -Path &ldquo;E:\AA_OCR\dm&rdquo; -Recurse
+foreach($child in $files){
+$child.Name
+$child.fullname
+$child | Get-Member
+$child.Extension
+$child.Exists
+$child.GetType()
+}
+#&gt;
+正则表达式
+<code>rundll32.exe keymgr.dll, KRShowKeyMgr</code>
+<code>cmdkey.exe</code>
+建立, 显示, 并删除已储存的用户名称和密码
+这个命令的语法为:
+<code>CMDKEY [{/add | /generic}:targetname {/smartcard | /user:username {/pass{:password}}} | /delete{:targetname | /ras} | /list{:targetname}]</code>
+范例:
+列出可用的认证:
+cmdkey /list
+cmdkey /list:targetname
+<strong>建立一般认证:</strong>
+可以用 /generic 参数来取代 /add 参数, 以建立一般认证
+删除现有认证:
+cmdkey /delete:targetname
+cmdkey /delete:Frank_Ma
+cmdkey /generic:Frank_Ma /user:username /pass:password</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
