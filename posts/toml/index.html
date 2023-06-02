@@ -3,10 +3,8 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
 多次定义同一个key是非法的
-key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符 等价于
-{ &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.com&amp;#34;: true } } 表 表（也被称为哈希表或字典）是键值对的集合 它们由表头定义，连同方括号作为单独的行出现 表头不同于数组，因为数组只有值 缩进会被忽略
-从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对
-[table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于'>
+1  key = &amp;#34;value&amp;#34;   点分隔符 1 2 3 4  name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符   等价于
+1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.'>
 <title>TOML</title>
 
 <link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/toml/'>
@@ -14,20 +12,16 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 <link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='TOML'>
 <meta property='og:description' content='规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
 多次定义同一个key是非法的
-key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符 等价于
-{ &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.com&amp;#34;: true } } 表 表（也被称为哈希表或字典）是键值对的集合 它们由表头定义，连同方括号作为单独的行出现 表头不同于数组，因为数组只有值 缩进会被忽略
-从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对
-[table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于'>
+1  key = &amp;#34;value&amp;#34;   点分隔符 1 2 3 4  name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符   等价于
+1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/toml/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='others' /><meta property='article:published_time' content='2023-05-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-25T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-05-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-25T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="TOML">
 <meta name="twitter:description" content="规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
 多次定义同一个key是非法的
-key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符 等价于
-{ &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.com&amp;#34;: true } } 表 表（也被称为哈希表或字典）是键值对的集合 它们由表头定义，连同方括号作为单独的行出现 表头不同于数组，因为数组只有值 缩进会被忽略
-从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对
-[table-1] key1 = &amp;#34;some string&amp;#34; key2 = 123 [table-2] key1 = &amp;#34;another string&amp;#34; key2 = 456 等价于">
+1  key = &amp;#34;value&amp;#34;   点分隔符 1 2 3 4  name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符   等价于
+1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.">
     </head>
     <body class="
     article-page
@@ -66,9 +60,7 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -80,6 +72,26 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -139,8 +151,8 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
     
     <header class="article-category">
         
-            <a href="/seattle/categories/none/" >
-                None
+            <a href="/seattle/categories/others/" >
+                others
             </a>
         
     </header>
@@ -211,14 +223,45 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 <h2 id="键值对">键值对</h2>
 <p>TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略</p>
 <p>多次定义同一个<code>key</code>是非法的</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML"><span style="color:#a6e22e">key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
-</code></pre></div><h3 id="点分隔符">点分隔符</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML"><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Orange&#34;</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML"><span style="color:#a6e22e">key</span> = <span style="color:#e6db74">&#34;value&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="点分隔符">点分隔符</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-TOML" data-lang="TOML"><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Orange&#34;</span>
 <span style="color:#a6e22e">physical</span>.<span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;orange&#34;</span>
 <span style="color:#a6e22e">physical</span>.<span style="color:#a6e22e">shape</span> = <span style="color:#e6db74">&#34;round&#34;</span>
 <span style="color:#a6e22e">site</span>.<span style="color:#e6db74">&#34;google.com&#34;</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># 引号内的点不会作为分隔符</span>
-</code></pre></div><p>等价于</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+</code></pre></td></tr></table>
+</div>
+</div><p>等价于</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Orange&#34;</span>,
     <span style="color:#f92672">&#34;physical&#34;</span>: {
         <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;orange&#34;</span>,
@@ -228,21 +271,50 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
         <span style="color:#f92672">&#34;google.com&#34;</span>: <span style="color:#66d9ef">true</span>
     }
 }
-</code></pre></div><h2 id="表">表</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="表">表</h2>
 <p>表（也被称为哈希表或字典）是键值对的集合
 它们由表头定义，连同方括号作为单独的行出现
 表头不同于数组，因为数组只有值
 缩进会被忽略</p>
 <p>从表头下方, 直至下一个表头或者文件结束, 都是这个表的键值对</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">table-1</span>]
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">table-1</span>]
 <span style="color:#a6e22e">key1</span> = <span style="color:#e6db74">&#34;some string&#34;</span>
 <span style="color:#a6e22e">key2</span> = <span style="color:#ae81ff">123</span>
 
 [<span style="color:#a6e22e">table-2</span>]
 <span style="color:#a6e22e">key1</span> = <span style="color:#e6db74">&#34;another string&#34;</span>
 <span style="color:#a6e22e">key2</span> = <span style="color:#ae81ff">456</span>
-</code></pre></div><p>等价于</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+</code></pre></td></tr></table>
+</div>
+</div><p>等价于</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;table-1&#34;</span>: {
         <span style="color:#f92672">&#34;key1&#34;</span>: <span style="color:#e6db74">&#34;some string&#34;</span>,
         <span style="color:#f92672">&#34;key2&#34;</span>: <span style="color:#ae81ff">123</span>
@@ -252,8 +324,22 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
         <span style="color:#f92672">&#34;key2&#34;</span>: <span style="color:#ae81ff">456</span>
     }
 }
-</code></pre></div><h2 id="表数组">表数组</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">products</span>]]
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="表数组">表数组</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[[<span style="color:#a6e22e">products</span>]]
 <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Hammer&#34;</span>
 <span style="color:#a6e22e">sku</span> = <span style="color:#ae81ff">738594937</span>
 [[<span style="color:#a6e22e">products</span>]]  <span style="color:#75715e"># 数组里的空表</span>
@@ -261,15 +347,30 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Nail&#34;</span>
 <span style="color:#a6e22e">sku</span> = <span style="color:#ae81ff">284758393</span>
 <span style="color:#a6e22e">color</span> = <span style="color:#e6db74">&#34;gray&#34;</span>
-</code></pre></div><p>等价于</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+</code></pre></td></tr></table>
+</div>
+</div><p>等价于</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;products&#34;</span>: [
         { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Hammer&#34;</span>, <span style="color:#f92672">&#34;sku&#34;</span>: <span style="color:#ae81ff">738594937</span> },
         { },
         { <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Nail&#34;</span>, <span style="color:#f92672">&#34;sku&#34;</span>: <span style="color:#ae81ff">284758393</span>, <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;gray&#34;</span> }
     ]
 }
-</code></pre></div><p><a class="link" href="https://transform.tools/toml-to-json"  target="_blank" rel="noopener"
+</code></pre></td></tr></table>
+</div>
+</div><p><a class="link" href="https://transform.tools/toml-to-json"  target="_blank" rel="noopener"
     >TOML to JSON</a></p>
 
 </section>
@@ -277,12 +378,6 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/seattle/tags/others/">others</a>
-        
-    </section>
-
 
     </footer>
 
@@ -293,41 +388,6 @@ key = &amp;#34;value&amp;#34; 点分隔符 name = &amp;#34;Orange&amp;#34; physi
     
 
     
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/seattle/posts/win11-brightness/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Win11 Brightness</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/seattle/posts/python-meeting/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Python Meeting</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
 
      
     

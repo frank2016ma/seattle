@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
-ssh -o ServerAliveInterval=60 root@127.0.0.1 使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
+1  ssh -o ServerAliveInterval=60 root@127.0.0.1   使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
 客户端.ssh/config文件设置  ~/.ssh/config 文件中添加ServerAliveInterval 60
 Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 '>
 <title>关于SSH长时间无操作自动断开</title>
@@ -15,7 +15,7 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 '>
 <meta property='og:description' content='使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
-ssh -o ServerAliveInterval=60 root@127.0.0.1 使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
+1  ssh -o ServerAliveInterval=60 root@127.0.0.1   使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
 客户端.ssh/config文件设置  ~/.ssh/config 文件中添加ServerAliveInterval 60
 Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 '>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/ssh-timeout/'>
@@ -25,7 +25,7 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 '>
 <meta name="twitter:description" content="使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
-ssh -o ServerAliveInterval=60 root@127.0.0.1 使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
+1  ssh -o ServerAliveInterval=60 root@127.0.0.1   使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
 客户端.ssh/config文件设置  ~/.ssh/config 文件中添加ServerAliveInterval 60
 Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 ">
     </head>
@@ -66,9 +66,7 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 ">
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -80,6 +78,26 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 ">
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -168,8 +186,15 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 ">
 <li>命令行参数设置</li>
 </ol>
 <p>如果是在终端中使用<code>ssh</code>命令连接远程机器, 如在<code>Windows Terminal</code>中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -o ServerAliveInterval<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span> root@127.0.0.1
-</code></pre></div><p>使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -o ServerAliveInterval<span style="color:#f92672">=</span><span style="color:#ae81ff">60</span> root@127.0.0.1
+</code></pre></td></tr></table>
+</div>
+</div><p>使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法</p>
 <ol start="2">
 <li>客户端<code>.ssh/config</code>文件设置</li>
 </ol>
@@ -206,19 +231,6 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 ">
     <h2 class="section-title">Related content</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/seattle/posts/find-cheat-sheet/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Find Cheat Sheet</h2>
-        </div>
-    </a>
-</article>
-
             
                 
 <article class="">

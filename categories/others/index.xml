@@ -19,12 +19,33 @@
 Foobar - Wikipedia</description>
         </item>
         <item>
+        <title>Csharp Call Command Line</title>
+        <link>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</link>
+        <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</guid>
+        <description>C# 中可以通过 Diagnostics.Process 类来实现调用外部的可执行文件
+下面是一段调用 PowerPoint 演示幻灯片的脚本:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  using System.Diagnostics; namespace awake { class Program { static void Main(string[] args) { Process p = new Process(); // powershell 的命令行工具  p.StartInfo.FileName = &amp;#34;C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE&amp;#34;; // /S 后面跟着命令的参数  p.StartInfo.Arguments = &amp;#34;/S \&amp;#34;E:\\mail\\keep awake.pptx\&amp;#34;&amp;#34;; p.StartInfo.CreateNoWindow = true; p.StartInfo.UseShellExecute = false; p.Start(); } } }   </description>
+        </item>
+        <item>
+        <title>TOML</title>
+        <link>https://frank2016ma.github.io/seattle/posts/toml/</link>
+        <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/toml/</guid>
+        <description>规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
+多次定义同一个key是非法的
+1  key = &amp;#34;value&amp;#34;   点分隔符 1 2 3 4  name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符   等价于
+1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.</description>
+        </item>
+        <item>
         <title>Batcat</title>
         <link>https://frank2016ma.github.io/seattle/drafts/batcat/</link>
         <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/drafts/batcat/</guid>
-        <description>hugo config | bat -l toml </description>
+        <description>1  hugo config | bat -l toml   </description>
         </item>
         <item>
         <title>Bilibili Video Test</title>
@@ -34,6 +55,41 @@ Foobar - Wikipedia</description>
         <guid>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</guid>
         <description>测试 hugo 主题 stack 中的 bilibili 视频 shortcode
 </description>
+        </item>
+        <item>
+        <title>Download Github Single File</title>
+        <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
+        <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
+        <description>在命令行下, 如何在GitHub单独下载一份文件
+1 2 3 4 5 6 7 8 9 10 11  # 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;   https://raw.githubusercontent.com/curl/curl/master/README.md
+Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
+        </item>
+        <item>
+        <title>MIME</title>
+        <link>https://frank2016ma.github.io/seattle/posts/mime/</link>
+        <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/mime/</guid>
+        <description>MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
+MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
+浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
+语法 MIME 类型通用结构：
+ type/subtype
+ MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
+MIME类型对大小写不敏感，但是传统写法都是小写。
+两种主要的 MIME 类型在默认类型中扮演了重要的角色：
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
+        </item>
+        <item>
+        <title>Microsoft Excel 横向滚动</title>
+        <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
+        <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
+        <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
+Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
         </item>
         
     </channel>

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo Content Management</title>
-        <link>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</link>
+        <link>https://frank2016ma.github.io/seattle/learning-hugo/hugo-content-management/</link>
         <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</guid>
+        <guid>https://frank2016ma.github.io/seattle/learning-hugo/hugo-content-management/</guid>
         <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
 Page Bundles are a way to group Page Resources.
 Page Bundle definition A Page Bundle can be one of:

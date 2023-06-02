@@ -5,7 +5,7 @@
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
  将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.'>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75  using System; using System.'>
 <title>修改xlsm文件中的宏脚本编码</title>
 
 <link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/'>
@@ -15,7 +15,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
  将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.'>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75  using System; using System.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='VBA' /><meta property='article:tag' content='encoding' /><meta property='article:published_time' content='2023-05-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-25T00:00:00&#43;00:00'/>
@@ -24,7 +24,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
  将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-using System; using System.IO; using System.Text; using Excel = Microsoft.Office.Interop.Excel; using Microsoft.Vbe.Interop; namespace XLSM_Big52GBK_Converter { class Program{ static void ConvertEncoding(string sourcePath, string destPath){ string content; content = File.ReadAllText(sourcePath, Encoding.GetEncoding(950)); File.WriteAllText(destPath, content, Encoding.GetEncoding(936)); } static void Watermark(){ Console.WriteLine(&amp;#34; ==========================&amp;#34;); Console.">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75  using System; using System.">
     </head>
     <body class="
     article-page
@@ -63,9 +63,7 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -77,6 +75,26 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -169,7 +187,86 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
 <li>生成<code>exe</code>后, 可以通过命令行执行, 也可以直接拖动图标将<code>xlsm</code>文件拖到生成的<code>.exe</code>文件上</li>
 </ol>
 <p>如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">using</span> System;
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">65
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">66
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">67
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">68
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">69
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">70
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">71
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">72
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">73
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">74
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">75
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">using</span> System;
 <span style="color:#66d9ef">using</span> System.IO;
 <span style="color:#66d9ef">using</span> System.Text;
 <span style="color:#66d9ef">using</span> Excel = Microsoft.Office.Interop.Excel;
@@ -244,15 +341,25 @@ using System; using System.IO; using System.Text; using Excel = Microsoft.Office
         }
     }
 }
-</code></pre></div><p>VBA 实现Excel单元格(或者Word)中的繁简转换, 可以使用以下两种方法</p>
+</code></pre></td></tr></table>
+</div>
+</div><p>VBA 实现Excel单元格(或者Word)中的繁简转换, 可以使用以下两种方法</p>
 <ol>
 <li>调用 EXCEL 的 TCSCConv.SharedAddin, 对sheet内容进行繁简转换</li>
 <li>调用系统API  LCMapString 对String进行繁简转换</li>
 </ol>
 <p>受限于本机非Unicode程式的编码格式, 可能会出现VBA本身就无法识别出简体中文的情况（当本机编码为big5时）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Declare</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">LCMapString</span> <span style="color:#66d9ef">Lib</span> <span style="color:#e6db74">&#34;kernel32&#34;</span> <span style="color:#66d9ef">Alias</span> <span style="color:#e6db74">&#34;LCMapStringA&#34;</span> (<span style="color:#66d9ef">ByVal</span> Locale <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> dwMapFlags <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpSrcStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchSrc <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpDestStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchDest <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Declare</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">LCMapString</span> <span style="color:#66d9ef">Lib</span> <span style="color:#e6db74">&#34;kernel32&#34;</span> <span style="color:#66d9ef">Alias</span> <span style="color:#e6db74">&#34;LCMapStringA&#34;</span> (<span style="color:#66d9ef">ByVal</span> Locale <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> dwMapFlags <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpSrcStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchSrc <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>, <span style="color:#66d9ef">ByVal</span> lpDestStr <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>, <span style="color:#66d9ef">ByVal</span> cchDest <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
 <span style="color:#66d9ef">Private</span> <span style="color:#66d9ef">Declare</span> <span style="color:#66d9ef">Function</span> <span style="color:#a6e22e">lstrlen</span> <span style="color:#66d9ef">Lib</span> <span style="color:#e6db74">&#34;kernel32&#34;</span> <span style="color:#66d9ef">Alias</span> <span style="color:#e6db74">&#34;lstrlenA&#34;</span> (<span style="color:#66d9ef">ByVal</span> lpString <span style="color:#f92672">As</span> <span style="color:#66d9ef">String</span>) <span style="color:#f92672">As</span> <span style="color:#66d9ef">Long</span>
-</code></pre></div>
+</code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 

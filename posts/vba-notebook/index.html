@@ -102,9 +102,7 @@ Cells(6, 1)
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -116,6 +114,26 @@ Cells(6, 1)
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -282,7 +300,34 @@ Offset(Row, Col)</p>
 <h3 id="range-表示非连续的区域">Range 表示非连续的区域:</h3>
 <p>Range(&ldquo;A1:A2, B3:B4&rdquo;).Value = 10</p>
 <h2 id="代码片段">代码片段</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">rangeTest</span>()
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb"><span style="color:#66d9ef">Sub</span> <span style="color:#a6e22e">rangeTest</span>()
     Debug.Print Range(<span style="color:#e6db74">&#34;a1: c5&#34;</span>).Address
     <span style="color:#75715e">&#39; $A$1:$C$5
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
@@ -305,7 +350,9 @@ Offset(Row, Col)</p>
     <span style="color:#66d9ef">Let</span> num <span style="color:#f92672">=</span> 5
     Range(letter <span style="color:#f92672">&amp;</span> num).Select
 <span style="color:#66d9ef">End</span> <span style="color:#66d9ef">Sub</span>
-</code></pre></div><h2 id="浮点数比较">浮点数比较</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="浮点数比较">浮点数比较</h2>
 <p>浮点数是不精确数据, 不能用等号判断是否相等</p>
 <p><code>bool isEqual = abs(f1-f2) &lt;= epsilon</code></p>
 <p>Decimal 类型只能在 Variant 内使用</p>

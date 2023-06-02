@@ -10,7 +10,7 @@
 <meta property='og:description' content='Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/bookmarklet/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='javascript' /><meta property='article:tag' content='tools' /><meta property='article:published_time' content='2023-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-27T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='bookmarklet' /><meta property='article:published_time' content='2023-03-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Bookmarklet">
 <meta name="twitter:description" content="Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.">
     </head>
@@ -51,9 +51,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -65,6 +63,26 @@
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -117,6 +135,14 @@
     <header class="article-header">
 
     <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/javascript/" >
+                javascript
+            </a>
+        
+    </header>
     
 
     <div class="article-title-wrapper">
@@ -179,12 +205,48 @@
 <ul>
 <li>浏览器的自动填充功能在部分网站的登录页面不会生效, 点击输入框也不会显示下拉历史记录, 可以使用bookmarklet实现自动输入填充信息登录</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span>(<span style="color:#66d9ef">function</span>(){document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#uCode&#39;</span>).<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;username&#39;</span>;document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#pW&#39;</span>).<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span>;document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#login_btn%20%3E%20button.login&#39;</span>).<span style="color:#a6e22e">click</span>();})();
-</code></pre></div><ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">javascript</span><span style="color:#f92672">:</span>(<span style="color:#66d9ef">function</span>(){document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#uCode&#39;</span>).<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;username&#39;</span>;document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#pW&#39;</span>).<span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;password&#39;</span>;document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;#login_btn%20%3E%20button.login&#39;</span>).<span style="color:#a6e22e">click</span>();})();
+</code></pre></td></tr></table>
+</div>
+</div><ul>
 <li>写文章时候, 经常会放上一些摘抄的原网址的标题和链接, 使用下面的<code>bookmarklet</code>可以快速获取文章标题和链接</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">](</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>)
-</code></pre></div><h2 id="如何编写-bookmarklet">如何编写 bookmarklet</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">](</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>上一条改良一下, 直接将markdown格式的链接复制到剪贴板, 免去手动复制</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">clipboard</span>.<span style="color:#a6e22e">writeText</span>(<span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">](</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>再优化一点, 复制成功之后加一个效果(网页标题短暂跳成&quot;Copied!&ldquo;之后又恢复)</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">clipboard</span>.<span style="color:#a6e22e">writeText</span>(<span style="color:#e6db74">`[</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">title</span><span style="color:#e6db74">}</span><span style="color:#e6db74">](</span><span style="color:#e6db74">${</span>document.<span style="color:#a6e22e">URL</span><span style="color:#e6db74">}</span><span style="color:#e6db74">)`</span>);<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tt</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">title</span>;document.<span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Copied!&#34;</span>;<span style="color:#a6e22e">setTimeout</span>(()=&gt;{document.<span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#a6e22e">tt</span>}, <span style="color:#ae81ff">1e3</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="如何编写-bookmarklet">如何编写 bookmarklet</h2>
 <p>你只需要编写常规的JavaScript, 网络上有很多在线转换工具, 帮助将常规的js代码生成bookmarklet, 比如:</p>
 <p><a class="link" href="https://caiorss.github.io/bookmarklet-maker/"  target="_blank" rel="noopener"
     >Bookmarklet Maker</a></p>
@@ -201,9 +263,7 @@
     
     <section class="article-tags">
         
-            <a href="/seattle/tags/javascript/">javascript</a>
-        
-            <a href="/seattle/tags/tools/">tools</a>
+            <a href="/seattle/tags/bookmarklet/">bookmarklet</a>
         
     </section>
 

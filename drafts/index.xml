@@ -13,7 +13,7 @@
         
         <guid>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</guid>
         <description>7z 命令行基本语法为
-7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.</description>
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹   e (Extract) 1 2 3 4 5  7z e archive.</description>
         </item>
         <item>
         <title>一些 Linux 命令</title>
@@ -22,9 +22,8 @@
         
         <guid>https://frank2016ma.github.io/seattle/drafts/linux-tools/</guid>
         <description>Linux命令 scp scp 命令 - SSH 教程 - 网道
-# 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
-which bash # /usr/bin/bash docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown 上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh
-examples 将 log 文件夹的所有.</description>
+1 2 3 4 5 6 7 8  # 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder   which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
+1 2  which bash # /usr/bin/bash   1 2  docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown   上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh</description>
         </item>
         <item>
         <title>Batcat</title>
@@ -32,7 +31,7 @@ examples 将 log 文件夹的所有.</description>
         <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/drafts/batcat/</guid>
-        <description>hugo config | bat -l toml </description>
+        <description>1  hugo config | bat -l toml   </description>
         </item>
         <item>
         <title>Powershell</title>

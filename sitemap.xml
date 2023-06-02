@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://frank2016ma.github.io/seattle/</loc>
-    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</loc>
-    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
+    <loc>https://frank2016ma.github.io/seattle/learning-hugo/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/categories/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/clipboard/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/learning-hugo/hugo-copy-code/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/js/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
+    <lastmod>2023-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/cheatsheet/</loc>
@@ -24,9 +39,6 @@
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/python-kwargs/</loc>
-    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/categories/others/</loc>
@@ -45,9 +57,6 @@
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</loc>
-    <lastmod>2023-05-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/none/</loc>
     <lastmod>2023-05-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/</loc>
@@ -119,19 +128,10 @@
     <loc>https://frank2016ma.github.io/seattle/tags/shell/</loc>
     <lastmod>2023-04-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/html/</loc>
-    <lastmod>2023-04-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/mime/</loc>
     <lastmod>2023-04-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</loc>
-    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/linux/</loc>
-    <lastmod>2023-04-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/powershell/</loc>
     <lastmod>2023-04-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</loc>
@@ -149,7 +149,7 @@
     <loc>https://frank2016ma.github.io/seattle/tags/hugo/</loc>
     <lastmod>2023-04-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/hugo-content-management/</loc>
+    <loc>https://frank2016ma.github.io/seattle/learning-hugo/hugo-content-management/</loc>
     <lastmod>2023-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/win11-brightness/</loc>
@@ -161,9 +161,6 @@
     <loc>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</loc>
     <lastmod>2023-04-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</loc>
-    <lastmod>2023-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/tldr/</loc>
     <lastmod>2023-04-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -172,6 +169,9 @@
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</loc>
     <lastmod>2023-04-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/powershell/</loc>
+    <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/powershell-history/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
@@ -188,10 +188,15 @@
     <loc>https://frank2016ma.github.io/seattle/posts/bookmarklet/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/javascript/</loc>
+    <loc>https://frank2016ma.github.io/seattle/tags/bookmarklet/</loc>
+    <lastmod>2023-03-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/javascript/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/python-meeting/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/search/</loc>
   </url>
 </urlset>

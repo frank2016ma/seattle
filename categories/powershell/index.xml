@@ -18,6 +18,15 @@
  Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .</description>
         </item>
         <item>
+        <title>Powershell Remove Duplicate Files</title>
+        <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
+        <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
+1 2 3  $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file   </description>
+        </item>
+        <item>
         <title>PowerShell Profile</title>
         <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
@@ -27,15 +36,12 @@
 长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
 $PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
 其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
-$PROFILE | Get-Member -Type NoteProperty 创建、编辑配置文件 notepad $PROFILE 如果配置文件首次设置后, 打开 PowerShell 时显示
+1  $PROFILE | Get-Member -Type NoteProperty   创建、编辑配置文件 1  notepad $PROFILE   如果配置文件首次设置后, 打开 PowerShell 时显示
 无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
 需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
-Set-ExecutionPolicy RemoteSigned 使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+1  Set-ExecutionPolicy RemoteSigned   使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
 特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
-若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。
-配置文件的另一个常见用途是保存常用函数、别名和变量。 将项目保存在配置文件中时，可以在任何适用的会话中使用它们，而无需重新创建它们。
-导入第三方库 Terminal-Icons 美化终端
-Import-Module Terminal-Icons 保存常用函数, 如 将 history 设置为查看所有历史命令, 而非仅仅当前会话的历史命令</description>
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。</description>
         </item>
         
     </channel>

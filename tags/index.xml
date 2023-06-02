@@ -6,7 +6,15 @@
         <description>Recent content in Tags on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>clipboard</title>
+        <link>https://frank2016ma.github.io/seattle/tags/clipboard/</link>
+        <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/clipboard/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>cheatsheet</title>
         <link>https://frank2016ma.github.io/seattle/tags/cheatsheet/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
@@ -95,30 +103,6 @@
         <description></description>
         </item>
         <item>
-        <title>HTML</title>
-        <link>https://frank2016ma.github.io/seattle/tags/html/</link>
-        <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/tags/html/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Linux</title>
-        <link>https://frank2016ma.github.io/seattle/tags/linux/</link>
-        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/tags/linux/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>PowerShell</title>
-        <link>https://frank2016ma.github.io/seattle/tags/powershell/</link>
-        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/tags/powershell/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Hugo</title>
         <link>https://frank2016ma.github.io/seattle/tags/hugo/</link>
         <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
@@ -135,11 +119,11 @@
         <description></description>
         </item>
         <item>
-        <title>cheat sheet</title>
-        <link>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</link>
-        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+        <title>PowerShell</title>
+        <link>https://frank2016ma.github.io/seattle/tags/powershell/</link>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/tags/cheat-sheet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/powershell/</guid>
         <description></description>
         </item>
         <item>
@@ -151,11 +135,11 @@
         <description></description>
         </item>
         <item>
-        <title>javascript</title>
-        <link>https://frank2016ma.github.io/seattle/tags/javascript/</link>
+        <title>bookmarklet</title>
+        <link>https://frank2016ma.github.io/seattle/tags/bookmarklet/</link>
         <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/tags/javascript/</guid>
+        <guid>https://frank2016ma.github.io/seattle/tags/bookmarklet/</guid>
         <description></description>
         </item>
         

@@ -13,14 +13,13 @@
         
         <guid>https://frank2016ma.github.io/seattle/posts/nginx-proxy-pass/</guid>
         <description>Nginx 反向代理的配置块内容通常如下:
-location [ = | ~ | ~* | ^~ ] uri { proxy_pass URL; } proxy_pass 后面的 URL, 如果带 /, 表示绝对路径, 如果不带 /, 表示相对路径
+1 2 3  location [ = | ~ | ~* | ^~ ] uri { proxy_pass URL; }   proxy_pass 后面的 URL, 如果带 /, 表示绝对路径, 如果不带 /, 表示相对路径
 通常 URL = host[:port][path](中括号内的内容表示可选)
 如 https://www.example.com:8080/,
 https:// 是协议, www.example.com 是 host, 80 是 port, / 是 path
   proxy_pass 后面的 URL 不包含 path 时, 如 https://www.example.com:8080
 target_url = URL + uri
-  proxy_pass 后面的 URL 包含 path 时, /也算(如 https://www.example.com/)
-target_url = URL.</description>
+  proxy_pass 后面的 URL 包含 path 时, /也算(如 https://www.</description>
         </item>
         
     </channel>

@@ -2,20 +2,20 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='7z 命令行基本语法为
-7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.'>
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹   e (Extract) 1 2 3 4 5  7z e archive.'>
 <title>7z 命令行使用</title>
 
 <link rel='canonical' href='https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/'>
 
 <link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='7z 命令行使用'>
 <meta property='og:description' content='7z 命令行基本语法为
-7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.'>
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹   e (Extract) 1 2 3 4 5  7z e archive.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/drafts/7z-cli-extract-zip/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Drafts' /><meta property='article:tag' content='CLI' /><meta property='article:published_time' content='2023-05-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-26T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="7z 命令行使用">
 <meta name="twitter:description" content="7z 命令行基本语法为
-7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...] a (Add) 7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹 e (Extract) 7z e archive.zip # extracts all files from archive archive.zip to the current directory. 7z e archive.zip -oc:\soft *.">
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.zip subdir # -tzip 表示压缩包格式为 zip # -t{archive_type}, 若不指定, 则使用默认格式 7z # 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip 7z a -tzip Files.zip *.txt -r # -r (Recurse), 表示递归, 包含子文件夹 # 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中 # 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹   e (Extract) 1 2 3 4 5  7z e archive.">
     </head>
     <body class="
     article-page
@@ -54,9 +54,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -68,6 +66,26 @@
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -186,9 +204,29 @@
     
     
     <p>7z 命令行基本语法为</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z &lt;command&gt; <span style="color:#f92672">[</span>&lt;switch&gt;...<span style="color:#f92672">]</span> &lt;base_archive_name&gt; <span style="color:#f92672">[</span>&lt;arguments&gt;...<span style="color:#f92672">]</span>
-</code></pre></div><h2 id="a-add">a (Add)</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z a -tzip archive.zip subdir
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z &lt;command&gt; <span style="color:#f92672">[</span>&lt;switch&gt;...<span style="color:#f92672">]</span> &lt;base_archive_name&gt; <span style="color:#f92672">[</span>&lt;arguments&gt;...<span style="color:#f92672">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="a-add">a (Add)</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z a -tzip archive.zip subdir
 <span style="color:#75715e"># -tzip 表示压缩包格式为 zip</span>
 <span style="color:#75715e"># -t{archive_type}, 若不指定, 则使用默认格式 7z</span>
 <span style="color:#75715e"># 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip</span>
@@ -197,7 +235,9 @@
 <span style="color:#75715e"># -r (Recurse), 表示递归, 包含子文件夹</span>
 <span style="color:#75715e"># 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中</span>
 <span style="color:#75715e"># 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹</span>
-</code></pre></div><!-- 如, 当前文件夹目录结构为:
+</code></pre></td></tr></table>
+</div>
+</div><!-- 如, 当前文件夹目录结构为:
 ```goat
 
 ```
@@ -207,18 +247,40 @@
 
 ``` -->
 <h2 id="e-extract">e (Extract)</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z e archive.zip
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z e archive.zip
 <span style="color:#75715e"># extracts all files from archive archive.zip to the current directory.</span>
 
 7z e archive.zip -oc<span style="color:#960050;background-color:#1e0010">:</span>\soft *.cpp -r
 <span style="color:#75715e"># extracts all *.cpp files from archive archive.zip to c:\soft folder.</span>
-</code></pre></div><h2 id="x-extract-with-full-paths-command">x (Extract with full paths) command</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z x archive.zip
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="x-extract-with-full-paths-command">x (Extract with full paths) command</h2>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z x archive.zip
 <span style="color:#75715e"># extracts all files from the archive archive.zip to the current directory.</span>
 
 7z x archive.zip -oc<span style="color:#960050;background-color:#1e0010">:</span>\soft *.cpp -r
 <span style="color:#75715e"># 提取压缩包`archive.zip`中所有的 `.cpp` 文件到文件夹 c:\soft 中</span>
-</code></pre></div><h2 id="参数-e-和-x-的区别">参数 e 和 x 的区别</h2>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参数-e-和-x-的区别">参数 e 和 x 的区别</h2>
 <!-- 如压缩包内部结构如下:
 ```goat
 
@@ -250,13 +312,25 @@ with the file from archive:
 ``` -->
 <p>使用 <code>x</code> 参数, 解压结果和日常使用右键-&gt;解压缩至&hellip;, 结果相同</p>
 <h2 id="examples">Examples</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># 将当前路径下的所有 mrpax 文件解压到当前路径, 以压缩包名称命名的文件夹中</span>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># 将当前路径下的所有 mrpax 文件解压到当前路径, 以压缩包名称命名的文件夹中</span>
 
 <span style="color:#75715e"># 如果 7z.exe 路径没有加到环境变量中, 需要指定完整路径</span>
 &amp;<span style="color:#e6db74">&#34;C:\Program Files\7-Zip\7z.exe&#34;</span> x *.mrpax -o*
 <span style="color:#75715e"># 如果已经加入到环境变量中, 可以直接使用 7z 命令</span>
 7z x *.mrpax -o*
-</code></pre></div><p><a class="link" href="https://documentation.help/7-Zip/"  target="_blank" rel="noopener"
+</code></pre></td></tr></table>
+</div>
+</div><p><a class="link" href="https://documentation.help/7-Zip/"  target="_blank" rel="noopener"
     >官方文档 - 7-Zip Documentation</a></p>
 
 </section>

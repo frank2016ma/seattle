@@ -7,7 +7,7 @@ PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会�
 这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
 Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
 可以通过以下命令来实现查看所有命令历史记录
-Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
 PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
 Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
@@ -23,7 +23,7 @@ PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会�
 这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
 Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
 可以通过以下命令来实现查看所有命令历史记录
-Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
 PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
 Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
@@ -38,7 +38,7 @@ PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会�
 这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
 Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
 可以通过以下命令来实现查看所有命令历史记录
-Get-Content (Get-PSReadlineOption).HistorySavePath 需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
 PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
 Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
@@ -81,9 +81,7 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
-            <h2 class="site-description">Hi there, Welcome to my blog 
-
- frank2016ma@foxmail.com</h2>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -95,6 +93,26 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
                 
                 
                 <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/learning-hugo/' >
+                
+                
+                
+                <span>Learning Hugo</span>
             </a>
         </li>
         
@@ -209,8 +227,15 @@ utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
 <h2 id="get-psreadlineoption">Get-PSReadlineOption</h2>
 <p><code>Get-PSReadlineOption</code> 命令 包含在 <code>PSReadLine</code> 模块下, 该模块需要 PowerShell 5.1 或更高的版本</p>
 <p>可以通过以下命令来实现查看所有命令历史记录</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Get-Content (Get-PSReadlineOption).HistorySavePath
-</code></pre></div><p>需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Get-Content (Get-PSReadlineOption).HistorySavePath
+</code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码</p>
 <p>PowerShell 5.1 中 <code>Get-Content</code> 命令的 <code>-Encoding</code> 参数默认是 <code>Default</code></p>
 <p><em>Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)</em></p>
 <p>而在 PowerShell 7.2 中, <code>Get-Content</code> 命令的 <code>-Encoding</code> 参数默认是 <code>utf8NoBOM</code></p>
