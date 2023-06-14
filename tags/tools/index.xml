@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 19 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/tools/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于SSH长时间无操作自动断开</title>
-        <link>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</link>
         <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</guid>
         <description>使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
@@ -21,10 +21,10 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         </item>
         <item>
         <title>Tmux</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
         <description>1 2 3 4 5 6 7 8 9  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
 Ctrl+b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
@@ -43,20 +43,20 @@ Ctrl+b [
         </item>
         <item>
         <title>tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr/</link>
         <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr/</guid>
         <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
         </item>
         <item>
         <title>Everything Search Tool</title>
-        <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/</link>
         <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/</guid>
         <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
 如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
@@ -74,10 +74,10 @@ UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和
         </item>
         <item>
         <title>VScode 快捷键</title>
-        <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/vscode-keys/</link>
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/vscode-keys/</guid>
         <description>多光标操作     ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容    编辑器控制     ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组    文件管理     ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹    显示     ====     Shift+Alt+0 切换编辑器布局(水平/垂直)   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）    语言操作     ====     Ctrl+K Ctrl+X 移除行尾空白字符    基础编辑     ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
         </item>
         

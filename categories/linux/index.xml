@@ -6,12 +6,24 @@
         <description>Recent content in Linux on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Sed Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</link>
+        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</guid>
+        <description>sed 语法 sed [options]... [script] [input-file]
+sed 默认输入输出为 stdin, stdout
+ sed treats multiple input files as one long stream. The following example prints the first line of the first file (one.txt) and the last line of the last file (three.txt). Use -s to reverse this behavior. 下面的命令中, sed 将 one two three 三个文件当作一个输入, 所以只会输出 one文件的第一行和 three 文件的最后一行
+ sed -n &#39;1p ; $p&#39; one.txt two.txt three.txt
+options -n --quiet</description>
+        </item>
+        <item>
         <title>apt Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</guid>
         <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
 apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
 search apt search package_name
@@ -27,21 +39,20 @@ PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不�
 apt remove package_name</description>
         </item>
         <item>
-        <title>一些 Linux 命令</title>
-        <link>https://frank2016ma.github.io/seattle/drafts/linux-tools/</link>
+        <title>Linux 命令</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</link>
         <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/drafts/linux-tools/</guid>
-        <description>Linux命令 scp scp 命令 - SSH 教程 - 网道
-1 2 3 4 5 6 7 8  # 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder   which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</guid>
+        <description>Linux命令 scp 1 2 3 4 5 6 7 8  # 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder   which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
 1 2  which bash # /usr/bin/bash   1 2  docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown   上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh</description>
         </item>
         <item>
         <title>关于SSH长时间无操作自动断开</title>
-        <link>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</link>
         <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</guid>
         <description>使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
@@ -51,26 +62,28 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         </item>
         <item>
         <title>Grep Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</link>
         <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-        <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54  # -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</guid>
+        <description>介绍 rep - print lines that match patterns
+语法 grep searches for PATTERNS in each FILE. PATTERNS is one or more patterns separated by newline characters, and grep prints each line that matches a pattern. Typically PATTERNS should be quoted when grep is used in a shell command.
+A FILE of “-” stands for standard input. If no FILE is given,recursive searches examine the working directory and nonrecursive searches read standard input.</description>
         </item>
         <item>
         <title>Find Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</guid>
         <description>Usage 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find .</description>
         </item>
         <item>
         <title>Tmux</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
         <description>1 2 3 4 5 6 7 8 9  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
 Ctrl+b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
@@ -89,10 +102,10 @@ Ctrl+b [
         </item>
         <item>
         <title>tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr/</link>
         <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr/</guid>
         <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>

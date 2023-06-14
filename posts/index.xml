@@ -6,12 +6,50 @@
         <description>Recent content in Posts on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 01 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Tic Tac Toe</title>
+        <link>https://frank2016ma.github.io/seattle/posts/js/tic-tac-toe/</link>
+        <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/js/tic-tac-toe/</guid>
+        <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133  import { useState } from &amp;#39;react&amp;#39;; /* React provides a special function called useState that you can call from your component to let it “remember” things.</description>
+        </item>
+        <item>
+        <title>Sed Cheat Sheet</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</link>
+        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</guid>
+        <description>sed 语法 sed [options]... [script] [input-file]
+sed 默认输入输出为 stdin, stdout
+ sed treats multiple input files as one long stream. The following example prints the first line of the first file (one.txt) and the last line of the last file (three.txt). Use -s to reverse this behavior. 下面的命令中, sed 将 one two three 三个文件当作一个输入, 所以只会输出 one文件的第一行和 three 文件的最后一行
+ sed -n &#39;1p ; $p&#39; one.txt two.txt three.txt
+options -n --quiet</description>
+        </item>
+        <item>
+        <title>js function</title>
+        <link>https://frank2016ma.github.io/seattle/posts/js/js-function/</link>
+        <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/js/js-function/</guid>
+        <description>js 有三种声明函数的方法 函数声明(Function Declaration) 1 2 3  function MyFunction(arg1[, arg2, ...]){ // }   函数表达式(Function Expression) 将一个匿名函数赋值给变量, 这个匿名函数又称函数表达式
+1 2 3  var f1 = function [MyFunction](arg1[, arg2, ...]){ // };   采用函数表达式声明函数时，function命令后面不带有函数名。 如果加上函数名，该函数名只在函数体内部有效，在函数体外部无效。 下面的 x 指代函数表达式本身
+1 2 3 4 5 6 7 8 9  var print = function x(){ // 内部  console.log(typeof x); }; // 外部 x // ReferenceError: x is not defined print() // function   函数表达式中加入函数名的好处:</description>
+        </item>
+        <item>
+        <title>Axios</title>
+        <link>https://frank2016ma.github.io/seattle/posts/js/axios-cheat-sheet/</link>
+        <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/js/axios-cheat-sheet/</guid>
+        <description>axios install  npm install axios &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script src=&amp;quot;https://unpkg.com/axios/dist/axios.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  example 1 2 3 4 5 6 7 8 9 10 11 12  axios.get(&amp;#39;/user?ID=12345&amp;#39;) .then(function (response) { // handle success  console.log(response); }) .catch(function (error) { // handle error  console.log(error); }) .finally(function () { // always executed  });   </description>
+        </item>
+        <item>
         <title>apt Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/apt-cheat-sheet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</guid>
         <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
 apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
 search apt search package_name
@@ -28,30 +66,34 @@ apt remove package_name</description>
         </item>
         <item>
         <title>Python Kwargs</title>
-        <link>https://frank2016ma.github.io/seattle/posts/python-kwargs/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/python/python-kwargs/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/python-kwargs/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/python/python-kwargs/</guid>
         <description>1 2 3 4  dt = {&amp;#39;sep&amp;#39;: &amp;#39; # &amp;#39;, &amp;#39;end&amp;#39;: &amp;#39;\n\n&amp;#39;} print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, **dt) # 等价于 print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, sep=&amp;#39; # &amp;#39;, end=&amp;#39;\n\n&amp;#39;)   </description>
         </item>
         <item>
         <title>编程文档中的 Foo Bar</title>
-        <link>https://frank2016ma.github.io/seattle/posts/foo-bar/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/foo-bar/</link>
         <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/foo-bar/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/foo-bar/</guid>
         <description>许多软件文档中, 代码示例的部分, 经常会使用 &amp;lsquo;foobar&amp;rsquo;或者 &amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo; 作为变量, 这两个单词具体是什么意思有点困惑, 词典给出的中文翻译都联系不上
 太长不看版:
 结合国情来理解, foo 和 bar 就是课文中的小明和小红, 罗翔刑法案例中的张三, 张宇高数课, 等价无穷小公式中的狗
 以下是维基百科给出的详细解释:
-Foobar - Wikipedia</description>
+Foobar - Wikipedia
+ 在编程中, 还有许多类似的约定俗成的占位符
+比如 python 中的 单下划线_, 表示某个临时的无关紧要的变量
+xargs命令参数中的 -I {}
+find命令 -exec 参数后 的 {}</description>
         </item>
         <item>
         <title>VBA Notebook</title>
-        <link>https://frank2016ma.github.io/seattle/posts/vba-notebook/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/dotnet/vba-notebook/</link>
         <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/vba-notebook/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/vba-notebook/</guid>
         <description>VBA(For Excel) Excel 对象 单元格里的数据类型系统是根据数据内容确定的, 比如：你将 A 列单元格格式设为保留两位的数值型, 当你在 A1 输入 5 时, 它就显示为 5.00, 如果输入 ABC, 它就不会变成数值型, 而是文本型, 如果将文本改为数字后, 又回到你设置的保留两位小数格式所以单元格设置格式只能对能转换的数据有效(当你设置为文本型后，所有输入字符都能转换为文本，可以理解为文本型才是单元格真正能设置的格式)
 相对地址 &amp;amp; 绝对地址($) C2 = A2 * B2
 AUTOFILL: C3 = A3 * B3
@@ -73,31 +115,51 @@ Cells(6, 1)
         </item>
         <item>
         <title>Csharp Call Command Line</title>
-        <link>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/dotnet/csharp-call-command-line/</link>
         <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/csharp-call-command-line/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/csharp-call-command-line/</guid>
         <description>C# 中可以通过 Diagnostics.Process 类来实现调用外部的可执行文件
 下面是一段调用 PowerPoint 演示幻灯片的脚本:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  using System.Diagnostics; namespace awake { class Program { static void Main(string[] args) { Process p = new Process(); // powershell 的命令行工具  p.StartInfo.FileName = &amp;#34;C:\\Program Files (x86)\\Microsoft Office\\Office16\\POWERPNT.EXE&amp;#34;; // /S 后面跟着命令的参数  p.StartInfo.Arguments = &amp;#34;/S \&amp;#34;E:\\mail\\keep awake.pptx\&amp;#34;&amp;#34;; p.StartInfo.CreateNoWindow = true; p.StartInfo.UseShellExecute = false; p.Start(); } } }   </description>
         </item>
         <item>
-        <title>TOML</title>
-        <link>https://frank2016ma.github.io/seattle/posts/toml/</link>
+        <title>7z 命令行使用</title>
+        <link>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/7z-cli-extract-zip/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/7z-cli-extract-zip/</guid>
+        <description>7z 命令行基本语法为
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   通配符 *.txt: means all files with an extension of &amp;ldquo;.txt&amp;rdquo; ?a*: means all files with a second character of &amp;ldquo;a&amp;rdquo; *1*: means all names that contains character &amp;ldquo;1&amp;rdquo; *.*.*: means all names that contain two at least &amp;ldquo;.&amp;rdquo; characters
+commands l (List) 列出压缩文件中的所有内容
+1  7z l archive.zip   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.</description>
+        </item>
+        <item>
+        <title>Linux 命令</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</link>
+        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</guid>
+        <description>Linux命令 scp 1 2 3 4 5 6 7 8  # 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder   which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
+1 2  which bash # /usr/bin/bash   1 2  docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown   上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh</description>
+        </item>
+        <item>
+        <title>TOML 配置文件</title>
+        <link>https://frank2016ma.github.io/seattle/posts/others/toml/</link>
         <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/toml/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/toml/</guid>
         <description>规格  TOML 是大小写敏感的 TOML 文件必须是合法的 UTF-8 编码的 Unicode 文档 空白是指制表符(0x09)或空格(0x20) 换行是指 LF(0x0A)或 CRLF(0x0D 0x0A) 使用 # 符号作为注释  键值对 TOML 文档最基本的构成区块是键值对, 键名和键值周围的空白会被忽略
 多次定义同一个key是非法的
 1  key = &amp;#34;value&amp;#34;   点分隔符 1 2 3 4  name = &amp;#34;Orange&amp;#34; physical.color = &amp;#34;orange&amp;#34; physical.shape = &amp;#34;round&amp;#34; site.&amp;#34;google.com&amp;#34; = true # 引号内的点不会作为分隔符   等价于
 1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.</description>
         </item>
         <item>
-        <title>修改xlsm文件中的宏脚本编码</title>
-        <link>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</link>
+        <title>更改xlsm文件中的宏脚本编码</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/dotnet/convert-xlsm-macro-encoding/</link>
         <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/convert-xlsm-macro-encoding/</guid>
         <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
@@ -106,10 +168,10 @@ Cells(6, 1)
         </item>
         <item>
         <title>Nginx 反向代理中的路径问题</title>
-        <link>https://frank2016ma.github.io/seattle/posts/nginx-proxy-pass/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</link>
         <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/nginx-proxy-pass/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</guid>
         <description>Nginx 反向代理的配置块内容通常如下:
 1 2 3  location [ = | ~ | ~* | ^~ ] uri { proxy_pass URL; }   proxy_pass 后面的 URL, 如果带 /, 表示绝对路径, 如果不带 /, 表示相对路径
 通常 URL = host[:port][path](中括号内的内容表示可选)
@@ -117,14 +179,14 @@ Cells(6, 1)
 https:// 是协议, www.example.com 是 host, 80 是 port, / 是 path
   proxy_pass 后面的 URL 不包含 path 时, 如 https://www.example.com:8080
 target_url = URL + uri
-  proxy_pass 后面的 URL 包含 path 时, /也算(如 https://www.</description>
+  proxy_pass 后面的 URL 包含 path 时, (/也算)(如 https://www.</description>
         </item>
         <item>
         <title>关于SSH长时间无操作自动断开</title>
-        <link>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</link>
         <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/ssh-timeout/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</guid>
         <description>使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
 使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
  命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
@@ -134,29 +196,19 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         </item>
         <item>
         <title>Bilibili Video Test</title>
-        <link>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/bilibili-video-test/</link>
         <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/bilibili-video-test/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/bilibili-video-test/</guid>
         <description>测试 hugo 主题 stack 中的 bilibili 视频 shortcode
 </description>
         </item>
         <item>
-        <title>Download Github Single File</title>
-        <link>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</link>
-        <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/download-github-single-file/</guid>
-        <description>在命令行下, 如何在GitHub单独下载一份文件
-1 2 3 4 5 6 7 8 9 10 11  # 下载到当前目录 wget https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -O https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; # example wget https://raw.githubusercontent.com/curl/curl/master/README.md curl -O https://raw.githubusercontent.com/curl/curl/master/README.md # 下载到指定文件夹 $dest_folder = /root/ wget -P $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt; curl -o $dest_folder https://raw.githubusercontent.com/&amp;lt;用户名&amp;gt;/&amp;lt;存储库名&amp;gt;/&amp;lt;分支名&amp;gt;/&amp;lt;文件路径&amp;gt;/&amp;lt;文件名&amp;gt;   https://raw.githubusercontent.com/curl/curl/master/README.md
-Windows PowerShell 中的 wget 和 curl, 并不是 Linux 平台下面的, 只是 Invoke-WebRequest 的别名</description>
-        </item>
-        <item>
         <title>MIME</title>
-        <link>https://frank2016ma.github.io/seattle/posts/mime/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/mime/</link>
         <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/mime/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/mime/</guid>
         <description>MIME 类型 MIME (Multipurpose Internet Mail Extensions) 是描述消息内容类型的标准，用来表示文档、文件或字节流的性质和格式。
 MIME 消息能包含文本、图像、音频、视频以及其他应用程序专用的数据。
 浏览器通常使用 MIME 类型（而不是文件扩展名）来确定如何处理URL，因此 We b服务器在响应头中添加正确的 MIME 类型非常重要。如果配置不正确，浏览器可能会无法解析文件内容，网站将无法正常工作，并且下载的文件也会被错误处理。
@@ -165,39 +217,40 @@ MIME 消息能包含文本、图像、音频、视频以及其他应用程序专
  MIME 的组成结构非常简单，由类型与子类型两个字符串中间用 / 分隔而组成，不允许有空格。type 表示可以被分多个子类的独立类别，subtype 表示细分后的每个类型。
 MIME类型对大小写不敏感，但是传统写法都是小写。
 两种主要的 MIME 类型在默认类型中扮演了重要的角色：
- text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。  摘自 MIME 类型 | 菜鸟教程</description>
+ text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。   摘自 MIME 类型 | 菜鸟教程</description>
         </item>
         <item>
         <title>Grep Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</link>
         <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/grep-cheat-sheet/</guid>
-        <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54  # -i 忽略大小写 grep -i ^DA demo.txt # Search only for the full word, -w # 仅匹配整个单词, 如下面的例子, &amp;#34;off&amp;#34; 不会被匹配到 grep -w &amp;#34;of&amp;#34; demo.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</guid>
+        <description>介绍 rep - print lines that match patterns
+语法 grep searches for PATTERNS in each FILE. PATTERNS is one or more patterns separated by newline characters, and grep prints each line that matches a pattern. Typically PATTERNS should be quoted when grep is used in a shell command.
+A FILE of “-” stands for standard input. If no FILE is given,recursive searches examine the working directory and nonrecursive searches read standard input.</description>
         </item>
         <item>
-        <title>Powershell Remove Duplicate Files</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</link>
+        <title>Powershell 删除重复文件脚本</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-remove-duplicate-files/</link>
         <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-remove-duplicate-files/</guid>
-        <description>PowerShell 脚本 删除重复文件(根据文件哈希值判重)
-1 2 3  $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file   </description>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-remove-duplicate-files/</guid>
+        <description>1 2 3  $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file   </description>
         </item>
         <item>
         <title>Find Cheat Sheet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/find-cheat-sheet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</guid>
         <description>Usage 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  find [path...] [options] [expression] # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find . -type d # file find . -type f ## Size # Find all bigger than 10MB files, 查找大于10M的文件 find .</description>
         </item>
         <item>
         <title>Tmux</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tmux/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tmux/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
         <description>1 2 3 4 5 6 7 8 9  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
 Ctrl+b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
@@ -216,47 +269,59 @@ Ctrl+b [
         </item>
         <item>
         <title>Win11 Brightness</title>
-        <link>https://frank2016ma.github.io/seattle/posts/win11-brightness/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/win11-brightness/</link>
         <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/win11-brightness/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/win11-brightness/</guid>
         <description>Windows11 系统的笔记本电脑在使用电源时, 会出现偶尔屏幕变暗又恢复的情况
 解决方法:
 打开 设置 &amp;gt; 系统 &amp;gt; 屏幕, 点击亮度调节 右侧下拉选项, 取消勾选 通过优化显示的内容和亮度降低电池能耗</description>
         </item>
         <item>
         <title>Microsoft Excel 横向滚动</title>
-        <link>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/microsoft-excel-scroll/</link>
         <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/microsoft-excel-scroll/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/microsoft-excel-scroll/</guid>
         <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
 Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
         </item>
         <item>
         <title>tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/tldr/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr/</link>
         <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/tldr/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr/</guid>
         <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
         </item>
         <item>
         <title>Gpt_Mirror</title>
-        <link>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/gpt_mirror/</link>
         <pubDate>Sun, 09 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/gpt_mirror/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/gpt_mirror/</guid>
         <description>Gpt-Mirror</description>
         </item>
         <item>
+        <title>Todo</title>
+        <link>https://frank2016ma.github.io/seattle/posts/others/todo/</link>
+        <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/others/todo/</guid>
+        <description>函数式编程入门教程 - 阮一峰的网络日志
+JavaScript 教程 - 网道
+ES6 教程 - 网道
+XHR，ajax，axios，fetch之间的区别 - 掘金
+JavaScript 教程 - SegmentFault 思否</description>
+        </item>
+        <item>
         <title>Everything Search Tool</title>
-        <link>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/</link>
         <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/everything-search-tool/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/</guid>
         <description>&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
 如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
 UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
@@ -273,11 +338,28 @@ UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和
 如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。</description>
         </item>
         <item>
-        <title>PowerShell History</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-history/</link>
+        <title>PowerShell Profile</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-profile/</link>
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-history/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-profile/</guid>
+        <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
+长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
+$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
+其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
+1  $PROFILE | Get-Member -Type NoteProperty   创建、编辑配置文件 1  notepad $PROFILE   如果配置文件首次设置后, 打开 PowerShell 时显示
+无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
+需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
+1  Set-ExecutionPolicy RemoteSigned   使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
+特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
+若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。</description>
+        </item>
+        <item>
+        <title>PowerShell 历史命令</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-history/</link>
+        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-history/</guid>
         <description>Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
 PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
 但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
@@ -291,49 +373,43 @@ Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
 utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</description>
         </item>
         <item>
-        <title>PowerShell Profile</title>
-        <link>https://frank2016ma.github.io/seattle/posts/powershell-profile/</link>
-        <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/powershell-profile/</guid>
-        <description>简短说明 介绍如何创建和使用 PowerShell 配置文件
-长说明 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以使用配置文件作为启动脚本来自定义环境。 可以添加命令、别名、函数、变量、模块、PowerShell 驱动器等。 还可以将其他特定于会话的元素添加到配置文件中，使其在每个会话中可用，而无需导入或重新创建它们。 PowerShell 支持用户和主机程序的多个配置文件。 但是，它不会为你创建配置文件。
-$PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 的路径。
-其他配置文件保存在 变量的注释属性中, 可通过以下命令查看对应类型配置文件的路径
-1  $PROFILE | Get-Member -Type NoteProperty   创建、编辑配置文件 1  notepad $PROFILE   如果配置文件首次设置后, 打开 PowerShell 时显示
-无法加载文件 C:\Users\Ma\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1，因为在此系统上禁止运行脚本。
-需要以管理员身份运行以下脚本, 修改执行策略以允许加载配置文件
-1  Set-ExecutionPolicy RemoteSigned   使用配置文件 在 PowerShell 中创建的许多项和运行的大多数命令仅影响当前会话。 结束会话时，将删除这些项。
-特定于会话的命令和项包括添加到会话的 PowerShell 变量、环境变量、别名、函数、命令和 PowerShell 模块。
-若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。</description>
-        </item>
-        <item>
         <title>VScode 快捷键</title>
-        <link>https://frank2016ma.github.io/seattle/posts/vscode-keys/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/vscode-keys/</link>
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/vscode-keys/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/vscode-keys/</guid>
         <description>多光标操作     ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容    编辑器控制     ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组    文件管理     ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹    显示     ====     Shift+Alt+0 切换编辑器布局(水平/垂直)   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）    语言操作     ====     Ctrl+K Ctrl+X 移除行尾空白字符    基础编辑     ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块    </description>
         </item>
         <item>
         <title>Bookmarklet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/bookmarklet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/js/bookmarklet/</link>
         <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/bookmarklet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/js/bookmarklet/</guid>
         <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
         </item>
         <item>
         <title>Python Meeting</title>
-        <link>https://frank2016ma.github.io/seattle/posts/python-meeting/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/python/python-meeting/</link>
         <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/python-meeting/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/python/python-meeting/</guid>
         <description>题目001: 在Python中如何实现单例模式。  点评：单例模式是指让一个类只能创建出唯一的实例，这个题目在面试中出现的频率极高，因为它考察的不仅仅是单例模式，更是对Python语言到底掌握到何种程度，建议大家用装饰器和元类这两种方式来实现单例模式，因为这两种方式的通用性最强，而且也可以顺便展示自己对装饰器和元类中两个关键知识点的理解。
  方法一：使用装饰器实现单例模式。
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  from functools import wraps def singleton(cls): &amp;#34;&amp;#34;&amp;#34;单例类装饰器&amp;#34;&amp;#34;&amp;#34; instances = {} @wraps(cls) def wrapper(*args, **kwargs): if cls not in instances: instances[cls] = cls(*args, **kwargs) return instances[cls] return wrapper @singleton class President: pass    扩展：装饰器是Python中非常有特色的语法，用一个函数去装饰另一个函数或类，为其添加额外的能力。通常通过装饰来实现的功能都属横切关注功能，也就是跟正常的业务逻辑没有必然联系，可以动态添加或移除的功能。装饰器可以为代码提供缓存、代理、上下文环境等服务，它是对设计模式中代理模式的践行。在写装饰器的时候，带装饰功能的函数（上面代码中的wrapper函数）通常都会用functools模块中的wraps再加以装饰，这个装饰器最重要的作用是给被装饰的类或函数动态添加一个__wrapped__属性，这个属性会将被装饰之前的类或函数保留下来，这样在我们不需要装饰功能的时候，可以通过它来取消装饰器，例如可以使用President = President.__wrapped__来取消对President类做的单例处理。需要提醒大家的是：上面的单例并不是线程安全的，如果要做到线程安全，需要对创建对象的代码进行加锁的处理。在Python中可以使用threading模块的RLock对象来提供锁，可以使用锁对象的acquire和release方法来实现加锁和解锁的操作。当然，更为简便的做法是使用锁对象的with上下文语法来进行隐式的加锁和解锁操作。
  方法二：使用元类实现单例模式。
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class SingletonMeta(type): &amp;#34;&amp;#34;&amp;#34;自定义单例元类&amp;#34;&amp;#34;&amp;#34; def __init__(cls, *args, **kwargs): cls.</description>
+        </item>
+        <item>
+        <title>Powershell</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/</link>
+        <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/</guid>
+        <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素 Get-Member -MemberType Properties Where-Object {} 特殊变量 $_ 来表示管道中的当前对象 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的. 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+ 因为notepad.exe位于C:Windows\system32 这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+ 常用的对管道结果进一步处理的命令有：
+ Compare-Object: 比较两组对象. ConvertTo-Html: 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML. Export-Clixml: 创建对象的基于 XML 的表示形式并将其存储在文件中. Export-Csv: 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中. ForEach-Object: 针对每一组输入对象执行操作. Format-List: 将输出的格式设置为属性列表, 其中每个属性均各占一行显示. Format-Table: 将输出的格式设置为表. Format-Wide: 将对象的格式设置为只能显示每个对象的一个属性的宽表. Get-Unique: 从排序列表返回唯一项目. Group-Object: 指定的属性包含相同值的组对象. Import-Clixml: 导入 CLIXML 文件, 并在 Windows PowerShell 中创建相应的对象.</description>
         </item>
         
     </channel>

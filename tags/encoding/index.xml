@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Thu, 25 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/encoding/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>修改xlsm文件中的宏脚本编码</title>
-        <link>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</link>
+        <title>更改xlsm文件中的宏脚本编码</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/dotnet/convert-xlsm-macro-encoding/</link>
         <pubDate>Thu, 25 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/convert-xlsm-macro-encoding/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/convert-xlsm-macro-encoding/</guid>
         <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
 由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情

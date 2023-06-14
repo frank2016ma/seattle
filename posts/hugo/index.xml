@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/</link>
+        <description>Recent content on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo Copy Code</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-copy-code/</link>
+        <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-copy-code/</guid>
+        <description>使用hugo建站, 点击代码块中右上角的 Copy按钮时, 发现没有生效
+仔细对比了一下stack主题的config文件以及content文件夹下的markdown源码, 复制代码并不需要额外特殊设置, 于是打开控制台, 发现确实有代码报错, 报错信息如下
+Markdown Syntax Guide
+Uncaught TypeError: Cannot read properties of undefined (reading &#39;writeText&#39;) at HTMLButtonElement.&amp;lt;anonymous&amp;gt; (main.js:4:429) (匿名) @ main.js:4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  let r = document.querySelectorAll(&amp;#34;.article-content div.highlight&amp;#34;) , i = &amp;#34;Copy&amp;#34; , n = &amp;#34;Copied!&amp;#34;; r.forEach(o=&amp;gt;{ let s = document.</description>
+        </item>
+        <item>
+        <title>Hugo Content Management</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-content-management/</link>
+        <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-content-management/</guid>
+        <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
+Page Bundles are a way to group Page Resources.
+Page Bundle definition A Page Bundle can be one of:
+ Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Wed, 24 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/nginx/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nginx 反向代理中的路径问题</title>
-        <link>https://frank2016ma.github.io/seattle/posts/nginx-proxy-pass/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</link>
         <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/nginx-proxy-pass/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</guid>
         <description>Nginx 反向代理的配置块内容通常如下:
 1 2 3  location [ = | ~ | ~* | ^~ ] uri { proxy_pass URL; }   proxy_pass 后面的 URL, 如果带 /, 表示绝对路径, 如果不带 /, 表示相对路径
 通常 URL = host[:port][path](中括号内的内容表示可选)
@@ -19,7 +19,7 @@
 https:// 是协议, www.example.com 是 host, 80 是 port, / 是 path
   proxy_pass 后面的 URL 不包含 path 时, 如 https://www.example.com:8080
 target_url = URL + uri
-  proxy_pass 后面的 URL 包含 path 时, /也算(如 https://www.</description>
+  proxy_pass 后面的 URL 包含 path 时, (/也算)(如 https://www.</description>
         </item>
         
     </channel>

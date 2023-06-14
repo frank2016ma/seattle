@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
+UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
+以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
+在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
+  点击常规页面。
+  检查 Everything 服务。
+  取消以管理员方式运行。
+  点击确定。
+  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
+  重启 Everything。
+  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
+如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。'>
+<title>Everything Search Tool</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Everything Search Tool'>
+<meta property='og:description' content='&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
+UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
+以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
+在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
+  点击常规页面。
+  检查 Everything 服务。
+  取消以管理员方式运行。
+  点击确定。
+  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
+  重启 Everything。
+  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
+如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/others/productivity-tools/everything-search-tool/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='tools' /><meta property='article:published_time' content='2023-04-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-03T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Everything Search Tool">
+<meta name="twitter:description" content="&amp;ldquo;Everything&amp;rdquo; 是什么？ &amp;ldquo;Everything&amp;rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。
+如何在运行 &amp;ldquo;Everything&amp;rdquo; 时屏蔽 UAC 警告？ &amp;ldquo;Everything&amp;rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。
+UAC 警告可以通过以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务或不使用 NTFS 索引来避免。
+以标准用户运行 &amp;ldquo;Everything&amp;rdquo; 和安装 &amp;ldquo;Everything&amp;rdquo; 服务：
+在 &amp;ldquo;Everything&amp;rdquo; 中，打开工具菜单，点击选项。
+  点击常规页面。
+  检查 Everything 服务。
+  取消以管理员方式运行。
+  点击确定。
+  退出 &amp;ldquo;Everything&amp;rdquo; (右键 Everything 托盘图标并点击退出)。
+  重启 Everything。
+  搜索 &amp;ldquo;Everything&amp;rdquo; 能否搜索文件内容？ 可以，&amp;ldquo;Everything&amp;rdquo; 可以通过搜索函数 content: 来搜索文件内容。
+文件内容未被索引时，搜索内容将会很慢。
+如何使用通配符？ 搜索关键词中使用通配符 * 将会匹配任意数量的任意字符。">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/hugo/' >
+                
+                
+                
+                <span>Hugo</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/archives/' >
+                
+                
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/categories/' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#everything-是什么">&ldquo;Everything&rdquo; 是什么？</a></li>
+        <li><a href="#如何在运行-everything-时屏蔽-uac-警告">如何在运行 &ldquo;Everything&rdquo; 时屏蔽 UAC 警告？</a></li>
+        <li><a href="#搜索">搜索</a>
+          <ul>
+            <li><a href="#everything-能否搜索文件内容">&ldquo;Everything&rdquo; 能否搜索文件内容？</a></li>
+            <li><a href="#如何使用通配符">如何使用通配符？</a></li>
+            <li><a href="#如何搜索文件类型">如何搜索文件类型？</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/posts/others/productivity-tools/everything-search-tool/">Everything Search Tool</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 03, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="everything-是什么">&ldquo;Everything&rdquo; 是什么？</h3>
+<p>&ldquo;Everything&rdquo; 是 Windows 上一款搜索引擎，它能够基于文件名快速定文件和文件夹位置。</p>
+<h3 id="如何在运行-everything-时屏蔽-uac-警告">如何在运行 &ldquo;Everything&rdquo; 时屏蔽 UAC 警告？</h3>
+<p>&ldquo;Everything&rdquo; 需要管理员权限以便低级别读取 NTFS 分卷来 NTFS 索引。</p>
+<p>UAC 警告可以通过以标准用户运行 &ldquo;Everything&rdquo; 和安装 &ldquo;Everything&rdquo; 服务或不使用 NTFS 索引来避免。</p>
+<p>以标准用户运行 &ldquo;Everything&rdquo; 和安装 &ldquo;Everything&rdquo; 服务：</p>
+<p>在 &ldquo;Everything&rdquo; 中，打开工具菜单，点击选项。</p>
+<ul>
+<li>
+<p>点击常规页面。</p>
+</li>
+<li>
+<p>检查 Everything 服务。</p>
+</li>
+<li>
+<p>取消以管理员方式运行。</p>
+</li>
+<li>
+<p>点击确定。</p>
+</li>
+<li>
+<p>退出 &ldquo;Everything&rdquo; (右键 Everything 托盘图标并点击退出)。</p>
+</li>
+<li>
+<p>重启 Everything。</p>
+</li>
+</ul>
+<h3 id="搜索">搜索</h3>
+<h4 id="everything-能否搜索文件内容">&ldquo;Everything&rdquo; 能否搜索文件内容？</h4>
+<p>可以，&ldquo;Everything&rdquo; 可以通过搜索函数 content: 来搜索文件内容。</p>
+<p>文件内容未被索引时，搜索内容将会很慢。</p>
+<h4 id="如何使用通配符">如何使用通配符？</h4>
+<p>搜索关键词中使用通配符 <code>*</code> 将会匹配任意数量的任意字符。</p>
+<p>例如，搜索以 e 开头并以 g 结尾的文件和文件夹：<code>e*g</code></p>
+<p>搜索关键词中使用通配符 <code>?</code> 将会匹配任一字符。</p>
+<p>例如，搜索含有两个字符扩展名的文件：<code>*.??</code></p>
+<h4 id="如何搜索文件类型">如何搜索文件类型？</h4>
+<p>搜索文件类型，请在搜索框输入扩展名，</p>
+<p>例如，搜索 mp3 文件，输入 <code>*.mp3</code> 即可。</p>
+<p>搜索多个文件类型，请使用 <code>|</code> 分隔，</p>
+<p>例如：<code>*.bmp|*.jpg</code> 将会搜索 bmp 或 jpg 类型文件。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/seattle/tags/tools/">tools</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/linux/vscode-keys/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">VScode 快捷键</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

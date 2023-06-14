@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
+PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
+但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
+这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
+Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
+可以通过以下命令来实现查看所有命令历史记录
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
+Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
+而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
+utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)'>
+<title>PowerShell 历史命令</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-history/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='PowerShell 历史命令'>
+<meta property='og:description' content='Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
+PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
+但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
+这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
+Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
+可以通过以下命令来实现查看所有命令历史记录
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
+Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
+而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
+utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-history/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='PowerShell' /><meta property='article:published_time' content='2023-04-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-02T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="PowerShell 历史命令">
+<meta name="twitter:description" content="Get-History PowerShell 的 Get-History 命令只显示当前会话的历史命令
+PowerShell 没有类似 Linux bash 下的 history 一样, 直接查看所有会话的历史命令的 Cmdlet
+但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中
+这个文件的路径可以通过命令 (Get-PSReadlineOption).HistorySavePath 获取到
+Get-PSReadlineOption Get-PSReadlineOption 命令 包含在 PSReadLine 模块下, 该模块需要 PowerShell 5.1 或更高的版本
+可以通过以下命令来实现查看所有命令历史记录
+1  Get-Content (Get-PSReadlineOption).HistorySavePath   需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码
+PowerShell 5.1 中 Get-Content 命令的 -Encoding 参数默认是 Default
+Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)
+而在 PowerShell 7.2 中, Get-Content 命令的 -Encoding 参数默认是 utf8NoBOM
+utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/hugo/' >
+                
+                
+                
+                <span>Hugo</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/archives/' >
+                
+                
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/categories/' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#get-history">Get-History</a></li>
+    <li><a href="#get-psreadlineoption">Get-PSReadlineOption</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/posts/windows/powershell/powershell-history/">PowerShell 历史命令</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 02, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="get-history">Get-History</h2>
+<p>PowerShell 的 <code>Get-History</code> 命令只显示<strong>当前会话</strong>的历史命令</p>
+<p>PowerShell 没有类似 Linux bash 下的 <code>history</code> 一样, 直接查看所有会话的历史命令的 Cmdlet</p>
+<p>但是和 bash 一样, PowerShell 将所有会话的命令历史记录存储在文本文件中</p>
+<p>这个文件的路径可以通过命令 <code>(Get-PSReadlineOption).HistorySavePath</code> 获取到</p>
+<h2 id="get-psreadlineoption">Get-PSReadlineOption</h2>
+<p><code>Get-PSReadlineOption</code> 命令 包含在 <code>PSReadLine</code> 模块下, 该模块需要 PowerShell 5.1 或更高的版本</p>
+<p>可以通过以下命令来实现查看所有命令历史记录</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Get-Content (Get-PSReadlineOption).HistorySavePath
+</code></pre></td></tr></table>
+</div>
+</div><p>需要注意的是, 如果历史命令中包含中文等非ASCII字符, 需要使用对应的编码读取该文本文件, 否则会显示乱码</p>
+<p>PowerShell 5.1 中 <code>Get-Content</code> 命令的 <code>-Encoding</code> 参数默认是 <code>Default</code></p>
+<p><em>Default 使用与系统的活动代码页相对应的编码 (通常为 ANSI)</em></p>
+<p>而在 PowerShell 7.2 中, <code>Get-Content</code> 命令的 <code>-Encoding</code> 参数默认是 <code>utf8NoBOM</code></p>
+<p><em>utf8NoBOM：以 UTF-8 格式编码，不带字节顺序标记 (BOM)</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/seattle/tags/powershell/">PowerShell</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/windows/powershell/powershell-profile/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">PowerShell Profile</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

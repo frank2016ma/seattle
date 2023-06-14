@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/clipboard/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hugo Copy Code</title>
-        <link>https://frank2016ma.github.io/seattle/learning-hugo/hugo-copy-code/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-copy-code/</link>
         <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/learning-hugo/hugo-copy-code/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-copy-code/</guid>
         <description>使用hugo建站, 点击代码块中右上角的 Copy按钮时, 发现没有生效
 仔细对比了一下stack主题的config文件以及content文件夹下的markdown源码, 复制代码并不需要额外特殊设置, 于是打开控制台, 发现确实有代码报错, 报错信息如下
 Markdown Syntax Guide

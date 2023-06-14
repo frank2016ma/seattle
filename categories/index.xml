@@ -6,20 +6,28 @@
         <description>Recent content in Categories on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 02 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>js</title>
-        <link>https://frank2016ma.github.io/seattle/categories/js/</link>
-        <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Linux</title>
+        <link>https://frank2016ma.github.io/seattle/categories/linux/</link>
+        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/categories/js/</guid>
+        <guid>https://frank2016ma.github.io/seattle/categories/linux/</guid>
         <description></description>
         </item>
         <item>
-        <title>Linux</title>
-        <link>https://frank2016ma.github.io/seattle/categories/linux/</link>
-        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        <title>javascript</title>
+        <link>https://frank2016ma.github.io/seattle/categories/javascript/</link>
+        <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/categories/linux/</guid>
+        <guid>https://frank2016ma.github.io/seattle/categories/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>React</title>
+        <link>https://frank2016ma.github.io/seattle/categories/react/</link>
+        <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/categories/react/</guid>
         <description></description>
         </item>
         <item>
@@ -47,6 +55,14 @@
         <description></description>
         </item>
         <item>
+        <title>dotnet</title>
+        <link>https://frank2016ma.github.io/seattle/categories/dotnet/</link>
+        <pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/categories/dotnet/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>tools</title>
         <link>https://frank2016ma.github.io/seattle/categories/tools/</link>
         <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
@@ -65,7 +81,7 @@
         <item>
         <title>PowerShell</title>
         <link>https://frank2016ma.github.io/seattle/categories/powershell/</link>
-        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/categories/powershell/</guid>
         <description></description>
@@ -76,14 +92,6 @@
         <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/categories/blog/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>javascript</title>
-        <link>https://frank2016ma.github.io/seattle/categories/javascript/</link>
-        <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/categories/javascript/</guid>
         <description></description>
         </item>
         
