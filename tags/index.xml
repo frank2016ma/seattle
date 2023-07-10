@@ -6,7 +6,31 @@
         <description>Recent content in Tags on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GUI</title>
+        <link>https://frank2016ma.github.io/seattle/tags/gui/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/gui/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>socket</title>
+        <link>https://frank2016ma.github.io/seattle/tags/socket/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/socket/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>tkinter</title>
+        <link>https://frank2016ma.github.io/seattle/tags/tkinter/</link>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/tkinter/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>cheatsheet</title>
         <link>https://frank2016ma.github.io/seattle/tags/cheatsheet/</link>
         <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>

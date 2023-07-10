@@ -354,8 +354,7 @@ seq <span style="color:#ae81ff">10</span> | sed -n <span style="color:#e6db74">&
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="正则表达式-regexp">正则表达式 /regexp/</h4>
-<p>sed &lsquo;/apple/s/hello/world/&rsquo; input.txt
-将包含<code>apple</code>的行 的hello 替换成 world</p>
+<p><code>sed '/apple/s/hello/world/' input.txt</code> 将包含<code>apple</code>的行 的hello 替换成 world</p>
 <p>如果要匹配的字符串本身包含 斜杠<code>/</code>, 可以用其他符号代替斜杠(通常是<code>%</code>), 这样可以避免频繁使用 <code>\</code> 来转义 <code>/</code></p>
 <p>下面三种写法都是匹配 以<code>/home/alice/documents/</code>开头的行</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -388,14 +387,11 @@ sed -n <span style="color:#e6db74">&#39;\;^/home/alice/documents/;p&#39;</span>
 <span style="color:#ae81ff">8</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>sed &lsquo;4,17s/hello/world/&rsquo; input.txt
-从第4行到第17行的hello 替换成world(左闭右闭)</p>
-<p><code>!</code> 反向匹配
-sed &lsquo;/apple/!s/hello/world/&rsquo; input.txt
-将<strong>不包含</strong><code>apple</code>的行 的hello 替换成 world</p>
-<p>地址范围
-sed &lsquo;4,17s/hello/world/&rsquo; input.txt
-<strong>将除了从第4行到第17行的所有行</strong>的hello 替换成world</p>
+</div><p><code>sed '4,17s/hello/world/' input.txt</code> 从第4行到第17行的hello 替换成world(左闭右闭)</p>
+<p><code>!</code> 反向匹配 <br/>
+<code>sed '/apple/!s/hello/world/' input.txt</code> 将<strong>不包含</strong><code>apple</code>的行 的hello 替换成 world</p>
+<p>地址范围 <br/>
+<code>sed '4,17s/hello/world/' input.txt</code> <strong>将除了从第4行到第17行的所有行</strong>的hello 替换成world</p>
 <h3 id="commandsx">commands(X)</h3>
 <h4 id="a-在addr后面添加内容">a (在addr后面添加内容)</h4>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
@@ -456,7 +452,7 @@ hello
 <h2 id="examples">examples</h2>
 <p><strong>以下的替换、追加及删除操作, 是不会修改原文件的, 修改文件需要加上<code>-i</code>参数</strong></p>
 <h3 id="查找">查找</h3>
-<p>sed -n &lsquo;/hello/p&rsquo; file.txt</p>
+<p><code>sed -n '/hello/p' file.txt</code></p>
 <p>修改文件并备份原文件</p>
 <p><code>sed -i.bak 's/foo/bar/g' file.txt</code></p>
 <p>以上命令会直接修改 file.txt 文件的内容, 并且备份原文件为 file.txt.bak</p>

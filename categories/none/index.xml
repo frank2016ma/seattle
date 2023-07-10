@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>None on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/categories/none/</link>
+        <description>Recent content in None on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 18 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CSS 元素居中</title>
+        <link>https://frank2016ma.github.io/seattle/posts/js/css-center/</link>
+        <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/js/css-center/</guid>
+        <description>行内元素和块级元素 行内元素  不会自动进行换行 元素的宽高不可以设置 无法设置竖直方向 margin  常见的行内元素: span, a
+块级元素  独占一行 (在不设置的情况下)继承父元素的宽高  常见的块级元素: div, p, table, h1-h6
+ 行内元素和块级元素不是绝对的, 可以相互转换
+ 水平居中 行内元素: text-align: center
+块级元素:
+ margin: 0 auto 将父元素设置为相对定位, 待居中元素设置为绝对定位, left: 50% 父元素设置属性 display: flex; justify-content: center  垂直居中 块级元素:
+ 父元素设置为相对定位, 待居中元素设置为绝对定位, top: 50% 父元素设置 display: flex; align-items: center  </description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='1 2 3 4  dt = {&amp;#39;sep&amp;#39;: &amp;#39; # &amp;#39;, &amp;#39;end&amp;#39;: &amp;#39;\n\n&amp;#39;} print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, **dt) # 等价于 print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, sep=&amp;#39; # &amp;#39;, end=&amp;#39;\n\n&amp;#39;)   '>
-<title>Python Kwargs</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='React 钩子'>
+<title>React Hook</title>
 
-<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/python/python-kwargs/'>
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/js/react/react-hook/'>
 
-<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Python Kwargs'>
-<meta property='og:description' content='1 2 3 4  dt = {&amp;#39;sep&amp;#39;: &amp;#39; # &amp;#39;, &amp;#39;end&amp;#39;: &amp;#39;\n\n&amp;#39;} print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, **dt) # 等价于 print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, sep=&amp;#39; # &amp;#39;, end=&amp;#39;\n\n&amp;#39;)   '>
-<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/python/python-kwargs/'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='React Hook'>
+<meta property='og:description' content='React 钩子'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/js/react/react-hook/'>
 <meta property='og:site_name' content='Frank in seattle'>
-<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-06-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-06-01T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Python Kwargs">
-<meta name="twitter:description" content="1 2 3 4  dt = {&amp;#39;sep&amp;#39;: &amp;#39; # &amp;#39;, &amp;#39;end&amp;#39;: &amp;#39;\n\n&amp;#39;} print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, **dt) # 等价于 print(&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;, sep=&amp;#39; # &amp;#39;, end=&amp;#39;\n\n&amp;#39;)   ">
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-06-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-06-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="React Hook">
+<meta name="twitter:description" content="React 钩子">
     </head>
     <body class="
     article-page
@@ -124,8 +124,8 @@
     
     <header class="article-category">
         
-            <a href="/seattle/categories/python/" >
-                Python
+            <a href="/seattle/categories/react/" >
+                React
             </a>
         
     </header>
@@ -133,9 +133,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/seattle/posts/python/python-kwargs/">Python Kwargs</a>
+            <a href="/seattle/posts/js/react/react-hook/">React Hook</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            React 钩子
+        </h3>
         
     </div>
 
@@ -155,7 +159,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jun 01, 2023</time>
+                <time class="article-time--published">Jun 25, 2023</time>
             </div>
         
 
@@ -185,21 +189,58 @@
     <section class="article-content">
     
     
-    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+    <p>React 的核心是组件, v16.8之前, 组件的标准写法是组件类</p>
+<p>组件的另一种写法是函数组件:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">dt <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;sep&#39;</span>: <span style="color:#e6db74">&#39; # &#39;</span>, <span style="color:#e6db74">&#39;end&#39;</span>: <span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#39;</span>}
-print(<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;world&#39;</span>, <span style="color:#f92672">**</span>dt)
-<span style="color:#75715e"># 等价于</span>
-print(<span style="color:#e6db74">&#39;hello&#39;</span>, <span style="color:#e6db74">&#39;world&#39;</span>, sep<span style="color:#f92672">=</span><span style="color:#e6db74">&#39; # &#39;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n\n</span><span style="color:#e6db74">&#39;</span>)
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Welcome</span>(<span style="color:#a6e22e">props</span>) {
+  <span style="color:#66d9ef">return</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h1</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Hello</span>, {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">name</span>}<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h1&gt;;</span>
+}
 </code></pre></td></tr></table>
 </div>
+</div><p>函数组件有一些限制: 必须是纯函数, 不能包含状态, 也不支持生命周期方法, 因此无法取代组件类</p>
+<p><strong>React Hooks 的设计目的，就是加强版函数组件，完全不使用&quot;类&quot;，就能写出一个全功能的组件。</strong></p>
+<p><strong>React Hooks 的意思是，组件尽量写成纯函数，如果需要外部功能和副作用，就用钩子把外部代码&quot;钩&quot;进来。</strong></p>
+<p>常用的钩子:</p>
+<ul>
+<li>useState()</li>
+</ul>
+<p>useState()这个函数接受状态的初始值，作为参数，返回一个数组，数组的第一个成员是一个变量, 指向状态的当前值。第二个成员是一个函数，用来更新状态，约定是set前缀加上状态的变量名</p>
+<ul>
+<li>useEffect()</li>
+</ul>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">useEffect</span>(()  =&gt;  {
+  <span style="color:#75715e">// Async Action
+</span><span style="color:#75715e"></span>}, [<span style="color:#a6e22e">dependencies</span>])
+</code></pre></td></tr></table>
 </div>
+</div><p>useEffect()用来引入具有副作用的操作，最常见的就是向服务器请求数据
+useEffect()接受两个参数。第一个参数是一个函数，异步操作的代码放在里面。第二个参数是一个数组，用于给出 Effect 的依赖项，只要这个数组发生变化，useEffect()就会执行。</p>
+<ul>
+<li>
+<p>useContext()</p>
+</li>
+<li>
+<p>useReducer()</p>
+</li>
+<li>
+<p>useRef</p>
+</li>
+</ul>
+<p>useRef 变化不会主动使页面渲染</p>
+
 </section>
 
 

@@ -6,18 +6,10 @@
         <description>Recent content in Categories on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Linux</title>
-        <link>https://frank2016ma.github.io/seattle/categories/linux/</link>
-        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/categories/linux/</guid>
-        <description></description>
-        </item>
-        <item>
+        <lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>javascript</title>
         <link>https://frank2016ma.github.io/seattle/categories/javascript/</link>
-        <pubDate>Tue, 06 Jun 2023 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/categories/javascript/</guid>
         <description></description>
@@ -25,7 +17,7 @@
         <item>
         <title>React</title>
         <link>https://frank2016ma.github.io/seattle/categories/react/</link>
-        <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/categories/react/</guid>
         <description></description>
@@ -33,9 +25,25 @@
         <item>
         <title>Python</title>
         <link>https://frank2016ma.github.io/seattle/categories/python/</link>
-        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/categories/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>None</title>
+        <link>https://frank2016ma.github.io/seattle/categories/none/</link>
+        <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/categories/none/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://frank2016ma.github.io/seattle/categories/linux/</link>
+        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/categories/linux/</guid>
         <description></description>
         </item>
         <item>

@@ -2,17 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://frank2016ma.github.io/seattle/posts/js/tic-tac-toe/</loc>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/react/tic-tac-toe/</loc>
     <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/javascript/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/websocket/</loc>
+    <lastmod>2023-06-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/react/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/react/react-hook/</loc>
+    <lastmod>2023-06-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/gui/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/image2ascii/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/python/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/chat-room/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/socket/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/tags/tkinter/</loc>
+    <lastmod>2023-06-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/css-center/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/categories/none/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/archives/</loc>
     <lastmod>2023-06-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/tags/cheatsheet/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
@@ -20,25 +62,19 @@
     <loc>https://frank2016ma.github.io/seattle/categories/linux/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</loc>
     <lastmod>2023-06-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/tags/</loc>
-    <lastmod>2023-06-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/javascript/</loc>
-    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/spread-syntax/</loc>
+    <lastmod>2023-06-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/js/js-function/</loc>
     <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/js/axios-cheat-sheet/</loc>
-    <lastmod>2023-06-05T00:00:00+00:00</lastmod>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/promise/</loc>
+    <lastmod>2023-06-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/react/</loc>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/axios-cheat-sheet/</loc>
     <lastmod>2023-06-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/hugo/</loc>
@@ -53,10 +89,7 @@
     <loc>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/categories/python/</loc>
-    <lastmod>2023-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/python/python-kwargs/</loc>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/tips/python-kwargs/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/categories/others/</loc>
@@ -182,7 +215,7 @@
     <loc>https://frank2016ma.github.io/seattle/tags/vscode/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/linux/vscode-keys/</loc>
+    <loc>https://frank2016ma.github.io/seattle/posts/others/vscode-keys/</loc>
     <lastmod>2023-04-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/js/bookmarklet/</loc>
@@ -191,11 +224,19 @@
     <loc>https://frank2016ma.github.io/seattle/tags/bookmarklet/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://frank2016ma.github.io/seattle/posts/python/python-meeting/</loc>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/tips/python-meeting/</loc>
     <lastmod>2023-03-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/</loc>
     <lastmod>2022-05-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/js/react/strict-mode-trigger-useeffect-twice/</loc>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/docs/</loc>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/docs/typing/</loc>
+  </url><url>
+    <loc>https://frank2016ma.github.io/seattle/posts/python/fastapi/</loc>
   </url><url>
     <loc>https://frank2016ma.github.io/seattle/categories/</loc>
   </url><url>
