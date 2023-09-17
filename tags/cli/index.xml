@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Fri, 26 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/cli/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>7z 命令行使用</title>
-        <link>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/7z-cli-extract-zip/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/others/7z-cli-extract-zip/</link>
         <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/others/productivity-tools/7z-cli-extract-zip/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/others/7z-cli-extract-zip/</guid>
         <description>7z 命令行基本语法为
 1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   通配符 *.txt: means all files with an extension of &amp;ldquo;.txt&amp;rdquo; ?a*: means all files with a second character of &amp;ldquo;a&amp;rdquo; *1*: means all names that contains character &amp;ldquo;1&amp;rdquo; *.*.*: means all names that contain two at least &amp;ldquo;.&amp;rdquo; characters
 commands l (List) 列出压缩文件中的所有内容

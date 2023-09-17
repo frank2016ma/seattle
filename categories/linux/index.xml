@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Sed Cheat Sheet</title>
+        <title>Sed 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</link>
         <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
         
@@ -19,7 +19,18 @@ sed 默认输入输出为 stdin, stdout
 options -n --quiet</description>
         </item>
         <item>
-        <title>apt Cheat Sheet</title>
+        <title>Xargs 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/xargs-cheatsheet/</link>
+        <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/xargs-cheatsheet/</guid>
+        <description>xargs命令的作用，是将标准输入转为命令行参数(使用xargs的原因是, 很多命令不支持标准输入传递参数, 如echo, ls)
+默认情况下, xargs将换行符和空格作为分隔符, 把标准输入分解成一个个命令行参数
+-d 参数可以更改分隔符 input file names are terminated by the specified character delim instead of by whitespace
+-L max-lines Use at most max-lines non-blank input lines per command line. for -L the argument is mandatory. Trailing blanks cause an input line to be logically continued on the next input line The -l form of this option is deprecated in favour of the POSIX-compliant -L option.</description>
+        </item>
+        <item>
+        <title>apt 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
         
@@ -39,15 +50,6 @@ PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不�
 apt remove package_name</description>
         </item>
         <item>
-        <title>Linux 命令</title>
-        <link>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</link>
-        <pubDate>Fri, 26 May 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/linux/linux-tools/</guid>
-        <description>Linux命令 scp 1 2 3 4 5 6 7 8  # 复制本地文件到远程机器 scp local_file remote_username@remote_ip:remote_folder # 复制远程文件到本地 scp remote_username@remote_ip:remote_file local_folder # (递归)复制目录 scp -r local_folder remote_username@remote_ip:remote_folder   which which指令会在环境变量$PATH设置的目录里查找符合条件的文件
-1 2  which bash # /usr/bin/bash   1 2  docker exec -it qinglong2 /usr/bin/fish OCI runtime exec failed: exec failed: unable to start container process: exec: &amp;#34;/usr/bin/fish&amp;#34;: stat /usr/bin/fish: no such file or directory: unknown   上面这段命令中, /usr/bin/fish 的路径是指 qinglong2 中的路径, docker镜像中没有安装 fish, 所以报错找不到文件或者路径, 通常大部分镜像只能使用bash, 有部分镜像使用bash也会出现如上报错, 需要使用 sh</description>
-        </item>
-        <item>
         <title>关于SSH长时间无操作自动断开</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</link>
         <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
@@ -61,7 +63,7 @@ apt remove package_name</description>
 Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
         </item>
         <item>
-        <title>Grep Cheat Sheet</title>
+        <title>Grep 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</link>
         <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -71,7 +73,7 @@ Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
 A FILE of “-” stands for standard input. If no FILE is given,recursive searches examine the working directory and nonrecursive searches read standard input.</description>
         </item>
         <item>
-        <title>Find Cheat Sheet</title>
+        <title>Find 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -81,12 +83,12 @@ A FILE of “-” stands for standard input. If no FILE is given,recursive searc
  Tests Actions Global options Positional options Operators   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find .</description>
         </item>
         <item>
-        <title>Tmux</title>
+        <title>Tmux 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
-        <description>1 2 3 4 5 6 7 8 9  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
+        <description>1 2 3 4 5 6 7 8  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
 Ctrl+b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
 Ctrl+b s
@@ -103,11 +105,11 @@ Ctrl+b [
 参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
         </item>
         <item>
-        <title>tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr/</link>
+        <title>tldr - 更加简洁的帮助文档</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</link>
         <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</guid>
         <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>

@@ -13,7 +13,7 @@
         
         <guid>https://frank2016ma.github.io/seattle/posts/others/foo-bar/</guid>
         <description>许多软件文档中, 代码示例的部分, 经常会使用 &amp;lsquo;foobar&amp;rsquo;或者 &amp;lsquo;foo&amp;rsquo;, &amp;lsquo;bar&amp;rsquo; 作为变量, 这两个单词具体是什么意思有点困惑, 词典给出的中文翻译都联系不上
-太长不看版:
+tl;dr:
 结合国情来理解, foo 和 bar 就是课文中的小明和小红, 罗翔刑法案例中的张三, 张宇高数课, 等价无穷小公式中的狗
 以下是维基百科给出的详细解释:
 Foobar - Wikipedia
@@ -34,7 +34,7 @@ find命令 -exec 参数后 的 {}</description>
 1 2 3 4 5 6 7 8 9 10  { &amp;#34;name&amp;#34;: &amp;#34;Orange&amp;#34;, &amp;#34;physical&amp;#34;: { &amp;#34;color&amp;#34;: &amp;#34;orange&amp;#34;, &amp;#34;shape&amp;#34;: &amp;#34;round&amp;#34; }, &amp;#34;site&amp;#34;: { &amp;#34;google.</description>
         </item>
         <item>
-        <title>Bilibili Video Test</title>
+        <title>bilibili 视频 shortcode 测试</title>
         <link>https://frank2016ma.github.io/seattle/posts/others/bilibili-video-test/</link>
         <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
@@ -59,7 +59,7 @@ MIME类型对大小写不敏感，但是传统写法都是小写。
  text/plain 表示文本文件的默认值。 application/octet-stream 表示所有其他情况的默认值。   摘自 MIME 类型 | 菜鸟教程</description>
         </item>
         <item>
-        <title>Win11 Brightness</title>
+        <title>Win11 笔记本亮度调节</title>
         <link>https://frank2016ma.github.io/seattle/posts/others/win11-brightness/</link>
         <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -76,18 +76,6 @@ MIME类型对大小写不敏感，但是传统写法都是小写。
         <guid>https://frank2016ma.github.io/seattle/posts/others/microsoft-excel-scroll/</guid>
         <description>浏览器 WPS Office 及及大部分支持横向滚动的桌面端软件, 支持 Shift + 鼠标滚轮 实现横向滚动
 Microsoft Office 的 Excel 横向滚动的方式是 Ctrl + Shift + 鼠标滚轮</description>
-        </item>
-        <item>
-        <title>Todo</title>
-        <link>https://frank2016ma.github.io/seattle/posts/others/todo/</link>
-        <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/posts/others/todo/</guid>
-        <description>函数式编程入门教程 - 阮一峰的网络日志
-JavaScript 教程 - 网道
-ES6 教程 - 网道
-XHR，ajax，axios，fetch之间的区别 - 掘金
-JavaScript 教程 - SegmentFault 思否</description>
         </item>
         
     </channel>

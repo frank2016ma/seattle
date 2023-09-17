@@ -14,19 +14,36 @@
         <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-copy-code/</guid>
         <description>使用hugo建站, 点击代码块中右上角的 Copy按钮时, 发现没有生效
 仔细对比了一下stack主题的config文件以及content文件夹下的markdown源码, 复制代码并不需要额外特殊设置, 于是打开控制台, 发现确实有代码报错, 报错信息如下
-Markdown Syntax Guide
-Uncaught TypeError: Cannot read properties of undefined (reading &#39;writeText&#39;) at HTMLButtonElement.&amp;lt;anonymous&amp;gt; (main.js:4:429) (匿名) @ main.js:4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  let r = document.querySelectorAll(&amp;#34;.article-content div.highlight&amp;#34;) , i = &amp;#34;Copy&amp;#34; , n = &amp;#34;Copied!&amp;#34;; r.forEach(o=&amp;gt;{ let s = document.</description>
+Uncaught TypeError: Cannot read properties of undefined (reading &#39;writeText&#39;) at HTMLButtonElement.&amp;lt;anonymous&amp;gt; (main.js:4:429) (匿名) @ main.js:4 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  let r = document.querySelectorAll(&amp;#34;.article-content div.highlight&amp;#34;) , i = &amp;#34;Copy&amp;#34; , n = &amp;#34;Copied!&amp;#34;; r.forEach(o=&amp;gt;{ let s = document.createElement(&amp;#34;button&amp;#34;); s.innerHTML = i, s.</description>
         </item>
         <item>
-        <title>Hugo Content Management</title>
-        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-content-management/</link>
-        <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+        <title>Hugo Shortcodes</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-shortcodes/</link>
+        <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-content-management/</guid>
-        <description>名词 Page resources – images, other pages, documents, etc. – have page-relative URLs and their own metadata.
-Page Bundles are a way to group Page Resources.
-Page Bundle definition A Page Bundle can be one of:
- Leaf Bundle(leaf means it has no children) Branch Bundle(home page, section, taxonomy terms, taxonomy list)  examples content/ ├── about(Leaf Bundle) │ ├── index.md ├── posts │ ├── my-post(Leaf Bundle) │ │ ├── content1.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-shortcodes/</guid>
+        <description>Built-in Shortcodes figure Shortcodes - figure | Hugo
+highlight 用于展示代码片段, 通常情况下 展示代码使用 markdown 语法即可, 是否显示行号, 代码起始行号等可以在配置文件中设置
+ 渲染结果如下:
+42{{ range .Pages }} 43 &amp;lt;h2&amp;gt;&amp;lt;a href=&amp;#34;{{ .RelPermalink }}&amp;#34;&amp;gt;{{ .LinkTitle }}&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt; 44{{ end }} ref &amp;amp; relref 渲染如下:
+hugo-image
+第三方 Shortcodes stack quote 1     效果如下: </description>
+        </item>
+        <item>
+        <title>Hugo 文章中的图片显示问题</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-image/</link>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-image/</guid>
+        <description>问题 初次尝试使用 Hugo 写一篇带图片的文章时, 遇到如下问题:
+文件放在路径 /static/image/ 下, markdown 文件中的路径是![](/image/image1.png)
+使用命令 hugo server 生成站点时, 可以在生成的页面中看到
+  但是发布到 Github Pages 或者 Nginx 生成静态网站时, 不会显示图片
+文件放在路径 /static/image/ 只是 hugo 的约定
+解决办法 新建文章时候, 直接新建 文件夹, 内容写在 index.md 中, 图片文件放在同名文件夹下面
+content └── post └── my-first-post ├── index.md ├── image1.png └── test.png  ![Alt text](test.png)
+渲染如下:
+ 这样的好处是, 不论是使用 hugo server 生成静态页面文件还是发布到 Github Pages, 或是使用 markdown 编辑器的预览功能, 都可以渲染图片</description>
         </item>
         
     </channel>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Excel on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/categories/excel/</link>
+        <description>Recent content in Excel on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/excel/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于 Excel 单元格数字格式、真实值和显示值</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/</link>
+        <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/</guid>
+        <description>在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记
+Number Format(数字格式) Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式
+ Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值
+  注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 toString() 方法的结果, 而对单元格设置数字格式后的显示值, 类似 format() 方法的结果
+ 单元格的数字精度问题 当数字的长度达到12位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)
+经实测在WPS表格中, 数字达到12位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法</description>
+        </item>
+        
+    </channel>
+</rss>

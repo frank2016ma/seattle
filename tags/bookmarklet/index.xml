@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Mon, 27 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/bookmarklet/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bookmarklet</title>
-        <link>https://frank2016ma.github.io/seattle/posts/js/bookmarklet/</link>
+        <link>https://frank2016ma.github.io/seattle/posts/javascript/bookmarklet/</link>
         <pubDate>Mon, 27 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/js/bookmarklet/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/javascript/bookmarklet/</guid>
         <description>Bookmarklet 是什么 A bookmarklet is a bookmark stored in a web browser that contains JavaScript commands that add new features to the browser. They are stored as the URL of a bookmark in a web browser or as a hyperlink on a web page. Bookmarklets are usually small snippets of JavaScript executed when user clicks on them. When clicked, bookmarklets can perform a wide variety of operations, such as running a search query from selected text or extracting data from a table.</description>
         </item>
         

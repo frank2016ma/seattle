@@ -5,15 +5,25 @@
         <link>https://frank2016ma.github.io/seattle/posts/python/docs/</link>
         <description>Recent content on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language><atom:link href="https://frank2016ma.github.io/seattle/posts/python/docs/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title></title>
-        <link>https://frank2016ma.github.io/seattle/posts/python/docs/typing/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 25 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/python/docs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mixin</title>
+        <link>https://frank2016ma.github.io/seattle/posts/python/docs/mixin/</link>
+        <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/python/docs/typing/</guid>
-        <description>Annotated  Add context specific metadata to a type.
- 1 2 3 4  from typing import Annotated def say_hello(name: Annotated[str, &amp;#34;this is just metadata&amp;#34;]) -&amp;gt; str: return f&amp;#34;Hello {name}&amp;#34;   Python itself doesn&amp;rsquo;t do anything with this Annotated. And for editors and other tools, the type is still str.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  @app.</description>
+        <guid>https://frank2016ma.github.io/seattle/posts/python/docs/mixin/</guid>
+        <description>Mixin (mix-in), 是一种编程模式, 和多重继承类似
+首先，需要注意的是混合（Mixin）仅存在于支持多重继承的编程语言中。在Java或C#等不支持多重继承的语言中，无法直接使用混合。
+在不支持混合的语言中，可以使用其他替代方法来达到类似的效果。 例如，在Java中，可以通过接口（Interface）和委托（Delegation）等技术来实现一些混合的特性。接口允许类实现多个接口以获取不同的功能，而委托则允许类将某些功能委托给其他对象来实现。
+然而，在真正的混合模式中，通过多重继承可以直接将多个类的功能组合到一个类中，而不需要接口或委托的复杂处理。 因此，在只支持单一继承的语言中，实现类似混合的功能可能会更加繁琐和复杂。
+在 Python 等面向对象语言中，通常它是实现了某种功能单元的类，用于被其他子类继承，将功能组合到子类中
+当多个类都实现了同一种功能时，这时应该考虑将该功能抽离成 Mixin 类
+在面向对象编程语言中，混合（Mixin）是一个包含方法的类，其他类可以使用这些方法，而无需将其作为父类。 其他类如何访问混合类的方法取决于所使用的编程语言。有时，混合类被描述为&amp;quot;被包含&amp;quot;而不是&amp;quot;被继承&amp;quot;。 混合类的主要目的是通过提供可重用的功能和行为来增强其他类，而无需创建复杂的继承关系。通过混合，类可以在不增加继承层次结构的同时获得新的方法和特性，提供了更大的灵活性和可复用性。混合是一种常见的编程技术，被广泛应用于许多面向对象编程语言中。
+Mixin 是一种特殊的多重继承方式。混合通常用于以下两种主要情况：
+当您希望为一个类提供许多可选功能时，可以使用 Mixin。 当您希望在许多不同的类中使用某个特定功能时，可以使用 Mixin。
+ Python mixin
+python - What is a mixin and why is it useful? - Stack Overflow
+Mixin - Wikipedia</description>
         </item>
         
     </channel>

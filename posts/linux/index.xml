@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/</link>
+        <description>Recent content on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/posts/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Sed 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</link>
+        <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</guid>
+        <description>sed 语法 sed [options]... [script] [input-file]
+sed 默认输入输出为 stdin, stdout
+ sed treats multiple input files as one long stream. The following example prints the first line of the first file (one.txt) and the last line of the last file (three.txt). Use -s to reverse this behavior. 下面的命令中, sed 将 one two three 三个文件当作一个输入, 所以只会输出 one文件的第一行和 three 文件的最后一行
+ sed -n &#39;1p ; $p&#39; one.txt two.txt three.txt
+options -n --quiet</description>
+        </item>
+        <item>
+        <title>Xargs 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/xargs-cheatsheet/</link>
+        <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/xargs-cheatsheet/</guid>
+        <description>xargs命令的作用，是将标准输入转为命令行参数(使用xargs的原因是, 很多命令不支持标准输入传递参数, 如echo, ls)
+默认情况下, xargs将换行符和空格作为分隔符, 把标准输入分解成一个个命令行参数
+-d 参数可以更改分隔符 input file names are terminated by the specified character delim instead of by whitespace
+-L max-lines Use at most max-lines non-blank input lines per command line. for -L the argument is mandatory. Trailing blanks cause an input line to be logically continued on the next input line The -l form of this option is deprecated in favour of the POSIX-compliant -L option.</description>
+        </item>
+        <item>
+        <title>apt 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</link>
+        <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</guid>
+        <description>apt(Advanced Package Tool) apt 是 Debian 系的Linux发行版默认的软件包管理器, 本文暂不讨论apt 和 apt-get 的关系与区别
+apt命令必须以具有sudo权限的用户运行, 以下示例省略前面的sudo
+search apt search package_name
+show apt show package_name 显示有关给定软件包的信息，包括其依赖项、安装、下载大小、软件包可用的来源、软件包内容的描述等
+install apt install package1 package2 安装软件包, 多个软件包名使用空格分隔
+update &amp;amp; upgrade apt update 从APT存储库中获取最新索引数据
+apt upgrade 将已安装的软件包升级到最新版本
+apt upgrade package_name 升级单个软件包
+list apt list --installed 列出已安装的软件包
+apt list --upgradeable 获取可升级软件包的列表
+remove &amp;amp; purge remove 和 purge 的区别: remove 保留软件包的配置文件, 而 purge 会卸载软件包并删除配置文件
+PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不一致时, 需要注意是不是之前安装过这个软件, 然后使用remove删除, 重新安装之后使用了之前的配置文件导致的
+apt remove package_name</description>
+        </item>
+        <item>
+        <title>Nginx 反向代理中的路径问题</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</link>
+        <pubDate>Wed, 24 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/nginx-proxy-pass/</guid>
+        <description>Nginx 反向代理的配置块内容通常如下:
+1 2 3  location [ = | ~ | ~* | ^~ ] uri { proxy_pass URL; }   proxy_pass 后面的 URL, 如果带 /, 表示绝对路径, 如果不带 /, 表示相对路径
+通常 URL = host[:port][path](中括号内的内容表示可选)
+如 https://www.example.com:8080/,
+https:// 是协议, www.example.com 是 host, 80 是 port, / 是 path
+  proxy_pass 后面的 URL 不包含 path 时, 如 https://www.example.com:8080
+target_url = URL + uri
+  proxy_pass 后面的 URL 包含 path 时, (/也算)(如 https://www.</description>
+        </item>
+        <item>
+        <title>关于SSH长时间无操作自动断开</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</link>
+        <pubDate>Fri, 19 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/ssh-timeout/</guid>
+        <description>使用 ssh 客户端远程连接到服务器时, 默认情况下, 一段时间不操作, 没有向服务器发送指令, 就自动断开了连接, 需要重新登录
+使用过的客户端中, xshell 默认情况下是会自动发送心跳来保持连接, 其他的一些如 mobaxterm, windterm, windows terminal自带的ssh, 时间久没有操作都是会断开连接的, 需要手动设置, 以下是手动设置的方法
+ 命令行参数设置  如果是在终端中使用ssh命令连接远程机器, 如在Windows Terminal中, 可以通过添加以下参数来设置每隔60秒向Server端发送一个空包以保持连接
+1  ssh -o ServerAliveInterval=60 root@127.0.0.1   使用以上参数只会对本次连接会话有效, 如果需要每次都自动保持连接, 可以使用下面的方法
+客户端.ssh/config文件设置  ~/.ssh/config 文件中添加ServerAliveInterval 60
+Host xxx HostName 127.0.0.1 User root ServerAliveInterval 60 </description>
+        </item>
+        <item>
+        <title>Grep 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</link>
+        <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</guid>
+        <description>介绍 rep - print lines that match patterns
+语法 grep searches for PATTERNS in each FILE. PATTERNS is one or more patterns separated by newline characters, and grep prints each line that matches a pattern. Typically PATTERNS should be quoted when grep is used in a shell command.
+A FILE of “-” stands for standard input. If no FILE is given,recursive searches examine the working directory and nonrecursive searches read standard input.</description>
+        </item>
+        <item>
+        <title>Find 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</guid>
+        <description>Usage  search for files in a directory hierarchy
+ 1  find [path...] [options] [expression]   An expression is composed of a sequence of things:
+ Tests Actions Global options Positional options Operators   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find .</description>
+        </item>
+        <item>
+        <title>Tmux 速查表</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
+        <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
+        <description>1 2 3 4 5 6 7 8  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
+Ctrl+b d
+列出当前所有会话(此快捷键需要在tmux会话内执行)
+Ctrl+b s
+划分左右两个窗格
+Ctrl+b %
+划分上下两个窗格
+Ctrl+b &amp;quot;
+关闭当前窗格
+Ctrl+b x
+调整窗格大小 Ctrl+b Ctrl+方向键
+copy mode 进入窗口之后不支持上下翻页, 使用以下快捷键进入 copy mode
+Ctrl+b [
+按 q 退出
+参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
+        </item>
+        <item>
+        <title>tldr - 更加简洁的帮助文档</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</link>
+        <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</guid>
+        <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
+tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
+安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
+        </item>
+        
+    </channel>
+</rss>

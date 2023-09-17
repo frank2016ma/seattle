@@ -6,19 +6,28 @@
         <description>Recent content in None on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 18 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>CSS 元素居中</title>
-        <link>https://frank2016ma.github.io/seattle/posts/js/css-center/</link>
-        <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+        <lastBuildDate>Wed, 14 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/none/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Quick Start</title>
+        <link>https://frank2016ma.github.io/seattle/posts/javascript/react/quick-start/</link>
+        <pubDate>Wed, 14 Jun 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/js/css-center/</guid>
-        <description>行内元素和块级元素 行内元素  不会自动进行换行 元素的宽高不可以设置 无法设置竖直方向 margin  常见的行内元素: span, a
-块级元素  独占一行 (在不设置的情况下)继承父元素的宽高  常见的块级元素: div, p, table, h1-h6
- 行内元素和块级元素不是绝对的, 可以相互转换
- 水平居中 行内元素: text-align: center
-块级元素:
- margin: 0 auto 将父元素设置为相对定位, 待居中元素设置为绝对定位, left: 50% 父元素设置属性 display: flex; justify-content: center  垂直居中 块级元素:
- 父元素设置为相对定位, 待居中元素设置为绝对定位, top: 50% 父元素设置 display: flex; align-items: center  </description>
+        <guid>https://frank2016ma.github.io/seattle/posts/javascript/react/quick-start/</guid>
+        <description>React apps are made out of components A component is a piece of the UI(user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page
+ React component names must always start with a capital letter, while HTML tags must be lowercase.
+ writing markup with JSX 1 2 3 4 5  export default function MyApp(){ return ( &amp;lt;div&amp;gt;MyApp&amp;lt;/div&amp;gt; ) }   The export default keywords specify the main component in the file.</description>
+        </item>
+        <item>
+        <title>Hugo Shortcodes</title>
+        <link>https://frank2016ma.github.io/seattle/posts/hugo/hugo-shortcodes/</link>
+        <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/hugo/hugo-shortcodes/</guid>
+        <description>Built-in Shortcodes figure Shortcodes - figure | Hugo
+highlight 用于展示代码片段, 通常情况下 展示代码使用 markdown 语法即可, 是否显示行号, 代码起始行号等可以在配置文件中设置
+ 渲染结果如下:
+42{{ range .Pages }} 43 &amp;lt;h2&amp;gt;&amp;lt;a href=&amp;#34;{{ .RelPermalink }}&amp;#34;&amp;gt;{{ .LinkTitle }}&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt; 44{{ end }} ref &amp;amp; relref 渲染如下:
+hugo-image
+第三方 Shortcodes stack quote 1     效果如下: </description>
         </item>
         
     </channel>

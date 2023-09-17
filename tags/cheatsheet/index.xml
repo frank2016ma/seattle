@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 10 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/cheatsheet/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Sed Cheat Sheet</title>
+        <title>Sed 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/sed-cheat-sheet/</link>
         <pubDate>Sat, 10 Jun 2023 00:00:00 +0000</pubDate>
         
@@ -19,7 +19,7 @@ sed 默认输入输出为 stdin, stdout
 options -n --quiet</description>
         </item>
         <item>
-        <title>apt Cheat Sheet</title>
+        <title>apt 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/apt-cheat-sheet/</link>
         <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
         
@@ -39,7 +39,7 @@ PS: 当我们安装了一个软件包, 发现某些设置和默认的设置不�
 apt remove package_name</description>
         </item>
         <item>
-        <title>Grep Cheat Sheet</title>
+        <title>Grep 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/grep-cheat-sheet/</link>
         <pubDate>Thu, 27 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -49,7 +49,7 @@ apt remove package_name</description>
 A FILE of “-” stands for standard input. If no FILE is given,recursive searches examine the working directory and nonrecursive searches read standard input.</description>
         </item>
         <item>
-        <title>Find Cheat Sheet</title>
+        <title>Find 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/find-cheat-sheet/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -59,12 +59,12 @@ A FILE of “-” stands for standard input. If no FILE is given,recursive searc
  Tests Actions Global options Positional options Operators   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # Wildcard find . -name &amp;#34;*.txt&amp;#34; find . -name &amp;#34;2020*.csv&amp;#34; find . -name &amp;#34;json_*&amp;#34; # regex # TODO # directory find .</description>
         </item>
         <item>
-        <title>Tmux</title>
+        <title>Tmux 速查表</title>
         <link>https://frank2016ma.github.io/seattle/posts/linux/tmux/</link>
         <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/linux/tmux/</guid>
-        <description>1 2 3 4 5 6 7 8 9  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
+        <description>1 2 3 4 5 6 7 8  # 新建会话 tmux new -s session_name # Attach to last session tmux a # Attach to a session with the name mysession tmux a -t mysession   常用快捷键 将当前会话与窗口分离
 Ctrl+b d
 列出当前所有会话(此快捷键需要在tmux会话内执行)
 Ctrl+b s
@@ -81,11 +81,11 @@ Ctrl+b [
 参考 Tmux Cheat Sheet &amp;amp; Quick Reference</description>
         </item>
         <item>
-        <title>tldr</title>
-        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr/</link>
+        <title>tldr - 更加简洁的帮助文档</title>
+        <link>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</link>
         <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr/</guid>
+        <guid>https://frank2016ma.github.io/seattle/posts/linux/tldr-cheat-sheet/</guid>
         <description>简介 tldr(Too Long; Didn&amp;rsquo;t Read) 是一个开源的命令行工具，提供简洁的命令行使用文档
 tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF版本
 安装 1 2 3 4 5 6  # nodejs npm install tldr # python pip3 install tldr   使用 tldr sed sed Edit text in a scriptable manner. See also: `awk`, `ed`. More information: https://www.gnu.org/software/sed/manual/sed.html. - Replace all `apple` (basic regex) occurrences with `mango` (basic regex) in all input lines and print the result to `stdout`: command | sed &#39;s/apple/mango/g&#39; - Execute a specific script [f]ile and print the result to `stdout`: command | sed -f path/to/script.</description>
@@ -96,7 +96,7 @@ tldr 提供了 web端 tldr InBrowser.App, nodejs 和 python 客户端以及 PDF�
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/others/vscode-keys/</guid>
-        <description>多光标操作     ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容    编辑器控制     ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组    文件管理     ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹    显示     ====     Shift+Alt+0 切换编辑器布局(水平/垂直)   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览Markdown文件（侧边）   Ctrl+K Z 禅模式（连按两次Esc退出）    语言操作     ====     Ctrl+K Ctrl+X 移除行尾空白字符    基础编辑     ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块     写文章时经常遇到一些英文名词以及缩写, 需要频繁切换输入法中英文以及大小写, 非常不方便, vscode 自带的命令转换选中内容的功能</description>
+        <description>多光标操作     ====     Ctrl+I 选中当前行   Shift+Alt+I 将光标插入所选每行的末尾   Ctrl+Shift+L 选择所有与所选中内容相同的内容   Ctrl+F2 选择所有与所选中词汇相同的内容    编辑器控制     ====     Ctrl+\ 拆分编辑器为多组   Ctrl+ 1 / 2 / 3 切换窗口焦点至某一组    文件管理     ====     Ctrl+K P 复制当前文件路径   Ctrl+K R 打开当前文件所在文件夹    显示     ====     Shift+Alt+0 切换编辑器布局(水平/垂直)   Ctrl+Shift+F 显示搜索界面   Ctrl+Shift+X 显示插件管理界面   Ctrl+K V 预览 Markdown 文件（侧边）   Ctrl+K Z 禅模式（连按两次 Esc 退出）    语言操作     ====     Ctrl+K Ctrl+X 移除行尾空白字符    基础编辑     ====     Ctrl+Shift+K 删除行   Ctrl+Enter 在当前行下方插入新行   Ctrl+Shift+Enter 在当前行上方插入新行   Shift+Alt+A 切换块注释   Alt+Z 切换自动换行   Ctrl+K Ctrl+[ 折叠当前所有子代码块   Ctrl+K Ctrl+] 展开当前所有子代码块     写文章时经常遇到一些英文名词以及缩写, 需要频繁切换输入法中英文以及大小写, 非常不方便, vscode 自带的命令转换选中内容的功能</description>
         </item>
         
     </channel>

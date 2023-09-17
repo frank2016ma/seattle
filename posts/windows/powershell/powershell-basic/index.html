@@ -2,38 +2,38 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-特殊变量 $_ 来表示管道中的当前对象
 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
- 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+  为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+而wordpad.exe所在的%ProgramFiles%\Windows NT\Accessories目录却没有包含,
+将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
   常用的对管道结果进一步处理的命令有：
-   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.'>
-<title>Powershell</title>
+   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.   Format-List 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.   Format-Table 将输出的格式设置为表.'>
+<title>Powershell 笔记</title>
 
 <link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/'>
 
-<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Powershell'>
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Powershell 笔记'>
 <meta property='og:description' content='Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-特殊变量 $_ 来表示管道中的当前对象
 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
- 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+  为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+而wordpad.exe所在的%ProgramFiles%\Windows NT\Accessories目录却没有包含,
+将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
   常用的对管道结果进一步处理的命令有：
-   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.'>
+   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.   Format-List 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.   Format-Table 将输出的格式设置为表.'>
 <meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/'>
 <meta property='og:site_name' content='Frank in seattle'>
 <meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2022-05-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-05-13T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="Powershell">
+<meta name="twitter:title" content="Powershell 笔记">
 <meta name="twitter:description" content="Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-特殊变量 $_ 来表示管道中的当前对象
 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
- 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+  为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+而wordpad.exe所在的%ProgramFiles%\Windows NT\Accessories目录却没有包含,
+将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path&#43;&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
   常用的对管道结果进一步处理的命令有：
-   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.">
+   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.   Format-List 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.   Format-Table 将输出的格式设置为表.">
     </head>
     <body class="
     article-page
@@ -89,11 +89,31 @@ Get-Member -MemberType Properties
         
         
         <li >
-            <a href='/seattle/search/' >
+            <a href='/seattle/posts/javascript/' >
                 
                 
                 
-                <span>Search</span>
+                <span>Javascript</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/linux/' >
+                
+                
+                
+                <span>Linux</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/python/' >
+                
+                
+                
+                <span>Python</span>
             </a>
         </li>
         
@@ -127,6 +147,16 @@ Get-Member -MemberType Properties
             </a>
         </li>
         
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
 
         <div class="menu-bottom-section">
             
@@ -157,7 +187,6 @@ Get-Member -MemberType Properties
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#文件系统">文件系统</a></li>
     <li><a href="#windows-凭证管理-cmdkeyexe">Windows 凭证管理 <code>cmdkey.exe</code></a></li>
   </ul>
 </nav>
@@ -186,7 +215,7 @@ Get-Member -MemberType Properties
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/seattle/posts/windows/powershell/powershell-basic/">Powershell</a>
+            <a href="/seattle/posts/windows/powershell/powershell-basic/">Powershell 笔记</a>
         </h2>
     
         
@@ -239,24 +268,14 @@ Get-Member -MemberType Properties
     
     
     <p><code>Get-Content</code> 将从文件读取的数据视为数组, 每行文件内容为一个数组元素</p>
-<p>Get-Member -MemberType Properties</p>
-<p>特殊变量 <code>$_</code> 来表示管道中的当前对象</p>
 <p>传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.</p>
 <hr>
-<p>为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？</p>
 <blockquote>
-<p>因为<code>notepad.exe</code>位于<code>C:Windows\system32</code>这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&quot;%ProgramFiles%\Windows NT\Accessories&quot;.</p>
+<p>为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？</p>
+<p>因为<code>notepad.exe</code>位于<code>C:Windows\system32</code>这个目录, 而这个目录已经默认被包含在Powershell的环境变量<code>$env:Path</code>中.<br>
+而<code>wordpad.exe</code>所在的<code>%ProgramFiles%\Windows NT\Accessories</code>目录却没有包含,<br>
+将<code>wordpad</code>所在的目录加入到环境变量中, <code>$env:Path=$env:Path+&quot;%ProgramFiles%\Windows NT\Accessories&quot;</code>.</p>
 </blockquote>
-<!-- 
-默认键入一个字符串, powershell会将它原样输出, 如果该字符串是一个命令或者启动程序, 在字符串前加'&'可以执行命令, 或者启动程序.
-判断一个变量是否为数组
-$ip=ipconfig
-$ip -is [array]
-查看数组的元素个数用$array.Count属性.访问第x个元素, 使用$array[x-1], 因为数组是以0开始索引的
-对于任何一个对象都可以使用Format-List _ (Format-List -Property _)查看它所有的属性和方法
-变量可以自动存储任何Powershell能够识别的类型信息, 可以通过$variable的GetType().Name查看和验证Powershell分配给变量的数据类型
-使用强类型的另一个原因是：每一个数据类型都有属于自己的函数.例如DateTime,和XML, 尽管这两种类型都可以用纯文本表示, 但是使用强类型[DateTime]和[XML],对于数据操作起来更方便 
--->
 <hr>
 <p>常用的对管道结果进一步处理的命令有：</p>
 <div class="table-wrapper"><table>
@@ -328,14 +347,6 @@ $ip -is [array]
 <td>删除输出, 不将其发送到控制台.</td>
 </tr>
 <tr>
-<td>Out-Printer</td>
-<td>将输出发送到打印机.</td>
-</tr>
-<tr>
-<td>Out-String</td>
-<td>将对象作为一列字符串发送到主机.</td>
-</tr>
-<tr>
 <td>Select-Object</td>
 <td>选择一个对象或一组对象的指定属性.它还可以从对象的数组中选择唯一对象, 也可以从对象数组的开头或末尾选择指定个数的对象.</td>
 </tr>
@@ -344,38 +355,24 @@ $ip -is [array]
 <td>按属性值对象进行排序.</td>
 </tr>
 <tr>
-<td>Tee-Object</td>
-<td>将命令输出保存在文件或变量中, 并将其显示在控制台中.</td>
-</tr>
-<tr>
 <td>Where-Object</td>
 <td>创建控制哪些对象沿着命令管道传递的筛选器.</td>
 </tr>
 </tbody>
 </table></div>
 <p>在ForEach-Object中, <code>$_</code>代表当前对象, 当然也允许通过<code>$_</code>,调用该对象支持的方法.</p>
-<h2 id="文件系统">文件系统</h2>
-<p><code>-filter</code>的执行效率明显高于<code>-include</code>, 原因在于-include<strong>支持正则表达式</strong>, 从内部实现上就更加复杂, 而-filter只支持简单的模式匹配</p>
-<p>Get-Content 逐行读取文本的内容, 然后把文本的每一行传递给管道.因此, 在你想读取一个长文件的前10行, 应当适用Select-Object：</p>
+<p><code>Get-Content</code> 逐行读取文本的内容, 然后把文本的每一行传递给管道.因此, 在你想读取一个长文件的前10行, 应当使用<code>Select-Object</code>:</p>
 <p><code>Get-Content $env:windir\windowsupdate.log | Select-Object -first 10</code></p>
-<p>使用<code>Select-String</code>可以过滤出文本文件中的信息.下面的命令行会从windowsupdate.log文件中过滤出<strong>包含&quot;added update&quot;短语的行</strong></p>
+<p>使用<code>Select-String</code>可以过滤出文本文件中的信息.下面的命令行会从<code>windowsupdate.log</code>文件中过滤出<strong>包含&quot;added update&quot;短语的行</strong></p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">
-Get-Content $env:windir\windowsupdate.log | Select-String <span style="color:#e6db74">&#34;Added update&#34;</span>
-
-<span style="color:#75715e"># </span>
-ls | ForEach-Object { Rename-Item $_.Name $_.Name.replace(<span style="color:#e6db74">&#34;abc&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>) }
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PowerShell" data-lang="PowerShell">Get-Content $env:windir\windowsupdate.log | Select-String <span style="color:#e6db74">&#34;Added update&#34;</span>
 
 <span style="color:#75715e"># 列出当前文件夹下所有powershell脚本, 并重命名为 Script1.ps1, Script2.ps1, Script3.ps1...</span>
 ls $directory*.ps1 | ForEach-Object {$x=0} { Rename-Item $_ (<span style="color:#e6db74">&#34;Script &#34;</span> + $x + <span style="color:#e6db74">&#34;.ps1&#34;</span>); $x++ } {<span style="color:#e6db74">&#34;Finished!&#34;</span>}

@@ -6,17 +6,30 @@
         <description>Recent content in VBA on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/vba/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>VBA Notebook</title>
-        <link>https://frank2016ma.github.io/seattle/posts/windows/dotnet/vba-notebook/</link>
+        <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/vba/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关于 Excel 单元格数字格式、真实值和显示值</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/</link>
+        <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/</guid>
+        <description>在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记
+Number Format(数字格式) Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式
+ Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值
+  注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 toString() 方法的结果, 而对单元格设置数字格式后的显示值, 类似 format() 方法的结果
+ 单元格的数字精度问题 当数字的长度达到12位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)
+经实测在WPS表格中, 数字达到12位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法</description>
+        </item>
+        <item>
+        <title>VBA 笔记</title>
+        <link>https://frank2016ma.github.io/seattle/posts/windows/excel/vba-notebook/</link>
         <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/vba-notebook/</guid>
-        <description>VBA(For Excel) Excel 对象 单元格里的数据类型系统是根据数据内容确定的, 比如：你将 A 列单元格格式设为保留两位的数值型, 当你在 A1 输入 5 时, 它就显示为 5.00, 如果输入 ABC, 它就不会变成数值型, 而是文本型, 如果将文本改为数字后, 又回到你设置的保留两位小数格式所以单元格设置格式只能对能转换的数据有效(当你设置为文本型后，所有输入字符都能转换为文本，可以理解为文本型才是单元格真正能设置的格式)
-相对地址 &amp;amp; 绝对地址($) C2 = A2 * B2
-AUTOFILL: C3 = A3 * B3
-J6 = I6 * $K$3 + I6
-AUTOFILL: J7 = I7 * $K$3 + I7
+        <guid>https://frank2016ma.github.io/seattle/posts/windows/excel/vba-notebook/</guid>
+        <description>VBA(For Excel) Excel 单元格内容格式 单元格里的数据类型系统是根据数据内容确定的, 比如：你将 A 列单元格格式设为保留两位的数值型, 当你在 A1 输入 5 时, 它就显示为 5.00, 如果输入 ABC, 它就不会变成数值型, 而是文本型, 如果将文本改为数字后, 又回到你设置的保留两位小数格式所以单元格设置格式只能对能转换的数据有效(当你设置为文本型后，所有输入字符都能转换为文本，可以理解为文本型才是单元格真正能设置的格式)
+相对地址 &amp;amp; 绝对地址($) 在单元格引用中, $表示 绝对引用, 绝对引用能够在自动填充和复制粘贴时保持引用单元格的绝对位置
+如果C2单元格值为 =A2*B2, 自动填充后, C3单元格值为 =A3*B3
+如果C2单元格值为 =$A$2*B2, 自动填充后, C3单元格值为 =$A$2*B3
 引用单元格   A1 表示法
 Range(&amp;ldquo;A1&amp;rdquo;)
 Range(&amp;ldquo;A1:B5&amp;rdquo;)
@@ -29,7 +42,11 @@ Range(&amp;ldquo;1:1,3:3,8:8&amp;rdquo;)
 Range(&amp;ldquo;A:A,C:C,F:F&amp;rdquo;)
   索引编号(适合用于循环)
 Cells(6, 1)
-  快捷表示法</description>
+  快捷表示法
+[A1:B5]
+  相对引用
+Offset(Row, Col)
+  Range 表示连续的区域有两种表达:  Range(&amp;ldquo;起始单元格&amp;rdquo;,&amp;ldquo;结束单元格&amp;rdquo;) Range(&amp;ldquo;起始单元格:结束单元格&amp;rdquo;)  Range 表示非连续的区域: Range(&amp;quot;A1:A2, B3:B4&amp;quot;).</description>
         </item>
         <item>
         <title>更改xlsm文件中的宏脚本编码</title>
@@ -38,10 +55,10 @@ Cells(6, 1)
         
         <guid>https://frank2016ma.github.io/seattle/posts/windows/dotnet/convert-xlsm-macro-encoding/</guid>
         <description>之前任职于一家台湾公司, 公司员工电脑默认的默认编码格式使用的是港台地区的 Big5 编码, 俗称 大五码, 且员工没有管理员权限, 不能修改, 而服务器使用的编码是GBK
-由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 950, Big5 的代码页面 936), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
+由于VBA年代比较久, 使用的还是代码页表示不同语言的字符集(GBK的代码页 936, Big5 的代码页面 950), 没有使用Unicode, 当在员工电脑录制编写的VBA脚本, 保存在xlsm文件中, 需要放到服务器上去执行时, 中文部分会显示乱码
 于是, 编写了下面这段代码来转换xlsm文件中的VBA脚本编码, 主要做了以下事情
- 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75  using System; using System.</description>
+ 将xlsm文件中的VBA代码导出为.bas代码文件 转换纯文本代码文件的编码格式(big5改为GBK) 将转换编码之后的代码导入xlsm文件 生成exe后, 可以通过命令行执行, 也可以直接拖动图标将xlsm文件拖到生成的.exe文件上  如果有需求要批量导出xlsm文件中的脚本代码, 下面的代码修改一下也可以实现
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  using System; using System.</description>
         </item>
         
     </channel>

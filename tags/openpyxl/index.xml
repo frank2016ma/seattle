@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>openpyxl on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/tags/openpyxl/</link>
+        <description>Recent content in openpyxl on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 12 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/openpyxl/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Pandas 追加写入 Excel 表格</title>
+        <link>https://frank2016ma.github.io/seattle/posts/python/pandas-append-range-to-sheet/</link>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/python/pandas-append-range-to-sheet/</guid>
+        <description>DataFrame 写入 Excel 文件 下面两段代码用于直接生成 Excel 文件, 如果文件已经存在, 会被覆盖
+1 2 3 4 5 6 7 8 9 10 11  # sht2, sht3 两张表都会被写入 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False) # 第二次会覆盖掉第一次的 # 只剩下 sht3 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False)    DataFrame 追加写入 Excel 文件 如果要往一份已经存在的Excel文件中追加内容, 如往含有标题的模板中填写数据或者在已有数据末尾追加数据
+pandas 1.4.0之前的版本 在 pandas 1.4.0 之前, 可以使用如下方法将 DataFrame 追加写入 Excel 文件</description>
+        </item>
+        
+    </channel>
+</rss>

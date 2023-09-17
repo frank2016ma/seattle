@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>golang on Frank in seattle</title>
+        <link>https://frank2016ma.github.io/seattle/categories/golang/</link>
+        <description>Recent content in golang on Frank in seattle</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 30 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/categories/golang/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>golang 日期格式化</title>
+        <link>https://frank2016ma.github.io/seattle/posts/golang/go-time-format-2006-01-02/</link>
+        <pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/posts/golang/go-time-format-2006-01-02/</guid>
+        <description>大部分编程语言中, 格式化日期的方式都是使用 YYYMMddHHMMSS 类似的字符串, 又或者是 %Y%m 之类的字符串
+而 golang 比较奇特, 日期格式化是使用一个具体的日期常量 2006-01-02 15:04:05 的不同表示方法来设置格式
+ 这个日期可以记为 1 月 2 日, 下午 3 点 4 分 5 秒, 06 年 -7 时区
+ </description>
+        </item>
+        
+    </channel>
+</rss>

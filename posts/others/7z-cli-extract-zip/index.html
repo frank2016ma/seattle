@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='7z 命令行基本语法为
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   通配符 *.txt: means all files with an extension of &amp;ldquo;.txt&amp;rdquo; ?a*: means all files with a second character of &amp;ldquo;a&amp;rdquo; *1*: means all names that contains character &amp;ldquo;1&amp;rdquo; *.*.*: means all names that contain two at least &amp;ldquo;.&amp;rdquo; characters
+commands l (List) 列出压缩文件中的所有内容
+1  7z l archive.zip   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.'>
+<title>7z 命令行使用</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/others/7z-cli-extract-zip/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='7z 命令行使用'>
+<meta property='og:description' content='7z 命令行基本语法为
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   通配符 *.txt: means all files with an extension of &amp;ldquo;.txt&amp;rdquo; ?a*: means all files with a second character of &amp;ldquo;a&amp;rdquo; *1*: means all names that contains character &amp;ldquo;1&amp;rdquo; *.*.*: means all names that contain two at least &amp;ldquo;.&amp;rdquo; characters
+commands l (List) 列出压缩文件中的所有内容
+1  7z l archive.zip   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/others/7z-cli-extract-zip/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='CLI' /><meta property='article:published_time' content='2023-05-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-26T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="7z 命令行使用">
+<meta name="twitter:description" content="7z 命令行基本语法为
+1  7z &amp;lt;command&amp;gt; [&amp;lt;switch&amp;gt;...] &amp;lt;base_archive_name&amp;gt; [&amp;lt;arguments&amp;gt;...]   通配符 *.txt: means all files with an extension of &amp;ldquo;.txt&amp;rdquo; ?a*: means all files with a second character of &amp;ldquo;a&amp;rdquo; *1*: means all names that contains character &amp;ldquo;1&amp;rdquo; *.*.*: means all names that contain two at least &amp;ldquo;.&amp;rdquo; characters
+commands l (List) 列出压缩文件中的所有内容
+1  7z l archive.zip   a (Add) 1 2 3 4 5 6 7 8 9  7z a -tzip archive.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/javascript/' >
+                
+                
+                
+                <span>Javascript</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/linux/' >
+                
+                
+                
+                <span>Linux</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/python/' >
+                
+                
+                
+                <span>Python</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/hugo/' >
+                
+                
+                
+                <span>Hugo</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/archives/' >
+                
+                
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/categories/' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#通配符">通配符</a></li>
+    <li><a href="#commands">commands</a>
+      <ul>
+        <li><a href="#l-list">l (List)</a></li>
+        <li><a href="#a-add">a (Add)</a></li>
+        <li><a href="#e-extract">e (Extract)</a></li>
+        <li><a href="#x-extract-with-full-paths-command">x (e<strong>X</strong>tract with full paths) command</a></li>
+        <li><a href="#命令-e-和-x-解压的区别">命令 e 和 x 解压的区别</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/tools/" >
+                tools
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/posts/others/7z-cli-extract-zip/">7z 命令行使用</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 26, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>7z 命令行基本语法为</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z &lt;command&gt; <span style="color:#f92672">[</span>&lt;switch&gt;...<span style="color:#f92672">]</span> &lt;base_archive_name&gt; <span style="color:#f92672">[</span>&lt;arguments&gt;...<span style="color:#f92672">]</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="通配符">通配符</h2>
+<p><code>*.txt</code>:  means all files with an extension of &ldquo;.txt&rdquo;
+<code>?a*</code>:    means all files with a second character of &ldquo;a&rdquo;
+<code>*1*</code>:    means all names that contains character &ldquo;1&rdquo;
+<code>*.*.*</code>:  means all names that contain two at least &ldquo;.&rdquo; characters</p>
+<h2 id="commands">commands</h2>
+<h3 id="l-list">l (List)</h3>
+<p>列出压缩文件中的所有内容</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z l archive.zip
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="a-add">a (Add)</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">7z a -tzip archive.zip subdir
+<span style="color:#75715e"># -tzip 表示压缩包格式为 zip</span>
+<span style="color:#75715e"># -t{archive_type}, 若不指定, 则使用默认格式 7z</span>
+<span style="color:#75715e"># 将 文件夹 subdir 及其子文件、子文件夹 添加到压缩文件 archive.zip</span>
+
+7z a -tzip Files.zip *.txt -r
+<span style="color:#75715e"># -r (Recurse), 表示递归, 包含子文件夹</span>
+<span style="color:#75715e"># 将当前文件夹及子文件夹下面的所有 .txt 文件添加到压缩包 Files.zip 中</span>
+<span style="color:#75715e"># 生成的压缩包包含目录结构, 但仅限于包含 目标类型文件的子文件夹</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="e-extract">e (Extract)</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z e archive.zip
+<span style="color:#75715e"># extracts all files from archive archive.zip to the current directory.</span>
+
+7z e archive.zip -oc<span style="color:#960050;background-color:#1e0010">:</span>\soft *.cpp -r
+<span style="color:#75715e"># extracts all *.cpp files from archive archive.zip to c:\soft folder.</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="x-extract-with-full-paths-command">x (e<strong>X</strong>tract with full paths) command</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">7z x archive.zip
+<span style="color:#75715e"># extracts all files from the archive archive.zip to the current directory.</span>
+
+7z x archive.zip -oc<span style="color:#960050;background-color:#1e0010">:</span>\soft *.cpp -r
+<span style="color:#75715e"># 提取压缩包`archive.zip`中所有的 `.cpp` 文件到文件夹 c:\soft 中</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="命令-e-和-x-解压的区别">命令 e 和 x 解压的区别</h3>
+<p>使用 <code>x</code> 参数解压, 会保留压缩包内部的文件夹结构, 解压结果和日常使用右键-&gt;解压缩至&hellip;, 结果相同</p>
+<p>使用 e 参数提取文件, 则会将压缩包内部所有层级的文件/文件夹都提取到同一个文件夹中</p>
+<h2 id="examples">Examples</h2>
+<p>将当前路径下的所有 <code>zip</code> 文件解压到当前路径下, 以压缩包名称命名的文件夹中</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># 如果 7z.exe 路径没有加到环境变量中, 需要指定完整路径</span>
+&amp;<span style="color:#e6db74">&#34;C:\Program Files\7-Zip\7z.exe&#34;</span> x *.zip -o*
+<span style="color:#75715e"># 如果已经加入到环境变量中, 可以直接使用 7z 命令</span>
+7z x *.zip -o*
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><a class="link" href="https://documentation.help/7-Zip/"  target="_blank" rel="noopener"
+    >官方文档 - 7-Zip Documentation</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/seattle/tags/cli/">CLI</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

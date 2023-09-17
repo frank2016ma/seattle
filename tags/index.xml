@@ -6,7 +6,31 @@
         <description>Recent content in Tags on Frank in seattle</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 12 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://frank2016ma.github.io/seattle/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Excel</title>
+        <link>https://frank2016ma.github.io/seattle/tags/excel/</link>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/excel/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>openpyxl</title>
+        <link>https://frank2016ma.github.io/seattle/tags/openpyxl/</link>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/openpyxl/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>pandas</title>
+        <link>https://frank2016ma.github.io/seattle/tags/pandas/</link>
+        <pubDate>Wed, 12 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://frank2016ma.github.io/seattle/tags/pandas/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>GUI</title>
         <link>https://frank2016ma.github.io/seattle/tags/gui/</link>
         <pubDate>Fri, 23 Jun 2023 00:00:00 +0000</pubDate>
@@ -97,17 +121,9 @@
         <item>
         <title>Hugo</title>
         <link>https://frank2016ma.github.io/seattle/tags/hugo/</link>
-        <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/tags/hugo/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Excel</title>
-        <link>https://frank2016ma.github.io/seattle/tags/excel/</link>
-        <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
-        
-        <guid>https://frank2016ma.github.io/seattle/tags/excel/</guid>
         <description></description>
         </item>
         <item>

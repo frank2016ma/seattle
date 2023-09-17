@@ -15,7 +15,7 @@
         <description>1 2 3  $root_path = &amp;#34;D:\folder_name&amp;#34; $log_file = &amp;#34;D:\log_file.txt&amp;#34; ls $root_path -recurse | get-filehash | group -property hash | where { $_.count -gt 1 } | % { $_.group } | epcsv $log_file   </description>
         </item>
         <item>
-        <title>PowerShell Profile</title>
+        <title>PowerShell 配置文件</title>
         <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-profile/</link>
         <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
         
@@ -32,19 +32,19 @@ $PROFILE 变量 变量 $PROFILE 存储 当前用户，当前主机 配置文件 
 若要保存这些项并使其在所有将来的会话中可用，请将它们添加到 PowerShell 配置文件。</description>
         </item>
         <item>
-        <title>Powershell</title>
+        <title>Powershell 笔记</title>
         <link>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/</link>
         <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
         
         <guid>https://frank2016ma.github.io/seattle/posts/windows/powershell/powershell-basic/</guid>
         <description>Get-Content 将从文件读取的数据视为数组, 每行文件内容为一个数组元素
-Get-Member -MemberType Properties
-特殊变量 $_ 来表示管道中的当前对象
 传统的Cmd管道是基于文本的, 但是Powershell是基于对象的.
- 为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
- 因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.而wordpad.exe 所在的&amp;quot;%ProgramFiles%\Windows NT\Accessories\wordpad.exe&amp;quot;目录却没有包含, 可以先进入这个目录, 再运行wordpad, 或者将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
+  为什么可以通过notpad打开记事本, 不能通过wordpad打开写字板？
+因为notepad.exe位于C:Windows\system32这个目录, 而这个目录已经默认被包含在Powershell的环境变量$env:Path中.
+而wordpad.exe所在的%ProgramFiles%\Windows NT\Accessories目录却没有包含,
+将wordpad所在的目录加入到环境变量中, $env:Path=$env:Path+&amp;quot;%ProgramFiles%\Windows NT\Accessories&amp;quot;.
   常用的对管道结果进一步处理的命令有：
-   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.</description>
+   命令 解释     Compare-Object 比较两组对象.   ConvertTo-Html 将 Microsoft .NET Framework 对象转换为可在 Web 浏览器中显示的 HTML.   Export-Clixml 创建对象的基于 XML 的表示形式并将其存储在文件中.   Export-Csv 将 Microsoft .NET Framework 对象转换为一系列以逗号分隔的、长度可变的 (CSV) 字符串, 并将这些字符串保存到一个 CSV 文件中.   ForEach-Object 针对每一组输入对象执行操作.   Format-List 将输出的格式设置为属性列表, 其中每个属性均各占一行显示.   Format-Table 将输出的格式设置为表.</description>
         </item>
         
     </channel>

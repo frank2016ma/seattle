@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='DataFrame 写入 Excel 文件 下面两段代码用于直接生成 Excel 文件, 如果文件已经存在, 会被覆盖
+1 2 3 4 5 6 7 8 9 10 11  # sht2, sht3 两张表都会被写入 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False) # 第二次会覆盖掉第一次的 # 只剩下 sht3 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False)    DataFrame 追加写入 Excel 文件 如果要往一份已经存在的Excel文件中追加内容, 如往含有标题的模板中填写数据或者在已有数据末尾追加数据
+pandas 1.4.0之前的版本 在 pandas 1.4.0 之前, 可以使用如下方法将 DataFrame 追加写入 Excel 文件'>
+<title>Pandas 追加写入 Excel 表格</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/python/pandas-append-range-to-sheet/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Pandas 追加写入 Excel 表格'>
+<meta property='og:description' content='DataFrame 写入 Excel 文件 下面两段代码用于直接生成 Excel 文件, 如果文件已经存在, 会被覆盖
+1 2 3 4 5 6 7 8 9 10 11  # sht2, sht3 两张表都会被写入 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False) # 第二次会覆盖掉第一次的 # 只剩下 sht3 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False)    DataFrame 追加写入 Excel 文件 如果要往一份已经存在的Excel文件中追加内容, 如往含有标题的模板中填写数据或者在已有数据末尾追加数据
+pandas 1.4.0之前的版本 在 pandas 1.4.0 之前, 可以使用如下方法将 DataFrame 追加写入 Excel 文件'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/python/pandas-append-range-to-sheet/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='pandas' /><meta property='article:tag' content='Excel' /><meta property='article:tag' content='openpyxl' /><meta property='article:published_time' content='2023-07-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-12T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Pandas 追加写入 Excel 表格">
+<meta name="twitter:description" content="DataFrame 写入 Excel 文件 下面两段代码用于直接生成 Excel 文件, 如果文件已经存在, 会被覆盖
+1 2 3 4 5 6 7 8 9 10 11  # sht2, sht3 两张表都会被写入 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False) # 第二次会覆盖掉第一次的 # 只剩下 sht3 with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht2&amp;#39;, index=False) with pd.ExcelWriter(path=r&amp;#39;path_to_file.xlsx&amp;#39;) as writer: df.to_excel(ew, sheet_name=&amp;#39;sht3&amp;#39;, index=False)    DataFrame 追加写入 Excel 文件 如果要往一份已经存在的Excel文件中追加内容, 如往含有标题的模板中填写数据或者在已有数据末尾追加数据
+pandas 1.4.0之前的版本 在 pandas 1.4.0 之前, 可以使用如下方法将 DataFrame 追加写入 Excel 文件">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/javascript/' >
+                
+                
+                
+                <span>Javascript</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/linux/' >
+                
+                
+                
+                <span>Linux</span>
+            </a>
+        </li>
+        
+        
+        <li  class='current' >
+            <a href='/seattle/posts/python/' >
+                
+                
+                
+                <span>Python</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/hugo/' >
+                
+                
+                
+                <span>Hugo</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/archives/' >
+                
+                
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/categories/' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#dataframe-写入-excel-文件">DataFrame 写入 Excel 文件</a></li>
+    <li><a href="#dataframe-追加写入-excel-文件">DataFrame 追加写入 Excel 文件</a>
+      <ul>
+        <li><a href="#pandas-140之前的版本">pandas 1.4.0之前的版本</a></li>
+        <li><a href="#pandas-140及之后的版本">pandas 1.4.0及之后的版本</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/python/" >
+                Python
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/posts/python/pandas-append-range-to-sheet/">Pandas 追加写入 Excel 表格</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 12, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="dataframe-写入-excel-文件">DataFrame 写入 Excel 文件</h2>
+<p>下面两段代码用于直接生成 Excel 文件, 如果文件已经存在, 会被覆盖</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># sht2, sht3 两张表都会被写入</span>
+<span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;path_to_file.xlsx&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+    df<span style="color:#f92672">.</span>to_excel(ew, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sht2&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+    df<span style="color:#f92672">.</span>to_excel(ew, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sht3&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+
+<span style="color:#75715e"># 第二次会覆盖掉第一次的</span>
+<span style="color:#75715e"># 只剩下 sht3</span>
+<span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;path_to_file.xlsx&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+    df<span style="color:#f92672">.</span>to_excel(ew, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sht2&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+<span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(path<span style="color:#f92672">=</span><span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;path_to_file.xlsx&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+    df<span style="color:#f92672">.</span>to_excel(ew, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;sht3&#39;</span>, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>)
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="dataframe-追加写入-excel-文件">DataFrame 追加写入 Excel 文件</h2>
+<p>如果要往一份已经存在的Excel文件中追加内容, 如往含有标题的模板中填写数据或者在已有数据末尾追加数据</p>
+<h3 id="pandas-140之前的版本">pandas 1.4.0之前的版本</h3>
+<p>在 pandas 1.4.0 之前, 可以使用如下方法将 DataFrame 追加写入 Excel 文件</p>
+<p>首先需要指定 <code>engine</code> 为 <code>openpyxl</code>(pandas 写Excel文件默认使用的库是<code>xlsxwriter</code>, 不支持追加写入)</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> openpyxl <span style="color:#f92672">import</span> load_workbook
+
+wb <span style="color:#f92672">=</span> load_workbook(file_path)
+
+<span style="color:#66d9ef">with</span> pd<span style="color:#f92672">.</span>ExcelWriter(file_path, engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;openpyxl&#39;</span>) <span style="color:#66d9ef">as</span> writer:
+    <span style="color:#75715e"># 指定 workbook 对象</span>
+    writer<span style="color:#f92672">.</span>book <span style="color:#f92672">=</span> wb
+    writer<span style="color:#f92672">.</span>sheets <span style="color:#f92672">=</span> dict((ws<span style="color:#f92672">.</span>title, ws) <span style="color:#66d9ef">for</span> ws <span style="color:#f92672">in</span> wb<span style="color:#f92672">.</span>worksheets)
+    <span style="color:#75715e"># 或者可以用表达式的写法</span>
+    writer<span style="color:#f92672">.</span>sheets <span style="color:#f92672">=</span> {ws<span style="color:#f92672">.</span>title: ws <span style="color:#66d9ef">for</span> ws <span style="color:#f92672">in</span> wb<span style="color:#f92672">.</span>worksheets}
+    df<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span>sht_name, index<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, header<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, startrow<span style="color:#f92672">=</span>len(book)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, )
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="pandas-140及之后的版本">pandas 1.4.0及之后的版本</h3>
+<p>在 pandas 1.4.0 之后, to_excel() 函数的 <code>if_sheet_exists</code> 新增了<code>overlay</code>属性</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74">&#39;&#39;&#39;
+</span><span style="color:#e6db74">if_sheet_exists : {{&#39;error&#39;, &#39;new&#39;, &#39;replace&#39;, &#39;overlay&#39;}}, default &#39;error&#39;
+</span><span style="color:#e6db74">How to behave when trying to write to a sheet that already exists (append mode only).
+</span><span style="color:#e6db74">* error: raise a ValueError.
+</span><span style="color:#e6db74">* new: Create a new sheet, with a name determined by the engine.
+</span><span style="color:#e6db74">* replace: Delete the contents of the sheet before writing to it.
+</span><span style="color:#e6db74">* overlay: Write contents to the existing sheet without removing the old contents.
+</span><span style="color:#e6db74">versionadded:: 1.3.0
+</span><span style="color:#e6db74">versionchanged:: 1.4.0
+</span><span style="color:#e6db74">Added `overlay` option
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">You can also write multiple DataFrames to a single sheet. Note that the
+</span><span style="color:#e6db74">``if_sheet_exists`` parameter needs to be set to ``overlay``:
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">with ExcelWriter(&#34;path_to_file.xlsx&#34;,
+</span><span style="color:#e6db74">    mode=&#34;a&#34;,
+</span><span style="color:#e6db74">    engine=&#34;openpyxl&#34;,
+</span><span style="color:#e6db74">    if_sheet_exists=&#34;overlay&#34;,
+</span><span style="color:#e6db74">) as writer:
+</span><span style="color:#e6db74">    df1.to_excel(writer, sheet_name=&#34;Sheet1&#34;)
+</span><span style="color:#e6db74">    df2.to_excel(writer, sheet_name=&#34;Sheet1&#34;, startcol=3)
+</span><span style="color:#e6db74">&#39;&#39;&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>对于pandas 1.4.0 及以上的版本, 可以使用下面的方法来追加写入</p>
+<p>首先, 依然是设置engine为 <code>openpyxl</code></p>
+<p>然后, 设置 <code>if_sheet_exists=&quot;overlay&quot;</code> 的同时, 还需要设置 <code>mode=&quot;a&quot;</code> 表示追加写入</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">with</span> ExcelWriter(<span style="color:#e6db74">&#34;path_to_file.xlsx&#34;</span>,
+    mode<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;a&#34;</span>,
+    engine<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;openpyxl&#34;</span>,
+    if_sheet_exists<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;overlay&#34;</span>,
+) <span style="color:#66d9ef">as</span> writer:
+    df1<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Sheet1&#34;</span>)
+    df2<span style="color:#f92672">.</span>to_excel(writer, sheet_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Sheet1&#34;</span>, startcol<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<p><a class="link" href="https://stackoverflow.com/questions/38074678/append-existing-excel-sheet-with-new-dataframe-using-python-pandas#38075046"  target="_blank" rel="noopener"
+    >Append existing excel sheet with new dataframe using python pandas - Stack Overflow</a></p>
+<p><a class="link" href="https://stackoverflow.com/questions/47737220/append-dataframe-to-excel-with-pandas"  target="_blank" rel="noopener"
+    >python - append dataframe to excel with pandas - Stack Overflow</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/seattle/tags/pandas/">pandas</a>
+        
+            <a href="/seattle/tags/excel/">Excel</a>
+        
+            <a href="/seattle/tags/openpyxl/">openpyxl</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/seattle/posts/others/microsoft-excel-scroll/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Microsoft Excel 横向滚动</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

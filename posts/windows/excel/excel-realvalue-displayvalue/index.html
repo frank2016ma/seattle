@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记
+Number Format(数字格式) Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式
+ Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值
+  注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 toString() 方法的结果, 而对单元格设置数字格式后的显示值, 类似 format() 方法的结果
+ 单元格的数字精度问题 当数字的长度达到12位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)
+经实测在WPS表格中, 数字达到12位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法'>
+<title>关于 Excel 单元格数字格式、真实值和显示值</title>
+
+<link rel='canonical' href='https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/'>
+
+<link rel="stylesheet" href="/seattle/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='关于 Excel 单元格数字格式、真实值和显示值'>
+<meta property='og:description' content='在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记
+Number Format(数字格式) Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式
+ Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值
+  注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 toString() 方法的结果, 而对单元格设置数字格式后的显示值, 类似 format() 方法的结果
+ 单元格的数字精度问题 当数字的长度达到12位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)
+经实测在WPS表格中, 数字达到12位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法'>
+<meta property='og:url' content='https://frank2016ma.github.io/seattle/posts/windows/excel/excel-realvalue-displayvalue/'>
+<meta property='og:site_name' content='Frank in seattle'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2023-07-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-07-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="关于 Excel 单元格数字格式、真实值和显示值">
+<meta name="twitter:description" content="在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记
+Number Format(数字格式) Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式
+ Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值
+  注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 toString() 方法的结果, 而对单元格设置数字格式后的显示值, 类似 format() 方法的结果
+ 单元格的数字精度问题 当数字的长度达到12位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)
+经实测在WPS表格中, 数字达到12位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "dark");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/seattle">Frank in seattle</a></h1>
+            <h2 class="site-description">frank2016ma@foxmail.com</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/seattle/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/javascript/' >
+                
+                
+                
+                <span>Javascript</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/linux/' >
+                
+                
+                
+                <span>Linux</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/python/' >
+                
+                
+                
+                <span>Python</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/posts/hugo/' >
+                
+                
+                
+                <span>Hugo</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/archives/' >
+                
+                
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/categories/' >
+                
+                
+                
+                <span>Categories</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/seattle/search/' >
+                
+                
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#number-format数字格式">Number Format(数字格式)</a>
+      <ul>
+        <li><a href="#单元格的数字精度问题">单元格的数字精度问题</a></li>
+        <li><a href="#格式自动转换">格式自动转换</a></li>
+      </ul>
+    </li>
+    <li><a href="#解压查看单元格真实值">解压查看单元格真实值</a></li>
+    <li><a href="#vba">VBA</a>
+      <ul>
+        <li><a href="#vba-数据处理应该避免使用显示值">VBA 数据处理应该避免使用显示值</a></li>
+      </ul>
+    </li>
+    <li><a href="#python-openpyxl">Python openpyxl</a></li>
+    <li><a href="#单引号">单引号</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/seattle/categories/excel/" >
+                Excel
+            </a>
+        
+            <a href="/seattle/categories/vba/" >
+                VBA
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/seattle/posts/windows/excel/excel-realvalue-displayvalue/">关于 Excel 单元格数字格式、真实值和显示值</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 25, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>在使用脚本语言对Excel文件进行操作时, 有时会发现, 脚本读取出的值和实际在Excel单元格中显示的值不一致的情况 搜索资料后整理出如下笔记</p>
+<h2 id="number-format数字格式">Number Format(数字格式)</h2>
+<p>Excel 已经有许多内置的数字格式, 如 货币, 百分比等, 你还可以根据自己的需求设置自定义的数字格式</p>
+<blockquote>
+<p>Applying a number format only changes how the number is displayed and doesn’t affect cell values that’s used to perform calculations. You can see the actual value in the formula bar.<br>
+应用数字格式只会改变数字的显示方式, 并不会影响用于计算的单元格值. 在公式栏(编辑栏)中可以看到实际的值</p>
+</blockquote>
+<blockquote>
+<p>注意: 公式栏中显示的也不一定是单元格内容的真实值, 有些数字格式, 本身是一种复杂的数据类型, 比如日期, 公式栏中显示的值, 类似编程语言中默认的 <code>toString()</code> 方法的结果, 而对单元格设置数字格式后的显示值, 类似 <code>format()</code> 方法的结果</p>
+</blockquote>
+<p><img src="/seattle/posts/windows/excel/excel-realvalue-displayvalue/Excel-formula-bar.png"
+	width="976"
+	height="379"
+	srcset="/seattle/posts/windows/excel/excel-realvalue-displayvalue/Excel-formula-bar_hu34552d0049c52ae14c4563388bcba5ed_31967_480x0_resize_box_3.png 480w, /seattle/posts/windows/excel/excel-realvalue-displayvalue/Excel-formula-bar_hu34552d0049c52ae14c4563388bcba5ed_31967_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="编辑栏"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="257"
+		data-flex-basis="618px"
+	
+></p>
+<h3 id="单元格的数字精度问题">单元格的数字精度问题</h3>
+<p>当数字的长度达到<code>12</code>位及以上, 会自动以科学计数法显示该数字(仅限Microsoft Excel)</p>
+<p>经实测在WPS表格中, 数字达到<code>12</code>位及以上, 会以文本格式显示该内容(默认靠左对齐, 完整显示内容), 而非科学计数法</p>
+<p>当单元格中的数字长度超过<code>15</code>位时, 会截取<code>15</code>位之后的数字, 全部变成<code>0</code>, 并且在计算时, 使用非精确的数值进行计算</p>
+<p>如, 在单元格中输入 <code>1234567890123456789</code> 回车后, 再查看编辑栏中的数值, 会显示 <code>1234567890123450000</code></p>
+<p>同样的, 小数部分过长的位数也会被截取</p>
+<p>解决以上问题, 可以使用 添加单引号前缀的方法或者事先将单元格格式设置为<code>文本</code>类型</p>
+<blockquote>
+<p>Microsoft Excel是根据IEEE 754规范设计的, 以确定它如何存储和计算浮点数.<br>
+然而, IEEE 754规范存在一些限制, 可以分为三个一般类别:</p>
+<ul>
+<li>最大/最小限制:<br>
+IEEE 754规范对浮点数的表示范围有一定的限制, 它不能表示超出一定范围的数值, 即存在最大值和最小值的限制</li>
+<li>精度:<br>
+由于浮点数是用有限的位数来表示, 所以存在精度问题. 在进行一些计算时, 可能会出现舍入误差, 导致结果不够准确.</li>
+<li>重复的二进制数:<br>
+由于二进制中一些小数（如1/3）在浮点数表示时是无限循环的, 所以在使用浮点数进行计算时, 可能会出现循环小数的问题.<br>
+这些限制可能会影响在Excel中进行特定类型的计算时的准确性和精度. 为了避免这些问题, 需要在特定情况下谨慎处理浮点数的计算和比较.</li>
+</ul>
+</blockquote>
+<h3 id="格式自动转换">格式自动转换</h3>
+<blockquote>
+<p>there are scenarios where Excel may automatically change the number format from General to something else, based on the characters that you typed into the cell. This feature saves you from having to manually make the easily recognized number format changes. The following table outlines a few examples where this can occur:<br>
+在某些情况下, Excel会根据你输入到单元格中的字符, 自动将数字格式从常规（General）更改为其他格式. 这个特性省去了手动进行常见数字格式更改的步骤. 以下是几个可能发生这种情况的例子:</p>
+</blockquote>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>If you type</th>
+<th>Excel automatically assigns this number format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>General</td>
+</tr>
+<tr>
+<td>1.123</td>
+<td>General</td>
+</tr>
+<tr>
+<td>1.1%</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>1.1E+2</td>
+<td>0.00E+00</td>
+</tr>
+<tr>
+<td>1 1/2</td>
+<td># ?/?</td>
+</tr>
+<tr>
+<td>$1.11</td>
+<td>Currency, 2 decimal places</td>
+</tr>
+<tr>
+<td>1/1/01</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>1:10</td>
+<td>Time</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="解压查看单元格真实值">解压查看单元格真实值</h2>
+<p>将xlsx格式解压, 打开 <code>xl/worksheets/sheets.xml</code> 文件可以看到</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;sheetData&gt;</span>
+    <span style="color:#f92672">&lt;row</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">spans=</span><span style="color:#e6db74">&#34;1:6&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;A1&#34;</span> <span style="color:#a6e22e">s=</span><span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>45132<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;B1&#34;</span> <span style="color:#a6e22e">t=</span><span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>0<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;C1&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>9<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;D1&#34;</span> <span style="color:#a6e22e">s=</span><span style="color:#e6db74">&#34;4&#34;</span> <span style="color:#a6e22e">t=</span><span style="color:#e6db74">&#34;s&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>1<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;F1&#34;</span> <span style="color:#a6e22e">s=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>3.14<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+    <span style="color:#f92672">&lt;/row&gt;</span>
+    <span style="color:#f92672">&lt;row</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;2&#34;</span> <span style="color:#a6e22e">spans=</span><span style="color:#e6db74">&#34;6:6&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;c</span> <span style="color:#a6e22e">r=</span><span style="color:#e6db74">&#34;F2&#34;</span> <span style="color:#a6e22e">s=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;v&gt;</span>45.6789<span style="color:#f92672">&lt;/v&gt;</span>
+        <span style="color:#f92672">&lt;/c&gt;</span>
+    <span style="color:#f92672">&lt;/row&gt;</span>
+<span style="color:#f92672">&lt;/sheetData&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>其中A1单元格中的 <code>45132</code> 就是数字格式的单元格内容储存的实际值, 表示从 <code>1900-01-01</code> 开始的日期天数</p>
+<p><code>s=&quot;2&quot;</code> 表示在 <code>styles.xml</code> 中引用的样式的下标(下标从0开始), 对应下面的 numFmt 第三个格式标签, 最终在Excel中显示日期为 <code>2023年7月2日</code></p>
+<p>而B1, D1 中的 0 和 1 并不是单元格的值, B1, D1 中的 <code>t=&quot;s&quot;</code> 表示引用了 <code>sharedStrings.xml</code>, 0 和 1 是引用的 <code>sharedStrings.xml</code> 的下标</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;numFmts</span> <span style="color:#a6e22e">count=</span><span style="color:#e6db74">&#34;6&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;42&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;_ &#34;</span><span style="color:#960050;background-color:#1e0010">￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">#,##0_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">&#34;￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">\-#,##0_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">&#34;￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">&#34;-&#34;_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">@_</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;44&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;_ &#34;</span><span style="color:#960050;background-color:#1e0010">￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">#,##0.00_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">&#34;￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">\-#,##0.00_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">&#34;￥&#34;*</span> <span style="color:#960050;background-color:#1e0010">&#34;-&#34;??_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">@_</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;176&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;yyyy&#34;</span><span style="color:#960050;background-color:#1e0010">年&#34;m&#34;月&#34;d&#34;日&#34;;@&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;177&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;0.000###&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;41&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;_ * #,##0_ ;_ * \-#,##0_ ;_ * &#34;</span><span style="color:#960050;background-color:#1e0010">-&#34;_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">@_</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;numFmt</span> <span style="color:#a6e22e">numFmtId=</span><span style="color:#e6db74">&#34;43&#34;</span> <span style="color:#a6e22e">formatCode=</span><span style="color:#e6db74">&#34;_ * #,##0.00_ ;_ * \-#,##0.00_ ;_ * &#34;</span><span style="color:#960050;background-color:#1e0010">-&#34;??_</span> <span style="color:#960050;background-color:#1e0010">;_</span> <span style="color:#960050;background-color:#1e0010">@_</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/numFmts&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="vba">VBA</h2>
+<p>首先需要注意的是, 真实值和显示值是Office软件实现的(如 Excel, WPS), 而非VBA</p>
+<p>使用VBA可以获取Excel单元格的真实值和显示值</p>
+<p>使用 <code>.Value2</code> 或者<code>.Value</code> 和可以获取单元格内容的真实值(此处暂不讨论<code>.Value2</code>和<code>.Value</code>的区别), 真实值会被转化成VBA的数据类型</p>
+<p>使用<code>.Text</code> 获取单元格的显示值, 显示值是所见即所得的(WYSIWYG), 在Excel单元格中看到是什么内容, VBA读出的就是什么内容, 显示值的数据类型是 <code>String</code></p>
+<h3 id="vba-数据处理应该避免使用显示值">VBA 数据处理应该避免使用显示值</h3>
+<p>在使用VBA进行自动化表格处理时, 应该避免使用 <code>.Text</code> 获取单元格显示值来进行处理</p>
+<p>影响显示值的因素有很多, 显示值会受到单元格宽度, 单元格的数字格式, 甚至是国家地区等因素的影响</p>
+<ol>
+<li>
+<p>当在单元格中设置输入日期, 当单元格宽度足够时, 会显示完整日期, 缩短单元格长度, 无法完整显示日期文本时候, 单元格的显示值就变成了一组由 &lsquo;#&rsquo; 组成的符号(<code>#</code>号的数量取决于单元格长度)</p>
+</li>
+<li>
+<p>常规格式下, 单元格中数字长度达到12位及以上时, 显示值会变成科学计数法(MS-Excel中)</p>
+</li>
+<li>
+<p>在中国, 数字 <code>123456789</code>, 设置为 金额格式, 则显示值为 <code>123,456,789.00</code>, 前面还会加上货币符号 <code>￥</code>, 而在某些国家, 如德国巴西等, 千分位分隔符和小数点的表示方法是相反的, 金额格式会显示为 <code>123.456.789,00</code></p>
+</li>
+</ol>
+<h2 id="python-openpyxl">Python openpyxl</h2>
+<p>openpyxl 中并没有显示值的概念, 因为 openpyxl 只是一个python库, 而真实值显示值的概念, 是在Office软件中实现的</p>
+<p>所以, <strong>使用Python(openpyxl或其他库)无法获取单元格的显示值</strong></p>
+<p>举一个例子, 一份 Excel 文件就像一个代码文件 <code>xxxx.py</code>, 而Office软件就像是IDE或者代码编辑器, 如 PyCharm, 代码文件本身只是一个普通的文本文件, 而代码的高亮显示, 自动提示等功能, 其实是由IDE提供的</p>
+<p>它只能获取单元格的真实值以及数字格式, 无法获取对这个值设置对应数字格式之后的显示值</p>
+<p>使用python时, 可以通过编写自定义函数的方式, 将真实值格式化为指定的数值格式</p>
+<h2 id="单引号">单引号</h2>
+<p>在单元格输入中, 在要输入的内容开头添加单引号<code>'</code>, 会强制将输入的内容作为文本处理, 且使用脚本读取时, VBA 和 Python 都会忽略前面的单引号, 从而能够保证读取的内容和输入的内容完全一致(除了单引号前缀), 且单引号的优先级高于数字格式及单元格宽度等, 改变数字格式不会改变读取值</p>
+<p><a class="link" href="https://support.microsoft.com/en-us/office/keeping-leading-zeros-and-large-numbers-1bf7b935-36e1-4985-842f-5dfa51f85fe7"  target="_blank" rel="noopener"
+    >Keeping leading zeros and large numbers - Microsoft Support</a></p>
+<p>如果在单元格开头插入单引号本身而不是作为文本标识符号转义, 可以参考下方链接中的做法
+<a class="link" href="https://www.exceldemy.com/add-single-quotes-in-excel/"  target="_blank" rel="noopener"
+    >How to Add Single Quotes in Excel (5 Easy Methods) - ExcelDemy</a></p>
+<hr>
+<p><a class="link" href="https://stackoverflow.com/questions/17359835/what-is-the-difference-between-text-value-and-value2"  target="_blank" rel="noopener"
+    >excel - What is the difference between .text, .value, and .value2? - Stack Overflow</a></p>
+<p><a class="link" href="https://support.microsoft.com/en-au/office/available-number-formats-in-excel-0afe8f52-97db-41f1-b972-4b46e9f1e8d2?wt.mc_id=otc_excel#ID0EBBH=Web"  target="_blank" rel="noopener"
+    >Available number formats in Excel - Microsoft Support</a></p>
+<p><a class="link" href="https://support.microsoft.com/en-au/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4"  target="_blank" rel="noopener"
+    >Format numbers as currency - Microsoft Support</a></p>
+<p><a class="link" href="https://learn.microsoft.com/en-us/office/troubleshoot/excel/format-cells-settings"  target="_blank" rel="noopener"
+    >Control settings in the Format Cells dialog box - Office | Microsoft Learn</a></p>
+<p><a class="link" href="https://learn.microsoft.com/en-us/office/troubleshoot/excel/last-digits-changed-to-zeros"  target="_blank" rel="noopener"
+    >Last digits are changed to zeros when you type long numbers in cells of Excel - Office | Microsoft Learn</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Frank in seattle
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+        <br>
+        <span>
+            <a href="https://beian.miit.gov.cn/">苏ICP备2023011679号-1</a>
+        </span>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/seattle/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
